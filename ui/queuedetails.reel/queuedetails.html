@@ -56,6 +56,16 @@
                 }
             },
 
+			"moviescores": {
+               "prototype": "ui/moviescores.reel",
+                "properties": {
+                    "element": {"#": "moviescores"}
+                },
+                "bindings": {
+                    "data": {"<-": "@owner.data" }
+                }
+			},
+
             "owner": {
                 "properties": {
                     "element": {"#": "queuedetails"}
@@ -71,6 +81,7 @@
 		<div data-montage-id="image" class="Image"></div>
 		<section>
 			<h2 data-montage-id="title" class="title"></h2>
+			<div data-montage-id="moviescores" class="moviescores"></div>
 			<div data-montage-id="scroller" class="scroller">
 				<p data-montage-id="description" class="description"></p>
 			</div>
