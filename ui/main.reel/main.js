@@ -66,6 +66,7 @@ exports.Main = Montage.create(Component, {
             this.application.addEventListener( "remoteDataReceived", this, false);
             this.application.addEventListener( "openTrailer", this, false);
             this.application.addEventListener( "addToQueue", this, false);
+            this.application.addEventListener( "removeFromQueue", this, false);
 
             this.canDrawGate.setField("latestBoxofficeMovies", false);
 
@@ -143,6 +144,18 @@ exports.Main = Montage.create(Component, {
                 var index = this.movieQueue.indexOf(movie);
                 if (index < 0) {
                     this.movieQueue.push(movie);
+                 }
+            }
+        }
+    },
+
+    handleRemoveFromQueue: {
+        value: function(event) {
+            var movie = event.detail;
+            if (movie) {
+                var index = this.movieQueue.indexOf(movie);
+                if (index >= 0) {
+                    this.movieQueue.splice(index, 1);
                  }
             }
         }
