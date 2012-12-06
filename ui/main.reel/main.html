@@ -106,6 +106,29 @@ POSSIBILITY OF SUCH DAMAGE.
                 ]
             },
 
+            "login": {
+                "prototype": "montage/ui/toggle-button.reel",
+                "properties": {
+					"element": {"#": "login"},
+					"pressedLabel": "Logout",
+					"unpressedLabel": "Login"
+               }
+            },
+
+            "myAccount": {
+                "prototype": "montage/ui/toggle-button.reel",
+                "properties": {
+                    "element": {"#": "myAccount"}
+                }
+            },
+
+            "myQueue": {
+                "prototype": "montage/ui/toggle-button.reel",
+                "properties": {
+                    "element": {"#": "myQueue"}
+                }
+             },
+
             "upcoming": {
                 "prototype": "montage/ui/toggle-button.reel",
                 "properties": {
@@ -134,6 +157,11 @@ POSSIBILITY OF SUCH DAMAGE.
 
     <body>
         <div data-montage-id="main" class="main">
+            <div class="login montage-ButtonGroup">
+                <button data-montage-id="login">Login</button>
+                <button data-montage-id="myAccount">My Account</button>
+                <button data-montage-id="myQueue">My Queue</button>
+            </div>
             <div data-montage-id="facade" class="facade">
                 <header class="header">
                     <img class="logo" src="assets/image/logo.png" alt="logo" />
