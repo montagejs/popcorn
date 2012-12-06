@@ -55,26 +55,6 @@ POSSIBILITY OF SUCH DAMAGE.
                 }
             },
 
-            "dates": {
-                "prototype": "montage/ui/dynamic-text.reel",
-                "properties": {
-                    "element": {"#": "dates-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.release_dates.theater" }
-                }
-            },
-
-            "runtime": {
-                "prototype": "montage/ui/dynamic-text.reel",
-                "properties": {
-                    "element": {"#": "runtime-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.runtime" }
-                }
-            },
-
             "rentButton": {
                 "prototype": "montage/ui/button.reel",
                 "properties": {
@@ -101,26 +81,6 @@ POSSIBILITY OF SUCH DAMAGE.
                 ]
             },
 
-            "audienceScore": {
-                "prototype": "montage/ui/dynamic-text.reel",
-                "properties": {
-                    "element": {"#": "audience-score-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.ratings.audience_score" }
-                }
-            },
-
-            "criticsScore": {
-                "prototype": "montage/ui/dynamic-text.reel",
-                "properties": {
-                    "element": {"#": "critics-score-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.ratings.critics_score" }
-                }
-            },
-
             "scroller": {
                 "prototype": "montage/ui/scroller.reel",
                 "properties": {
@@ -129,11 +89,19 @@ POSSIBILITY OF SUCH DAMAGE.
                 }
             },
 
+            "moviescores": {
+               "prototype": "ui/moviescores.reel",
+                "properties": {
+                    "element": {"#": "moviescores"}
+                },
+                "bindings": {
+                    "data": {"<-": "@owner.data" }
+                }
+            },
+
             "owner": {
                 "properties": {
-                    "element": {"#": "details"},
-                    "cImage": {"#": "c-image"},
-                    "aImage": {"#": "a-image"}
+                    "element": {"#": "details"}
                 }
             }
         }
@@ -145,14 +113,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
           <section>
               <h2 data-montage-id="title" class="title"></h2>
-              <p>
-                  <time data-montage-id="dates-content" class="score"></time>
-                  Runtime <span data-montage-id="runtime-content" class="score"></span>
-                  Audience <span data-montage-id="a-image" class="rt-icon icon-audience"></span>
-                           <span data-montage-id="audience-score-content" class="score"></span>
-                  Critics <span data-montage-id="c-image" class="rt-icon icon-critics"></span>
-                          <span data-montage-id="critics-score-content" class="score"></span>
-              </p>
+              <p data-montage-id="moviescores"></p>
               <div data-montage-id="scroller" class="scroller">
                   <p data-montage-id="description" class="description"></p>
               </div>
