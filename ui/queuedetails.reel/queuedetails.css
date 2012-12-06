@@ -1,0 +1,71 @@
+/* @override http://localhost:8082/montage-projects/ui/queuedetails.reel/queuedetails.css */
+
+.queuedetails {
+    position: relative;
+    text-align: center;
+    color: hsl(0,0%,60%);
+}
+
+.queuedetails .title {
+    width: 600px;
+    margin: 0 auto;
+    color: hsl(0,0%,100%);
+    padding-bottom: 5px;
+    border-bottom: 1px dashed hsl(0,0%,30%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.queuedetails .scroller {
+    width: 600px;
+    margin: 0 auto;
+    height: 200px;
+}
+
+.queuedetails .Image  {
+    position: absolute;
+    width: 180px;
+    height: 267px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border: 6px solid hsl(0,0%,0%);
+    box-sizing: content-box;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: inset 0 0 2px hsla(0,0%,100%,.5), 0 6px 20px rgba(0,0,0,.7);
+}
+
+.queuedetails .description {
+    width: 590px;
+    margin-left: 10px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+.queuedetails .action-buttons {
+    position: absolute;
+    top: 88px;
+    right: 30px;
+}
+
+.queuedetails .montage-Button.button,
+.queuedetails .montage-Button:focus {
+    display: block;
+    width: 100px;
+    margin: 10px 0;
+    border-color: hsl(0,0%,0%);
+    color: hsla(0,0%,0%,.8);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: inherit;
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.2);
+    box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 2px hsla(0,0%,100%,.1);
+    background: hsl(210,100%,60%) -webkit-linear-gradient(top, hsla(0,0%,100%,.2), hsla(0,0%,0%,.2) );
+}
+
+.queuedetails .montage-Button:active {
+    background-color: hsl(210,100%,40%) -webkit-linear-gradient(top, hsla(0,0%,40%,.2), hsla(0,0%,0%,.2) );
+}

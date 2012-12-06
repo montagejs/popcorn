@@ -29,13 +29,13 @@
                 }
             },
 
-            "title": {
-                "prototype": "montage/ui/dynamic-text.reel",
+            "queuedetails": {
+                "prototype": "ui/queuedetails.reel",
                 "properties": {
-                    "element": {"#": "title"}
+                    "element": {"#": "queuedetails"}
                 },
                 "bindings": {
-                    "value": {"<-": "@queuelist.objectAtCurrentIteration.title"}
+                    "data": {"<-": "@queuelist.objectAtCurrentIteration"}
                 }
             },
 
@@ -61,7 +61,7 @@
             <button data-montage-id="close-button" class="button button-close">✕</button>
             <div data-montage-id="scroller" class="listscroller">
                 <ul data-montage-id="queuelist">
-                    <li><h2 data-montage-id="title"></h2></li>
+                    <li><span data-montage-id="queuedetails"></span></li>
                 </ul>
             </div>
         </div>

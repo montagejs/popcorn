@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="queuedetails.css">
+
+    <script type="text/montage-serialization">
+        {
+            "title": {
+                "prototype": "montage/ui/dynamic-text.reel",
+                "properties": {
+                    "element": {"#": "title"}
+                },
+                "bindings": {
+                    "value": {"<-": "@owner.data.title" }
+                }
+            },
+
+            "description": {
+                "prototype": "montage/ui/dynamic-text.reel",
+                "properties": {
+                    "element": {"#": "description"}
+                },
+                "bindings": {
+                    "value": {"<-": "@owner.data.synopsis" }
+                }
+            },
+
+            "removeButton": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "remove-button"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ]
+            },
+
+            "image": {
+                "prototype": "ui/image.reel",
+                "properties": {
+                    "element": {"#": "image"}
+                },
+                "bindings": {
+                    "src": {"<-": "@owner.data.posters.detailed" }
+                }
+            },
+
+           "scroller": {
+                "prototype": "montage/ui/scroller.reel",
+                "properties": {
+                    "element": {"#": "scroller"},
+                    "hasMomentum": true
+                }
+            },
+
+            "owner": {
+                "properties": {
+                    "element": {"#": "queuedetails"}
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+	<div id="queuedetails" class="queuedetails">
+		<div data-montage-id="queuedetails-container" class="queuedetails-container">
+
+		<div data-montage-id="image" class="Image"></div>
+		<section>
+			<h2 data-montage-id="title" class="title"></h2>
+			<div data-montage-id="scroller" class="scroller">
+				<p data-montage-id="description" class="description"></p>
+			</div>
+		</section>
+
+		<nav class="action-buttons">
+			<button data-montage-id="remove-button" class="button button-remove">Remove</button>
+		</nav>
+
+		</div>
+	</div>
+</body>
+</html>
