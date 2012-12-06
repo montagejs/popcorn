@@ -47,8 +47,8 @@
     right: 40px;
 }
 
-.details .montage-button.button,
-.details .montage-button:focus {
+.details .montage-Button.button,
+.details .montage-Button:focus {
     display: block;
     width: 100px;
     margin: 10px 0;
@@ -62,7 +62,7 @@
     background: hsl(210,100%,60%) -webkit-linear-gradient(top, hsla(0,0%,100%,.2), hsla(0,0%,0%,.2) );
 }
 
-.details .montage-button:active {
+.details .montage-Button:active {
     background-color: hsl(210,100%,40%);
 }
 
