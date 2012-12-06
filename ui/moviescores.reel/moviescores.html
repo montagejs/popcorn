@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="moviescores.css">
+
+    <script type="text/montage-serialization">
+        {
+
+            "dates": {
+                "prototype": "montage/ui/dynamic-text.reel",
+                "properties": {
+                    "element": {"#": "dates-content"}
+                },
+                "bindings": {
+                    "value": {"<-": "@owner.data.release_dates.theater" }
+                }
+            },
+
+            "runtime": {
+                "prototype": "montage/ui/dynamic-text.reel",
+                "properties": {
+                    "element": {"#": "runtime-content"}
+                },
+                "bindings": {
+                    "value": {"<-": "@owner.data.runtime" }
+                }
+            },
+
+            "audienceScore": {
+                "prototype": "montage/ui/dynamic-text.reel",
+                "properties": {
+                    "element": {"#": "audience-score-content"}
+                },
+                "bindings": {
+                    "value": {"<-": "@owner.data.ratings.audience_score" }
+                }
+            },
+
+            "criticsScore": {
+                "prototype": "montage/ui/dynamic-text.reel",
+                "properties": {
+                    "element": {"#": "critics-score-content"}
+                },
+                "bindings": {
+                    "value": {"<-": "@owner.data.ratings.critics_score" }
+                }
+            },
+
+            "owner": {
+                "properties": {
+                    "element": {"#": "moviescores"},
+                    "cImage": {"#": "c-image"},
+                    "aImage": {"#": "a-image"}
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+	<div id="moviescores" class="moviescores">
+		<div data-montage-id="scores-container" class="scores-container">
+			<p>
+				<time data-montage-id="dates-content" class="score"></time>
+				Runtime <span data-montage-id="runtime-content" class="score"></span>
+				Audience <span data-montage-id="a-image" class="rt-icon icon-audience"></span>
+				<span data-montage-id="audience-score-content" class="score"></span>
+				Critics <span data-montage-id="c-image" class="rt-icon icon-critics"></span>
+				<span data-montage-id="critics-score-content" class="score"></span>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
