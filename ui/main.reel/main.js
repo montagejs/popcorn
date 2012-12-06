@@ -50,10 +50,22 @@ exports.Main = Montage.create(Component, {
         value: null
     },
 
+    _movieQueue: {
+        value: [],
+        distinct: true
+    },
+
+    movieQueue: {
+        get: function() {
+            return this._movieQueue;
+        }
+    },
+
     didCreate: {
         value: function() {
             this.application.addEventListener( "remoteDataReceived", this, false);
             this.application.addEventListener( "openTrailer", this, false);
+            this.application.addEventListener( "addToQueue", this, false);
 
             this.canDrawGate.setField("latestBoxofficeMovies", false);
 
@@ -113,6 +125,19 @@ exports.Main = Montage.create(Component, {
             this.categoryId = category;
             for (var i = 0; i < buttons.length; i++) {
                 buttons[i].pressed = (buttons[i].category === category);
+            }
+        }
+    },
+
+    handleAddToQueue: {
+        value: function(event) {
+            var movie = event.detail;
+            if (movie) {
+                var index = this.movieQueue.indexOf(movie);
+                if (index < 0) {
+                    this.movieQueue.push(movie);
+                    console.log(this.movieQueue);
+                 }
             }
         }
     }

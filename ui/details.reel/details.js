@@ -44,5 +44,11 @@ exports.Details = Montage.create(Component, {
         value: function() {
             this.dispatchEventNamed("openTrailer", true, true, this.data.title);
         }
+    },
+
+    handleQueueButtonAction: {
+        value: function() {
+            this.dispatchEventNamed("addToQueue", true, true, this.data);
+        }
     }
 });

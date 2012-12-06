@@ -85,7 +85,13 @@ POSSIBILITY OF SUCH DAMAGE.
                 "prototype": "montage/ui/button.reel",
                 "properties": {
                     "element": {"#": "queue-button"}
-                }
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ]
             },
 
             "scroller": {
