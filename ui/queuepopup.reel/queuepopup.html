@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="queuepopup.css">
+        <script type="text/montage-serialization">
+        {
+            "closeButton": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "close-button"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ]
+
+            },
+
+            "queuelist": {
+                "prototype": "montage/ui/repetition.reel",
+                "properties": {
+                    "element": {"#": "queuelist"}
+                },
+                "bindings": {
+                    "objects": {"<-": "@owner.movieQueue"}
+                }
+            },
+
+            "title": {
+                "prototype": "montage/ui/dynamic-text.reel",
+                "properties": {
+                    "element": {"#": "title"}
+                },
+                "bindings": {
+                    "value": {"<-": "@queuelist.objectAtCurrentIteration.title"}
+                }
+            },
+
+           "scroller": {
+                "prototype": "montage/ui/scroller.reel",
+                "properties": {
+                    "element": {"#": "scroller"},
+                    "hasMomentum": true
+                }
+            },
+
+           "owner": {
+                "properties": {
+                    "element": {"#": "queuepopup"}
+                }
+            }
+        }
+        </script>
+    </head>
+
+    <body>
+        <div data-montage-id="queuepopup" class="queuepopup">
+            <button data-montage-id="close-button" class="button button-close">✕</button>
+            <div data-montage-id="scroller" class="listscroller">
+                <ul data-montage-id="queuelist">
+                    <li><h2 data-montage-id="title"></h2></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+
+</html>

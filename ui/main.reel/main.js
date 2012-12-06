@@ -129,6 +129,13 @@ exports.Main = Montage.create(Component, {
         }
     },
 
+    handleMyQueueAction: {
+        value: function(action) {
+            var popup = this.templateObjects.queuepopup;
+            popup.showQueue(this.movieQueue);
+        }
+    },
+
     handleAddToQueue: {
         value: function(event) {
             var movie = event.detail;
@@ -136,7 +143,6 @@ exports.Main = Montage.create(Component, {
                 var index = this.movieQueue.indexOf(movie);
                 if (index < 0) {
                     this.movieQueue.push(movie);
-                    console.log(this.movieQueue);
                  }
             }
         }

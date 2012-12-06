@@ -126,7 +126,13 @@ POSSIBILITY OF SUCH DAMAGE.
                 "prototype": "montage/ui/toggle-button.reel",
                 "properties": {
                     "element": {"#": "myQueue"}
-                }
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ]
              },
 
             "upcoming": {
@@ -149,6 +155,13 @@ POSSIBILITY OF SUCH DAMAGE.
                 "prototype": "ui/moviepopup.reel",
                 "properties": {
                     "element": {"#": "popup"}
+                }
+            },
+
+            "queuepopup": {
+                "prototype": "ui/queuepopup.reel",
+                "properties": {
+                    "element": {"#": "queuepopup"}
                 }
             }
         }</script>
@@ -174,6 +187,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 </header>
                 <div data-montage-id="facade-flow" class="facade-flow"></div>
                 <div data-montage-id="popup" class="popup"></div>
+                <div data-montage-id="queuepopup" class="popup"></div>
             </div>
         </div>
     </body>
