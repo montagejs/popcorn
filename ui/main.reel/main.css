@@ -28,6 +28,7 @@
 .logo {
     display: inline-block;
     vertical-align: middle;
+    height: 30px; /* Half of real size -> Retina */
     margin-right: 40px;
 }
 

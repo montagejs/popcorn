@@ -22,6 +22,10 @@ body {
     font: 30px/1.8em "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 
+.logo-bootstrapper {
+    height: 30px; /* Half of real size -> Retina */
+}
+
 .montage-app-bootstrapping #montage-app-bootstrapper {
     display: block;
 }
