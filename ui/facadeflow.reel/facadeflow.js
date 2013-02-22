@@ -62,9 +62,11 @@ exports.Facadeflow = Montage.create( Component, {
             if ( val%1 == 0 && this.category ) {
                 this.selectedMovie = this.category[val];
                 this.detailsFadeIn = true;
+                this.detailsFadeOut = false;
                 this.needsDraw = true;
             } else if ( val%1 != 0 && this.category ){
                 this.detailsFadeOut = true;
+                this.detailsFadeIn = false;
                 this.needsDraw = true;
             }
         },
