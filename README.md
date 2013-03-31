@@ -1,7 +1,12 @@
-Sample Montage application
+Popcorn
 ===============
 
-This application is an example of how a Montage application can be structured and implemented.
+![Screenshot](assets/image/screenshot.jpg)
+
+[Live Demo](http://montagejs.org/apps/popcorn/)
+
+
+## Install
 
 This application depends on the Montage framework which isn't included in the repository. There are two easy ways to
 install the Montage framework so that it can be loaded by this application.
