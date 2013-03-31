@@ -54,3 +54,23 @@
     background: hsl(0,100%,50%) -webkit-linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
 }
 
+.MontageMade {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    width: 50px;
+    height: 100px;
+    overflow: hidden;
+    font-size: 0;
+    color: transparent;
+    background: url(../../assets/image/montage-made.svg) no-repeat center;
+    background-size: 100% auto;
+}
+
+.MontageMade:hover {
+    opacity: .9;
+}
+
+.MontageMade:active {
+    top: 2px;
+}
