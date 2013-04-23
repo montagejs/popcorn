@@ -36,7 +36,7 @@
     display: inline-block;
 }
 
-.filter .montage-Button {
+.filter .matte-Button {
     border-color: hsl(0,0%,0%);
     color: hsl(0,0%,60%);
     font-size: 15px;
@@ -45,11 +45,11 @@
     background: hsl(0,0%,12%) -webkit-linear-gradient(top, hsla(0,0%,100%,.1), hsla(0,0%,0%,.1) );
 }
 
-.filter .montage-Button.active {
+.filter .matte-Button.active {
     background: hsl(0,0%,10%) -webkit-linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
 }
 
-.filter .montage-Button.selected {
+.filter .matte-Button.selected {
     color: hsla(0,0%,100%,.9);
     background: hsl(0,100%,50%) -webkit-linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
 }

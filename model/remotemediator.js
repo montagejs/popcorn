@@ -29,10 +29,11 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 </copyright> */
 var Montage = require("montage/core/core").Montage;
+var application = require("montage/core/application").application;
 
 var API_KEY = "gp967ctbkuhh32ztc2knmj9p";
 
-exports.Remotemediator = Montage.create( Montage, {
+exports.Remotemediator = Montage.create(Montage, {
     TRAILERS_FEED: {
         value: "https://gdata.youtube.com/feeds/api/videos?q=%s+official+trailer&max-results=1&v=2&alt=json"
     },
@@ -118,7 +119,7 @@ exports.Remotemediator = Montage.create( Montage, {
             if( !movies ){
                 alert( "flixter api error, please try again" );
             } else {
-                this.dispatchEventNamed("remoteDataReceived", true, true, { type: "latestBoxofficeMovies", data: movies })
+                application.dispatchEventNamed("remoteDataReceived", true, true, { type: "latestBoxofficeMovies", data: movies })
 
             }
 
@@ -138,7 +139,7 @@ exports.Remotemediator = Montage.create( Montage, {
             if( !movies ){
                 alert( "flixter api error, please try again" );
             } else {
-                this.dispatchEventNamed("remoteDataReceived", true, false, { type: "upcomingMovies", data: movies })
+                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "upcomingMovies", data: movies })
             }
 
         }
@@ -158,7 +159,7 @@ exports.Remotemediator = Montage.create( Montage, {
             if( !movies ){
                 alert( "flixter api error, please try again" );
             } else {
-                this.dispatchEventNamed("remoteDataReceived", true, false, { type: "topDvdRentals", data: movies })
+                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "topDvdRentals", data: movies })
             }
 
         }
@@ -177,7 +178,7 @@ exports.Remotemediator = Montage.create( Montage, {
             if( !movies ){
                 alert( "flixter api error, please try again" );
             } else {
-                this.dispatchEventNamed("remoteDataReceived", true, false, { type: "inTheaters", data: movies })
+                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "inTheaters", data: movies })
             }
 
         }

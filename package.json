@@ -2,7 +2,8 @@
     "name": "popcorn",
     "version": "0.0.2",
     "dependencies": {
-        "montage" : "0.12.4"
+        "montage" : "0.13.0-alpha",
+        "matte": "0.1.1-alpha"
     },
     "bundle": ["ui/main.reel"],
     "shard": 4

@@ -30,19 +30,14 @@ POSSIBILITY OF SUCH DAMAGE.
 </copyright> */
 var Montage     = require("montage").Montage,
     Component   = require("montage/ui/component").Component,
-    ArrayController = require("montage/ui/controller/array-controller").ArrayController;
+    RangeController = require("montage/core/range-controller").RangeController;
 
 exports.Facadeflow = Montage.create( Component, {
     didCreate: {
         value: function() {
-            var controller = ArrayController.create();
+            var controller = RangeController.create();
 
-            controller.automaticallyOrganizeObjects = true;
-            Object.defineBinding(controller, "content", {
-                boundObject: this,
-                boundObjectPropertyPath: "category",
-                oneway: true
-            });
+            controller.defineBinding("content", {"<-": "category", source: this});
             this.buttonController = controller;
             this.application.addEventListener( "dataReceived", this, false);
         }
@@ -223,8 +218,12 @@ exports.Facadeflow = Montage.create( Component, {
         }
     },
 
-    prepareForDraw: {
-        value: function() {
+    enterDocument: {
+        value: function(firstTime) {
+            if (!firstTime) {
+                return;
+            }
+
             var pagesKnots = [],
                 point,
                 tangent,
