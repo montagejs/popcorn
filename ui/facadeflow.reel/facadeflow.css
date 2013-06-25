@@ -7,7 +7,8 @@
     height: 425px;
     background: url(film-bottom.png);
 }
-.flow {
+.facade-flow .flow {
+    position: relative;
     overflow: visible;
     opacity: 1;
     -webkit-transition-duration: .5s;
