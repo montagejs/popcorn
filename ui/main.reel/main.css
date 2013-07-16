@@ -3,18 +3,22 @@
 .main {
     display: -webkit-box;
     display: -moz-box;
+    display: -ms-flexbox;
     display: box;
     -webkit-box-align: center;
     -moz-box-align: center;
+    -ms-flex-align: center;
     box-align: center;
     -webkit-box-pack: center;
     -moz-box-pack: center;
+    -ms-flex-pack: center;
     box-pack: center;
     width: 100%; /* FF fix */
     height: 100%;
 	font-family: "Nunito","Lucida Grande", Lucida, Verdana, sans-serif;
 	background: -webkit-radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
     background: -moz-radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
+    background: -ms-radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
     background: radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
 }
 
@@ -53,12 +57,14 @@
     box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 2px hsla(0,0%,100%,.1);
     background: hsl(0,0%,12%) -webkit-linear-gradient(top, hsla(0,0%,100%,.1), hsla(0,0%,0%,.1) );
     background: hsl(0,0%,12%) -moz-linear-gradient(top, hsla(0,0%,100%,.1), hsla(0,0%,0%,.1) );
+    background: hsl(0,0%,12%) -ms-linear-gradient(top, hsla(0,0%,100%,.1), hsla(0,0%,0%,.1) );
     background: hsl(0,0%,12%) linear-gradient(top, hsla(0,0%,100%,.1), hsla(0,0%,0%,.1) );
 }
 
 .filter .matte-Button.active {
     background: hsl(0,0%,10%) -webkit-linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
     background: hsl(0,0%,10%) -moz-linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
+    background: hsl(0,0%,10%) -ms-linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
     background: hsl(0,0%,10%) linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
 }
 
@@ -66,6 +72,7 @@
     color: hsla(0,0%,100%,.9);
     background: hsl(0,100%,50%) -webkit-linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
     background: hsl(0,100%,50%) -moz-linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
+    background: hsl(0,100%,50%) -ms-linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
     background: hsl(0,100%,50%) linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
 }
 
