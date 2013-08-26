@@ -36,6 +36,17 @@ POSSIBILITY OF SUCH DAMAGE.
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="stylesheet" type="text/css" href="assets/style/base.css">
     <title>Montage Popcorn</title>
+
+    <script>
+        // Workaround for window.Touch on desktop browsers
+        // NOTE This is a hotfix from montage 2d9dada66ea73de571fbc2f2ca2bcc83b6f545ef
+        // specifically for the presence of window.Touch as of Chrome 29
+        // This can be removed upon updating this application to Montage ~v0.13.4
+        if (!("ontouchstart" in window)) {
+            window.Touch = null;
+        }
+    </script>
+
     <script src="node_modules/montage/montage.js"></script>
     <script type="text/montage-serialization">
             {
