@@ -9,9 +9,9 @@ This demo application showcases how to structure and optimize a MontageJS applic
 
 ##Installation
 
-To run the [Name] demo locally, you must have Node.js and npm installed. MontageJS application development depends on npm, the Node package manager, which is distributed with Node.js. If you haven't done so already, be sure to [download](http://nodejs.org/download/) and run the prebuilt Node.js installer for your platform from the Node.js website. Then follow these steps:
+To run the Popcorn demo locally, you must have Node.js and npm installed. MontageJS application development depends on npm, the Node package manager, which is distributed with Node.js. If you haven't done so already, be sure to [download](http://nodejs.org/download/) and run the prebuilt Node.js installer for your platform from the Node.js website. Then follow these steps:
 
-1. Clone the [name of GitHub repo] [GitHub repo](https://github.com/montagejs/popcorn) in your desktop.
+1. Clone the popcorn [GitHub repo](https://github.com/montagejs/popcorn) in your desktop.
 
 2. Use your command line tool to navigate to the cloned directory and install the modules required to run the demo:
         
