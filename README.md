@@ -11,8 +11,8 @@ This demo application showcases how to structure and optimize a MontageJS applic
 
 To run this demo locally you need:
 
-* A web server of your choice. Montage applications are client-side applications with no particular back-end dependency.
-* Node.js and npm. MontageJS uses Node.js for its command-line developer tools and for code dependency management.
+* A web server of your choice. MontageJS applications are client-side applications with no particular back-end dependency.
+* Node.js and npm. MontageJS uses Node.js and npm for its developer tools and for code dependency management.
 * Cloned GitHub repo of this demo.
 
 First, if you haven't done so already, [download](http://nodejs.org/download/) and run the prebuilt Node.js installer for your platform from the Node.js website to install npm.
