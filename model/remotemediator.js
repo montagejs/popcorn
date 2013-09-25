@@ -85,19 +85,10 @@ exports.Remotemediator = Montage.create(Montage, {
 
     searchYoutubeTrailer: {
         value: function(title, callback) {
-            var title_array = title.split(" "),
-                search_string = "",
-                word;
+             
+             var search_string = title.split(' ').join('+'),
+                 search_url = this.TRAILERS_FEED.replace("%s", search_string);
 
-            for (var i = 0, length=title_array.length; i < length; i++) {
-                word = title_array[i];
-                if( i != 0 ){
-                    search_string += "+";
-                }
-                search_string += word;
-            };
-
-             var search_url = this.TRAILERS_FEED.replace("%s", search_string);
              this.jsonpCall(search_url, function(event) {
                  callback(event.feed.entry[0].media$group.yt$videoid.$t);
              });
