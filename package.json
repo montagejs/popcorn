@@ -1,13 +1,11 @@
 {
-    "name": "Popcorn-Responsive",
-    "version": "0.1.0",
+    "name": "Popcorn",
+    "version": "0.2.0",
     "dependencies": {
-        "montage": "*",
-        "matte": "*",
-        "digit": "*",
-        "montage-testing": "~0.1.1"
+        "montage": "git+http://github.com/montagejs/montage.git#master",
+        "matte": "git+http://github.com/montagejs/matte.git#master"
     },
     "devDependencies": {
-        "testacular": "~0.5.7"
+        "montage-testing": "~0.3.0"
     }
 }
