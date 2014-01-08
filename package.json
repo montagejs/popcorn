@@ -1,10 +1,13 @@
 {
-    "name": "popcorn",
-    "version": "0.0.2",
+    "name": "Popcorn-Responsive",
+    "version": "0.1.0",
     "dependencies": {
-        "montage" : "0.13.0-alpha",
-        "matte": "0.1.1-alpha"
+        "montage": "*",
+        "matte": "*",
+        "digit": "*",
+        "montage-testing": "~0.1.1"
     },
-    "bundle": ["ui/main.reel"],
-    "shard": 4
+    "devDependencies": {
+        "testacular": "~0.5.7"
+    }
 }

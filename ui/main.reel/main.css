@@ -1,6 +1,4 @@
-/* @override http://localhost:8082/montage-projects/main.reel/main.css */
-
-.main {
+.Main {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -15,18 +13,18 @@
     box-pack: center;
     width: 100%; /* FF fix */
     height: 100%;
-	font-family: "Nunito","Lucida Grande", Lucida, Verdana, sans-serif;
-	background: -webkit-radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
+    font-family: "Nunito","Lucida Grande", Lucida, Verdana, sans-serif;
+    background: -webkit-radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
     background: -moz-radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
     background: -ms-radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
     background: radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
 }
 
 .facade {
-	position:	relative;
-	width:      1024px;
+    position:    relative;
+    width:      1024px;
     height:     672px;
-	overflow:   hidden;
+    overflow:   hidden;
 }
 
 .header {
@@ -35,7 +33,7 @@
     top: 20px;
     left: 0;
     right: 0;
-	text-align: center;
+    text-align: center;
 }
 
 .logo {
