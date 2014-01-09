@@ -31,8 +31,8 @@ exports.Main = Montage.create(Component, /** @lends module:"ui/main.reel".Main# 
         value: null
     },
 
-    didCreate: {
-        value: function() {
+    constructor: {
+        value: function Main() {
             this.application.addEventListener( "remoteDataReceived", this, false);
             this.application.addEventListener( "openTrailer", this, false);
 
