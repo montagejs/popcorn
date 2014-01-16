@@ -42,7 +42,10 @@ POSSIBILITY OF SUCH DAMAGE.
                     "isSelectionEnabled": false,
                     "cameraFov": 36.99,
                     "cameraTargetPoint": [0, 0, 0],
-                    "stride": 1
+                    "stride": 1,
+                    "hasSelectedIndexScrolling": true,
+                    "isSelectionEnabled": true,
+                    "scrollingTransitionDuration": "300"
                 },
                 "bindings": {
                     "contentController": {"<-": "@owner.buttonController"}
@@ -55,7 +58,7 @@ POSSIBILITY OF SUCH DAMAGE.
                     "element": {"#": "image"}
                 },
                 "bindings": {
-                    "src": {"<-": "@flow.objectAtCurrentIteration.posters.detailed" }
+                    "src": {"<-": "@flow:iteration.object.posters.detailed" }
                 }
             },
 
