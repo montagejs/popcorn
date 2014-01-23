@@ -1,30 +1,19 @@
 .Main {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: box;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    box-align: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    box-pack: center;
-    width: 100%; /* FF fix */
-    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
     font-family: "Nunito","Lucida Grande", Lucida, Verdana, sans-serif;
-    background: -webkit-radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
-    background: -moz-radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
-    background: -ms-radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
-    background: radial-gradient(center, closest-side, hsl(0,0%,30%), hsl(0,0%,15%) );
 }
 
 .facade {
-    position:    relative;
-    width:      1024px;
-    height:     672px;
-    overflow:   hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -887px;
+    margin-top: -420px;
 }
 
 .header {
@@ -34,6 +23,7 @@
     left: 0;
     right: 0;
     text-align: center;
+    display: none;
 }
 
 .logo {
@@ -41,6 +31,7 @@
     vertical-align: middle;
     height: 30px; /* Half of real size -> Retina */
     margin-right: 40px;
+    display: none;
 }
 
 .filter {
@@ -85,6 +76,7 @@
     color: transparent;
     background: url(../../assets/image/montage-made.svg) no-repeat center;
     background-size: 100% auto;
+    display: none;
 }
 
 .MontageMade:hover {
