@@ -108,10 +108,11 @@ exports.Main = Montage.create(Component, /** @lends module:"ui/main.reel".Main# 
         value: function (self) {
             if ((window.innerHeight === window.outerHeight) || (window.innerHeight !== this._element.offsetHeight)) {
                 window.scrollTo(0, 0);
+                self.templateObjects.facadeflow.flow.handleResize();
                 window.clearTimeout(self._windowScrollTimeout);
                 self._windowScrollTimeout = window.setTimeout(function () {
                     self._windowScroll(self);
-                }, 1000);
+                }, 700);
             }
         }
     },

@@ -38,15 +38,16 @@ POSSIBILITY OF SUCH DAMAGE.
             "flow": {
                 "prototype": "montage/ui/flow.reel",
                 "properties": {
+                    "slotContent": {"@": "overlay"},
                     "element": {"#": "flow"},
                     "isSelectionEnabled": false,
-                    "cameraFov": 36.99,
+                    "cameraFov": 77.06934,
                     "cameraTargetPoint": [0, 0, 0],
                     "stride": 1,
                     "hasSelectedIndexScrolling": true,
                     "isSelectionEnabled": true,
                     "scrollingTransitionDuration": "600",
-                    "linearScrollingVector": [-240, 0],
+                    "linearScrollingVector": [-90, 0],
                     "cameraPosition": [0, 0, 400],
                     "paths": [
                         {
@@ -159,10 +160,18 @@ POSSIBILITY OF SUCH DAMAGE.
 
             "owner": {
                 "properties": {
-                    "element": {"#": "facade-flow"}
+                    "element": {"#": "facade-flow"},
+                    "flow": {"@": "flow"}
                 },
                 "bindings": {
                     "scroll": {"<-": "@flow.scroll"}
+                }
+            },
+
+            "overlay": {
+                "prototype": "ui/overlay.reel",
+                "properties": {
+                    "element": {"#": "overlay"}
                 }
             }
         }
@@ -171,6 +180,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
     <body>
         <div data-montage-id="facade-flow" class="facade-flow">
+            <div data-montage-id="overlay"></div>
             <div data-montage-id="flow" class="flow flow-fade-out">
                 <div data-montage-id="image" class="Image"></div>
             </div>

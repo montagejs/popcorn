@@ -1,5 +1,5 @@
 * {
-    /*-webkit-user-select: none;
+    -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -9,20 +9,15 @@
     user-drag: none;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-    box-sizing: border-box;*/
+    box-sizing: border-box;
 }
 
 body {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: #000;
+    overflow: hidden;
 }
 
 #montage-app-bootstrapper {
-    display: none;
     padding-top: 200px;
     color: white;
     text-align: center;
@@ -38,7 +33,6 @@ body {
 }
 
 #montage-app-loader {
-    display: none;
     text-align: center;
     color: #777;
     font: 20px/1.8em "Lucida Grande", Lucida, Verdana, sans-serif;

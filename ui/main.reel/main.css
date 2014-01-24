@@ -1,19 +1,10 @@
 .Main {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: hidden;
     font-family: "Nunito","Lucida Grande", Lucida, Verdana, sans-serif;
-}
-
-.facade {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -887px;
-    margin-top: -420px;
 }
 
 .header {
@@ -23,7 +14,6 @@
     left: 0;
     right: 0;
     text-align: center;
-    display: none;
 }
 
 .logo {
@@ -34,7 +24,7 @@
     display: none;
 }
 
-.filter {
+/*.filter {
     display: inline-block;
 }
 
@@ -63,6 +53,133 @@
     background: hsl(0,100%,50%) -moz-linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
     background: hsl(0,100%,50%) -ms-linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
     background: hsl(0,100%,50%) linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
+}*/
+
+.filter {
+    position: fixed;
+    background: black;
+    overflow: hidden;
+}
+.filter .matte-Button {
+    display: block;
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    opacity: .5;
+    height: auto;
+    border-radius: 0;
+}
+.filter .matte-Button:after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url(icons.png);
+    background-repeat: no-repeat;
+    background-size: 32px 332px;
+}
+.filter .matte-Button.in_theaters:after {
+    background-position: 0 -100px;
+}
+.filter .matte-Button.upcoming:after {
+    background-position: 0 -200px;
+}
+.filter .matte-Button.rentals:after {
+    background-position: 0 -300px;
+}
+.filter .matte-Button.selected {
+    opacity: 1;
+    background-color: #333;
+}
+.facadeWindow {
+    position: fixed;
+    overflow: hidden;
+}
+@media (min-width: 501px) and (min-height: 501px) {
+    .filter {
+        top: 20px;
+        left: 20px;
+    }
+    .filter .matte-Button {
+        float: left;
+        width: 150px;
+        height: 64px;
+    }
+    .facadeWindow {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+@media (max-width: 500px) and (orientation: portrait) {
+    .filter {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        padding: 0 8px;
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+    }
+    .filter .matte-Button {
+        -webkit-box-flex: 1;
+        width: 25%;
+        line-height: 100px;
+        font-size: 11px;
+    }
+    .filter .matte-Button:after {
+        left: 50%;
+        top: 8px;
+        margin-left: -16px;
+    }
+    .facadeWindow {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 64px;
+    }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+    .filter {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 126px;
+        padding: 8px 0;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+    .filter .matte-Button {
+        -webkit-box-flex: 1;
+        padding-left: 48px;
+        text-align: left;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .filter .matte-Button:after {
+        left: 8px;
+        top: 50%;
+        margin-top: -16px;
+    }
+    .facadeWindow {
+        top: 0;
+        left: 126px;
+        right: 0;
+        bottom: 0;
+    }
+    .facadeWindow .facade-flow {
+        top: -80%;
+        left: 0;
+        bottom: -80%;
+        right: 0;
+        margin-top: 0;
+        height: auto;
+    }
 }
 
 .MontageMade {

@@ -152,7 +152,7 @@ exports.Facadeflow = Montage.create( Component, {
                 self.detailsFadeOut = false;
                 self.needsDraw = true;
 
-            }, 500 );
+            }, 800 );
         }
     },
 

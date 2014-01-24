@@ -102,18 +102,20 @@
 </head>
 <body>
     <div data-montage-id="main" class="Main">
-        <div data-montage-id="facade" class="facade">
-            <header class="header">
-                <img class="logo" src="../../assets/image/logo.png" alt="logo" />
-                <div class="filter matte-ButtonGroup">
-                    <button data-montage-id="latest">Box Office</button>
-                    <button data-montage-id="theaters">In Theaters</button>
-                    <button data-montage-id="upcoming">Upcoming</button>
-                    <button data-montage-id="dvd">DVD Rentals</button>
-                </div>
-            </header>
-            <div data-montage-id="facade-flow" class="facade-flow"></div>
-            <div data-montage-id="popup" class="popup"></div>
+        <header class="header">
+            <img class="logo" src="../../assets/image/logo.png" alt="logo" />
+            <div class="filter">
+                <button data-montage-id="latest" class="box_office">Box office</button>
+                <button data-montage-id="theaters" class="in_theaters">In theaters</button>
+                <button data-montage-id="upcoming" class="upcoming">Upcoming</button>
+                <button data-montage-id="dvd" class="rentals">Rentals</button>
+            </div>
+        </header>
+        <div class="facadeWindow">
+            <div data-montage-id="facade" class="facade">
+                <div data-montage-id="facade-flow" class="facade-flow"></div>
+                <div data-montage-id="popup" class="popup"></div>
+            </div>
         </div>
         <a class="MontageMade" href="http://montagejs.org">Made with Montage</a>
     </div>

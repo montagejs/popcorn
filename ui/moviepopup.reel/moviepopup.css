@@ -1,13 +1,14 @@
 /* @override http://localhost:8082/montage-projects/ui/moviepopup.reel/moviepopup.css */
 
 .moviepopup {
-	position: absolute;
-	z-index: 2;
-	top: 0;
-	left: 0;
-	width: 1024px;
-	height: 672px;
-	padding-top: 50px;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 1024px;
+    height: 672px;
+    padding-top: 50px;
     background: black;
     -webkit-transform: translate3d( 0, -700px, 0 );
     -moz-transform: translate3d( 0, -700px, 0 );

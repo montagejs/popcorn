@@ -28,16 +28,19 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 </copyright> */
-var Montage     = require("montage").Montage,
-    Component   = require("montage/ui/component").Component;
 
-var Image = exports.Image = Montage.create(Component, {
+var Montage = require("montage").Montage,
+    Component = require("montage/ui/component").Component;
 
-    _src: {value: null},
+exports.Image = Montage.create(Component, {
+
+    _src: {
+        value: null
+    },
 
     src: {
-        set: function(value) {
-            if(value !== this._src) {
+        set: function (value) {
+            if (value !== this._src) {
                 this._src = value;
                 this.needsDraw = true;
             }
@@ -46,8 +49,10 @@ var Image = exports.Image = Montage.create(Component, {
 
     draw: {
         value: function() {
-            this._element.style.backgroundImage = "url(" + this._src + ")";
-    //        this._element.style.backgroundPosition = "0% 50%";
+            if (typeof this._src !== "undefined") {
+                this._element.style.backgroundImage = "url(" + this._src + ")";
+            }
         }
     }
+
 });
