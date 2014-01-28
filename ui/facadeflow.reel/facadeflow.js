@@ -33,8 +33,8 @@ var Montage     = require("montage").Montage,
     RangeController = require("montage/core/range-controller").RangeController;
 
 exports.Facadeflow = Montage.create( Component, {
-    didCreate: {
-        value: function() {
+    constructor: {
+        value: function Facadeflow() {
             var controller = RangeController.create();
 
             controller.defineBinding("content", {"<-": "category", source: this});

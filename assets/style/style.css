@@ -1,15 +1,15 @@
 * {
-	-webkit-user-select: none;
+    -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-	-webkit-user-drag: none;
+    -webkit-user-drag: none;
     -moz-user-drag: none;
     -ms-user-drag: none;
     user-drag: none;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -19,7 +19,7 @@ html, body {
 body {
     margin: 0;
     overflow: hidden;
-    background:	#000;
+    background:    #000;
 }
 
 #montage-app-bootstrapper {

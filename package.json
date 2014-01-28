@@ -1,10 +1,11 @@
 {
-    "name": "popcorn",
-    "version": "0.0.2",
+    "name": "Popcorn",
+    "version": "0.2.0",
     "dependencies": {
-        "montage" : "0.13.0-alpha",
-        "matte": "0.1.1-alpha"
+        "montage": "git+http://github.com/montagejs/montage.git#master",
+        "matte": "git+http://github.com/montagejs/matte.git#master"
     },
-    "bundle": ["ui/main.reel"],
-    "shard": 4
+    "devDependencies": {
+        "montage-testing": "~0.3.0"
+    }
 }

@@ -31,7 +31,7 @@ POSSIBILITY OF SUCH DAMAGE.
 var Montage = require("montage/core/core").Montage;
 var application = require("montage/core/application").application;
 
-var API_KEY = "gp967ctbkuhh32ztc2knmj9p";
+var API_KEY = "edvr96kp6mddwsasvmt269pw";
 
 exports.Remotemediator = Montage.create(Montage, {
     TRAILERS_FEED: {
@@ -85,7 +85,7 @@ exports.Remotemediator = Montage.create(Montage, {
 
     searchYoutubeTrailer: {
         value: function(title, callback) {
-             
+
              var search_string = title.split(' ').join('+'),
                  search_url = this.TRAILERS_FEED.replace("%s", search_string);
 

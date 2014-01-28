@@ -39,7 +39,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 "prototype": "montage/ui/flow.reel",
                 "properties": {
                     "element": {"#": "flow"},
-                    "isSelectionEnabled": false,
+                    "isSelectionEnabled": true,
                     "cameraFov": 36.99,
                     "cameraTargetPoint": [0, 0, 0],
                     "stride": 1,
@@ -157,11 +157,12 @@ POSSIBILITY OF SUCH DAMAGE.
                             "tailOffset": 4
                         }
                     ],
-                    "scrollingTransitionDuration": 500,
+                    "scrollingTransitionDuration": 300,
                     "scrollingTransitionTimingFunction": "ease",
                     "scrollVectorX": true,
                     "scrollVectorY": true,
-                    "selectedIndexScrollingOffset": 0
+                    "selectedIndexScrollingOffset": 0,
+                    "hasSelectedIndexScrolling": true
                 },
                 "bindings": {
                     "contentController": {"<-": "@owner.buttonController"}
@@ -174,7 +175,7 @@ POSSIBILITY OF SUCH DAMAGE.
                     "element": {"#": "image"}
                 },
                 "bindings": {
-                    "src": {"<-": "@flow.objectAtCurrentIteration.posters.detailed" }
+                    "src": {"<-": "@flow:iteration.object.posters.detailed" }
                 }
             },
 
