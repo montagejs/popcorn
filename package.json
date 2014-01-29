@@ -2,8 +2,8 @@
     "name": "Popcorn",
     "version": "0.2.0",
     "dependencies": {
-        "montage": "git+http://github.com/montagejs/montage.git#master",
-        "matte": "git+http://github.com/montagejs/matte.git#master"
+        "montage": "git+http://github.com/montagejs/montage.git#1289311fde56c00d918496b687fa25833c167d02",
+        "matte": "git+http://github.com/montagejs/matte.git#33b8364c9628cc68608578851b678d17008367fc"
     },
     "devDependencies": {
         "montage-testing": "~0.3.0"
