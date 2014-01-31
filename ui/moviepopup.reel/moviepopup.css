@@ -1,23 +1,23 @@
 /* @override http://localhost:8082/montage-projects/ui/moviepopup.reel/moviepopup.css */
 
 .moviepopup {
-    display: none;
-    position: absolute;
-    z-index: 2;
+    position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
-    width: 1024px;
-    height: 672px;
+    right: 0;
+    bottom: 0;
     padding-top: 50px;
     background: black;
-    -webkit-transform: translate3d( 0, -700px, 0 );
-    -moz-transform: translate3d( 0, -700px, 0 );
-    -ms-transform: translate3d( 0, -700px, 0 );
-    transform: translate3d( 0, -700px, 0 );
+    -webkit-transform: translate3d( 0, -100%, 0 );
+    -moz-transform: translate3d( 0, -100%, 0 );
+    -ms-transform: translate3d( 0, -100%, 0 );
+    transform: translate3d( 0, -100%, 0 );
     -webkit-transition: -webkit-transform .3s cubic-bezier(.53, .09, .94, .53);
     -moz-transition: -moz-transform .3s cubic-bezier(.53, .09, .94, .53);
     -ms-transition: -ms-transform .3s cubic-bezier(.53, .09, .94, .53);
     transition: transform .3s cubic-bezier(.53, .09, .94, .53);
+    pointer-events: none;
 }
 
 .moviepopup-open {
@@ -29,6 +29,8 @@
     -moz-transition: -moz-transform .3s cubic-bezier(0, .20, .15, 1);
     -ms-transition: -ms-transform .3s cubic-bezier(0, .20, .15, 1);
     transition: transform .3s cubic-bezier(0, .20, .15, 1);
+    display: block;
+    pointer-events: all;
 }
 
 .moviepopup .button-close,

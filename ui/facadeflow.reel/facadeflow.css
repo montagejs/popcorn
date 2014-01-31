@@ -19,53 +19,6 @@
 .montage-Flow-Slot {
     -webkit-transform-style: preserve-3d;
 }
-/*.film {
-    position: absolute;
-    width: 1184px;
-    height: 472px;
-    top: 176px;
-    left: 295px;
-    background-image: url(overlay.png);
-    background-size: 438px 472px;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-.film:before {
-    content: "";
-    position: absolute;
-    width: 1184px;
-    height: 472px;
-    top: 0;
-    left: 0;
-    background-image: url(overlay.png);
-    background-size: 438px 472px;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    -webkit-transform: scale(-1, 1);
-    -moz-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1);
-}
-.film:after {
-    content: "";
-    position: absolute;
-    width: 143px;
-    height: 144px;
-    top: 297px;
-    left: 873px;
-    background-image: url(popcorn.png);
-    background-size: 143px 144px;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}*/
 .flow .Image  {
     position: absolute;
     width: 180px;
@@ -87,24 +40,4 @@
     background-image: url(frame.png);
     background-size: 246px 332px;
     background-repeat: no-repeat;
-}
-.details  {
-    height: 280px;
-    margin: 0 auto;
-    -webkit-transform: translate3d(0,-30px,0);
-    -moz-transform: translate3d(0,-30px,0);
-    -ms-transform: translate3d(0,-30px,0);
-    transform: translate3d(0,-30px,0);
-    -webkit-transition: opacity .5s, -webkit-transform .5s;
-    -moz-transition: opacity .5s, -moz-transform .5s;
-    -ms-transition: opacity .5s, -ms-transform .5s;
-    transition: opacity .5s, transform .5s;
-    display: none;
-}
-.details-fade-out{
-    opacity: 0;
-    -webkit-transform: translate3d(0,-20px,0);
-    -moz-transform: translate3d(0,-20px,0);
-    -ms-transform: translate3d(0,-20px,0);
-    transform: translate3d(0,-20px,0);
 }

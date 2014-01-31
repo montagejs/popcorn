@@ -170,7 +170,7 @@ exports.Facadeflow = Montage.create( Component, {
     draw: {
         value: function (event) {
             var flow = this.templateObjects.flow,
-                details = this.templateObjects.details;
+                details = this.details;
 
             if( this._fadeIn ){
                 flow.element.classList.remove( 'flow-fade-out');

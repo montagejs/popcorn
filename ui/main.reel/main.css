@@ -1,64 +1,16 @@
 .Main {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    font-family: "Nunito","Lucida Grande", Lucida, Verdana, sans-serif;
+    overflow: hidden;
+    font-family: Helvetica, Arial, sans-serif;
 }
-
-.header {
-    position: absolute;
-    z-index: 1;
-    top: 20px;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
-.logo {
-    display: inline-block;
-    vertical-align: middle;
-    height: 30px; /* Half of real size -> Retina */
-    margin-right: 40px;
-    display: none;
-}
-
-/*.filter {
-    display: inline-block;
-}
-
-.filter .matte-Button {
-    border-color: hsl(0,0%,0%);
-    color: hsl(0,0%,60%);
-    font-size: 15px;
-    font-family: inherit;
-    box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 2px hsla(0,0%,100%,.1);
-    background: hsl(0,0%,12%) -webkit-linear-gradient(top, hsla(0,0%,100%,.1), hsla(0,0%,0%,.1) );
-    background: hsl(0,0%,12%) -moz-linear-gradient(top, hsla(0,0%,100%,.1), hsla(0,0%,0%,.1) );
-    background: hsl(0,0%,12%) -ms-linear-gradient(top, hsla(0,0%,100%,.1), hsla(0,0%,0%,.1) );
-    background: hsl(0,0%,12%) linear-gradient(top, hsla(0,0%,100%,.1), hsla(0,0%,0%,.1) );
-}
-
-.filter .matte-Button.active {
-    background: hsl(0,0%,10%) -webkit-linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
-    background: hsl(0,0%,10%) -moz-linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
-    background: hsl(0,0%,10%) -ms-linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
-    background: hsl(0,0%,10%) linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
-}
-
-.filter .matte-Button.selected {
-    color: hsla(0,0%,100%,.9);
-    background: hsl(0,100%,50%) -webkit-linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
-    background: hsl(0,100%,50%) -moz-linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
-    background: hsl(0,100%,50%) -ms-linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
-    background: hsl(0,100%,50%) linear-gradient(top, hsla(0,0%,100%,.15), hsla(0,0%,0%,.3) );
-}*/
-
 .filter {
     position: fixed;
     background: black;
-    overflow: hidden;
+    z-index: 2;
 }
 .filter .matte-Button {
     display: block;
@@ -72,8 +24,15 @@
     opacity: .5;
     height: auto;
     border-radius: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-.filter .matte-Button:after {
+.filter .matte-Button:active,
+.filter .matte-Button.active,
+.filter .matte-Button:focus {
+    background-color: #333;
+    opacity: .6;
+}
+.filter .matte-Button:before {
     content: "";
     position: absolute;
     width: 32px;
@@ -82,13 +41,13 @@
     background-repeat: no-repeat;
     background-size: 32px 332px;
 }
-.filter .matte-Button.in_theaters:after {
+.filter .matte-Button.in_theaters:before {
     background-position: 0 -100px;
 }
-.filter .matte-Button.upcoming:after {
+.filter .matte-Button.upcoming:before {
     background-position: 0 -200px;
 }
-.filter .matte-Button.rentals:after {
+.filter .matte-Button.rentals:before {
     background-position: 0 -300px;
 }
 .filter .matte-Button.selected {
@@ -99,15 +58,60 @@
     position: fixed;
     overflow: hidden;
 }
-@media (min-width: 501px) and (min-height: 501px) {
+.details-fade-out{
+    opacity: 0;
+}
+@media (min-width: 501px) and (max-height: 660px) and (min-height: 501px) {
+    .logo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        display: block;
+        margin-top: -340px;
+        margin-left: -210.75px;
+        width: 421.5px;
+        height: 172.5px;
+        z-index: 3;
+        padding: 0;
+        pointer-events: none;
+        display: none;
+    }
     .filter {
-        top: 20px;
-        left: 20px;
+        top: 50%;
+        left: 50%;
+        margin-top: -248px;
+        margin-left: -244px;
+        background: none;
     }
     .filter .matte-Button {
         float: left;
-        width: 150px;
-        height: 64px;
+        margin-left: 3px;
+        width: 118px;
+        height: 40px;
+        padding-bottom: 16px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        border-radius: 3px;
+        border: 1px solid rgba(255,255,255,.15);
+    }
+    .filter .matte-Button:before {
+        position: relative;
+        display: inline-block;
+        left: 0;
+        top: 7px;
+        width: 32px;
+        height: 24px;
+        background-size: 24px 249px;
+    }
+    .filter .matte-Button.in_theaters:before {
+        background-position: 0 -75px;
+    }
+    .filter .matte-Button.upcoming:before {
+        background-position: 0 -150px;
+    }
+    .filter .matte-Button.rentals:before {
+        background-position: 0 -225px;
     }
     .facadeWindow {
         top: 0;
@@ -115,14 +119,118 @@
         right: 0;
         bottom: 0;
     }
+    .facadeWindow .facade-flow {
+        margin-top: -530px;
+    }
+    .details {
+        position: fixed;
+        z-index: 3;
+        bottom: 10px;
+        width: 500px;
+        left: 50%;
+        margin-left: -250px;
+        height: 180px;
+        -webkit-transform: translate3d(0,119px,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-transition: opacity .35s, -webkit-transform .35s;
+        -moz-transition: opacity .35s, -moz-transform .35s;
+        -ms-transition: opacity .35s, -ms-transform .35s;
+        transition: opacity .35s, transform .35s;
+    }
+    .details.expanded {
+        -webkit-transform: translate3d(0,0,0);
+    }
+}
+@media (min-width: 501px) and (min-height: 660px) {
+    .logo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        display: block;
+        margin-top: -365px;
+        margin-left: -210.75px;
+        width: 421.5px;
+        height: 172.5px;
+        z-index: 3;
+        padding: 0;
+        pointer-events: none;
+    }
+    .filter {
+        top: 50%;
+        left: 50%;
+        margin-top: -228px;
+        margin-left: -242px;
+        background: none;
+    }
+    .filter .matte-Button {
+        float: left;
+        margin-left: 3px;
+        width: 118px;
+        height: 40px;
+        padding-bottom: 16px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        border-radius: 3px;
+        border: 1px solid rgba(255,255,255,.15);
+    }
+    .filter .matte-Button:before {
+        position: relative;
+        display: inline-block;
+        left: 0;
+        top: 7px;
+        width: 32px;
+        height: 24px;
+        background-size: 24px 249px;
+    }
+    .filter .matte-Button.in_theaters:before {
+        background-position: 0 -75px;
+    }
+    .filter .matte-Button.upcoming:before {
+        background-position: 0 -150px;
+    }
+    .filter .matte-Button.rentals:before {
+        background-position: 0 -225px;
+    }
+    .facadeWindow {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .facadeWindow .facade-flow {
+        margin-top: -525px;
+    }
+    .details {
+        position: fixed;
+        z-index: 3;
+        top: 50%;
+        width: 500px;
+        left: 50%;
+        margin-left: -250px;
+        margin-top: 148px;
+        height: 180px;
+        -webkit-transition: opacity .35s, -webkit-transform .35s;
+        -moz-transition: opacity .35s, -moz-transform .35s;
+        -ms-transition: opacity .35s, -ms-transform .35s;
+        transition: opacity .35s, transform .35s;
+    }
+    .details .title:before {
+        display: none;
+    }
 }
 @media (max-width: 500px) and (orientation: portrait) {
+    .logo {
+        display: none;
+    }
     .filter {
         bottom: 0;
         left: 0;
         right: 0;
         height: 64px;
-        padding: 0 8px;
+        padding: 0;
         display: -webkit-box;
         -webkit-box-orient: horizontal;
     }
@@ -132,7 +240,7 @@
         line-height: 100px;
         font-size: 11px;
     }
-    .filter .matte-Button:after {
+    .filter .matte-Button:before {
         left: 50%;
         top: 8px;
         margin-left: -16px;
@@ -143,8 +251,34 @@
         right: 0;
         bottom: 64px;
     }
+    .facadeWindow .facade-flow {
+        margin-top: -525px;
+    }
+    .details {
+        position: fixed;
+        z-index: 1;
+        bottom: 64px;
+        left: 0;
+        right: 0;
+        height: 180px;
+        border-radius: 0;
+        -webkit-transform: translate3d(0,137px,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-transition: opacity .35s, -webkit-transform .35s;
+        -moz-transition: opacity .35s, -moz-transform .35s;
+        -ms-transition: opacity .35s, -ms-transform .35s;
+        transition: opacity .35s, transform .35s;
+    }
+    .details.expanded {
+        -webkit-transform: translate3d(0,0,0);
+    }
 }
 @media (max-height: 500px) and (orientation: landscape) {
+    .logo {
+        display: none;
+    }
     .filter {
         top: 0;
         left: 0;
@@ -161,7 +295,7 @@
         font-size: 14px;
         white-space: nowrap;
     }
-    .filter .matte-Button:after {
+    .filter .matte-Button:before {
         left: 8px;
         top: 50%;
         margin-top: -16px;
@@ -173,19 +307,41 @@
         bottom: 0;
     }
     .facadeWindow .facade-flow {
-        top: -80%;
+        top: -65%;
         left: 0;
-        bottom: -80%;
+        bottom: -65%;
         right: 0;
-        margin-top: 0;
+        margin-top: -50px;
         height: auto;
+    }
+    .details {
+        position: fixed;
+        z-index: 3;
+        bottom: 10px;
+        left: 136px;
+        right: 10px;
+        height: 180px;
+        max-width: 600px;
+        min-width: 400px;
+        margin: auto;
+        -webkit-transform: translate3d(0,148px,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-transition: opacity .35s, -webkit-transform .35s;
+        -moz-transition: opacity .35s, -moz-transform .35s;
+        -ms-transition: opacity .35s, -ms-transform .35s;
+        transition: opacity .35s, transform .35s;
+    }
+    .details.expanded {
+        -webkit-transform: translate3d(0,0,0);
     }
 }
 
 .MontageMade {
     position: absolute;
     top: 0;
-    right: 25px;
+    left: 25px;
     width: 50px;
     height: 100px;
     overflow: hidden;
@@ -193,7 +349,6 @@
     color: transparent;
     background: url(../../assets/image/montage-made.svg) no-repeat center;
     background-size: 100% auto;
-    display: none;
 }
 
 .MontageMade:hover {

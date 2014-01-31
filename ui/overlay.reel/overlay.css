@@ -43,6 +43,17 @@
     -webkit-transform-origin: 0 0 0;
     -webkit-transform: translate3d(2368px, 0, 0) scale(-1, 1);
 }
+.Overlay .film:after {
+    content: "";
+    position: absolute;
+    width: 286px;
+    height: 288px;
+    background-image: url(popcorn.png);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    -webkit-transform-origin: 0 0 0;
+    -webkit-transform: translate3d(1760px, 600px, 0);
+}
 .Overlay .top {
     position: absolute;
     left: 1774px;
@@ -57,7 +68,7 @@
     -webkit-transform: translate3d(-251.75px, -102.25px, 1098.660519px) scale(.125, .125);
     -webkit-transform-style: preserve-3d;
 }
-.Overlay .top:after {
+.Overlay .top:before {
     content: "";
     position: absolute;
     width: 592px;

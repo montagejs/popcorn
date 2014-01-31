@@ -128,6 +128,7 @@ exports.Main = Montage.create(Component, /** @lends module:"ui/main.reel".Main# 
         value: function () {
             var self = this;
 
+            window.scrollTo(0, 0);
             // iOS 7.0.x iPhone/iPod Touch workaround
             if (navigator.userAgent.match(/(iPhone|iPod touch);.*CPU.*OS 7_0_\d/i)) {
                 window.clearTimeout(this._windowScrollTimeout);
