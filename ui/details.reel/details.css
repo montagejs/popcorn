@@ -59,13 +59,22 @@
     background: linear-gradient(top, hsla(0,0%,10%,.95), hsla(0,0%,25%,.95) );
     border-bottom: 1px solid rgba(0,0,0,.5);
     display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
     -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    box-orient: horizontal;
 }
 
 .summary > div {
     padding: 0 6px;
     text-align: center;
     -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-box-flex: 1;
+    box-flex: 1;
     border-left: 1px solid rgba(0,0,0,.3);
     color: #bbb;
 }

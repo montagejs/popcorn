@@ -235,10 +235,19 @@
         height: 64px;
         padding: 0;
         display: -webkit-box;
+        display: -moz-box;
+        display: -ms-box;
+        display: box;
         -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -ms-box-orient: horizontal;
+        box-orient: horizontal;
     }
     .filter .matte-Button {
         -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-box-flex: 1;
+        box-flex: 1;
         width: 25%;
         line-height: 100px;
         font-size: 11px;
@@ -292,10 +301,19 @@
         width: 126px;
         padding: 8px 0;
         display: -webkit-box;
+        display: -moz-box;
+        display: -ms-box;
+        display: box;
         -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -ms-box-orient: vertical;
+        box-orient: vertical;
     }
     .filter .matte-Button {
         -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-box-flex: 1;
+        box-flex: 1;
         padding-left: 48px;
         text-align: left;
         font-size: 14px;
