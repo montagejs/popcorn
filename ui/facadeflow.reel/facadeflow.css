@@ -18,6 +18,9 @@
 }
 .montage-Flow-Slot {
     -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 .flow .Image  {
     position: absolute;
