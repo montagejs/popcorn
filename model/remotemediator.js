@@ -2,6 +2,8 @@
 
 var Montage = require("montage/core/core").Montage;
 var application = require("montage/core/application").application;
+var Promise = require("montage/core/promise").Promise;
+var uuidGenerate = require("montage/core/uuid").generate;
 
 var API_KEY = "edvr96kp6mddwsasvmt269pw";
 
@@ -36,22 +38,29 @@ exports.Remotemediator = Montage.specialize({
     },
 
     jsonpCall: {
-        value: function (url, callback) {
-            var callbackName = "scriptCallback" + callback.uuid.replace(/-/g, "_"),
-                script = document.createElement("script");
+        value: function (url) {
+            var callbackName = "scriptCallback" + uuidGenerate().replace(/-/g, "_"),
+                script = document.createElement("script"),
+                deferredResponse = Promise.defer();
 
-            window[callbackName] = function () {
+            window[callbackName] = function (data) {
                 delete window[callbackName];
                 if (script.parentNode) {
                     script.parentNode.removeChild(script);
                 }
-                callback.apply(this, arguments);
+                deferredResponse.resolve(data);
+            };
+
+            script.onerror = function(error) {
+                deferredResponse.reject(error);
             };
 
             script.type = 'text/javascript';
             script.src = url + "&callback=" + callbackName;
-            // naughty...
             document.head.appendChild(script);
+
+            return deferredResponse.promise;
+
         }
     },
 
@@ -59,83 +68,65 @@ exports.Remotemediator = Montage.specialize({
         value: function (title, callback) {
 
             var searchString = title.split(' ').join('+'),
-                 searchUrl = this.TRAILERS_FEED.replace("%s", searchString);
+                searchUrl = this.TRAILERS_FEED.replace("%s", searchString);
 
-            this.jsonpCall(searchUrl, function (event) {
-                callback(event.feed.entry[0].media$group.yt$videoid.$t);
-            });
+            this.jsonpCall(search_url).then(function (response) {
+                callback(response.feed.entry[0].media$group.yt$videoid.$t);
+            }).done();
         }
 
     },
 
     loadLatestBoxofficeMovies: {
         value: function () {
-            this.jsonpCall(this.BOXOFFICE_FEED, this.latestBoxofficeMoviesCallback);
-        }
-    },
-
-    latestBoxofficeMoviesCallback: {
-        value: function (event) {
-            var movies = event.movies;
-            if( !movies ){
-                alert( "flixter api error, please try again" );
-            } else {
-                application.dispatchEventNamed("remoteDataReceived", true, true, { type: "latestBoxofficeMovies", data: movies });
-            }
+            this.jsonpCall(this.BOXOFFICE_FEED)
+                .then(function (response) {
+                    return response.movies;
+                }).then(function (movies) {
+                    application.dispatchEventNamed("remoteDataReceived", true, true, {
+                        type: "latestBoxofficeMovies", data: movies
+                    });
+                }).done();
         }
     },
 
     loadUpcomingMovies: {
-        value: function (){
-            this.jsonpCall(this.UPCOMING_FEED, this.upcomingMoviesCallback);
-        }
-    },
-
-    upcomingMoviesCallback: {
-        value: function (event) {
-            var movies = event.movies;
-            if (!movies){
-                alert( "flixter api error, please try again" );
-            } else {
-                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "upcomingMovies", data: movies });
-            }
-
+        value: function () {
+            this.jsonpCall(this.UPCOMING_FEED)
+                .then(function (response) {
+                    return response.movies;
+                }).then(function (movies) {
+                    application.dispatchEventNamed("remoteDataReceived", true, true, {
+                        type: "upcomingMovies", data: movies
+                    });
+                }).done();
         }
     },
 
     loadTopDvdRentals: {
         value: function () {
-            this.jsonpCall(this.TOPRENTALS_FEED, this.topDvdRentalsCallback);
+            this.jsonpCall(this.TOPRENTALS_FEED)
+                .then(function (response) {
+                    return response.movies;
+                }).then(function (movies) {
+                    application.dispatchEventNamed("remoteDataReceived", true, true, {
+                        type: "topDvdRentals", data: movies
+                    });
+                }).done();
         }
 
-    },
-
-    topDvdRentalsCallback: {
-        value: function (event) {
-            var movies = event.movies;
-            if (!movies){
-                alert( "flixter api error, please try again" );
-            } else {
-                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "topDvdRentals", data: movies });
-            }
-
-        }
     },
 
     loadInTheaters: {
-        value: function () {
-            this.jsonpCall(this.INTHEATERS_FEED, this.inTheatersCallback);
-        }
-    },
-
-    inTheatersCallback: {
-        value: function (event) {
-            var movies = event.movies;
-            if (!movies) {
-                alert( "flixter api error, please try again" );
-            } else {
-                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "inTheaters", data: movies });
-            }
+        value: function (){
+            this.jsonpCall(this.INTHEATERS_FEED)
+                .then(function (response) {
+                    return response.movies;
+                }).then(function (movies) {
+                    application.dispatchEventNamed("remoteDataReceived", true, true, {
+                        type: "inTheaters", data: movies
+                    });
+                }).done();
         }
     }
 });
