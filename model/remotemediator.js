@@ -66,6 +66,30 @@ exports.Remotemediator = Montage.specialize({
         }
     },
 
+    xhrCall: {
+        value: function (url) {
+            var deferredResponse = Promise.defer();
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", url, true);
+            xhr.responseType = "json";
+
+            xhr.onload = function(event) {
+                try {
+                    if (200 === this.status) {
+                        deferredResponse.resolve(typeof this.response === "string" ? JSON.parse(this.response) : this.response);
+                    } else {
+                        deferredResponse.reject(new Error(this.status + ": " + this.response));
+                    }
+                } catch(error) {}
+            };
+
+            xhr.send();
+            return deferredResponse.promise;
+        }
+    },
+
     searchYoutubeTrailer: {
         value: function (title, callback) {
 
