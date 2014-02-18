@@ -49,6 +49,7 @@ exports.Main = Component.specialize({
             ];
 
             this._initialDataLoad.then(function () {
+                self.dispatchEventNamed("initialDataReady", true);
                 self.canDrawGate.setField("latestBoxofficeMovies", true);
                 self.changeCategory("latestBoxofficeMovies");
             }).done();

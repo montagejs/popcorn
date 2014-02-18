@@ -9,7 +9,7 @@ exports.Facadeflow = Component.specialize({
             var controller = RangeController.create();
             controller.defineBinding("content", {"<-": "category", source: this});
             this.buttonController = controller;
-            this.application.addEventListener( "dataReceived", this, false);
+            this.application.addEventListener( "initialDataReady", this, false);
         }
     },
 
@@ -124,7 +124,7 @@ exports.Facadeflow = Component.specialize({
         }
     },
 
-    handleDataReceived: {
+    handleInitialDataReady: {
         value: function () {
             // do it manually to avoid fade out effect
             this.category = this.latestBoxofficeMovies;

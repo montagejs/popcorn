@@ -75,7 +75,7 @@ exports.Remotemediator = Montage.specialize({
             xhr.open("GET", url, true);
             xhr.responseType = "json";
 
-            xhr.onload = function(event) {
+            xhr.onload = function () {
                 try {
                     if (200 === this.status) {
                         deferredResponse.resolve(typeof this.response === "string" ? JSON.parse(this.response) : this.response);
