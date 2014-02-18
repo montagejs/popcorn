@@ -30,10 +30,12 @@ exports.Remotemediator = Montage.specialize({
 
     load: {
         value: function () {
-            this.loadLatestBoxofficeMovies();
-            this.loadUpcomingMovies();
-            this.loadTopDvdRentals();
-            this.loadInTheaters();
+            var boxOfficePromise = this.loadLatestBoxofficeMovies();
+            this.loadUpcomingMovies().done();
+            this.loadTopDvdRentals().done();
+            this.loadInTheaters().done();
+
+            return boxOfficePromise;
         }
     },
 
@@ -70,7 +72,7 @@ exports.Remotemediator = Montage.specialize({
             var searchString = title.split(' ').join('+'),
                 searchUrl = this.TRAILERS_FEED.replace("%s", searchString);
 
-            this.jsonpCall(search_url).then(function (response) {
+            this.jsonpCall(searchUrl).then(function (response) {
                 callback(response.feed.entry[0].media$group.yt$videoid.$t);
             }).done();
         }
@@ -79,54 +81,58 @@ exports.Remotemediator = Montage.specialize({
 
     loadLatestBoxofficeMovies: {
         value: function () {
-            this.jsonpCall(this.BOXOFFICE_FEED)
+            return this.jsonpCall(this.BOXOFFICE_FEED)
                 .then(function (response) {
                     return response.movies;
                 }).then(function (movies) {
                     application.dispatchEventNamed("remoteDataReceived", true, true, {
-                        type: "latestBoxofficeMovies", data: movies
+                        type: "latestBoxofficeMovies",
+                        data: movies
                     });
-                }).done();
+                });
         }
     },
 
     loadUpcomingMovies: {
         value: function () {
-            this.jsonpCall(this.UPCOMING_FEED)
+            return this.jsonpCall(this.UPCOMING_FEED)
                 .then(function (response) {
                     return response.movies;
                 }).then(function (movies) {
                     application.dispatchEventNamed("remoteDataReceived", true, true, {
-                        type: "upcomingMovies", data: movies
+                        type: "upcomingMovies",
+                        data: movies
                     });
-                }).done();
+                });
         }
     },
 
     loadTopDvdRentals: {
         value: function () {
-            this.jsonpCall(this.TOPRENTALS_FEED)
+            return this.jsonpCall(this.TOPRENTALS_FEED)
                 .then(function (response) {
                     return response.movies;
                 }).then(function (movies) {
                     application.dispatchEventNamed("remoteDataReceived", true, true, {
-                        type: "topDvdRentals", data: movies
+                        type: "topDvdRentals",
+                        data: movies
                     });
-                }).done();
+                });
         }
 
     },
 
     loadInTheaters: {
         value: function (){
-            this.jsonpCall(this.INTHEATERS_FEED)
+            return this.jsonpCall(this.INTHEATERS_FEED)
                 .then(function (response) {
                     return response.movies;
                 }).then(function (movies) {
                     application.dispatchEventNamed("remoteDataReceived", true, true, {
-                        type: "inTheaters", data: movies
+                        type: "inTheaters",
+                        data: movies
                     });
-                }).done();
+                });
         }
     }
 });

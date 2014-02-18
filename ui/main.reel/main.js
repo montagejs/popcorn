@@ -22,20 +22,24 @@ exports.Main = Component.specialize({
         value: null
     },
 
+    _initialDataLoad: {
+        value: null
+    },
+
     constructor: {
         value: function Main () {
             this.application.addEventListener( "remoteDataReceived", this, false);
             this.application.addEventListener( "openTrailer", this, false);
 
             this.canDrawGate.setField("latestBoxofficeMovies", false);
-
-            this.remoteMediator.load();
+            this._initialDataLoad = this.remoteMediator.load();
         }
     },
 
     templateDidLoad: {
         value: function () {
-            var templateObjects = this.templateObjects;
+            var templateObjects = this.templateObjects,
+                self = this;
 
             this._categoryButtonGroup = [
                 templateObjects.latest,
@@ -43,21 +47,17 @@ exports.Main = Component.specialize({
                 templateObjects.dvd,
                 templateObjects.upcoming
             ];
+
+            this._initialDataLoad.then(function () {
+                self.canDrawGate.setField("latestBoxofficeMovies", true);
+                self.changeCategory("latestBoxofficeMovies");
+            }).done();
         }
     },
 
     handleRemoteDataReceived: {
-        value: function (event) {
-            var data = event.detail.data,
-                type = event.detail.type;
-
-            this.appData[type] = data;
-
-            if( type === "latestBoxofficeMovies" ){
-                this.canDrawGate.setField("latestBoxofficeMovies", true);
-                this.dispatchEventNamed("dataReceived", true);
-                this.changeCategory(type);
-            }
+        value: function(event){
+            this.appData[event.detail.type] = event.detail.data;
         }
     },
 
@@ -82,9 +82,11 @@ exports.Main = Component.specialize({
         value: function (category) {
             var buttons = this._categoryButtonGroup;
 
-            this.categoryId = category;
-            for (var i = 0; i < buttons.length; i++) {
-                buttons[i].pressed = (buttons[i].category === category);
+            if (buttons) {
+                this.categoryId = category;
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].pressed = (buttons[i].category === category);
+                }
             }
         }
     },
