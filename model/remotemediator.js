@@ -58,7 +58,7 @@ exports.Remotemediator = Montage.specialize({
             };
 
             script.type = 'text/javascript';
-            script.src = url + "&callback=" + callbackName;
+            script.src = url + (url.indexOf("?") > -1 ? "&" : "?") + "callback=" + callbackName;
             document.head.appendChild(script);
 
             return deferredResponse.promise;
