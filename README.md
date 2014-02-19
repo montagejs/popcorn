@@ -1,33 +1,59 @@
-{{name}}
-==============
+Popcorn
+===============
 
-This is the Montage app template.
+![Screenshot](assets/image/screenshot.jpg)
 
-Note: Before working on your app you will need to add montage to it.
+[Live Demo](http://montagejs.org/apps/popcorn/)
 
-```
-npm install .
-```
+This demo application showcases how to structure and optimize a MontageJS application for tablets.
 
-Layout
-------
+##Installation
 
-The template contains the following files and directories:
+To run this demo locally you need:
 
-* `index.html`
-* `package.json` – Describes your app and its dependencies
-* `README.markdown` – This readme. Replace the current content with a description of your app
-* `ui/` – Directory containing all the UI .reel directories.
-  * `main.reel` – The main interface component
-* `core/` – Directory containing all core code for your app.
-* `node_modules/` – Directory containing all npm packages needed, including Montage. Any packages here must be included as `dependencies` in `package.json` for the Montage require to find them.
-* `assets/` – Assets such as global styles and images for your app
-* `test/` – Directory containing tests for your app.
-  * `all.js` – Module that point the test runner to all your jasmine specs.
-* `run-tests.html` – Page to run jasmine tests manually in your browser
-* `testacular.conf.js` – This is the testacular configuration file. You can start testacular by running `node_modules/testacular/bin/testacular start`
+* A web server of your choice. MontageJS applications are client-side applications with no particular back-end dependency.
+* Node.js and npm. MontageJS uses Node.js and npm for its developer tools and for code dependency management.
+* Cloned GitHub repo of this demo.
 
-Create the following directories if you need them:
+First, if you haven't done so already, [download](http://nodejs.org/download/) and run the prebuilt Node.js installer for your platform from the Node.js website to install npm.
 
-* `locale/` – Directory containing localized content.
-* `scripts/` – Directory containing other JS libraries. If a library doesn’t support the CommonJS "exports" object it will need to be loaded through a `<script>` tag.
+Then, to run the Popcorn demo locally, follow these steps:
+
+1. Clone the popcorn [GitHub repo](https://github.com/montagejs/popcorn) in your desktop.
+
+2. Use your command line tool to navigate to the cloned directory and install the modules required to run the demo:
+        
+   ```
+   cd popcorn
+   npm update
+   ```
+    
+3. Spin up your preferred HTTP server and point your browser to the associated port.
+
+    > During development MontageJS applications rely on XHR to load their various components and modules, which is why you will need a web server to serve the demo.
+
+    > If you happen to have [minit](https://github.com/montagejs/minit), the Montage Initializer, installed (`npm install minit -g`) you can run `minit serve` from within the demo directory to set up a server on demand.
+
+
+## Application Structure
+
+Folder / File | Description |
+------------ | ------------- 
+assets | Contains global styles and images for the application.
+model | Contains the data model.
+index.html | Is the entry-point HTML document.
+LICENSE.md | Contains copyright information.
+package.json | Describes your app and its dependencies.
+README.md | Provides information about the demo application and how to install it.
+ui | Contains the user interface components of the demo application.
+
+## Contact Us
+
+Got questions? Join us on [irc.freenode.net#montage](http://webchat.freenode.net/?channels=montage).
+
+Got feedback or want to report a bug? Let us know by creating a new [GitHub issue](https://github.com/montagejs/popcorn).
+
+## Credit
+
+This demo application was created by [MontageJS](http://montagejs.org).
+
