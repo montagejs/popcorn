@@ -82,7 +82,20 @@ exports.Remotemediator = Montage.specialize({
                     } else {
                         deferredResponse.reject(new Error(this.status + ": " + this.response));
                     }
-                } catch(error) {}
+                } catch(error) {
+                    console.log("Error loading the feed: " , error);
+                    deferredResponse.reject(new Error("Error loading the feed: " + error));
+                }
+            };
+
+            xhr.onerror = function(event) {
+                console.log("Error loading the feed: " , event);
+                deferredResponse.reject(new Error("Error loading the feed: " + event));
+            };
+
+            xhr.onabort = function(event) {
+                console.log("Abort loading the feed: " , event);
+                deferredResponse.reject(new Error("Abort loading the feed: " + event));
             };
 
             xhr.send();
