@@ -1,82 +1,46 @@
-/* @override http://localhost:8082/montage-projects/ui/facadeflow.reel/facadeflow.css */
-
 .facade-flow  {
-	position: relative;
-	margin-top: 40px;
-    width: 1024px;
-    height: 425px;
-    background: url(film-bottom.png);
+    position: absolute;
+    top: 50%;
+    margin-top: -500px;
+    left: 0;
+    right: 0;
+    height: 1000px;
 }
-.facade-flow .flow {
-    position: relative;
-    overflow: visible;
+.facade-flow .flow .montage-Flow-Repetition {
     opacity: 1;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -ms-transition-duration: .5s;
-    transition-duration: .5s;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    transition: opacity .5s;
 }
-.flow2 {
-    width: 1024px;
-    height: 425px;
-}
-.flow-fade-out{
+.facade-flow .flow.flow-fade-out .montage-Flow-Repetition {
     opacity: 0;
 }
-
-.film {
-    position: absolute;
-    width: 1024px;
-	height: 425px;
-    top: 0;
-    left: 0;
-    background: url(film-top.png);
-    pointer-events: none;
+.montage-Flow-Slot {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 .flow .Image  {
     position: absolute;
     width: 180px;
     height: 267px;
-    margin-left: -96px;
-    margin-top: -136px;
-    border: 6px solid hsl(0,0%,0%);
-    box-sizing: content-box;
-    -moz-box-sizing: content-box;
+    margin-left: -90px;
+    margin-top: -130px;
     cursor: pointer;
-    border-radius: 8px;
-    //box-shadow: inset 0 0 2px hsla(0,0%,100%,.5), 0 6px 20px rgba(0,0,0,.7);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
-
 .flow .Image:before {
     content: "";
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    border-radius: 3px;
-    background-image: -webkit-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.15) 50%, hsla(0,0%,100%,0) 50% );
-    background-image: -moz-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.15) 50%, hsla(0,0%,100%,0) 50% );
-    background-image: -ms-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.15) 50%, hsla(0,0%,100%,0) 50% );
-    background-image: linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.15) 50%, hsla(0,0%,100%,0) 50% );
+    top: -26px;
+    left: -33px;
+    width: 246px;
+    height: 332px;
+    background-image: url(frame.png);
+    background-size: 246px 332px;
+    background-repeat: no-repeat;
 }
-
-.details  {
-    height: 280px;
-    margin: 0 auto;
-    -webkit-transform: translate3d(0,-30px,0);
-    -moz-transform: translate3d(0,-30px,0);
-    -ms-transform: translate3d(0,-30px,0);
-    transform: translate3d(0,-30px,0);
-    -webkit-transition: opacity .5s, -webkit-transform .5s;
-    -moz-transition: opacity .5s, -moz-transform .5s;
-    -ms-transition: opacity .5s, -ms-transform .5s;
-    transition: opacity .5s, transform .5s;
-}
-
-.details-fade-out{
-    opacity: 0;
-    -webkit-transform: translate3d(0,-20px,0);
-    -moz-transform: translate3d(0,-20px,0);
-    -ms-transform: translate3d(0,-20px,0);
-    transform: translate3d(0,-20px,0);
-}
-
-

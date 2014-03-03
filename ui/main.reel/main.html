@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Main</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link href='http://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
     <script type="text/montage-serialization">
     {
         "owner": {
@@ -16,7 +15,8 @@
         "facadeflow": {
             "prototype": "ui/facadeflow.reel",
             "properties": {
-                "element": {"#": "facade-flow"}
+                "element": {"#": "facade-flow"},
+                "details": {"@": "details"}
             },
             "bindings": {
                 "latestBoxofficeMovies": {"<-": "@owner.appData.latestBoxofficeMovies" },
@@ -24,6 +24,16 @@
                 "topDvdRentals": {"<-": "@owner.appData.topDvdRentals" },
                 "inTheaters": {"<-": "@owner.appData.inTheaters" },
                 "categoryId": {"<-": "@owner.categoryId"}
+            }
+        },
+
+        "details": {
+            "prototype": "ui/details.reel",
+            "properties": {
+                "element": {"#": "details"}
+            },
+            "bindings": {
+                "data": {"<-": "@facadeflow.selectedMovie" }
             }
         },
 
@@ -102,20 +112,22 @@
 </head>
 <body>
     <div data-montage-id="main" class="Main">
-        <div data-montage-id="facade" class="facade">
-            <header class="header">
-                <img class="logo" src="../../assets/image/logo.png" alt="logo" />
-                <div class="filter matte-ButtonGroup">
-                    <button data-montage-id="latest">Box Office</button>
-                    <button data-montage-id="theaters">In Theaters</button>
-                    <button data-montage-id="upcoming">Upcoming</button>
-                    <button data-montage-id="dvd">DVD Rentals</button>
-                </div>
-            </header>
-            <div data-montage-id="facade-flow" class="facade-flow"></div>
-            <div data-montage-id="popup" class="popup"></div>
+        <img class="logo" src="../../assets/image/logo.png" alt="logo" />
+        <div class="filter">
+            <button data-montage-id="latest" class="box_office">Box office</button>
+            <button data-montage-id="theaters" class="in_theaters">In theaters</button>
+            <button data-montage-id="upcoming" class="upcoming">Upcoming</button>
+            <button data-montage-id="dvd" class="rentals">Rentals</button>
         </div>
+        <div class="facadeWindow">
+            <div data-montage-id="facade" class="facade">
+                <div data-montage-id="facade-flow" class="facade-flow"></div>
+            </div>
+            <div data-montage-id="details" class="details"></div>
+        </div>
+
         <a class="MontageMade" href="http://montagejs.org">Made with Montage</a>
+        <div data-montage-id="popup" class="popup"></div>
     </div>
 </body>
 </html>

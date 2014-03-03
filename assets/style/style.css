@@ -12,18 +12,12 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
-    margin: 0;
+    background: #000;
     overflow: hidden;
-    background:    #000;
 }
 
 #montage-app-bootstrapper {
-    display: none;
     padding-top: 200px;
     color: white;
     text-align: center;
@@ -39,7 +33,6 @@ body {
 }
 
 #montage-app-loader {
-    display: none;
     text-align: center;
     color: #777;
     font: 20px/1.8em "Lucida Grande", Lucida, Verdana, sans-serif;

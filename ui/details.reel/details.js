@@ -79,6 +79,11 @@ exports.Details = Montage.create(Component, {
                 }else{
                     this.cImage.style.backgroundPosition = '0px -100px'
                 }
+                if (this._isDetailsExpanded) {
+                    this._element.classList.add("expanded");
+                } else {
+                    this._element.classList.remove("expanded");
+                }
             }
         }
     },
@@ -92,6 +97,17 @@ exports.Details = Montage.create(Component, {
     handleTrailerButtonAction: {
         value: function() {
             this.dispatchEventNamed("openTrailer", true, true, this.data.title);
+        }
+    },
+
+    _isDetailsExpanded: {
+        value: false
+    },
+
+    handleExpandButtonAction: {
+        value: function() {
+            this._isDetailsExpanded = !this._isDetailsExpanded;
+            this.needsDraw = true;
         }
     }
 });

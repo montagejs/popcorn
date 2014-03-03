@@ -130,27 +130,6 @@ exports.Facadeflow = Montage.create( Component, {
         }
     },
 
-    pointInCircleAt: { // returns a point in a unit radius circle with center at origin for a given angle
-        value: function (angle) {
-            return [Math.cos(angle), Math.sin(angle)];
-        }
-    },
-
-    tangentInCircleAt: { // returns normalized tangent vector for a point in a circle at a given angle
-        value: function (angle) {
-            return [-Math.sin(angle), Math.cos(angle)];
-        }
-    },
-
-    scaleVector: {
-        value: function (vector, scale) {
-            return [
-                vector[0] * scale,
-                vector[1] * scale
-            ];
-        }
-    },
-
     _changeCategory: {
         value: function(categoryId) {
             var self = this;
@@ -173,7 +152,7 @@ exports.Facadeflow = Montage.create( Component, {
                 self.detailsFadeOut = false;
                 self.needsDraw = true;
 
-            }, 500 );
+            }, 800 );
         }
     },
 
@@ -191,7 +170,7 @@ exports.Facadeflow = Montage.create( Component, {
     draw: {
         value: function (event) {
             var flow = this.templateObjects.flow,
-                details = this.templateObjects.details;
+                details = this.details;
 
             if( this._fadeIn ){
                 flow.element.classList.remove( 'flow-fade-out');
@@ -216,54 +195,6 @@ exports.Facadeflow = Montage.create( Component, {
             }
 
         }
-    },
-
-    enterDocument: {
-        value: function(firstTime) {
-            if (!firstTime) {
-                return;
-            }
-
-            var pagesKnots = [],
-                point,
-                tangent,
-                angle,
-                radius = 480,
-                bezierHandlerLength = .130976446, // magic number, optimized length of a handler to create a 16-segments cubic bezier unit radius circle
-                i,
-                flow = this.templateObjects.flow;
-
-            for (i = 0; i <= 8; i++) {
-                angle = Math.PI - i * Math.PI / 8;
-                point = this.scaleVector(this.pointInCircleAt(angle), radius);
-                tangent = this.scaleVector(this.tangentInCircleAt(angle), radius * bezierHandlerLength);
-                pagesKnots.push(
-                    {
-                        "knotPosition": [point[0], 0, -point[1]],
-                        "previousHandlerPosition": [point[0] + tangent[0], 0, -point[1] - tangent[1]],
-                        "nextHandlerPosition": [point[0] - tangent[0], 0, -point[1] + tangent[1]],
-                        "previousDensity": 1,
-                        "nextDensity": 1,
-                        "rotateY": angle - Math.PI / 2
-                    }
-                );
-            }
-            pagesKnots[4].knotPosition[2] = -200;
-            pagesKnots[4].nextHandlerPosition[2] = -200;
-            pagesKnots[4].previousHandlerPosition[2] = -200;
-            flow.cameraPosition = [0, 0, 400];
-
-            var y = 0, z = 0;
-            flow.paths = [
-                {
-                    "knots": pagesKnots,
-                    "headOffset": 4,
-                    "tailOffset": 4,
-                    "units": {
-                        "rotateY": "rad"
-                    }
-                }
-            ];
-        }
     }
+
 });
