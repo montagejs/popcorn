@@ -65,6 +65,16 @@ POSSIBILITY OF SUCH DAMAGE.
                 }
             },
 
+            "maturity": {
+                "prototype": "montage/ui/text.reel",
+                "properties": {
+                    "element": {"#": "maturity-content"}
+                },
+                "bindings": {
+                    "value": {"<-": "@owner.data.mpaa_rating" }
+                }
+            },
+
             "runtime": {
                 "prototype": "montage/ui/text.reel",
                 "properties": {
@@ -147,6 +157,7 @@ POSSIBILITY OF SUCH DAMAGE.
               <h2 data-montage-id="title" class="title"></h2>
               <p>
                   <time data-montage-id="dates-content" class="score"></time>
+                  <span data-montage-id="maturity-content" class="maturity"></span>
                   Runtime <span data-montage-id="runtime-content" class="score"></span>
                   Audience <span data-montage-id="a-image" class="rt-icon icon-audience"></span>
                            <span data-montage-id="audience-score-content" class="score"></span>
