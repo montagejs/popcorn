@@ -35,6 +35,16 @@
                 }
             },
 
+            "maturity": {
+                "prototype": "montage/ui/text.reel",
+                "properties": {
+                    "element": {"#": "maturity-content"}
+                },
+                "bindings": {
+                    "value": {"<-": "@owner.data.mpaa_rating" }
+                }
+            },
+
             "runtime": {
                 "prototype": "montage/ui/text.reel",
                 "properties": {
@@ -128,7 +138,7 @@
             <h2 data-montage-id="title" class="title"></h2>
             <div class="summary">
                 <div>
-                    Release: <time data-montage-id="dates-content" class="score"></time>
+                    Release: <time data-montage-id="dates-content" class="score"></time><span data-montage-id="maturity-content" class="maturity"></span>
                 </div>
                 <div>
                     Duration: <span data-montage-id="runtime-content" class="score"></span>′
