@@ -1,39 +1,11 @@
-/* <copyright>
-Copyright (c) 2012, Motorola Mobility LLC.
-All Rights Reserved.
+/*global require,alert,window,document*/
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-* Redistributions of source code must retain the above copyright notice,
-  this list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
-
-* Neither the name of Motorola Mobility LLC nor the names of its
-  contributors may be used to endorse or promote products derived from this
-  software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE.
-</copyright> */
 var Montage = require("montage/core/core").Montage;
 var application = require("montage/core/application").application;
 
 var API_KEY = "edvr96kp6mddwsasvmt269pw";
 
-exports.Remotemediator = Montage.create(Montage, {
+exports.Remotemediator = Montage.specialize({
     TRAILERS_FEED: {
         value: "https://gdata.youtube.com/feeds/api/videos?q=%s+official+trailer&max-results=1&v=2&alt=json"
     },
@@ -55,7 +27,7 @@ exports.Remotemediator = Montage.create(Montage, {
     },
 
     load: {
-        value: function() {
+        value: function () {
             this.loadLatestBoxofficeMovies();
             this.loadUpcomingMovies();
             this.loadTopDvdRentals();
@@ -64,11 +36,11 @@ exports.Remotemediator = Montage.create(Montage, {
     },
 
     jsonpCall: {
-        value: function(url, callback) {
+        value: function (url, callback) {
             var callbackName = "scriptCallback" + callback.uuid.replace(/-/g, "_"),
                 script = document.createElement("script");
 
-            window[callbackName] = function(data) {
+            window[callbackName] = function () {
                 delete window[callbackName];
                 if (script.parentNode) {
                     script.parentNode.removeChild(script);
@@ -84,94 +56,86 @@ exports.Remotemediator = Montage.create(Montage, {
     },
 
     searchYoutubeTrailer: {
-        value: function(title, callback) {
+        value: function (title, callback) {
 
-             var search_string = title.split(' ').join('+'),
-                 search_url = this.TRAILERS_FEED.replace("%s", search_string);
+            var searchString = title.split(' ').join('+'),
+                 searchUrl = this.TRAILERS_FEED.replace("%s", searchString);
 
-             this.jsonpCall(search_url, function(event) {
-                 callback(event.feed.entry[0].media$group.yt$videoid.$t);
-             });
+            this.jsonpCall(searchUrl, function (event) {
+                callback(event.feed.entry[0].media$group.yt$videoid.$t);
+            });
         }
 
     },
 
     loadLatestBoxofficeMovies: {
-        value: function( data ){
-             this.jsonpCall(this.BOXOFFICE_FEED, this.latestBoxofficeMoviesCallback);
+        value: function () {
+            this.jsonpCall(this.BOXOFFICE_FEED, this.latestBoxofficeMoviesCallback);
         }
-
     },
 
     latestBoxofficeMoviesCallback: {
-        value: function(event) {
+        value: function (event) {
             var movies = event.movies;
-
             if( !movies ){
                 alert( "flixter api error, please try again" );
             } else {
-                application.dispatchEventNamed("remoteDataReceived", true, true, { type: "latestBoxofficeMovies", data: movies })
-
+                application.dispatchEventNamed("remoteDataReceived", true, true, { type: "latestBoxofficeMovies", data: movies });
             }
-
         }
     },
 
     loadUpcomingMovies: {
-        value: function( data ){
-             this.jsonpCall(this.UPCOMING_FEED, this.upcomingMoviesCallback);
+        value: function (){
+            this.jsonpCall(this.UPCOMING_FEED, this.upcomingMoviesCallback);
         }
     },
 
     upcomingMoviesCallback: {
-        value: function(event) {
+        value: function (event) {
             var movies = event.movies;
-
-            if( !movies ){
+            if (!movies){
                 alert( "flixter api error, please try again" );
             } else {
-                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "upcomingMovies", data: movies })
+                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "upcomingMovies", data: movies });
             }
 
         }
     },
 
     loadTopDvdRentals: {
-        value: function( data ){
-             this.jsonpCall(this.TOPRENTALS_FEED, this.topDvdRentalsCallback);
+        value: function () {
+            this.jsonpCall(this.TOPRENTALS_FEED, this.topDvdRentalsCallback);
         }
 
     },
 
     topDvdRentalsCallback: {
-        value: function(event) {
+        value: function (event) {
             var movies = event.movies;
-
-            if( !movies ){
+            if (!movies){
                 alert( "flixter api error, please try again" );
             } else {
-                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "topDvdRentals", data: movies })
+                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "topDvdRentals", data: movies });
             }
 
         }
     },
 
     loadInTheaters: {
-        value: function( data ){
-             this.jsonpCall(this.INTHEATERS_FEED, this.inTheatersCallback);
+        value: function () {
+            this.jsonpCall(this.INTHEATERS_FEED, this.inTheatersCallback);
         }
     },
 
     inTheatersCallback: {
-        value: function(event) {
+        value: function (event) {
             var movies = event.movies;
-
-            if( !movies ){
+            if (!movies) {
                 alert( "flixter api error, please try again" );
             } else {
-                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "inTheaters", data: movies })
+                application.dispatchEventNamed("remoteDataReceived", true, false, { type: "inTheaters", data: movies });
             }
-
         }
     }
 });
