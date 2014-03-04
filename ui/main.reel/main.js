@@ -1,19 +1,10 @@
-/**
-    @module "ui/main.reel"
-    @requires montage
-    @requires montage/ui/component
-*/
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
+/*global require*/
+
+var Component = require("montage/ui/component").Component,
     Remotemediator = require("model/remotemediator").Remotemediator,
     AppData = require("model/appdata").AppData;
 
-/**
-    Description TODO
-    @class module:"ui/main.reel".Main
-    @extends module:ui/component.Component
-*/
-exports.Main = Montage.create(Component, /** @lends module:"ui/main.reel".Main# */ {
+exports.Main = Component.specialize({
 
     appData: {
         value: AppData.create()
@@ -32,7 +23,7 @@ exports.Main = Montage.create(Component, /** @lends module:"ui/main.reel".Main# 
     },
 
     constructor: {
-        value: function Main() {
+        value: function Main () {
             this.application.addEventListener( "remoteDataReceived", this, false);
             this.application.addEventListener( "openTrailer", this, false);
 
@@ -43,7 +34,7 @@ exports.Main = Montage.create(Component, /** @lends module:"ui/main.reel".Main# 
     },
 
     templateDidLoad: {
-        value: function() {
+        value: function () {
             var templateObjects = this.templateObjects;
 
             this._categoryButtonGroup = [
@@ -56,7 +47,7 @@ exports.Main = Montage.create(Component, /** @lends module:"ui/main.reel".Main# 
     },
 
     handleRemoteDataReceived: {
-        value: function(event){
+        value: function (event) {
             var data = event.detail.data,
                 type = event.detail.type;
 
@@ -71,24 +62,24 @@ exports.Main = Montage.create(Component, /** @lends module:"ui/main.reel".Main# 
     },
 
     handleOpenTrailer: {
-        value: function(event) {
+        value: function (event) {
             var title = event.detail,
                 popup = this.templateObjects.popup;
 
-            this.remoteMediator.searchYoutubeTrailer(title, function(id) {
+            this.remoteMediator.searchYoutubeTrailer(title, function (id) {
                 popup.openTrailer(id);
             });
         }
     },
 
     handleCategoryButtonAction: {
-        value: function(action) {
+        value: function (action) {
             this.changeCategory(action.target.category);
         }
     },
 
     changeCategory: {
-        value: function(category) {
+        value: function (category) {
             var buttons = this._categoryButtonGroup;
 
             this.categoryId = category;

@@ -1,42 +1,12 @@
-/* <copyright>
-Copyright (c) 2012, Motorola Mobility LLC.
-All Rights Reserved.
+/*global require*/
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-* Redistributions of source code must retain the above copyright notice,
-  this list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
-
-* Neither the name of Motorola Mobility LLC nor the names of its
-  contributors may be used to endorse or promote products derived from this
-  software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE.
-</copyright> */
-var Montage     = require("montage").Montage,
-    Component   = require("montage/ui/component").Component,
+var Component   = require("montage/ui/component").Component,
     RangeController = require("montage/core/range-controller").RangeController;
 
-exports.Facadeflow = Montage.create( Component, {
+exports.Facadeflow = Component.specialize({
     constructor: {
-        value: function Facadeflow() {
+        value: function Facadeflow () {
             var controller = RangeController.create();
-
             controller.defineBinding("content", {"<-": "category", source: this});
             this.buttonController = controller;
             this.application.addEventListener( "dataReceived", this, false);
@@ -52,20 +22,20 @@ exports.Facadeflow = Montage.create( Component, {
     },
 
     scroll: {
-        set: function(val) {
+        set: function (val) {
             this._scroll = val;
-            if ( val%1 == 0 && this.category ) {
+            if ( val%1 === 0 && this.category ) {
                 this.selectedMovie = this.category[val];
                 this.detailsFadeIn = true;
                 this.detailsFadeOut = false;
                 this.needsDraw = true;
-            } else if ( val%1 != 0 && this.category ){
+            } else if ( val%1 !== 0 && this.category ){
                 this.detailsFadeOut = true;
                 this.detailsFadeIn = false;
                 this.needsDraw = true;
             }
         },
-        get: function() {
+        get: function () {
             return this._scroll;
         }
     },
@@ -107,10 +77,10 @@ exports.Facadeflow = Montage.create( Component, {
     },
 
     switchValue: {
-        set: function(val){
+        set: function (val) {
             this._switchValue = val;
         },
-        get: function(){
+        get: function () {
             return this._switchValue;
         }
     },
@@ -119,10 +89,10 @@ exports.Facadeflow = Montage.create( Component, {
         value: null
     },
     categoryId: {
-        get: function() {
+        get: function () {
             return this._categoryId;
         },
-        set: function(value) {
+        set: function (value) {
             if (value) {
                 this._categoryId = value;
                 this._changeCategory(value);
@@ -131,21 +101,19 @@ exports.Facadeflow = Montage.create( Component, {
     },
 
     _changeCategory: {
-        value: function(categoryId) {
+        value: function (categoryId) {
             var self = this;
 
             this.detailsFadeOut = true;
             this._fadeOut = true;
             this.needsDraw = true;
             // wait .5s until the fade out effect is completed
-            setTimeout( function() {
+            setTimeout( function () {
                 if (self.templateObjects && self.templateObjects.flow) {
                     self.templateObjects.flow.scroll = 0;
                 }
-
                 self.category = self[categoryId];
                 self.selectedMovie = self.category[0];
-
                 self._fadeIn = true;
                 self._fadeOut = false;
                 self.detailsFadeIn = true;
@@ -157,7 +125,7 @@ exports.Facadeflow = Montage.create( Component, {
     },
 
     handleDataReceived: {
-        value: function (event) {
+        value: function () {
             // do it manually to avoid fade out effect
             this.category = this.latestBoxofficeMovies;
             this.selectedMovie = this.category[0];
@@ -168,7 +136,7 @@ exports.Facadeflow = Montage.create( Component, {
     },
 
     draw: {
-        value: function (event) {
+        value: function () {
             var flow = this.templateObjects.flow,
                 details = this.details;
 
@@ -188,7 +156,7 @@ exports.Facadeflow = Montage.create( Component, {
             }
 
             if( this.detailsFadeOut ){
-                if( details.element.classList.contains('details-fade-out') == false ){
+                if( details.element.classList.contains('details-fade-out') === false ){
                     details.element.classList.add('details-fade-out');
                 }
                 this.detailsFadeOut = false;
