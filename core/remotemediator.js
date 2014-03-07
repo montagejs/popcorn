@@ -7,7 +7,7 @@ var uuidGenerate = require("montage/core/uuid").generate;
 
 var API_KEY = "edvr96kp6mddwsasvmt269pw";
 
-exports.Remotemediator = Montage.specialize({
+exports.RemoteMediator = Montage.specialize({
     TRAILERS_FEED: {
         value: "https://gdata.youtube.com/feeds/api/videos?q=%s+official+trailer&max-results=1&v=2&alt=json"
     },

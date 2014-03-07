@@ -1,8 +1,8 @@
 /*global require*/
 
 var Component = require("montage/ui/component").Component,
-    Remotemediator = require("model/remotemediator").Remotemediator,
-    AppData = require("model/appdata").AppData;
+    RemoteMediator = require("core/remotemediator").RemoteMediator,
+    AppData = require("core/appdata").AppData;
 
 exports.Main = Component.specialize({
 
@@ -11,7 +11,7 @@ exports.Main = Component.specialize({
     },
 
     remoteMediator: {
-        value: Remotemediator.create()
+        value: RemoteMediator.create()
     },
 
     categoryId: {
