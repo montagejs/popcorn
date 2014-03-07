@@ -1,4 +1,3 @@
-/*global require*/
 
 var AbstractImage = require("montage/ui/base/abstract-image").AbstractImage;
 

@@ -1,4 +1,3 @@
-/*global require*/
 
 var Component = require("montage/ui/component").Component;
 

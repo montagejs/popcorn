@@ -1,4 +1,3 @@
-/*global require,alert,window,document*/
 
 var Montage = require("montage/core/core").Montage;
 var application = require("montage/core/application").application;
@@ -12,7 +11,7 @@ exports.RemoteMediator = Montage.specialize({
         value: "https://gdata.youtube.com/feeds/api/videos?q=%s+official+trailer&max-results=1&v=2&alt=json"
     },
 
-    BOXOFFICE_FEED: {
+    BOX_OFFICE_FEED: {
         value: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?limit=15&country=us&apikey=" + API_KEY
     },
 
@@ -20,17 +19,17 @@ exports.RemoteMediator = Montage.specialize({
         value: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?page_limit=30&page=1&country=us&apikey=" + API_KEY
     },
 
-    TOPRENTALS_FEED: {
+    TOP_RENTALS_FEED: {
         value: "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?limit=20&country=us&apikey=" + API_KEY
     },
 
-    INTHEATERS_FEED: {
+    IN_THEATERS_FEED: {
         value: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=30&page=1&country=us&apikey=" + API_KEY
     },
 
     load: {
         value: function () {
-            var boxOfficePromise = this.loadLatestBoxofficeMovies();
+            var boxOfficePromise = this.loadLatestBoxOfficeMovies();
             this.loadUpcomingMovies().done();
             this.loadTopDvdRentals().done();
             this.loadInTheaters().done();
@@ -105,7 +104,6 @@ exports.RemoteMediator = Montage.specialize({
 
     searchYoutubeTrailer: {
         value: function (title, callback) {
-
             var searchString = title.split(' ').join('+'),
                 searchUrl = this.TRAILERS_FEED.replace("%s", searchString);
 
@@ -116,52 +114,52 @@ exports.RemoteMediator = Montage.specialize({
 
     },
 
-    loadLatestBoxofficeMovies: {
+    loadLatestBoxOfficeMovies: {
         value: function () {
-            return this.jsonpCall(this.BOXOFFICE_FEED)
-                .then(function (response) {
-                    return response.movies;
-                }).then(function (movies) {
-                    application.dispatchEventNamed("remoteDataReceived", true, true, {
-                        type: "latestBoxofficeMovies",
-                        data: movies
-                    });
+            return this.jsonpCall(this.BOX_OFFICE_FEED)
+            .then(function (response) {
+                return response.movies;
+            }).then(function (movies) {
+                application.dispatchEventNamed("remoteDataReceived", true, true, {
+                    type: "latestBoxOfficeMovies",
+                    data: movies
                 });
+            });
         }
     },
 
     loadUpcomingMovies: {
         value: function () {
             return this.jsonpCall(this.UPCOMING_FEED)
-                .then(function (response) {
-                    return response.movies;
-                }).then(function (movies) {
-                    application.dispatchEventNamed("remoteDataReceived", true, true, {
-                        type: "upcomingMovies",
-                        data: movies
-                    });
+            .then(function (response) {
+                return response.movies;
+            }).then(function (movies) {
+                application.dispatchEventNamed("remoteDataReceived", true, true, {
+                    type: "upcomingMovies",
+                    data: movies
                 });
+            });
         }
     },
 
     loadTopDvdRentals: {
         value: function () {
-            return this.jsonpCall(this.TOPRENTALS_FEED)
-                .then(function (response) {
-                    return response.movies;
-                }).then(function (movies) {
-                    application.dispatchEventNamed("remoteDataReceived", true, true, {
-                        type: "topDvdRentals",
-                        data: movies
-                    });
+            return this.jsonpCall(this.TOP_RENTALS_FEED)
+            .then(function (response) {
+                return response.movies;
+            }).then(function (movies) {
+                application.dispatchEventNamed("remoteDataReceived", true, true, {
+                    type: "topDvdRentals",
+                    data: movies
                 });
+            });
         }
 
     },
 
     loadInTheaters: {
         value: function (){
-            return this.jsonpCall(this.INTHEATERS_FEED)
+            return this.jsonpCall(this.IN_THEATERS_FEED)
                 .then(function (response) {
                     return response.movies;
                 }).then(function (movies) {

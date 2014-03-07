@@ -1,9 +1,10 @@
-/*global require*/
 
 var Component = require("montage/ui/component").Component;
 
+var TRAILER_URL = "http://www.youtube.com/embed/%s";
+var PLACE_HOLDER = "%s";
+
 exports.Moviepopup = Component.specialize({
-    TRAILER_URL: {value: "http://www.youtube.com/embed/%s"},
 
     player: {
         value: null
@@ -21,7 +22,7 @@ exports.Moviepopup = Component.specialize({
 
     openTrailer: {
         value: function (id) {
-            this.player.src = this.TRAILER_URL.replace("%s", id);
+            this.player.src = TRAILER_URL.replace(PLACE_HOLDER, id);
             this.open();
         }
     },
@@ -44,10 +45,10 @@ exports.Moviepopup = Component.specialize({
     draw: {
         value: function () {
             if (this.opening) {
-                this.element.classList.add( "moviepopup-open");
+                this.element.classList.add("moviepopup-open");
                 this.opening = false;
             } else if (this.closing) {
-                this.element.classList.remove( "moviepopup-open");
+                this.element.classList.remove("moviepopup-open");
                 this.closing = false;
             }
         }

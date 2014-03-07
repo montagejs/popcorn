@@ -26,6 +26,9 @@
         "Map": true,
         "Set": true,
 
+        "window": true,
+        "document": true,
+
         "console": false
     }
 }

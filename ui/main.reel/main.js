@@ -1,4 +1,3 @@
-/*global require*/
 
 var Component = require("montage/ui/component").Component,
     RemoteMediator = require("core/remotemediator").RemoteMediator,
@@ -6,12 +5,22 @@ var Component = require("montage/ui/component").Component,
 
 exports.Main = Component.specialize({
 
+    constructor: {
+        value: function Main () {
+            this.application.addEventListener( "remoteDataReceived", this, false);
+            this.application.addEventListener( "openTrailer", this, false);
+
+            this.canDrawGate.setField("latestBoxOfficeMovies", false);
+            this._initialDataLoad = this.remoteMediator.load();
+        }
+    },
+
     appData: {
-        value: AppData.create()
+        value: new AppData()
     },
 
     remoteMediator: {
-        value: RemoteMediator.create()
+        value: new RemoteMediator()
     },
 
     categoryId: {
@@ -24,16 +33,6 @@ exports.Main = Component.specialize({
 
     _initialDataLoad: {
         value: null
-    },
-
-    constructor: {
-        value: function Main () {
-            this.application.addEventListener( "remoteDataReceived", this, false);
-            this.application.addEventListener( "openTrailer", this, false);
-
-            this.canDrawGate.setField("latestBoxofficeMovies", false);
-            this._initialDataLoad = this.remoteMediator.load();
-        }
     },
 
     templateDidLoad: {
@@ -50,8 +49,8 @@ exports.Main = Component.specialize({
 
             this._initialDataLoad.then(function () {
                 self.dispatchEventNamed("initialDataReady", true);
-                self.canDrawGate.setField("latestBoxofficeMovies", true);
-                self.changeCategory("latestBoxofficeMovies");
+                self.canDrawGate.setField("latestBoxOfficeMovies", true);
+                self.changeCategory("latestBoxOfficeMovies");
             }).done();
         }
     },
@@ -94,8 +93,8 @@ exports.Main = Component.specialize({
 
     /**
         iOS 7.0.x iPhone/iPod Touch workaround. After switching from portrait to landscape
-        mode, Safari shows the content fullscreen. If the top or bottom of the content is
-        clicked, navigations bars appear hiding content. This workaround reduces the height
+        mode, Safari shows the content full screen. If the top or bottom of the content is
+        clicked, navigation bars appear hiding content. This workaround reduces the height
         of the content.
     */
     _windowScroll: {

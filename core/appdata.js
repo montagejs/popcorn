@@ -3,7 +3,7 @@
 var Montage = require("montage").Montage;
 
 exports.AppData = Montage.specialize({
-    latestBoxofficeMovies: {
+    latestBoxOfficeMovies: {
         value: null
     },
 

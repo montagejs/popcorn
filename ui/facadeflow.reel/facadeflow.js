@@ -1,4 +1,3 @@
-/*global require*/
 
 var Component   = require("montage/ui/component").Component,
     RangeController = require("montage/core/range-controller").RangeController;
@@ -6,7 +5,7 @@ var Component   = require("montage/ui/component").Component,
 exports.Facadeflow = Component.specialize({
     constructor: {
         value: function Facadeflow () {
-            var controller = RangeController.create();
+            var controller = new RangeController();
             controller.defineBinding("content", {"<-": "category", source: this});
             this.buttonController = controller;
             this.application.addEventListener( "initialDataReady", this, false);
@@ -48,7 +47,7 @@ exports.Facadeflow = Component.specialize({
         value: false
     },
 
-    latestBoxofficeMovies: {
+    latestBoxOfficeMovies: {
         value: null
     },
 
@@ -127,7 +126,7 @@ exports.Facadeflow = Component.specialize({
     handleInitialDataReady: {
         value: function () {
             // do it manually to avoid fade out effect
-            this.category = this.latestBoxofficeMovies;
+            this.category = this.latestBoxOfficeMovies;
             this.selectedMovie = this.category[0];
             this.detailsFadeIn = true;
             this._fadeIn = true;

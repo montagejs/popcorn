@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="details.css">
-
     <script type="text/montage-serialization">
-        {
-            "title": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "title"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.title" }
+    {
+        "title": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "title"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.data.title" }
+            }
+        },
+
+        "description": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "description"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.data.synopsis" }
+            }
+        },
+
+        "dates": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "dates-content"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.data.release_dates.theater" }
+            }
+        },
+
+        "maturity": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "maturity-content"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.data.mpaa_rating" }
+            }
+        },
+
+        "runtime": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "runtime-content"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.data.runtime" }
+            }
+        },
+
+        "rentButton": {
+            "prototype": "matte/ui/button.reel",
+            "properties": {
+                "element": {"#": "rent-button"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
                 }
-            },
+            ]
+        },
 
-            "description": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "description"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.synopsis" }
+        "trailerButton": {
+            "prototype": "matte/ui/button.reel",
+            "properties": {
+                "element": {"#": "trailer-button"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
                 }
-            },
+            ]
+        },
 
-            "dates": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "dates-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.release_dates.theater" }
+        "expandButton": {
+            "prototype": "matte/ui/button.reel",
+            "properties": {
+                "element": {"#": "expand"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
                 }
-            },
+            ]
+        },
 
-            "maturity": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "maturity-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.mpaa_rating" }
-                }
+        "audienceScore": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "audience-score-content"}
             },
+            "bindings": {
+                "value": {"<-": "@owner.data.ratings.audience_score" }
+            }
+        },
 
-            "runtime": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "runtime-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.runtime" }
-                }
+        "criticsScore": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "critics-score-content"}
             },
+            "bindings": {
+                "value": {"<-": "@owner.data.ratings.critics_score" }
+            }
+        },
 
-            "rentButton": {
-                "prototype": "matte/ui/button.reel",
-                "properties": {
-                    "element": {"#": "rent-button"}
-                },
-                "listeners": [
-                    {
-                        "type": "action",
-                        "listener": {"@": "owner"}
-                    }
-                ]
-            },
+        "scroller": {
+            "prototype": "matte/ui/scroller.reel",
+            "properties": {
+                "element": {"#": "scroller"},
+                "hasMomentum": true
+            }
+        },
 
-            "trailerButton": {
-                "prototype": "matte/ui/button.reel",
-                "properties": {
-                    "element": {"#": "trailer-button"}
-                },
-                "listeners": [
-                    {
-                        "type": "action",
-                        "listener": {"@": "owner"}
-                    }
-                ]
-            },
-
-            "expandButton": {
-                "prototype": "matte/ui/button.reel",
-                "properties": {
-                    "element": {"#": "expand"}
-                },
-                "listeners": [
-                    {
-                        "type": "action",
-                        "listener": {"@": "owner"}
-                    }
-                ]
-            },
-
-            "audienceScore": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "audience-score-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.ratings.audience_score" }
-                }
-            },
-
-            "criticsScore": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "critics-score-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.ratings.critics_score" }
-                }
-            },
-
-            "scroller": {
-                "prototype": "matte/ui/scroller.reel",
-                "properties": {
-                    "element": {"#": "scroller"},
-                    "hasMomentum": true
-                }
-            },
-
-            "owner": {
-                "properties": {
-                    "element": {"#": "details"},
-                    "cImage": {"#": "c-image"},
-                    "aImage": {"#": "a-image"}
-                }
+        "owner": {
+            "properties": {
+                "element": {"#": "details"},
+                "cImage": {"#": "c-image"},
+                "aImage": {"#": "a-image"}
             }
         }
+    }
     </script>
 </head>
 <body>

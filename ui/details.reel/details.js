@@ -1,8 +1,8 @@
-/*global require*/
 
 var Component = require("montage/ui/component").Component;
 
 exports.Details = Component.specialize({
+
     _data: {
         value: null
     },
