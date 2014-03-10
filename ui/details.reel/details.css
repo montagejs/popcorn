@@ -94,6 +94,14 @@
     border-left: none;
 }
 
+.summary > div > div {
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    font-size: 13px;
+    line-height: 1.7em;
+    color: #777;
+}
+
 .summary * {
     white-space: nowrap;
 }
@@ -195,7 +203,7 @@
 }
 
 .rt-icon {
-    margin-left: 12px;
+    margin-bottom: 2px;
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -203,5 +211,5 @@
     background-size: 25px auto;
     background-image: url(rt_lg.png);
     background-repeat: no-repeat;
-    display: none;
+    /*display: none;*/
 }

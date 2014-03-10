@@ -68,7 +68,7 @@ exports.Details = Component.specialize({
 
     handleTrailerButtonAction: {
         value: function () {
-            this.dispatchEventNamed("openTrailer", true, true, this.data.title);
+            this.dispatchEventNamed("openTrailer", true, true, {title: this.data.title});
         }
     },
 

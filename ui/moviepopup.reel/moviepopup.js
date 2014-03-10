@@ -10,47 +10,37 @@ exports.Moviepopup = Component.specialize({
         value: null
     },
 
-    opening: {
-        value: false
-    },
-
     handleCloseButtonAction: {
         value: function () {
-            this.close();
+            this.templateObjects.overlay.hide();
         }
+    },
+
+    _trailerId: {
+        value: null
     },
 
     openTrailer: {
         value: function (id) {
-            this.player.src = TRAILER_URL.replace(PLACE_HOLDER, id);
-            this.open();
+            this._trailerId = id;
+            this.templateObjects.overlay.show();
         }
     },
 
-    open: {
-        value: function () {
-            this.opening = true;
-            this.needsDraw = true;
-        }
-    },
-
-    close: {
-        value: function () {
-            this.player.src = null;
-            this.closing = true;
-            this.needsDraw = true;
-        }
-    },
-
-    draw: {
-        value: function () {
-            if (this.opening) {
-                this.element.classList.add("moviepopup-open");
-                this.opening = false;
-            } else if (this.closing) {
-                this.element.classList.remove("moviepopup-open");
-                this.closing = false;
+    didShowOverlay: {
+        value: function (overlay) {
+            if (this._trailerId) {
+                this.player.src = TRAILER_URL.replace(PLACE_HOLDER, this._trailerId);
             }
+            overlay.classList.add('is-shown');
         }
+    },
+
+    didHideOverlay: {
+        value: function (overlay) {
+            this._trailerId = null;
+            overlay.classList.remove('is-shown');
+        }
+
     }
 });

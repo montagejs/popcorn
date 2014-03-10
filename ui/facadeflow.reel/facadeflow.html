@@ -5,6 +5,16 @@
     <link rel="stylesheet" type="text/css" href="facadeflow.css">
     <script type="text/montage-serialization">
     {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"},
+                "flow": {"@": "flow"}
+            },
+            "bindings": {
+                "scroll": {"<-": "@flow.scroll"}
+            }
+        },
+
         "flow": {
             "prototype": "montage/ui/flow.reel",
             "properties": {
@@ -105,7 +115,7 @@
                 ]
             },
             "bindings": {
-                "contentController": {"<-": "@owner.buttonController"}
+                "contentController": {"<-": "@owner._contentController"}
             }
         },
 
@@ -119,18 +129,8 @@
             }
         },
 
-        "owner": {
-            "properties": {
-                "element": {"#": "facade-flow"},
-                "flow": {"@": "flow"}
-            },
-            "bindings": {
-                "scroll": {"<-": "@flow.scroll"}
-            }
-        },
-
         "overlay": {
-            "prototype": "ui/overlay.reel",
+            "prototype": "./overlay.reel",
             "properties": {
                 "element": {"#": "overlay"}
             }
@@ -139,7 +139,7 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="facade-flow" class="facade-flow">
+    <div data-montage-id="owner" class="facade-flow">
         <div data-montage-id="overlay"></div>
         <div data-montage-id="flow" class="flow flow-fade-out">
             <div data-montage-id="image" class="Image"></div>
