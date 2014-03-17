@@ -3,9 +3,7 @@
  * @requires montage/core/core
  */
 var Montage = require("montage/core/core").Montage;
-var Promise = require("montage/core/promise").Promise;
 var RangeController = require("montage/core/range-controller").RangeController;
-var application = require("montage/core/application").application;
 
 var CategoryController = require("./category-controller").CategoryController;
 var sharedTransport = require("./jsonp-transport").shared;

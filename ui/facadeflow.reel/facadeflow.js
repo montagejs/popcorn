@@ -1,6 +1,6 @@
 
-var Component   = require("montage/ui/component").Component,
-    RangeController = require("montage/core/range-controller").RangeController;
+var Component   = require("montage/ui/component").Component;
+
 //TODO rename to Movie List
 exports.Facadeflow = Component.specialize({
     constructor: {
