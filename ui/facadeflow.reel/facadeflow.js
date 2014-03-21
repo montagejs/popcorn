@@ -157,18 +157,6 @@ exports.Facadeflow = Component.specialize({
         }
     },
 
-//    handleInitialDataReady: {
-//        value: function () {
-//            // do it manually to avoid fade out effect
-//            this._contentController = this.categoryController;
-////            this.category = this.latestBoxOffice;
-////            this.selectedMovie = this.category[0];
-//            this.detailsFadeIn = true;
-//            this._fadeIn = true;
-//            this.needsDraw = true;
-//        }
-//    },
-
     draw: {
         value: function () {
             var flow = this.templateObjects.flow,
