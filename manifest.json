@@ -1,0 +1,35 @@
+{
+    "name": "Popcorn",
+    "description": "",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "offline_enabled": true,
+    "app": {
+        "background": {
+            "scripts": [
+                "chrome-app/background.js"
+            ]
+        }
+    },
+
+    "icons": {
+        "16": "assets/icon/popcorn-16.png",
+        "128": "assets/icon/popcorn-128.png"
+    },
+
+    "sandbox": {
+        "pages": ["index.html"]
+    },
+
+    "permissions": [
+        "https://*/*",
+        "experimental",
+        "unlimitedStorage", {
+            "socket": [
+                "tcp-connect",
+                "udp-send-to",
+                "udp-bind"
+            ]
+        }
+    ]
+}
