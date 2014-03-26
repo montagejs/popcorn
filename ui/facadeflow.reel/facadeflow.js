@@ -1,20 +1,29 @@
-/*global require*/
 
-var Component   = require("montage/ui/component").Component,
-    RangeController = require("montage/core/range-controller").RangeController;
+var Component   = require("montage/ui/component").Component;
 
+//TODO rename to Movie List
 exports.Facadeflow = Component.specialize({
     constructor: {
         value: function Facadeflow () {
-            var controller = RangeController.create();
-            controller.defineBinding("content", {"<-": "category", source: this});
-            this.buttonController = controller;
-            this.application.addEventListener( "dataReceived", this, false);
+//            var controller = new RangeController();
+//            controller.defineBinding("content", {"<-": "category", source: this});
+            this.defineBinding("selectedMovie", {"<-": "categoriesController.selection.one()"});
+//            this.categoriesController = controller;
+            this.application.addEventListener( "initialDataReady", this, false);
         }
     },
 
-    selectedMovie: {
+    _selectedMovie: {
         value: null
+    },
+
+    selectedMovie: {
+        get: function () {
+            return this._selectedMovie;
+        },
+        set: function (value) {
+            this._selectedMovie = value;
+        }
     },
 
     _scroll: {
@@ -24,12 +33,11 @@ exports.Facadeflow = Component.specialize({
     scroll: {
         set: function (val) {
             this._scroll = val;
-            if ( val%1 === 0 && this.category ) {
-                this.selectedMovie = this.category[val];
+            if ( val%1 === 0 ) {
                 this.detailsFadeIn = true;
                 this.detailsFadeOut = false;
                 this.needsDraw = true;
-            } else if ( val%1 !== 0 && this.category ){
+            } else if ( val%1 !== 0 ){
                 this.detailsFadeOut = true;
                 this.detailsFadeIn = false;
                 this.needsDraw = true;
@@ -48,7 +56,7 @@ exports.Facadeflow = Component.specialize({
         value: false
     },
 
-    latestBoxofficeMovies: {
+    latestBoxOffice: {
         value: null
     },
 
@@ -68,7 +76,7 @@ exports.Facadeflow = Component.specialize({
         value: null
     },
 
-    buttonController: {
+    _contentController: {
         value: null
     },
 
@@ -100,8 +108,33 @@ exports.Facadeflow = Component.specialize({
         }
     },
 
+    _categoryContentController: {
+        value: null
+    },
+
+    categoryContentController: {
+        get: function () {
+            return this._categoryContentController;
+        },
+        set: function (value) {
+            if (value == null) { return; }
+            if (this._categoryContentController == null) {
+                // first time
+                this._categoryContentController = value;
+                this._contentController = value;
+                this.detailsFadeIn = true;
+                this._fadeIn = true;
+                this.needsDraw = true;
+            } else {
+                this._categoryContentController = value;
+                //TODO change _changeCategory() name
+                this._changeCategory();
+            }
+        }
+    },
+
     _changeCategory: {
-        value: function (categoryId) {
+        value: function () {
             var self = this;
 
             this.detailsFadeOut = true;
@@ -112,8 +145,8 @@ exports.Facadeflow = Component.specialize({
                 if (self.templateObjects && self.templateObjects.flow) {
                     self.templateObjects.flow.scroll = 0;
                 }
-                self.category = self[categoryId];
-                self.selectedMovie = self.category[0];
+                //TODO rename this _contentController isn't descriptive
+                self._contentController = self.categoryContentController;
                 self._fadeIn = true;
                 self._fadeOut = false;
                 self.detailsFadeIn = true;
@@ -121,17 +154,6 @@ exports.Facadeflow = Component.specialize({
                 self.needsDraw = true;
 
             }, 800 );
-        }
-    },
-
-    handleDataReceived: {
-        value: function () {
-            // do it manually to avoid fade out effect
-            this.category = this.latestBoxofficeMovies;
-            this.selectedMovie = this.category[0];
-            this.detailsFadeIn = true;
-            this._fadeIn = true;
-            this.needsDraw = true;
         }
     },
 

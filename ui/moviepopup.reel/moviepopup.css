@@ -1,6 +1,6 @@
-/* @override http://localhost:8082/montage-projects/ui/moviepopup.reel/moviepopup.css */
+/* @override http://localhost:8082/montage-projects/ui/Moviepopup.reel/Moviepopup.css */
 
-.moviepopup {
+.Moviepopup {
     position: fixed;
     z-index: 999;
     top: 0;
@@ -20,7 +20,7 @@
     pointer-events: none;
 }
 
-.moviepopup-open {
+.Moviepopup.is-shown {
     -webkit-transform: translate3d( 0, 0px, 0 );
     -moz-transform: translate3d( 0, 0px, 0 );
     -ms-transform: translate3d( 0, 0px, 0 );
@@ -33,8 +33,8 @@
     pointer-events: all;
 }
 
-.moviepopup .button-close,
-.moviepopup .button-close:focus {
+.Moviepopup .button-close,
+.Moviepopup .button-close:focus {
     position: absolute;
     top: 6px;
     right: 6px;
@@ -49,7 +49,7 @@
     background: hsl(0,0%,12%) linear-gradient(top, hsla(0,0%,100%,.1), hsla(0,0%,0%,.1) );
 }
 
-.moviepopup .button-close.active {
+.Moviepopup .button-close.active {
     background: hsl(0,0%,10%) -webkit-linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
     background: hsl(0,0%,10%) -moz-linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );
     background: hsl(0,0%,10%) -ms-linear-gradient(top, hsla(0,0%,40%,.1), hsla(0,0%,0%,.1) );

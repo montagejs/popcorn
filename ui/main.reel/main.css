@@ -58,7 +58,11 @@
     position: fixed;
     overflow: hidden;
 }
-.details-fade-out{
+.details.details-fade-out {
+    -webkit-transition: -webkit-transform .35s;
+    -moz-transition: -moz-transform .35s;
+    -ms-transition: -ms-transform .35s;
+    transition: transform .35s;
     opacity: 0;
 }
 @media (min-width: 501px) and (max-height: 660px) and (min-height: 501px) {
@@ -130,7 +134,7 @@
         left: 50%;
         margin-left: -250px;
         height: 180px;
-        -webkit-transform: translate3d(0,119px,0);
+        -webkit-transform: translate3d(0,95px,0);
         -moz-transform: translate3d(0,119px,0);
         -ms-transform: translate3d(0,119px,0);
         transform: translate3d(0,119px,0);
@@ -214,7 +218,7 @@
         left: 50%;
         margin-left: -250px;
         margin-top: 148px;
-        height: 180px;
+        height: 203px;
         -webkit-transition: opacity .35s, -webkit-transform .35s;
         -moz-transition: opacity .35s, -moz-transform .35s;
         -ms-transition: opacity .35s, -ms-transform .35s;
@@ -251,6 +255,7 @@
         width: 25%;
         line-height: 100px;
         font-size: 11px;
+        text-align: center;
     }
     .filter .matte-Button:before {
         left: 50%;
@@ -323,6 +328,12 @@
         left: 8px;
         top: 50%;
         margin-top: -16px;
+    }
+    .filter .matte-Button .CategoryButton-text {
+        position: absolute;
+        left: 48px;
+        top: 50%;
+        margin-top: -7px;
     }
     .facadeWindow {
         top: 0;

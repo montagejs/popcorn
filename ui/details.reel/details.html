@@ -1,155 +1,158 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="details.css">
-
     <script type="text/montage-serialization">
-        {
-            "title": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "title"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.title" }
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"},
+                "cImage": {"#": "cImage"},
+                "aImage": {"#": "aImage"}
+            }
+        },
+
+        "title": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "title"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.data.title" }
+            }
+        },
+
+        "description": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "description"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.data.synopsis" }
+            }
+        },
+
+        "dates": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "dates"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.data.release_dates.theater" }
+            }
+        },
+
+        "maturity": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "maturity"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.data.mpaa_rating" }
+            }
+        },
+
+        "runtime": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "runtime"}
+            },
+            "bindings": {
+                "value": {"<-": "(@owner.data.runtime/60).floor() + 'h ' + @owner.data.runtime%60 + 'min'" }
+            }
+        },
+
+        "rentButton": {
+            "prototype": "matte/ui/button.reel",
+            "properties": {
+                "element": {"#": "rentButton"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
                 }
-            },
+            ]
+        },
 
-            "description": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "description"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.synopsis" }
+        "trailerButton": {
+            "prototype": "matte/ui/button.reel",
+            "properties": {
+                "element": {"#": "trailerButton"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
                 }
-            },
+            ]
+        },
 
-            "dates": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "dates-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.release_dates.theater" }
+        "expandButton": {
+            "prototype": "matte/ui/button.reel",
+            "properties": {
+                "element": {"#": "expand"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
                 }
-            },
+            ]
+        },
 
-            "maturity": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "maturity-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.mpaa_rating" }
-                }
+        "audienceScore": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "audienceScore"}
             },
+            "bindings": {
+                "value": {"<-": "@owner.data.ratings.audience_score" }
+            }
+        },
 
-            "runtime": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "runtime-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.runtime" }
-                }
+        "criticsScore": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "criticsScore"}
             },
+            "bindings": {
+                "value": {"<-": "@owner.data.ratings.critics_score" }
+            }
+        },
 
-            "rentButton": {
-                "prototype": "matte/ui/button.reel",
-                "properties": {
-                    "element": {"#": "rent-button"}
-                },
-                "listeners": [
-                    {
-                        "type": "action",
-                        "listener": {"@": "owner"}
-                    }
-                ]
-            },
-
-            "trailerButton": {
-                "prototype": "matte/ui/button.reel",
-                "properties": {
-                    "element": {"#": "trailer-button"}
-                },
-                "listeners": [
-                    {
-                        "type": "action",
-                        "listener": {"@": "owner"}
-                    }
-                ]
-            },
-
-            "expandButton": {
-                "prototype": "matte/ui/button.reel",
-                "properties": {
-                    "element": {"#": "expand"}
-                },
-                "listeners": [
-                    {
-                        "type": "action",
-                        "listener": {"@": "owner"}
-                    }
-                ]
-            },
-
-            "audienceScore": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "audience-score-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.ratings.audience_score" }
-                }
-            },
-
-            "criticsScore": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "critics-score-content"}
-                },
-                "bindings": {
-                    "value": {"<-": "@owner.data.ratings.critics_score" }
-                }
-            },
-
-            "scroller": {
-                "prototype": "matte/ui/scroller.reel",
-                "properties": {
-                    "element": {"#": "scroller"},
-                    "hasMomentum": true
-                }
-            },
-
-            "owner": {
-                "properties": {
-                    "element": {"#": "details"},
-                    "cImage": {"#": "c-image"},
-                    "aImage": {"#": "a-image"}
-                }
+        "scroller": {
+            "prototype": "matte/ui/scroller.reel",
+            "properties": {
+                "element": {"#": "scroller"},
+                "hasMomentum": true
             }
         }
+    }
     </script>
 </head>
 <body>
-    <div data-montage-id="details" class="details">
+    <div data-montage-id="owner" class="details">
         <div data-montage-id="expand" class="expand">
             <h2 data-montage-id="title" class="title"></h2>
             <div class="summary">
                 <div>
-                    Release: <time data-montage-id="dates-content" class="score"></time><span data-montage-id="maturity-content" class="maturity"></span>
+                    <div>Release</div><time data-montage-id="dates" class="score"></time>
                 </div>
                 <div>
-                    Duration: <span data-montage-id="runtime-content" class="score"></span>′
+                    <div>Rating</div><span data-montage-id="maturity" class="maturity"></span></span>
                 </div>
                 <div>
-                    <span data-montage-id="a-image" class="rt-icon icon-audience"></span>Audience:
-                    <span data-montage-id="audience-score-content" class="score"></span>%
+                    <div>Duration</div><span data-montage-id="runtime" class="score"></span>
                 </div>
                 <div>
-                    <span data-montage-id="c-image" class="rt-icon icon-critics"></span>Critics:
-                    <span data-montage-id="critics-score-content" class="score"></span>%
+                    <div>Critics</div>
+                    <span data-montage-id="cImage" class="rt-icon icon-critics"></span><span data-montage-id="criticsScore" class="score"></span>%
+                </div>
+                <div>
+                    <div>Audience</div>
+                    <span data-montage-id="aImage" class="rt-icon icon-audience"></span> <span data-montage-id="audienceScore" class="score"></span>%
                 </div>
             </div>
         </div>
@@ -157,8 +160,8 @@
             <p data-montage-id="description" class="description"></p>
         </div>
         <nav class="action-buttons">
-            <button data-montage-id="trailer-button" class="button button-trailer">Trailer</button>
-            <button data-montage-id="rent-button" class="button button-rent">Rent</button>
+            <button data-montage-id="trailerButton" class="button button-trailer">Trailer</button>
+            <button data-montage-id="rentButton" class="button button-rent">Rent</button>
         </nav>
     </div>
 </body>

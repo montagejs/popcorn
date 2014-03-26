@@ -1,8 +1,8 @@
-/*global require*/
 
 var Component = require("montage/ui/component").Component;
 
 exports.Details = Component.specialize({
+
     _data: {
         value: null
     },
@@ -68,7 +68,7 @@ exports.Details = Component.specialize({
 
     handleTrailerButtonAction: {
         value: function () {
-            this.dispatchEventNamed("openTrailer", true, true, this.data.title);
+            this.dispatchEventNamed("openTrailer", true, true, {title: this.data.title});
         }
     },
 

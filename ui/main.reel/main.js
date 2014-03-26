@@ -1,98 +1,52 @@
-/*global require*/
 
 var Component = require("montage/ui/component").Component,
-    Remotemediator = require("model/remotemediator").Remotemediator,
-    AppData = require("model/appdata").AppData;
+    sharedRottenTomatoService = require("core/rotten-tomato-service").shared,
+    sharedYoutubeService = require("core/youtube-service").shared;
 
+//TODO use details in toggle buttons
+//TODO do not use matte toggle buttons
 exports.Main = Component.specialize({
-
-    appData: {
-        value: AppData.create()
-    },
-
-    remoteMediator: {
-        value: Remotemediator.create()
-    },
-
-    categoryId: {
-        value: null
-    },
-
-    _categoryButtonGroup: {
-        value: null
-    },
 
     constructor: {
         value: function Main () {
-            this.application.addEventListener( "remoteDataReceived", this, false);
             this.application.addEventListener( "openTrailer", this, false);
 
-            this.canDrawGate.setField("latestBoxofficeMovies", false);
-
-            this.remoteMediator.load();
+            this.canDrawGate.setField("moviesLoaded", false);
+            this._initialDataLoad = this.rottenTomato.load();
         }
+    },
+
+    rottenTomato: {
+        value: sharedRottenTomatoService
+    },
+
+    _initialDataLoad: {
+        value: null
     },
 
     templateDidLoad: {
         value: function () {
-            var templateObjects = this.templateObjects;
-
-            this._categoryButtonGroup = [
-                templateObjects.latest,
-                templateObjects.theaters,
-                templateObjects.dvd,
-                templateObjects.upcoming
-            ];
-        }
-    },
-
-    handleRemoteDataReceived: {
-        value: function (event) {
-            var data = event.detail.data,
-                type = event.detail.type;
-
-            this.appData[type] = data;
-
-            if( type === "latestBoxofficeMovies" ){
-                this.canDrawGate.setField("latestBoxofficeMovies", true);
-                this.dispatchEventNamed("dataReceived", true);
-                this.changeCategory(type);
-            }
+            var self = this;
+            self._initialDataLoad.then(function () {
+                self.canDrawGate.setField("moviesLoaded", true);
+            }).done();
         }
     },
 
     handleOpenTrailer: {
         value: function (event) {
-            var title = event.detail,
+            var title = event.detail.title,
                 popup = this.templateObjects.popup;
-
-            this.remoteMediator.searchYoutubeTrailer(title, function (id) {
+            sharedYoutubeService.searchYoutubeTrailer(title).then(function (id) {
                 popup.openTrailer(id);
-            });
-        }
-    },
-
-    handleCategoryButtonAction: {
-        value: function (action) {
-            this.changeCategory(action.target.category);
-        }
-    },
-
-    changeCategory: {
-        value: function (category) {
-            var buttons = this._categoryButtonGroup;
-
-            this.categoryId = category;
-            for (var i = 0; i < buttons.length; i++) {
-                buttons[i].pressed = (buttons[i].category === category);
-            }
+            }).done();
         }
     },
 
     /**
         iOS 7.0.x iPhone/iPod Touch workaround. After switching from portrait to landscape
-        mode, Safari shows the content fullscreen. If the top or bottom of the content is
-        clicked, navigations bars appear hiding content. This workaround reduces the height
+        mode, Safari shows the content full screen. If the top or bottom of the content is
+        clicked, navigation bars appear hiding content. This workaround reduces the height
         of the content.
     */
     _windowScroll: {
