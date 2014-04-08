@@ -1,0 +1,315 @@
+
+/*-----------------------------------------------------------------------------
+MARK:    media
+-----------------------------------------------------------------------------*/
+
+.matte-VideoPlayer {
+    position: relative;
+    display: inline-block;
+    min-width: 500px;
+    overflow: hidden;
+    border: 1px solid black;
+    background-color: #000;      /* black opaque */
+}
+
+.matte-VideoPlayer.fullscreen {
+    position: absolute;
+    display: -webkit-box;
+    -webkit-box-sizing: border-box;
+    z-index: 1000;                        /* TODO: Define global z-index regions */
+    top: 0;
+    left: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.matte-VideoPlayer .matte-VideoPlayer-video {
+    display: block; /* Get rid of the bottom space */
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+
+/*-----------------------------------------------------------------------------
+MARK:    Controller
+-----------------------------------------------------------------------------*/
+.matte-VideoPlayer .control-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    box-shadow: inset 0 2px 6px 2px hsla(0,0%,0%,.4);
+    background-color: hsla(0,0%,0%,.95);
+    background-image: -webkit-linear-gradient(top,    hsla(0,0%,100%,.27)  0%,
+                                                    hsla(0,0%,100%,.15) 50%,
+                                                    hsla(0,0%,30%,.4) 50%,
+                                                    hsla(0,0%,0%,1) 100%);
+}
+
+.matte-VideoPlayer .control-wrapper.hide-controls {
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: translateY(50px);
+    -webkit-transition: opacity .2s linear, -webkit-transform .2s cubic-bezier(.6,0,1,.75);
+}
+
+.matte-VideoPlayer .control-wrapper.show-controls {
+    opacity: 1.0;
+    -webkit-transition: opacity .2s linear, -webkit-transform .3s cubic-bezier(0,.4,.16,1);
+}
+
+
+.matte-VideoPlayer .controller {
+    display: -webkit-box;
+    position: relative;
+    max-width: 1280px;
+    color: #ffffff;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.matte-VideoPlayer .controller > div {
+    border-right: 1px solid hsla(0,0%,0%,.7);
+    border-left: 1px solid hsla(0,0%,100%,.1);
+}
+.matte-VideoPlayer .controller > div:first-child {
+    border-left: none;
+}
+.matte-VideoPlayer .controller > div:last-child {
+     border-right: none;
+}
+
+.matte-VideoPlayer .controller-text {
+    font: bold 14px "Helvetica Neue", Helvetica, sans-serif;
+    color: #888;
+    text-shadow: 0 1px 0px #000;
+}
+
+
+/*-----------------------------------------------------------------------------
+MARK:    Scrubber Panel
+-----------------------------------------------------------------------------*/
+
+.matte-VideoPlayer .controller-scrubber-panel {
+    display: -webkit-box;
+    -webkit-box-flex: 1;
+    height: 50px;
+    text-align: center;
+}
+
+.matte-VideoPlayer .scrubber {
+    display: block;
+    -webkit-box-flex: 1;
+}
+
+.scrubber {
+    top: 50%;
+    margin: -5px 14px 0 14px;
+}
+
+.matte-VideoPlayer .position {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+}
+
+.matte-VideoPlayer .duration {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+}
+
+
+/*-----------------------------------------------------------------------------
+MARK:    Button Panel
+-----------------------------------------------------------------------------*/
+
+.matte-VideoPlayer .controller-button-panel {
+    display: block;
+    position: relative;
+    height: 50px;
+}
+
+.matte-VideoPlayer .controller-button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    border: none;
+}
+.matte-VideoPlayer .controller-button:active {
+    background-color: hsla(0,0%,0%,.4);
+}
+
+.matte-VideoPlayer .play                   { background-image: url("images/play.png"); }
+.matte-VideoPlayer .play.playing          { background-image: url("images/pause.png"); }
+
+.matte-VideoPlayer .ff,
+.matte-VideoPlayer .rw,
+.matte-VideoPlayer .repeat
+{ display: none; } /* Temporarily disabled */
+
+/*-----------------------------------------------------------------------------
+MARK:    Volume Panel
+-----------------------------------------------------------------------------*/
+
+.matte-VideoPlayer .controller-volume-panel {
+    display: -webkit-box;
+    position: relative;
+    width: 148px;
+    height: 50px;
+}
+
+.matte-VideoPlayer .volume {
+    position: relative;
+    top: 16px;
+    -webkit-box-flex: 1;
+}
+
+.matte-VideoPlayer .controller-progress {
+    height: 15px;
+    box-shadow: inset 0 0px 3px 1px hsla(0,0%,0%,.5);
+    background: -webkit-repeating-linear-gradient(left, hsl(0,0%,25%) 0, hsl(0,0%,25%) 3px,
+                                                        hsl(0,0%,10%) 3px, hsl(0,0%,10%) 5px);
+}
+.matte-VideoPlayer .controller-progress:before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: -webkit-linear-gradient(top, hsla(0,0%,0%,0), hsla(0,0%,0%,.3) );
+}
+
+.matte-VideoPlayer .volume-progress {
+    width: 50%;
+    height: 100%;
+    background: -webkit-repeating-linear-gradient(left, hsl(195,90%,50%) 0, hsl(195,90%,50%) 3px,
+                                                        transparent 3px, transparent 5px);
+    -webkit-transition: width .1s ease-in-out;
+}
+
+.matte-VideoPlayer .volume-plus,
+.matte-VideoPlayer .volume-minus {
+    width: 50px;
+}
+
+.matte-VideoPlayer .volume-minus        { background-image: url("images/volume-down.png"); }
+.matte-VideoPlayer .volume-minus:active {
+    background-color: transparent;
+    background-image: url("images/volume-down.png"),
+    -webkit-linear-gradient(right, hsla(0,0%,0%,0), hsla(0,0%,0%,.5) );
+}
+.matte-VideoPlayer .volume-plus         { background-image: url("images/volume-up.png"); }
+.matte-VideoPlayer .volume-plus:active {
+    background-color: transparent;
+    background-image: url("images/volume-up.png"),
+    -webkit-linear-gradient(left, hsla(0,0%,0%,0), hsla(0,0%,0%,.5) );
+}
+
+.matte-VideoPlayer  .controller-volume-panel .mute               { display: none; }  /* also MUTE[muted] */
+
+
+
+/*-----------------------------------------------------------------------------
+MARK:    Stop Panel
+-----------------------------------------------------------------------------*/
+
+.matte-VideoPlayer .controller-stop-panel {
+    display: block;
+    position: relative;
+    width: auto;
+    height: 50px;
+}
+
+
+.matte-VideoPlayer .STOP {
+    float: none;
+    right: 0;
+}
+
+/*-----------------------------------------------------------------------------
+MARK:    Fullscreen Panel
+-----------------------------------------------------------------------------*/
+
+.matte-VideoPlayer .controller-fullscreen-panel {
+    display: block;
+    position: relative;
+    width: auto;
+    height: 50px;
+}
+
+
+.matte-VideoPlayer .fullscreen {
+    float: none;
+    right: 0;
+}
+
+.matte-VideoPlayer .enter-fullscreen        { background-image: url("images/fullscreen-enter.png"); }
+.matte-VideoPlayer .exit-fullscreen         { background-image: url("images/fullscreen-exit.png"); }
+
+.matte-VideoPlayer .support-fullscreen { display: block; }
+.matte-VideoPlayer .hide-fullscreen { display: none; }
+
+
+/*-----------------------------------------------------------------------------
+MARK:    Track Panel
+-----------------------------------------------------------------------------*/
+
+.matte-VideoPlayer .controller-track-panel {
+    display: none;
+    position: relative;
+    width: 110px;
+    height: 50px;
+}
+
+.matte-VideoPlayer .controller-track-panel .controller-button {
+    float: none;
+    position: absolute;
+    outline: none;
+}
+
+.matte-VideoPlayer .PREVIOUS {
+    top: 0;
+    left: 0;
+}
+
+.matte-VideoPlayer .NEXT {
+    top: 0;
+    left: 55px;
+}
+
+.matte-VideoPlayer .supportsPlaylistControls .controller-button:active {
+    color: #f44;
+}
+
+.matte-VideoPlayer .supportsPlaylistControls {
+    display: none;
+    height: 50px;
+}
+
+
+.matte-VideoPlayer .STOP           { background-image: url("images/media-1up-controls-exitFullscreen.png"); }
+.matte-VideoPlayer .STOP:active    { background-image: url("images/media-1up-controls-exitFullscreen-P.png"); }
+
+.matte-VideoPlayer .PREVIOUS       { background-image: url("images/photos-1up-controls-prev.png"); }
+.matte-VideoPlayer .PREVIOUS:active{ background-image: url("images/photos-1up-controls-prev-P.png"); }
+
+.matte-VideoPlayer .NEXT           { background-image: url("images/photos-1up-controls-next.png"); }
+.matte-VideoPlayer .NEXT:active    { background-image: url("images/photos-1up-controls-next-P.png"); }
+
+.matte-VideoPlayer .matte-Slider.pressed .handlerbg div,
+.matte-VideoPlayer .matte-Slider.pressed .handler div,
+.matte-VideoPlayer .matte-Slider.pressed .handler2 div,
+.matte-VideoPlayer .matte-Slider.pressed .handler3 div,
+.matte-VideoPlayer .matte-Slider.pressed .handler4 div {
+    -webkit-transform: scale3d(.85, .85, .85);
+}

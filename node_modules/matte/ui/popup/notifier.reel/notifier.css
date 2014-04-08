@@ -1,0 +1,10 @@
+
+.matte-Notifier {
+    background-color: #333; /*#FFF1A8*/;
+    color: #fff;
+}
+
+.matte-Notifier Notifier-message {
+    padding: 10px 20px;
+    text-overflow: ellipsis;
+}

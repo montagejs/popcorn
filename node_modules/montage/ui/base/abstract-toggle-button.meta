@@ -1,0 +1,118 @@
+{
+    "enabled_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "enabled",
+            "valueType": "boolean",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "pressedLabel_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "pressedLabel",
+            "valueType": "string",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "unpressedLabel_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "unpressedLabel",
+            "valueType": "string",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "holdThreshold_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "holdThreshold",
+            "valueType": "number",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "active_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "active",
+            "valueType": "boolean",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "blueprint_parent": {
+        "prototype": "core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractControl",
+                "prototypeName": "AbstractControl",
+                "blueprintModule": {
+                    "%": "ui/base/abstract-control.meta"
+                }
+            }
+        }
+    },
+    "root": {
+        "prototype": "core/meta/module-blueprint",
+        "properties": {
+            "name": "AbstractToggleButton",
+            "parent": {
+                "@": "blueprint_parent"
+            },
+            "propertyBlueprints": [
+                {
+                    "@": "enabled_property"
+                },
+                {
+                    "@": "pressedLabel_property"
+                },
+                {
+                    "@": "unpressedLabel_property"
+                },
+                {
+                    "@": "holdThreshold_property"
+                },
+                {
+                    "@": "active_property"
+                }
+            ],
+            "propertyBlueprintGroups": {
+                "Main": [
+                    {
+                        "@": "enabled_property"
+                    },
+                    {
+                        "@": "pressedLabel_property"
+                    },
+                    {
+                        "@": "unpressedLabel_property"
+                    }
+                ],
+                "Options": [
+                    {
+                        "@": "holdThreshold_property"
+                    },
+                    {
+                        "@": "active_property"
+                    }
+                ]
+            },
+            "blueprintModule": {
+                "%": "ui/base/abstract-toggle-button.meta"
+            },
+            "exportName": "AbstractToggleButton",
+            "module": {
+                "%": "ui/base/abstract-toggle-button"
+            }
+        }
+    }
+}
