@@ -1,0 +1,16 @@
+
+.matte-TextSlider-input {
+    display: none;
+}
+
+.matte-TextSlider--editing .matte-TextSlider-input {
+    display: inherit;
+}
+
+.matte-TextSlider-value {
+    border-bottom: 1px dotted #000;
+}
+
+.matte-TextSlider--editing .matte-TextSlider-value, .matte-TextSlider--editing .matte-TextSlider-label {
+    display: none;
+}

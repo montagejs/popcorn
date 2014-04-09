@@ -1,0 +1,13 @@
+.idea
+node_modules
+npm-debug.log
+.DS_Store
+atlassian-ide-plugin.xml
+TEST-*.xml
+/builds
+.gitignore
+.jshintignore
+.jshintrc
+spec
+test
+tools

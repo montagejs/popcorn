@@ -1,0 +1,9 @@
+.montage-Overlay {
+    display: none;
+    position: absolute;
+    z-index: 7000;
+}
+
+.montage-Overlay--visible {
+    display: block;
+}

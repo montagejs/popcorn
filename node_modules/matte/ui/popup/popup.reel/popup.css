@@ -1,0 +1,69 @@
+/* these need to be moved to montage.css when that is created */
+.matte-invisible {
+    display: none;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.matte-Popup-modal-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.8;
+}
+
+.matte-Popup-container {
+    border: 1px solid #eee;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-transition: opacity .25s;
+    -moz-transition: opacity .25s;
+    -ms-transition: opacity .25s;
+    -o-transition: opacity .25s;
+    transition: opacity .25s;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, .2);
+    cursor: default;
+    margin: 0;
+    outline: none;
+    width: auto;
+    border-radius: 3px;
+}
+
+.matte-Popup-noborder {
+    border: 0px;
+}
+
+.matte-Popup--modal {
+    border: 3px solid #ccc;
+}
+
+.matte-Popup-container *:focus {
+    outline: none;
+}
+
+.matte-Popup-wrapper {
+
+}
+
+.matte-Popup-header {
+    background-color: whitesmoke;
+    border-bottom: 1px solid #eee;
+    padding: 5px 15px;
+}
+.matte-Popup-footer {
+    background-color: whitesmoke;
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+
+}

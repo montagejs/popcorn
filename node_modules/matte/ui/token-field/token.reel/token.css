@@ -1,0 +1,49 @@
+.matte-Token {
+    display: inline-block;
+    margin: 3px 1px;
+    border: 1px solid hsl(0,0%,85%);
+    background-color: hsl(0,0%,95%);
+    color: #333;
+    vertical-align: middle;
+    cursor: default;
+    border-radius: 3px;
+}
+
+.matte-Token > .matte-Token-text {
+    padding: 0px 1px 0px 5px;
+}
+
+.matte-Token > .matte-Token-delete {
+    display: inline-block;
+    padding: 3px 6px;
+    border-left: inherit;
+    border-radius: 0 2px 2px 0;
+    color: hsl(0,0%,60%);
+    cursor: pointer;
+}
+.matte-Token > .matte-Token-delete:hover {
+    color: hsl(0,0%,30%);
+    background-color: hsl(0,0%,90%);
+}
+.matte-Token > .matte-Token-delete:active {
+    color: hsl(0,0%,60%);
+    background-color: hsl(0,0%,85%);
+}
+
+/* selected */
+.matte-Token.selected {
+    border-color: hsl(0,0%,60%);
+}
+
+.matte-Token.selected > .matte-Token-delete {
+    color: hsl(0,0%,100%);
+    background-color: hsl(0,0%,60%);
+}
+
+.matte-Token.active {
+    border: 1px solid #ccc;
+}
+
+.matte-Token.matte-Token--adhoc {
+    border: 1px dashed #ccc;
+}

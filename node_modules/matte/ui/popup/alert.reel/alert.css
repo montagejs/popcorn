@@ -1,0 +1,62 @@
+
+.matte-Alert-dialog {
+    min-width: 300px;
+}
+.matte-Alert-dialog Alert-content {
+    font-size: 1.3em;
+    padding: 15px;
+
+}
+.matte-Alert-dialog Alert-actions {
+    float: right;
+}
+
+/*
+
+.matte-Alert-dialog {
+    font-family: "AG Buch BQ Regular", "AG Buch BQ", Helvetica, Arial, sans-serif;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0px 3px;
+}
+
+.matte-Alert-dialog .header {
+    height: 25px;
+    color: #fff;
+}
+
+.matte-Alert-dialog .header h4 {
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.matte-Alert-dialog .content {
+    text-align: center;
+    margin: 5px 0;
+    background-color: #e6e6e6;
+    padding: 10px;
+}
+
+.matte-Alert-dialog .msg-container {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.matte-Alert-dialog .msg {
+    font-size: 18pt;
+    font-weight: normal;
+}
+
+.matte-Alert-dialog .msg-detail {
+    font-size: 12pt;
+    font-weight: normal;
+    color: #cccccc;
+}
+
+.matte-Alert-dialog .action-container {
+    padding: 10px 0;
+}
+*/
+
