@@ -1,7 +1,7 @@
 Popcorn
 ===============
 
-![Screenshot](assets/image/screenshot.jpg)
+![Screenshot](assets/image/screenshot.png)
 
 [Live Demo](http://montagejs.org/apps/popcorn/)
 
