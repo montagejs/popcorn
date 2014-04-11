@@ -7,19 +7,16 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "owner"},
-                "flow": {"@": "flow"}
-            },
-            "bindings": {
-                "scroll": {"<-": "@flow.scroll"}
+                "element": {"#": "owner"}
             }
         },
 
-        "flow": {
+        "movieFlow": {
             "prototype": "montage/ui/flow.reel",
             "properties": {
+                "delegate": {"@": "owner"},
                 "slotContent": {"@": "overlay"},
-                "element": {"#": "flow"},
+                "element": {"#": "movieFlow"},
                 "isSelectionEnabled": false,
                 "cameraFov": 77.06934,
                 "cameraTargetPoint": [0, 0, 0],
@@ -119,13 +116,13 @@
             }
         },
 
-        "image": {
+        "poster": {
             "prototype": "ui/image.reel",
             "properties": {
-                "element": {"#": "image"}
+                "element": {"#": "poster"}
             },
             "bindings": {
-                "src": {"<-": "@flow:iteration.object.posters.detailed" }
+                "src": {"<-": "@movieFlow:iteration.object.posters.detailed" }
             }
         },
 
@@ -141,8 +138,8 @@
 <body>
     <div data-montage-id="owner" class="facade-flow">
         <div data-montage-id="overlay"></div>
-        <div data-montage-id="flow" class="flow flow-fade-out">
-            <div data-montage-id="image" class="Image"></div>
+        <div data-montage-id="movieFlow" class="flow flow-fade-out">
+            <div data-montage-id="poster" class="Image"></div>
         </div>
         <div class="film"></div>
     </div>

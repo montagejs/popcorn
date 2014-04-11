@@ -5,48 +5,35 @@ var Component   = require("montage/ui/component").Component;
 exports.Facadeflow = Component.specialize({
     constructor: {
         value: function Facadeflow () {
-//            var controller = new RangeController();
-//            controller.defineBinding("content", {"<-": "category", source: this});
             this.defineBinding("selectedMovie", {"<-": "categoriesController.selection.one()"});
-//            this.categoriesController = controller;
             this.application.addEventListener( "initialDataReady", this, false);
         }
     },
 
-    _selectedMovie: {
-        value: null
-    },
-
     selectedMovie: {
-        get: function () {
-            return this._selectedMovie;
-        },
-        set: function (value) {
-            this._selectedMovie = value;
-        }
-    },
-
-    _scroll: {
         value: null
     },
 
-    scroll: {
-        set: function (val) {
-            this._scroll = val;
-            if ( val%1 === 0 ) {
-                this.detailsFadeIn = true;
-                this.detailsFadeOut = false;
-                this.needsDraw = true;
-            } else if ( val%1 !== 0 ){
-                this.detailsFadeOut = true;
-                this.detailsFadeIn = false;
-                this.needsDraw = true;
-            }
-        },
-        get: function () {
-            return this._scroll;
+    movieFlowDidTranslateStart: {
+        value: function () {
+            this.detailsFadeOut = true;
+            this.detailsFadeIn = false;
+            this.needsDraw = true;
         }
     },
+
+    movieFlowDidTranslateEnd: {
+        value: function (flow) {
+            var scroll = Math.round(flow.scroll);
+            if(this._contentController) {
+                this._contentController.select(this._contentController.content[scroll]);
+            }
+            this.detailsFadeIn = true;
+            this.detailsFadeOut = false;
+            this.needsDraw = true;
+        }
+    },
+
 
     _fadeIn: {
         value: false
@@ -143,7 +130,7 @@ exports.Facadeflow = Component.specialize({
             // wait .5s until the fade out effect is completed
             setTimeout( function () {
                 if (self.templateObjects && self.templateObjects.flow) {
-                    self.templateObjects.flow.scroll = 0;
+                    self.templateObjects.movieFlow.scroll = 0;
                 }
                 //TODO rename this _contentController isn't descriptive
                 self._contentController = self.categoryContentController;
@@ -159,7 +146,7 @@ exports.Facadeflow = Component.specialize({
 
     draw: {
         value: function () {
-            var flow = this.templateObjects.flow,
+            var flow = this.templateObjects.movieFlow,
                 details = this.details;
 
             if( this._fadeIn ){
