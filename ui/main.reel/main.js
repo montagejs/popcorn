@@ -36,9 +36,9 @@ exports.Main = Component.specialize({
     handleOpenTrailer: {
         value: function (event) {
             var title = event.detail.title,
-                popup = this.templateObjects.popup;
+            player = this.templateObjects.player;
             sharedYoutubeService.searchYoutubeTrailer(title).then(function (id) {
-                popup.openTrailer(id);
+                player.openTrailer(id);
             }).done();
         }
     },
