@@ -112,7 +112,8 @@
                 ]
             },
             "bindings": {
-                "contentController": {"<-": "@owner._contentController"}
+                "contentController": {"<-": "@owner._displayedContentController"},
+                "classList.has('is-hidden')": {"<-": "@owner._flowHidden"}
             }
         },
 
@@ -136,9 +137,9 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="facade-flow">
+    <div data-montage-id="owner" class="facade-flow is-initialState">
         <div data-montage-id="overlay"></div>
-        <div data-montage-id="movieFlow" class="flow flow-fade-out">
+        <div data-montage-id="movieFlow" class="flow">
             <div data-montage-id="poster" class="Image"></div>
         </div>
         <div class="film"></div>

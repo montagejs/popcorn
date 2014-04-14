@@ -13,7 +13,7 @@
     -ms-transition: opacity .5s;
     transition: opacity .5s;
 }
-.facade-flow .flow.flow-fade-out .montage-Flow-Repetition {
+.facade-flow .flow.is-hidden .montage-Flow-Repetition {
     opacity: 0;
 }
 .montage-Flow-Slot {
@@ -41,6 +41,7 @@
     width: 246px;
     height: 332px;
     background-image: url(frame.png);
+    pointer-events: none;
     background-size: 246px 332px;
     background-repeat: no-repeat;
 }
