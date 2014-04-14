@@ -7,58 +7,11 @@
     overflow: hidden;
     font-family: Helvetica, Arial, sans-serif;
 }
-.filter {
-    position: fixed;
-    background: black;
-    z-index: 2;
-}
-.filter .matte-Button {
-    display: block;
-    position: relative;
-    font-family: Helvetica, Arial, sans-serif;
-    color: white;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    border: none;
-    opacity: .5;
-    height: auto;
-    border-radius: 0;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-.filter .matte-Button:active,
-.filter .matte-Button.active,
-.filter .matte-Button:focus {
-    background-color: #333;
-    opacity: .6;
-}
-.filter .matte-Button:before {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background-image: url(icons.png);
-    background-repeat: no-repeat;
-    background-size: 32px 332px;
-}
-.filter .matte-Button.in_theaters:before {
-    background-position: 0 -100px;
-}
-.filter .matte-Button.upcoming:before {
-    background-position: 0 -200px;
-}
-.filter .matte-Button.rentals:before {
-    background-position: 0 -300px;
-}
-.filter .matte-Button.selected {
-    opacity: 1;
-    background-color: #333;
-}
-.facadeWindow {
+.Main-content {
     position: fixed;
     overflow: hidden;
 }
-.details.details-fade-out {
+.Main-details.details-fade-out {
     -webkit-transition: -webkit-transform .35s;
     -moz-transition: -moz-transform .35s;
     -ms-transition: -ms-transform .35s;
@@ -80,53 +33,16 @@
         pointer-events: none;
         display: none;
     }
-    .filter {
-        top: 50%;
-        left: 50%;
-        margin-top: -248px;
-        margin-left: -244px;
-        background: none;
-    }
-    .filter .matte-Button {
-        float: left;
-        margin-left: 3px;
-        width: 118px;
-        height: 40px;
-        padding-bottom: 16px;
-        text-align: center;
-        font-size: 14px;
-        line-height: 24px;
-        border-radius: 3px;
-        border: 1px solid rgba(255,255,255,.15);
-    }
-    .filter .matte-Button:before {
-        position: relative;
-        display: inline-block;
-        left: 0;
-        top: 7px;
-        width: 32px;
-        height: 24px;
-        background-size: 24px 249px;
-    }
-    .filter .matte-Button.in_theaters:before {
-        background-position: 0 -75px;
-    }
-    .filter .matte-Button.upcoming:before {
-        background-position: 0 -150px;
-    }
-    .filter .matte-Button.rentals:before {
-        background-position: 0 -225px;
-    }
-    .facadeWindow {
+    .Main-content {
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
     }
-    .facadeWindow .facade-flow {
+    .Main-content .Main-strip {
         margin-top: -530px;
     }
-    .details {
+    .Main-details {
         position: fixed;
         z-index: 3;
         bottom: 10px;
@@ -143,7 +59,7 @@
         -ms-transition: opacity .35s, -ms-transform .35s;
         transition: opacity .35s, transform .35s;
     }
-    .details.expanded {
+    .Main-details.expanded {
         -webkit-transform: translate3d(0,0,0);
         -moz-transform: translate3d(0,0,0);
         -ms-transform: translate3d(0,0,0);
@@ -164,53 +80,16 @@
         padding: 0;
         pointer-events: none;
     }
-    .filter {
-        top: 50%;
-        left: 50%;
-        margin-top: -228px;
-        margin-left: -242px;
-        background: none;
-    }
-    .filter .matte-Button {
-        float: left;
-        margin-left: 3px;
-        width: 118px;
-        height: 40px;
-        padding-bottom: 16px;
-        text-align: center;
-        font-size: 14px;
-        line-height: 24px;
-        border-radius: 3px;
-        border: 1px solid rgba(255,255,255,.15);
-    }
-    .filter .matte-Button:before {
-        position: relative;
-        display: inline-block;
-        left: 0;
-        top: 7px;
-        width: 32px;
-        height: 24px;
-        background-size: 24px 249px;
-    }
-    .filter .matte-Button.in_theaters:before {
-        background-position: 0 -75px;
-    }
-    .filter .matte-Button.upcoming:before {
-        background-position: 0 -150px;
-    }
-    .filter .matte-Button.rentals:before {
-        background-position: 0 -225px;
-    }
-    .facadeWindow {
+    .Main-content {
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
     }
-    .facadeWindow .facade-flow {
+    .Main-content .Main-strip {
         margin-top: -525px;
     }
-    .details {
+    .Main-details {
         position: fixed;
         z-index: 3;
         top: 50%;
@@ -224,7 +103,7 @@
         -ms-transition: opacity .35s, -ms-transform .35s;
         transition: opacity .35s, transform .35s;
     }
-    .details .title:before {
+    .Main-details .title:before {
         display: none;
     }
 }
@@ -232,46 +111,16 @@
     .logo {
         display: none;
     }
-    .filter {
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 64px;
-        padding: 0;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-box;
-        display: box;
-        -webkit-box-orient: horizontal;
-        -moz-box-orient: horizontal;
-        -ms-box-orient: horizontal;
-        box-orient: horizontal;
-    }
-    .filter .matte-Button {
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        -ms-box-flex: 1;
-        box-flex: 1;
-        width: 25%;
-        line-height: 100px;
-        font-size: 11px;
-        text-align: center;
-    }
-    .filter .matte-Button:before {
-        left: 50%;
-        top: 8px;
-        margin-left: -16px;
-    }
-    .facadeWindow {
+    .Main-content {
         top: 0;
         left: 0;
         right: 0;
         bottom: 64px;
     }
-    .facadeWindow .facade-flow {
+    .Main-content .Main-strip {
         margin-top: -525px;
     }
-    .details {
+    .Main-details {
         position: fixed;
         z-index: 1;
         bottom: 64px;
@@ -288,7 +137,7 @@
         -ms-transition: opacity .35s, -ms-transform .35s;
         transition: opacity .35s, transform .35s;
     }
-    .details.expanded {
+    .Main-details.expanded {
         -webkit-transform: translate3d(0,0,0);
         -moz-transform: translate3d(0,0,0);
         -ms-transform: translate3d(0,0,0);
@@ -299,58 +148,7 @@
     .logo {
         display: none;
     }
-    .filter {
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 126px;
-        padding: 8px 0;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-box;
-        display: box;
-        -webkit-box-orient: vertical;
-        -moz-box-orient: vertical;
-        -ms-box-orient: vertical;
-        box-orient: vertical;
-    }
-    .filter .matte-Button {
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        -ms-box-flex: 1;
-        box-flex: 1;
-        padding-left: 48px;
-        text-align: left;
-        font-size: 14px;
-        white-space: nowrap;
-    }
-    .filter .matte-Button:before {
-        left: 8px;
-        top: 50%;
-        margin-top: -16px;
-    }
-    .filter .matte-Button .CategoryButton-text {
-        position: absolute;
-        left: 48px;
-        top: 50%;
-        margin-top: -7px;
-    }
-    .facadeWindow {
-        top: 0;
-        left: 126px;
-        right: 0;
-        bottom: 0;
-    }
-    .facadeWindow .facade-flow {
-        top: -65%;
-        left: 0;
-        bottom: -65%;
-        right: 0;
-        margin-top: -50px;
-        height: auto;
-        width: auto;
-    }
-    .details {
+    .Main-details {
         position: absolute;
         bottom: 10px;
         left: 10px;
@@ -368,7 +166,7 @@
         -ms-transition: opacity .35s, -ms-transform .35s;
         transition: opacity .35s, transform .35s;
     }
-    .details.expanded {
+    .Main-details.expanded {
         -webkit-transform: translate3d(0,0,0);
         -moz-transform: translate3d(0,0,0);
         -ms-transform: translate3d(0,0,0);
