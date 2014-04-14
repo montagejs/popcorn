@@ -10,27 +10,9 @@
                 "element": {"#": "owner"}
             },
             "bindings": {
-                "selected": {"<-": "@radioButtonController.value" }
+                "selected": {"<-": "@radioButtonController.value"}
             }
         },
-
-        "radioButtonController": {
-            "prototype": "montage/core/radio-button-controller",
-            "bindings": {
-                "contentController": {"<-": "@owner.categories" }
-            }
-        },
-
-        "repetition": {
-            "prototype": "montage/ui/repetition.reel",
-            "properties": {
-                "element": {"#": "repetition"}
-            },
-            "bindings": {
-                "contentController": {"<-": "@owner.categories" }
-            }
-        },
-
         "button": {
             "prototype": "./category-button.reel",
             "properties": {
@@ -38,18 +20,34 @@
                 "radioButtonController": {"@": "radioButtonController"}
             },
             "bindings": {
-                "value": {"<-": "@repetition:iteration.object" },
-                "label": {"<-": "@repetition:iteration.object.title" },
-                "classList.has(@repetition:iteration.object.key)": {"<-": "true" }
+                "classList.has(@repetition:iteration.object.key)": {"<-": "true"},
+                "label": {"<-": "@repetition:iteration.object.title"},
+                "value": {"<-": "@repetition:iteration.object"}
+            }
+        },
+        "radioButtonController": {
+            "prototype": "montage/core/radio-button-controller",
+            "bindings": {
+                "contentController": {"<-": "@owner.categories"}
+            }
+        },
+        "repetition": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "repetition"}
+            },
+            "bindings": {
+                "contentController": {"<-": "@owner.categories"}
             }
         }
-
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="Categories">
-        <span data-montage-id="repetition" class="filter"><button data-montage-id="button"></button></span>
+        <span data-montage-id="repetition" class="filter">
+            <button data-montage-id="button"></button>
+        </span>
     </div>
 </body>
 </html>

@@ -1,0 +1,40 @@
+{
+  "blueprint_abstractimage_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "AbstractImage",
+        "blueprintModule": {
+          "%": "montage/ui/base/abstract-image.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_src": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "src",
+      "blueprint": {"@": "root"},
+      "valueType": "url"
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "parent": {"@": "blueprint_abstractimage_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_src"}
+      ],
+      "propertyBlueprintGroups": {
+        "Image": [
+          {"@": "blueprint_unnamed_src"}
+        ]
+      },
+      "module": {
+        "%": "ui/moviestrip.reel/image.reel"
+      },
+      "exportName": "Image"
+    }
+  }
+}

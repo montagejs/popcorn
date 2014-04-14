@@ -1,0 +1,39 @@
+{
+  "blueprint_abstractradiobutton_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "AbstractRadioButton",
+        "blueprintModule": {
+          "%": "montage/ui/base/abstract-radio-button.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_label": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "label",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "parent": {"@": "blueprint_abstractradiobutton_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_label"}
+      ],
+      "propertyBlueprintGroups": {
+        "CategoryButton": [
+          {"@": "blueprint_unnamed_label"}
+        ]
+      },
+      "module": {
+        "%": "ui/categories.reel/category-button.reel"
+      },
+      "exportName": "CategoryButton"
+    }
+  }
+}
