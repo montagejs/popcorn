@@ -9,6 +9,7 @@ var AbstractRadioButton = require("montage/ui/base/abstract-radio-button").Abstr
  * @extends Component
  */
 exports.CategoryButton = AbstractRadioButton.specialize(/** @lends CategoryButton# */ {
+
     constructor: {
         value: function CategoryButton() {
             this.super();

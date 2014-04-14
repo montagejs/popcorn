@@ -28,14 +28,14 @@
                 "element": {"#": "details"}
             },
             "bindings": {
-                "data": {"<-": "@facadeflow.categoryContentController.selection.0" }
+                "data": {"<-": "@moviestrip.categoryContentController.selection.0" }
             }
         },
 
-        "facadeflow": {
-            "prototype": "ui/facadeflow.reel",
+        "moviestrip": {
+            "prototype": "ui/moviestrip.reel",
             "properties": {
-                "element": {"#": "facadeflow"},
+                "element": {"#": "moviestrip"},
                 "movieDetails": {"@": "details"}
             },
             "bindings": {
@@ -43,10 +43,10 @@
             }
         },
 
-        "popup": {
-            "prototype": "ui/moviepopup.reel",
+        "player": {
+            "prototype": "ui/player.reel",
             "properties": {
-                "element": {"#": "popup"}
+                "element": {"#": "player"}
             }
         }
     }
@@ -57,14 +57,14 @@
         <img class="logo" src="../../assets/image/logo.png" alt="logo" />
         <div data-montage-id="categories"></div>
         <div class="facadeWindow">
-            <div data-montage-id="facadeflow" class="facade">
+            <div data-montage-id="moviestrip" class="facade">
                 <div data-montage-id="facade-flow" class="facade-flow"></div>
             </div>
             <div data-montage-id="details" class="details"></div>
         </div>
 
         <a class="MontageMade" href="http://montagejs.org">Made with Montage</a>
-        <div data-montage-id="popup" class="popup"></div>
+        <div data-montage-id="player" class="popup"></div>
     </div>
 </body>
 </html>

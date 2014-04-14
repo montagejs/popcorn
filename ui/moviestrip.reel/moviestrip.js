@@ -1,10 +1,10 @@
 
 var Component   = require("montage/ui/component").Component;
 
-//TODO rename to Filmstrip
-exports.Facadeflow = Component.specialize({
+exports.Moviestrip = Component.specialize({
+
     constructor: {
-        value: function Facadeflow () {
+        value: function Moviestrip () {
             this.super();
         }
     },

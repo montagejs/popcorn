@@ -3,6 +3,13 @@ var Component = require("montage/ui/component").Component;
 
 exports.Details = Component.specialize({
 
+    constructor: {
+        value: function Details() {
+            this.super();
+        }
+    },
+
+
     _data: {
         value: null
     },
