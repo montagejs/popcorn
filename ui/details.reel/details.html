@@ -18,7 +18,7 @@
                 "element": {"#": "audienceScore"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.ratings.audience_score"}
+                "value": {"<-": "@owner.movie.ratings.audience_score"}
             }
         },
         "criticsScore": {
@@ -27,7 +27,7 @@
                 "element": {"#": "criticsScore"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.ratings.critics_score"}
+                "value": {"<-": "@owner.movie.ratings.critics_score"}
             }
         },
         "dates": {
@@ -36,7 +36,7 @@
                 "element": {"#": "dates"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.release_dates.theater"}
+                "value": {"<-": "@owner.movie.release_dates.theater"}
             }
         },
         "description": {
@@ -45,7 +45,7 @@
                 "element": {"#": "description"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.synopsis"}
+                "value": {"<-": "@owner.movie.synopsis"}
             }
         },
         "expandButton": {
@@ -66,7 +66,7 @@
                 "element": {"#": "maturity"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.mpaa_rating"}
+                "value": {"<-": "@owner.movie.mpaa_rating"}
             }
         },
         "rentButton": {
@@ -87,7 +87,7 @@
                 "element": {"#": "runtime"}
             },
             "bindings": {
-                "value": {"<-": "(@owner.data.runtime/60).floor() + 'h ' + @owner.data.runtime%60 + 'min'"}
+                "value": {"<-": "(@owner.movie.runtime/60).floor() + 'h ' + @owner.movie.runtime%60 + 'min'"}
             }
         },
         "scroller": {
@@ -103,7 +103,7 @@
                 "element": {"#": "title"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.title"}
+                "value": {"<-": "@owner.movie.title"}
             }
         },
         "trailerButton": {

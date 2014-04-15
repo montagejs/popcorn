@@ -10,26 +10,26 @@ exports.Details = Component.specialize({
     },
 
 
-    _data: {
+    _movie: {
         value: null
     },
 
-    data: {
+    movie: {
         set: function (val) {
-            this._data = val;
+            this._movie = val;
             this.needsDraw = true;
         },
         get: function () {
-            return this._data;
+            return this._movie;
         }
     },
 
     draw: {
         value: function () {
-            if (this.data) {
+            if (this.movie) {
                 //jshint -W106
-                var audience = this.data.ratings.audience_rating,
-                    critics = this.data.ratings.critics_rating;
+                var audience = this.movie.ratings.audience_rating,
+                    critics = this.movie.ratings.critics_rating;
                 //jshint +W106
                 if (audience === "Fresh") {
                     this.aImage.style.backgroundPosition = '0px 0px';
@@ -69,13 +69,13 @@ exports.Details = Component.specialize({
 
     handleRentButtonAction: {
         value: function () {
-            window.open( this.data.links.alternate );
+            window.open( this.movie.links.alternate );
         }
     },
 
     handleTrailerButtonAction: {
         value: function () {
-            this.dispatchEventNamed("openTrailer", true, true, {title: this.data.title});
+            this.dispatchEventNamed("openTrailer", true, true, {title: this.movie.title});
         }
     },
 
