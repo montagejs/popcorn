@@ -10,10 +10,6 @@
 .Main-content {
     position: fixed;
     overflow: hidden;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0px;
 }
 .Main-details.details-fade-out {
     -webkit-transition: -webkit-transform .35s;
@@ -151,6 +147,21 @@
 @media (max-height: 500px) and (orientation: landscape) {
     .logo {
         display: none;
+    }
+    .Main-content {
+        top: 0;
+        left: 126px;
+        right: 0;
+        bottom: 0;
+    }
+    .Main-content .Main-strip {
+        top: -65%;
+        left: 0;
+        bottom: -65%;
+        right: 0;
+        margin-top: -50px;
+        height: auto;
+        width: auto;
     }
     .Main-details {
         position: absolute;

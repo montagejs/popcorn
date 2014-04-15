@@ -200,6 +200,8 @@
     margin: 0;
     background: transparent;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 12px;
+    min-width: 30px;
 }
 
 .rt-icon {
