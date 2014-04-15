@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="main.css">
     <script type="text/montage-serialization">
     {
@@ -10,43 +10,38 @@
                 "element": {"#": "owner"}
             }
         },
-
         "categories": {
             "prototype": "ui/categories.reel",
             "properties": {
                 "element": {"#": "categories"}
             },
             "bindings": {
-                "categories": {"<-": "@owner.rottenTomato.categories" }
+                "categories": {"<-": "@owner.rottenTomato.categories"}
             }
-
         },
-
         "details": {
             "prototype": "ui/details.reel",
             "properties": {
                 "element": {"#": "details"}
             },
             "bindings": {
-                "data": {"<-": "@facadeflow.categoryContentController.selection.0" }
+                "data": {"<-": "@moviestrip.categoryContentController.selection.0"}
             }
         },
-
-        "facadeflow": {
-            "prototype": "ui/facadeflow.reel",
+        "moviestrip": {
+            "prototype": "ui/moviestrip.reel",
             "properties": {
-                "element": {"#": "facadeflow"},
-                "details": {"@": "details"}
+                "element": {"#": "moviestrip"},
+                "movieDetails": {"@": "details"}
             },
             "bindings": {
                 "categoryContentController": {"<-": "@owner.rottenTomato.categories.selection.one().contentController"}
             }
         },
-
-        "popup": {
-            "prototype": "ui/moviepopup.reel",
+        "player": {
+            "prototype": "ui/player.reel",
             "properties": {
-                "element": {"#": "popup"}
+                "element": {"#": "player"}
             }
         }
     }
@@ -54,17 +49,16 @@
 </head>
 <body>
     <div data-montage-id="owner" class="Main">
-        <img class="logo" src="../../assets/image/logo.png" alt="logo" />
+        <img class="logo" src="../../assets/image/logo.png" alt="logo">
         <div data-montage-id="categories"></div>
-        <div class="facadeWindow">
-            <div data-montage-id="facadeflow" class="facade">
-                <div data-montage-id="facade-flow" class="facade-flow"></div>
-            </div>
-            <div data-montage-id="details" class="details"></div>
+        <div class="Main-content">
+            <div data-montage-id="moviestrip" class="Main-strip"></div>
+            <div data-montage-id="details" class="Main-details"></div>
         </div>
-
-        <a class="MontageMade" href="http://montagejs.org">Made with Montage</a>
-        <div data-montage-id="popup" class="popup"></div>
+        <a class="MontageMade" href="http://montagejs.org">
+            Made with Montage
+        </a>
+        <div data-montage-id="player" class="popup"></div>
     </div>
 </body>
 </html>

@@ -1,0 +1,40 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_player": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "player",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_player"}
+      ],
+      "propertyBlueprintGroups": {
+        "Player": [
+          {"@": "blueprint_unnamed_player"}
+        ]
+      },
+      "module": {
+        "%": "ui/player.reel"
+      },
+      "exportName": "Player"
+    }
+  }
+}

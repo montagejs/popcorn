@@ -1,96 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="details.css">
     <script type="text/montage-serialization">
     {
         "owner": {
             "properties": {
                 "element": {"#": "owner"},
-                "cImage": {"#": "cImage"},
-                "aImage": {"#": "aImage"}
+                "aImage": {"#": "aImage"},
+                "cImage": {"#": "cImage"}
             }
         },
-
-        "title": {
+        "audienceScore": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "title"}
+                "element": {"#": "audienceScore"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.title" }
+                "value": {"<-": "@owner.data.ratings.audience_score"}
             }
         },
-
-        "description": {
+        "criticsScore": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "description"}
+                "element": {"#": "criticsScore"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.synopsis" }
+                "value": {"<-": "@owner.data.ratings.critics_score"}
             }
         },
-
         "dates": {
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "dates"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.release_dates.theater" }
+                "value": {"<-": "@owner.data.release_dates.theater"}
             }
         },
-
-        "maturity": {
+        "description": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "maturity"}
+                "element": {"#": "description"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.mpaa_rating" }
+                "value": {"<-": "@owner.data.synopsis"}
             }
         },
-
-        "runtime": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "runtime"}
-            },
-            "bindings": {
-                "value": {"<-": "(@owner.data.runtime/60).floor() + 'h ' + @owner.data.runtime%60 + 'min'" }
-            }
-        },
-
-        "rentButton": {
-            "prototype": "matte/ui/button.reel",
-            "properties": {
-                "element": {"#": "rentButton"}
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "listener": {"@": "owner"}
-                }
-            ]
-        },
-
-        "trailerButton": {
-            "prototype": "matte/ui/button.reel",
-            "properties": {
-                "element": {"#": "trailerButton"}
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "listener": {"@": "owner"}
-                }
-            ]
-        },
-
         "expandButton": {
-            "prototype": "matte/ui/button.reel",
+            "prototype": "digit/ui/button.reel",
             "properties": {
                 "element": {"#": "expand"}
             },
@@ -101,58 +60,105 @@
                 }
             ]
         },
-
-        "audienceScore": {
+        "maturity": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "audienceScore"}
+                "element": {"#": "maturity"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.ratings.audience_score" }
+                "value": {"<-": "@owner.data.mpaa_rating"}
             }
         },
-
-        "criticsScore": {
+        "rentButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "rentButton"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "runtime": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "criticsScore"}
+                "element": {"#": "runtime"}
             },
             "bindings": {
-                "value": {"<-": "@owner.data.ratings.critics_score" }
+                "value": {"<-": "(@owner.data.runtime/60).floor() + 'h ' + @owner.data.runtime%60 + 'min'"}
             }
         },
-
         "scroller": {
             "prototype": "matte/ui/scroller.reel",
             "properties": {
                 "element": {"#": "scroller"},
                 "hasMomentum": true
             }
+        },
+        "title": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "title"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.data.title"}
+            }
+        },
+        "trailerButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "trailerButton"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
         }
     }
     </script>
 </head>
 <body>
-    <div data-montage-id="owner" class="details">
+    <div data-montage-id="owner" class="Details">
         <div data-montage-id="expand" class="expand">
             <h2 data-montage-id="title" class="title"></h2>
             <div class="summary">
                 <div>
-                    <div>Release</div><time data-montage-id="dates" class="score"></time>
+                    <div>
+                        Release
+                    </div>
+                    <time data-montage-id="dates" class="score"></time>
                 </div>
                 <div>
-                    <div>Rating</div><span data-montage-id="maturity" class="maturity"></span></span>
+                    <div>
+                        Rating
+                    </div>
+                    <span data-montage-id="maturity" class="maturity"></span>
                 </div>
                 <div>
-                    <div>Duration</div><span data-montage-id="runtime" class="score"></span>
+                    <div>
+                        Duration
+                    </div>
+                    <span data-montage-id="runtime" class="score"></span>
                 </div>
                 <div>
-                    <div>Critics</div>
-                    <span data-montage-id="cImage" class="rt-icon icon-critics"></span><span data-montage-id="criticsScore" class="score"></span>%
+                    <div>
+                        Critics
+                    </div>
+                    <span data-montage-id="cImage" class="rt-icon icon-critics"></span>
+                    <span data-montage-id="criticsScore" class="score"></span>
+                    %
                 </div>
                 <div>
-                    <div>Audience</div>
-                    <span data-montage-id="aImage" class="rt-icon icon-audience"></span> <span data-montage-id="audienceScore" class="score"></span>%
+                    <div>
+                        Audience
+                    </div>
+                    <span data-montage-id="aImage" class="rt-icon icon-audience"></span>
+                    <span data-montage-id="audienceScore" class="score"></span>
+                    %
                 </div>
             </div>
         </div>
@@ -160,8 +166,12 @@
             <p data-montage-id="description" class="description"></p>
         </div>
         <nav class="action-buttons">
-            <button data-montage-id="trailerButton" class="button button-trailer">Trailer</button>
-            <button data-montage-id="rentButton" class="button button-rent">Rent</button>
+            <button data-montage-id="trailerButton" class="button button-trailer">
+                Trailer
+            </button>
+            <button data-montage-id="rentButton" class="button button-rent">
+                Rent
+            </button>
         </nav>
     </div>
 </body>

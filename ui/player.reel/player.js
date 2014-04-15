@@ -4,7 +4,14 @@ var Component = require("montage/ui/component").Component;
 var TRAILER_URL = "http://www.youtube.com/embed/%s";
 var PLACE_HOLDER = "%s";
 
-exports.Moviepopup = Component.specialize({
+exports.Player = Component.specialize({
+
+    constructor: {
+        value: function Player() {
+            this.super();
+        }
+    },
+
 
     player: {
         value: null
