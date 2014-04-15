@@ -1,4 +1,4 @@
-.facade-flow  {
+.Moviestrip  {
     position: absolute;
     top: 50%;
     margin-top: -500px;
@@ -6,14 +6,14 @@
     right: 0;
     height: 1000px;
 }
-.facade-flow .flow .montage-Flow-Repetition {
+.Moviestrip-flow .montage-Flow-Repetition {
     opacity: 1;
     -webkit-transition: opacity .5s;
     -moz-transition: opacity .5s;
     -ms-transition: opacity .5s;
     transition: opacity .5s;
 }
-.facade-flow .flow.is-hidden .montage-Flow-Repetition {
+.Moviestrip-flow.is-hidden .montage-Flow-Repetition {
     opacity: 0;
 }
 .montage-Flow-Slot {
@@ -22,7 +22,7 @@
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
-.flow .Image  {
+.Moviestrip-flow .Moviestrip-image  {
     position: absolute;
     width: 180px;
     height: 267px;
@@ -33,7 +33,7 @@
     background-size: cover;
     background-position: center center;
 }
-.flow .Image:before {
+.Moviestrip-flow .Moviestrip-image:before {
     content: "";
     position: absolute;
     top: -26px;

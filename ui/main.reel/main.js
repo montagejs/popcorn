@@ -53,7 +53,7 @@ exports.Main = Component.specialize({
         value: function (self) {
             if ((window.innerHeight === window.outerHeight) || (window.innerHeight !== this._element.offsetHeight)) {
                 window.scrollTo(0, 0);
-                self.templateObjects.moviestrip.flow.handleResize();
+                self.templateObjects.moviestrip.movieFlow.handleResize();
                 window.clearTimeout(self._windowScrollTimeout);
                 self._windowScrollTimeout = window.setTimeout(function () {
                     self._windowScroll(self);

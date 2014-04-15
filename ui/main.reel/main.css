@@ -10,6 +10,10 @@
 .Main-content {
     position: fixed;
     overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
 }
 .Main-details.details-fade-out {
     -webkit-transition: -webkit-transform .35s;
