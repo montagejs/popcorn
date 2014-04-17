@@ -10,10 +10,10 @@
       }
     }
   },
-  "blueprint_unnamed_data": {
+  "blueprint_unnamed_movie": {
     "prototype": "montage/core/meta/property-blueprint",
     "properties": {
-      "name": "data",
+      "name": "movie",
       "blueprint": {"@": "root"},
       "valueType": "object"
     }
@@ -24,11 +24,11 @@
       "name": null,
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
-        {"@": "blueprint_unnamed_data"}
+        {"@": "blueprint_unnamed_movie"}
       ],
       "propertyBlueprintGroups": {
         "Details": [
-          {"@": "blueprint_unnamed_data"}
+          {"@": "blueprint_unnamed_movie"}
         ]
       },
       "module": {
