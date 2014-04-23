@@ -72,11 +72,7 @@
     display: -webkit-box;
     display: -moz-box;
     display: -ms-box;
-    display: box;
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    -ms-box-orient: horizontal;
-    box-orient: horizontal;
+    display: flex;
 }
 
 .summary > div {
@@ -85,7 +81,7 @@
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -ms-box-flex: 1;
-    box-flex: 1;
+    flex: 1;
     border-left: 1px solid rgba(0,0,0,.3);
     color: #bbb;
 }
