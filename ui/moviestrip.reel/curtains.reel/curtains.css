@@ -1,4 +1,10 @@
-.Overlay {
+.Curtains {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.Curtains.Curtains-curtainLeft {
     position: absolute;
     top: -818px;
     left: -1774px;
@@ -10,13 +16,9 @@
     -moz-transform: translate3d(0, 0, -855.612018px);
     -ms-transform: translate3d(0, 0, -855.612018px);
     transform: translate3d(0, 0, -855.612018px);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
 }
-.Overlay:before {
-    content: "";
+.Curtains .Curtains-curtainRight{
+    /*content: "";*/
     position: absolute;
     top: 0;
     left: 1772px;
@@ -29,13 +31,13 @@
     -ms-transform: scale(-1, 1);
     transform: scale(-1, 1);
 }
-.Overlay .film {
+.Curtains .Curtains-film {
     position: absolute;
     left: 1774px;
     top: 841px;
     width: 1184px;
     height: 944px;
-    background-image: url(overlay.png);
+    background-image: url(filmstrip.png);
     background-repeat: no-repeat;
     pointer-events: none;
     -webkit-transform-origin: 0 0 0;
@@ -47,12 +49,11 @@
     -ms-transform: translate3d(-296px, -139.5px, 941.709016px) scale(.25, .25);
     transform: translate3d(-296px, -139.5px, 941.709016px) scale(.25, .25);
 }
-.Overlay .film:before {
-    content: "";
+.Curtains .Curtains-filmRight {
     position: absolute;
     width: 1184px;
     height: 944px;
-    background-image: url(overlay.png);
+    background-image: url(filmstrip.png);
     background-repeat: no-repeat;
     pointer-events: none;
     -webkit-transform-origin: 0 0 0;
@@ -64,8 +65,7 @@
     -ms-transform: translate3d(2368px, 0, 0) scale(-1, 1);
     transform: translate3d(2368px, 0, 0) scale(-1, 1);
 }
-.Overlay .film:after {
-    content: "";
+.Curtains .Curtains-filmLeft {
     position: absolute;
     width: 286px;
     height: 288px;
@@ -81,7 +81,7 @@
     -ms-transform: translate3d(1760px, 600px, 0);
     transform: translate3d(1760px, 600px, 0);
 }
-.Overlay .top {
+.Curtains .Curtains-topLeft {
     position: absolute;
     left: 1774px;
     top: 818px;
@@ -104,10 +104,9 @@
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
-.Overlay .top:before {
-    content: "";
+.Curtains .Curtains-topRight {
     position: absolute;
-    width: 592px;
+    width: 832px;
     height: 1682px;
     border-left: 240px solid black;
     background-image: url(background.jpg);

@@ -224,7 +224,7 @@
                     }
                 ],
                 "scrollingTransitionDuration": "600",
-                "slotContent": {"@": "overlay"},
+                "slotContent": {"@": "curtains"},
                 "stride": 1
             },
             "bindings": {
@@ -232,10 +232,10 @@
                 "contentController": {"<-": "@owner._displayedContentController"}
             }
         },
-        "overlay": {
-            "prototype": "./overlay.reel",
+        "curtains": {
+            "prototype": "./curtains.reel",
             "properties": {
-                "element": {"#": "overlay"}
+                "element": {"#": "curtains"}
             }
         },
         "poster": {
@@ -252,7 +252,7 @@
 </head>
 <body>
     <div data-montage-id="owner" class="Moviestrip">
-        <div data-montage-id="overlay"></div>
+        <div data-montage-id="curtains"></div>
         <div data-montage-id="movieFlow" class="Moviestrip-flow">
             <div data-montage-id="poster" class="Moviestrip-image"></div>
         </div>
