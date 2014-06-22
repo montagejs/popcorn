@@ -8,7 +8,7 @@ var RangeController = require("montage/core/range-controller").RangeController;
 var CategoryController = require("./category-controller").CategoryController;
 var sharedTransport = require("./jsonp-transport").shared;
 
-var API_KEY = "edvr96kp6mddwsasvmt269pw";
+var API_KEY = "enuvdkprrujx6k8mzx9zyavg";
 var BOX_OFFICE_FEED = "https://rottentomatoes.montagestudio.com/api/public/v1.0/lists/movies/box_office.json?limit=15&country=us&apikey=" + API_KEY;
 var UPCOMING_FEED = "https://rottentomatoes.montagestudio.com/api/public/v1.0/lists/movies/upcoming.json?page_limit=30&page=1&country=us&apikey=" + API_KEY;
 var TOP_RENTALS_FEED = "https://rottentomatoes.montagestudio.com/api/public/v1.0/lists/dvds/top_rentals.json?limit=20&country=us&apikey=" + API_KEY;
