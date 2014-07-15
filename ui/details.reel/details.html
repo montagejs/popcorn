@@ -7,9 +7,7 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "owner"},
-                "aImage": {"#": "aImage"},
-                "cImage": {"#": "cImage"}
+                "element": {"#": "owner"}
             }
         },
         "audienceScore": {
@@ -18,7 +16,7 @@
                 "element": {"#": "audienceScore"}
             },
             "bindings": {
-                "value": {"<-": "@owner.movie.ratings.audience_score"}
+                "value": {"<-": "@owner.movie.vote_average"}
             }
         },
         "criticsScore": {
@@ -27,7 +25,7 @@
                 "element": {"#": "criticsScore"}
             },
             "bindings": {
-                "value": {"<-": "@owner.movie.ratings.critics_score"}
+                "value": {"<-": "@owner.movie.popularity.round(0)"}
             }
         },
         "dates": {
@@ -36,7 +34,7 @@
                 "element": {"#": "dates"}
             },
             "bindings": {
-                "value": {"<-": "@owner.movie.release_dates.theater"}
+                "value": {"<-": "@owner.movie.release_date"}
             }
         },
         "description": {
@@ -45,7 +43,7 @@
                 "element": {"#": "description"}
             },
             "bindings": {
-                "value": {"<-": "@owner.movie.synopsis"}
+                "value": {"<-": "@owner.movie.overview"}
             }
         },
         "expandButton": {
@@ -66,20 +64,8 @@
                 "element": {"#": "maturity"}
             },
             "bindings": {
-                "value": {"<-": "@owner.movie.mpaa_rating"}
+                "value": {"<-": "@owner.movie.mpaaRating"}
             }
-        },
-        "rentButton": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "element": {"#": "rentButton"}
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "listener": {"@": "owner"}
-                }
-            ]
         },
         "runtime": {
             "prototype": "montage/ui/text.reel",
@@ -147,19 +133,16 @@
             </div>
             <div>
                 <div>
-                    Critics
+                    Popularity
                 </div>
-                <span data-montage-id="cImage" class="rt-icon icon-critics"></span>
                 <span data-montage-id="criticsScore" class="score"></span>
-                %
             </div>
             <div>
                 <div>
-                    Audience
+                    Score
                 </div>
-                <span data-montage-id="aImage" class="rt-icon icon-audience"></span>
                 <span data-montage-id="audienceScore" class="score"></span>
-                %
+                / 10
             </div>
         </div>
         <div data-montage-id="scroller" class="scroller">
@@ -168,9 +151,6 @@
         <nav class="action-buttons">
             <button data-montage-id="trailerButton" class="button button-trailer">
                 Trailer
-            </button>
-            <button data-montage-id="rentButton" class="button button-rent">
-                Rent
             </button>
         </nav>
     </div>

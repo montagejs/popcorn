@@ -1,5 +1,6 @@
 
 var Component = require("montage/ui/component").Component;
+var sharedTmdbService = require("core/tmdb-service").shared;
 
 exports.Details = Component.specialize({
 
@@ -16,7 +17,29 @@ exports.Details = Component.specialize({
 
     movie: {
         set: function (val) {
+            var self = this;
             this._movie = val;
+            if(val != null) {
+                sharedTmdbService.loadMovie(val)
+                .then(function (movie) {
+                    self.dispatchBeforeOwnPropertyChange("movie", self._movie);
+                    self._movie = movie;
+                    self.dispatchOwnPropertyChange("movie", self._movie);
+                    return movie;
+                })
+                .then(function (movie) {
+                    return sharedTmdbService.loadReleases(movie);
+                })
+                .then(function (releases) {
+                    var rating = releases.countries[0].certification;
+
+                    if (rating.length === 0) {
+                        rating = "none";
+                    }
+                    self._movie.mpaaRating = rating;
+                })
+                .done();
+            }
             this.needsDraw = true;
         },
         get: function () {
@@ -26,7 +49,7 @@ exports.Details = Component.specialize({
 
     draw: {
         value: function () {
-            if (this.movie) {
+            if (false && this.movie) {
                 //jshint -W106
                 var audience = this.movie.ratings.audience_rating,
                     critics = this.movie.ratings.critics_rating;
