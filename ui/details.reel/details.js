@@ -49,37 +49,18 @@ exports.Details = Component.specialize({
 
     draw: {
         value: function () {
-            if (false && this.movie) {
+            if (this.movie) {
                 //jshint -W106
-                var audience = this.movie.ratings.audience_rating,
-                    critics = this.movie.ratings.critics_rating;
+                var popularity = this.movie.popularity;
                 //jshint +W106
-                if (audience === "Fresh") {
-                    this.aImage.style.backgroundPosition = '0px 0px';
-                } else if (audience === "Rotten") {
-                    this.aImage.style.backgroundPosition = '0px -25px';
-                } else if (audience === "Certified Fresh") {
-                    this.aImage.style.backgroundPosition = '0px -50px';
-                } else if (audience === "Upright") {
-                    this.aImage.style.backgroundPosition = '0px -75px';
-                } else if (audience === "Spilled") {
-                    this.aImage.style.backgroundPosition = '0px -125px';
+                if (popularity < 25) {
+                    this.popularityIcon.style.backgroundPosition = '0px 0px';
+                } else if (popularity < 50) {
+                    this.popularityIcon.style.backgroundPosition = '-12px 0px';
+                } else if (popularity < 75) {
+                    this.popularityIcon.style.backgroundPosition = '-24px 0px';
                 } else {
-                    this.aImage.style.backgroundPosition = '0px -100px';
-                }
-
-                if (critics === "Fresh"){
-                    this.cImage.style.backgroundPosition = '0px 0px';
-                } else if (critics === "Rotten"){
-                    this.cImage.style.backgroundPosition = '0px -25px';
-                } else if (critics === "Certified Fresh"){
-                    this.cImage.style.backgroundPosition = '0px -50px';
-                } else if (critics === "Upright"){
-                    this.cImage.style.backgroundPosition = '0px -75px';
-                } else if (critics === "Spilled"){
-                    this.cImage.style.backgroundPosition = '0px -125px';
-                } else {
-                    this.cImage.style.backgroundPosition = '0px -100px';
+                    this.popularityIcon.style.backgroundPosition = '-36px 0px';
                 }
                 if (this._isDetailsExpanded) {
                     this._element.classList.add("expanded");
