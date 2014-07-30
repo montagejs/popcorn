@@ -1,6 +1,6 @@
 
 var Component = require("montage/ui/component").Component,
-    sharedRottenTomatoService = require("core/rotten-tomato-service").shared,
+    sharedRottenTomatoService = require("core/tmdb-service").shared,
     sharedYoutubeService = require("core/youtube-service").shared;
 
 //TODO use details in toggle buttons

@@ -244,7 +244,7 @@
                 "element": {"#": "poster"}
             },
             "bindings": {
-                "src": {"<-": "@movieFlow:iteration.object.posters.detailed"}
+                "src": {"<-": "'http://image.tmdb.org/t/p/w300' + @movieFlow:iteration.object.poster_path"}
             }
         }
     }

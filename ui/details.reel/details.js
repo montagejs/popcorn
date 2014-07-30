@@ -1,5 +1,6 @@
 
 var Component = require("montage/ui/component").Component;
+var sharedTmdbService = require("core/tmdb-service").shared;
 
 exports.Details = Component.specialize({
 
@@ -16,7 +17,29 @@ exports.Details = Component.specialize({
 
     movie: {
         set: function (val) {
+            var self = this;
             this._movie = val;
+            if(val != null) {
+                sharedTmdbService.loadMovie(val)
+                .then(function (movie) {
+                    self.dispatchBeforeOwnPropertyChange("movie", self._movie);
+                    self._movie = movie;
+                    self.dispatchOwnPropertyChange("movie", self._movie);
+                    return movie;
+                })
+                .then(function (movie) {
+                    return sharedTmdbService.loadReleases(movie);
+                })
+                .then(function (releases) {
+                    var rating = releases.countries[0].certification;
+
+                    if (rating.length === 0) {
+                        rating = "none";
+                    }
+                    self._movie.mpaaRating = rating;
+                })
+                .done();
+            }
             this.needsDraw = true;
         },
         get: function () {
@@ -28,35 +51,16 @@ exports.Details = Component.specialize({
         value: function () {
             if (this.movie) {
                 //jshint -W106
-                var audience = this.movie.ratings.audience_rating,
-                    critics = this.movie.ratings.critics_rating;
+                var popularity = this.movie.popularity;
                 //jshint +W106
-                if (audience === "Fresh") {
-                    this.aImage.style.backgroundPosition = '0px 0px';
-                } else if (audience === "Rotten") {
-                    this.aImage.style.backgroundPosition = '0px -25px';
-                } else if (audience === "Certified Fresh") {
-                    this.aImage.style.backgroundPosition = '0px -50px';
-                } else if (audience === "Upright") {
-                    this.aImage.style.backgroundPosition = '0px -75px';
-                } else if (audience === "Spilled") {
-                    this.aImage.style.backgroundPosition = '0px -125px';
+                if (popularity < 25) {
+                    this.popularityIcon.style.backgroundPosition = '0px 0px';
+                } else if (popularity < 50) {
+                    this.popularityIcon.style.backgroundPosition = '-12px 0px';
+                } else if (popularity < 75) {
+                    this.popularityIcon.style.backgroundPosition = '-24px 0px';
                 } else {
-                    this.aImage.style.backgroundPosition = '0px -100px';
-                }
-
-                if (critics === "Fresh"){
-                    this.cImage.style.backgroundPosition = '0px 0px';
-                } else if (critics === "Rotten"){
-                    this.cImage.style.backgroundPosition = '0px -25px';
-                } else if (critics === "Certified Fresh"){
-                    this.cImage.style.backgroundPosition = '0px -50px';
-                } else if (critics === "Upright"){
-                    this.cImage.style.backgroundPosition = '0px -75px';
-                } else if (critics === "Spilled"){
-                    this.cImage.style.backgroundPosition = '0px -125px';
-                } else {
-                    this.cImage.style.backgroundPosition = '0px -100px';
+                    this.popularityIcon.style.backgroundPosition = '-36px 0px';
                 }
                 if (this._isDetailsExpanded) {
                     this._element.classList.add("expanded");

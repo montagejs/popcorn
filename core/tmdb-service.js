@@ -1,5 +1,5 @@
 /**
- * @module ./rotten-tomato-service
+ * @module ./tmdb-service
  * @requires montage/core/core
  */
 var Montage = require("montage/core/core").Montage;
@@ -8,18 +8,18 @@ var RangeController = require("montage/core/range-controller").RangeController;
 var CategoryController = require("./category-controller").CategoryController;
 var sharedTransport = require("./jsonp-transport").shared;
 
-var API_KEY = "k5aw75jhje4dupwrkc6ggtpx";
-var BOX_OFFICE_FEED = "https://rottentomatoes.montagestudio.com/api/public/v1.0/lists/movies/box_office.json?limit=15&country=us&apikey=" + API_KEY;
-var UPCOMING_FEED = "https://rottentomatoes.montagestudio.com/api/public/v1.0/lists/movies/upcoming.json?page_limit=30&page=1&country=us&apikey=" + API_KEY;
-var TOP_RENTALS_FEED = "https://rottentomatoes.montagestudio.com/api/public/v1.0/lists/dvds/top_rentals.json?limit=20&country=us&apikey=" + API_KEY;
-var IN_THEATERS_FEED = "https://rottentomatoes.montagestudio.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=30&page=1&country=us&apikey=" + API_KEY;
-
+var API_KEY = "dbf71473cf25bbd06939baef47b626eb";
+var BOX_OFFICE_FEED = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + API_KEY;
+var UPCOMING_FEED = "https://api.themoviedb.org/3/movie/upcoming?api_key=" + API_KEY;
+var TOP_RATED_FEED = "https://api.themoviedb.org/3/movie/top_rated?api_key=" + API_KEY;
+var POPULAR_FEED = "https://api.themoviedb.org/3/movie/popular?api_key=" + API_KEY;
+var MOVIE = "https://api.themoviedb.org/3/movie/";
 /**
- * @class RottenTomatoService
+ * @class TmdbService
  * @extends Montage
  */
-//TODO change to tomatoes
-exports.RottenTomatoService = Montage.specialize(/** @lends RottenTomatoService# */ {
+
+exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
 //TODO combine constructor and load
     constructor: {
         value: function RottenTomatoService() {
@@ -35,8 +35,8 @@ exports.RottenTomatoService = Montage.specialize(/** @lends RottenTomatoService#
 
             self.latestBoxOffice = new CategoryController("Box Office", "box_office");
             self.upcoming = new CategoryController("Upcoming", "upcoming");
-            self.topDvdRentals = new CategoryController("Rentals", "rentals");
-            self.inTheaters = new CategoryController("In Theaters", "in_theaters");
+            self.topDvdRentals = new CategoryController("Top Rated", "rentals");
+            self.inTheaters = new CategoryController("Popular", "in_theaters");
 
             var boxOfficePromise = this.loadLatestBoxOfficeMovies()
             .then(function (latestBoxOffice) {
@@ -50,8 +50,8 @@ exports.RottenTomatoService = Montage.specialize(/** @lends RottenTomatoService#
                 // then do the rest
                 return [
                     self.loadUpcomingMovies(),
-                    self.loadTopDvdRentals(),
-                    self.loadInTheaters()
+                    self.loadTopRated(),
+                    self.loadPopular()
                 ];
             })
             .spread(function (upcomingMovies, topDvdRentals, inTheaters) {
@@ -88,9 +88,9 @@ exports.RottenTomatoService = Montage.specialize(/** @lends RottenTomatoService#
     loadLatestBoxOfficeMovies: {
         value: function () {
 
-            return sharedTransport.makeRequest(BOX_OFFICE_FEED, "rottenTomato")
+            return sharedTransport.makeRequest(BOX_OFFICE_FEED, "tmdb")
             .then(function (response) {
-                return response.movies;
+                return response.results;
             });
         }
     },
@@ -98,34 +98,52 @@ exports.RottenTomatoService = Montage.specialize(/** @lends RottenTomatoService#
     loadUpcomingMovies: {
         value: function () {
 
-            return sharedTransport.makeRequest(UPCOMING_FEED, "rottenTomato")
+            return sharedTransport.makeRequest(UPCOMING_FEED, "tmdb")
             .then(function (response) {
-                return response.movies;
+                return response.results;
             });
         }
     },
 
-    loadTopDvdRentals: {
+    loadTopRated: {
         value: function () {
 
-            return sharedTransport.makeRequest(TOP_RENTALS_FEED, "rottenTomato")
+            return sharedTransport.makeRequest(TOP_RATED_FEED, "tmdb")
             .then(function (response) {
-                return response.movies;
+                return response.results;
             });
         }
 
     },
 
-    loadInTheaters: {
+    loadPopular: {
         value: function () {
 
-            return sharedTransport.makeRequest(IN_THEATERS_FEED, "rottenTomato")
+            return sharedTransport.makeRequest(POPULAR_FEED, "tmdb")
             .then(function (response) {
-                return response.movies;
+                return response.results;
+            });
+        }
+    },
+
+    loadMovie: {
+        value: function (movie) {
+            return sharedTransport.makeRequest(MOVIE+ movie.id + "?api_key=" + API_KEY, "tmdb")
+            .then(function (response) {
+                return response;
+            });
+        }
+    },
+
+    loadReleases: {
+        value: function (movie) {
+            return sharedTransport.makeRequest(MOVIE+ movie.id + "/releases?api_key=" + API_KEY, "tmdb")
+            .then(function (response) {
+                return response;
             });
         }
     }
 
 });
 
-exports.shared = new exports.RottenTomatoService();
+exports.shared = new exports.TmdbService();

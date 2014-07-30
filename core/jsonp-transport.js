@@ -49,7 +49,7 @@ exports.JsonpTransport = Montage.specialize(/** @lends JsonpTransport# */ {
 
     _handleResponse: {
         value: function (data, deferred) {
-            console.log("response", data);
+//            console.log("response", data);
             if (!data) {
                 deferred.reject(new Error("Unknown API Error"));
             } else if (data.error) {
