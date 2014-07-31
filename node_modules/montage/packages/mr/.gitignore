@@ -1,0 +1,7 @@
+.npmignore
+.tmp
+.idea
+.DS_Store
+lcov.info
+lcov-report/
+/node_modules
