@@ -92,10 +92,8 @@
 }
 
 .summary > div > div {
-    text-align: left;
     border-bottom: 1px solid rgba(0,0,0,.3);
     font-size: 13px;
-    line-height: 1.7em;
     color: #777;
 }
 
