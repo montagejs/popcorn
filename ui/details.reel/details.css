@@ -158,11 +158,11 @@
     right: 16px;
     position: absolute;
     border-bottom: 11px solid hsl(0,0%,13%);
-    background: -webkit-linear-gradient(top, hsla(0,0%,13%,0), hsl(0,0%,13%) );
-    background: -moz-linear-gradient(top, hsla(0,0%,18%,.95), hsla(0,0%,25%,.95) );
-    background: -ms-linear-gradient(top, hsla(0,0%,18%,.95), hsla(0,0%,25%,.95) );
-    background: linear-gradient(top, hsla(0,0%,18%,.95), hsla(0,0%,25%,.95) );
-    -webkit-transform: translate3d(0,1px,0);
+    background: -webkit-linear-gradient(top, hsla(0,0%,13%,0), hsl(0,0%,13%, 1) );
+    background: -moz-linear-gradient(top, hsla(0,0%,13%,0), hsla(0,0%,13%, 1) );
+    background: -ms-linear-gradient(top, hsla(0,0%,13%,0), hsla(0,0%,13%, 1) );
+    background: linear-gradient(top, hsla(0,0%,13%,0), hsla(0,0%,13%, 1) );
+    -webkit-transform: translate3d(0,1px,0);    
     -moz-transform: translate3d(0,1px,0);
     -ms-transform: translate3d(0,1px,0);
     transform: translate3d(0,1px,0);
