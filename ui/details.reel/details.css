@@ -124,7 +124,7 @@
 }
 
 .scroller {
-    height: 118px;
+    height: 101px;
     color: white;
     background: hsl(0,0%,13%);
 }
@@ -214,7 +214,13 @@
     }
 }
 
-@media (orientation: landscape) {
+@media all and (max-width: 500px) and (orientation: portrait) {
+    .scroller {
+        height: 118px;
+    }
+}
+
+@media all and (max-width: 500px) and (orientation: landscape) {
     .scroller {
         height: 79px;
     }

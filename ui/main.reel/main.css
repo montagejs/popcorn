@@ -50,10 +50,10 @@
         left: 50%;
         margin-left: -250px;
         height: 180px;
-        -webkit-transform: translate3d(0,95px,0);
-        -moz-transform: translate3d(0,119px,0);
-        -ms-transform: translate3d(0,119px,0);
-        transform: translate3d(0,119px,0);
+        -webkit-transform: translate3d(0,148px,0);
+        -moz-transform: translate3d(0,148px,0);
+        -ms-transform: translate3d(0,148px,0);
+        transform: translate3d(0,148px,0);
         -webkit-transition: opacity .35s, -webkit-transform .35s;
         -moz-transition: opacity .35s, -moz-transform .35s;
         -ms-transition: opacity .35s, -ms-transform .35s;
@@ -96,7 +96,7 @@
         width: 500px;
         left: 50%;
         margin-left: -250px;
-        margin-top: 148px;
+        margin-top: 138px;
         height: 203px;
         -webkit-transition: opacity .35s, -webkit-transform .35s;
         -moz-transition: opacity .35s, -moz-transform .35s;
@@ -106,9 +106,9 @@
     .Main-details .title:before {
         display: none;
     }
-    .scroller {
+    /*.scroller {
         height: 108px;
-    }
+    }*/
 }
 @media (max-width: 500px) and (orientation: portrait) {
     .logo {
