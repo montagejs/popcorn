@@ -129,12 +129,12 @@
         bottom: 64px;
         left: 0;
         right: 0;
-        height: 180px;
+        height: 220px;
         border-radius: 0;
-        -webkit-transform: translate3d(0,137px,0);
-        -moz-transform: translate3d(0,137px,0);
-        -ms-transform: translate3d(0,137px,0);
-        transform: translate3d(0,137px,0);
+        -webkit-transform: translate3d(0,177px,0);
+        -moz-transform: translate3d(0,177px,0);
+        -ms-transform: translate3d(0,177px,0);
+        transform: translate3d(0,177px,0);
         -webkit-transition: opacity .35s, -webkit-transform .35s;
         -moz-transition: opacity .35s, -moz-transform .35s;
         -ms-transition: opacity .35s, -ms-transform .35s;

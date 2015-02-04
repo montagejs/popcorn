@@ -123,29 +123,8 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-@media (max-width: 500px) and (orientation: portrait) {
-
-    .summary > div {
-        font-size: 9.5px;
-        padding: 0;
-        border: none;
-    }
-    .Details .title {
-        font-size: 16px;
-        padding-right: 75px;
-    }
-    .Details .action-buttons .digit-Button.button,
-    .Details .action-buttons .digit-Button:focus,
-    .Details .action-buttons .digit-Button:active,
-    .Details .action-buttons .digit-Button.active,
-    .Details .action-buttons .digit-Button:hover {
-        font-size: 13px;
-        width: 64px;
-    }
-}
-
 .scroller {
-    height: 85px;
+    height: 118px;
     color: white;
     background: hsl(0,0%,13%);
 }
@@ -206,6 +185,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-size: 12px;
     min-width: 30px;
+    cursor: default;
 }
 
 .icon-popularity {
@@ -221,3 +201,44 @@
     bottom: -3px;
     right: 6px;
 }
+
+/* Working to get hover states on the button */
+
+@media (max-width: 500px) {
+    .Details .expand.digit-Button,
+    .Details .expand.digit-Button:hover,
+    .Details .expand.digit-Button.active,
+    .Details .expand.digit-Button:active,
+    .Details .expand.digit-Button.focus {
+        cursor: pointer;
+    }
+}
+
+@media (orientation: landscape) {
+    .scroller {
+        height: 79px;
+    }
+}
+
+@media (max-width: 500px) or (orientation: portrait) {
+
+    .summary > div {
+        font-size: 9.5px;
+        padding: 0;
+        border: none;
+    }
+    .Details .title {
+        font-size: 16px;
+        padding-right: 75px;
+    }
+    .Details .action-buttons .digit-Button.button,
+    .Details .action-buttons .digit-Button:focus,
+    .Details .action-buttons .digit-Button:active,
+    .Details .action-buttons .digit-Button.active,
+    .Details .action-buttons .digit-Button:hover {
+        font-size: 13px;
+        width: 64px;
+    }
+    
+}
+
