@@ -1,13 +1,6 @@
+var Component = require("montage/ui/component").Component;
 
-var AbstractImage = require("montage/ui/base/abstract-image").AbstractImage;
-
-exports.Image = AbstractImage.specialize( {
-
-    constructor: {
-        value: function Image() {
-            this.super();
-        }
-    },
+exports.Image = Component.specialize( {
 
     _src: {
         value: null
@@ -24,14 +17,10 @@ exports.Image = AbstractImage.specialize( {
 
     draw: {
         value: function () {
-            var src;
-            if (this._isLoadingImage || this._isInvalidSrc) {
-                src = this.emptyImageSrc;
+            if (this._src) {
+                this._element.style.backgroundImage = "url(" + this._src + ")";
             } else {
-                src = this._getRebasedSrc();
-            }
-            if (typeof src !== "undefined") {
-                this._element.style.backgroundImage = "url(" + src + ")";
+                this._element.style.backgroundImage = "url(assets/image/no-poster.jpg)";
             }
         }
     }
