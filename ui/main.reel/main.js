@@ -35,11 +35,23 @@ exports.Main = Component.specialize({
 
     handleOpenTrailer: {
         value: function (event) {
-            var title = event.detail.title,
-            player = this.templateObjects.player;
-            sharedYoutubeService.searchYoutubeTrailer(title).then(function (id) {
-                player.openTrailer(id);
-            }).done();
+            var trailers = event.detail.trailers;
+            //todo: filter video list with youtube trailer available.?
+
+            if (trailers && trailers.youtube && trailers.youtube.length) { 
+                var videos = trailers.youtube,
+                    video;
+
+                for (var i = 0, length = videos.length; i < length; i++) {
+                    video = videos[i];
+
+                    if (video.name && video.name.toLowerCase().indexOf('official') > -1) {
+                        break;
+                    }
+                }
+
+                this.templateObjects.player.openTrailer(video.source);
+             }
         }
     },
 
