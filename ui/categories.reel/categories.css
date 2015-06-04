@@ -137,21 +137,16 @@
         right: 0;
         height: 64px;
         padding: 0;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-box;
-        display: box;
+        display: -webkit-flex;display: -ms-flexbox;display: flex;
         -webkit-box-orient: horizontal;
         -moz-box-orient: horizontal;
         -ms-box-orient: horizontal;
         box-orient: horizontal;
     }
     .Categories .Categories-button {
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        -ms-box-flex: 1;
-        box-flex: 1;
-        width: 25%;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
         line-height: 100px;
         font-size: 11px;
         text-align: center;
@@ -170,20 +165,19 @@
         bottom: 0;
         width: 126px;
         padding: 8px 0;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-box;
-        display: box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-orient: vertical;
         -moz-box-orient: vertical;
         -ms-box-orient: vertical;
         box-orient: vertical;
     }
     .Categories .Categories-button {
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        -ms-box-flex: 1;
-        box-flex: 1;
+        -webkit-flex: 1;-ms-flex: 1;flex: 1;
         padding-left: 48px;
         text-align: left;
         font-size: 14px;

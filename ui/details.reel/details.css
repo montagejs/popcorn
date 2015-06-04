@@ -13,7 +13,7 @@
     padding: 0;
     font-size: 18px;
     line-height: 42px;
-    padding: 0 162px 0 12px;
+    padding: 0 84px 0 12px;
     height: 42px;
     background: -webkit-linear-gradient(top, hsla(0,0%,50%,.95), hsla(0,0%,25%,.95) );
     background: -moz-linear-gradient(top, hsla(0,0%,50%,.95), hsla(0,0%,25%,.95) );
@@ -92,10 +92,8 @@
 }
 
 .summary > div > div {
-    text-align: left;
     border-bottom: 1px solid rgba(0,0,0,.3);
     font-size: 13px;
-    line-height: 1.7em;
     color: #777;
 }
 
@@ -125,28 +123,8 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-@media (max-width: 500px) and (orientation: portrait) {
-
-    .summary > div {
-        font-size: 9.5px;
-        padding: 0;
-        border: none;
-    }
-    .Details .title {
-        font-size: 16px;
-    }
-    .Details .action-buttons .digit-Button.button,
-    .Details .action-buttons .digit-Button:focus,
-    .Details .action-buttons .digit-Button:active,
-    .Details .action-buttons .digit-Button.active,
-    .Details .action-buttons .digit-Button:hover {
-        font-size: 13px;
-        width: 64px;
-    }
-}
-
 .scroller {
-    height: 85px;
+    height: 101px;
     color: white;
     background: hsl(0,0%,13%);
 }
@@ -158,11 +136,11 @@
     right: 16px;
     position: absolute;
     border-bottom: 11px solid hsl(0,0%,13%);
-    background: -webkit-linear-gradient(top, hsla(0,0%,13%,0), hsl(0,0%,13%) );
-    background: -moz-linear-gradient(top, hsla(0,0%,18%,.95), hsla(0,0%,25%,.95) );
-    background: -ms-linear-gradient(top, hsla(0,0%,18%,.95), hsla(0,0%,25%,.95) );
-    background: linear-gradient(top, hsla(0,0%,18%,.95), hsla(0,0%,25%,.95) );
-    -webkit-transform: translate3d(0,1px,0);
+    background: -webkit-linear-gradient(top, hsla(0,0%,13%,0), hsla(0,0%,13%, 1) );
+    background: -moz-linear-gradient(top, hsla(0,0%,13%,0), hsla(0,0%,13%, 1) );
+    background: -ms-linear-gradient(top, hsla(0,0%,13%,0), hsla(0,0%,13%, 1) );
+    background: linear-gradient(top, hsla(0,0%,13%,0), hsla(0,0%,13%, 1) );
+    -webkit-transform: translate3d(0,1px,0);    
     -moz-transform: translate3d(0,1px,0);
     -ms-transform: translate3d(0,1px,0);
     transform: translate3d(0,1px,0);
@@ -207,6 +185,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-size: 12px;
     min-width: 30px;
+    cursor: default;
 }
 
 .icon-popularity {
@@ -222,3 +201,50 @@
     bottom: -3px;
     right: 6px;
 }
+
+/* Working to get hover states on the button */
+
+@media (max-width: 500px) {
+    .Details .expand.digit-Button,
+    .Details .expand.digit-Button:hover,
+    .Details .expand.digit-Button.active,
+    .Details .expand.digit-Button:active,
+    .Details .expand.digit-Button.focus {
+        cursor: pointer;
+    }
+}
+
+@media all and (max-width: 500px) and (orientation: portrait) {
+    .scroller {
+        height: 118px;
+    }
+}
+
+@media all and (max-width: 500px) and (orientation: landscape) {
+    .scroller {
+        height: 79px;
+    }
+}
+
+@media (max-width: 500px) or (orientation: portrait) {
+
+    .summary > div {
+        font-size: 9.5px;
+        padding: 0;
+        border: none;
+    }
+    .Details .title {
+        font-size: 16px;
+        padding-right: 75px;
+    }
+    .Details .action-buttons .digit-Button.button,
+    .Details .action-buttons .digit-Button:focus,
+    .Details .action-buttons .digit-Button:active,
+    .Details .action-buttons .digit-Button.active,
+    .Details .action-buttons .digit-Button:hover {
+        font-size: 13px;
+        width: 64px;
+    }
+    
+}
+
