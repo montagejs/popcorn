@@ -128,7 +128,7 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
 
     loadMovie: {
         value: function (movie) {
-            return sharedTransport.makeRequest(MOVIE+ movie.id + "?api_key=" + API_KEY, "tmdb")
+            return sharedTransport.makeRequest(MOVIE+ movie.id + "?api_key=" + API_KEY + "&append_to_response=trailers", "tmdb")
             .then(function (response) {
                 return response;
             });
