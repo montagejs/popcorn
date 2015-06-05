@@ -8,8 +8,7 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "owner"},
-                "player": {"#": "iframe"}
+                "element": {"#": "owner"}
             }
         },
         "closeButton": {
@@ -37,10 +36,8 @@
 <body>
     <div data-montage-id="owner">
         <div data-montage-id="overlay" class="Moviepopup">
-            <button data-montage-id="closeButton" class="button button-close">
-                ✕
-            </button>
-            <iframe data-montage-id="iframe" class="montage-youtube-player" type="text/html" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
+            <button data-montage-id="closeButton" class="button button-close">✕</button>
+            <div id="youtube-player" class="montage-youtube-player"></div>
         </div>
     </div>
 </body>
