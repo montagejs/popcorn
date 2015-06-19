@@ -246,6 +246,39 @@
             "bindings": {
                 "src": {"<-": "'http://image.tmdb.org/t/p/w300' + @movieFlow:iteration.object.poster_path"}
             }
+        },
+
+        "key_up": {
+            "prototype": "montage/composer/key-composer",
+            "properties": {
+                "keys": "up",
+                "identifier": "previous",
+                "component": {"@": "owner"}
+            }
+        },
+        "key_down": {
+            "prototype": "montage/composer/key-composer",
+            "properties": {
+                "keys": "down",
+                "identifier": "next",
+                "component": {"@": "owner"}
+            }
+        },
+        "key_left": {
+            "prototype": "montage/composer/key-composer",
+            "properties": {
+                "keys": "left",
+                "identifier": "previous",
+                "component": {"@": "owner"}
+            }
+        },
+        "key_right": {
+            "prototype": "montage/composer/key-composer",
+            "properties": {
+                "keys": "right",
+                "identifier": "next",
+                "component": {"@": "owner"}
+            }
         }
     }
     </script>
