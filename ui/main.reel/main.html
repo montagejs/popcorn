@@ -17,7 +17,7 @@
                 "element": {"#": "categories"}
             },
             "bindings": {
-                "categories": {"<-": "@owner.rottenTomato.categories"}
+                "categories": {"<-": "@owner.moviesService.categories"}
             }
         },
         "details": {
@@ -36,7 +36,7 @@
                 "movieDetails": {"@": "details"}
             },
             "bindings": {
-                "categoryContentController": {"<-": "@owner.rottenTomato.categories.selection.one().contentController"}
+                "categoryContentController": {"<-": "@owner.moviesService.categories.selection.one().contentController"}
             }
         },
         "player": {
