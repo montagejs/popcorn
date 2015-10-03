@@ -10,6 +10,9 @@ exports.Details = Component.specialize({
         }
     },
 
+    isVisible: {
+        value: null
+    },
 
     _movie: {
         value: null
@@ -19,11 +22,13 @@ exports.Details = Component.specialize({
         set: function (val) {
             var self = this;
             this._movie = val;
-            if(val != null) {
+            this.isVisible = false;
+            if(val != null && !val.loaded) {
                 sharedTmdbService.loadMovie(val)
                 .then(function (movie) {
                     self.dispatchBeforeOwnPropertyChange("movie", self._movie);
                     self._movie = movie;
+                    val.runtime = movie.runtime;
                     self.dispatchOwnPropertyChange("movie", self._movie);
                     return movie;
                 })
@@ -36,9 +41,13 @@ exports.Details = Component.specialize({
                     if (rating.length === 0) {
                         rating = "none";
                     }
-                    self._movie.mpaaRating = rating;
+                    val.mpaaRating = self._movie.mpaaRating = rating;
+                    val.loaded = true;
+                    self.isVisible = true;
                 })
                 .done();
+            } else {
+                this.isVisible = true;
             }
             this.needsDraw = true;
         },

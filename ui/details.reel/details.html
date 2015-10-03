@@ -9,6 +9,9 @@
             "properties": {
                 "element": {"#": "owner"},
                 "popularityIcon": {"#": "popularityIcon"}
+            },
+            "bindings": {
+                "classList.has('visible')": {"<-": "@owner.isVisible"}
             }
         },
         "audienceScore": {
