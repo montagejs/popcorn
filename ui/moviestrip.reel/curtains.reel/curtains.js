@@ -1,10 +1,10 @@
 
 var Component = require("montage/ui/component").Component;
 
-exports.Overlay = Component.specialize({
+exports.Curtains = Component.specialize({
 
     constructor: {
-        value: function Overlay() {
+        value: function Curtains() {
             this.super();
         }
     }
