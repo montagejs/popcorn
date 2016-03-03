@@ -27,6 +27,23 @@ exports.Moviestrip = Component.specialize({
         value: null
     },
 
+    _movieFlow: {
+        value: null
+    },
+
+    movieFlow: {
+        get: function () {
+            return this._movieFlow;
+        },
+        set: function (value) {
+            this._movieFlow = value;
+            this._movieFlow.addEventListener("transitionend", function() {
+                self._flowHiddenCallback();
+                cancelTimeout(this._flowHiddenCallbackTimeout);
+            },false);
+        }
+    },
+
     categoryContentController: {
         get: function () {
             return this._categoryContentController;
@@ -48,22 +65,33 @@ exports.Moviestrip = Component.specialize({
         value: null
     },
 
+    _flowHiddenCallback: {
+        value: function () {
+            // reset the flow to initial scroll position
+            if (this.movieFlow) {
+                this.movieFlow.scroll = 0;
+            }
+            this._displayedContentController = this.categoryContentController;
+            this._flowHidden = false;
+            this._detailsHidden = false;
+        }
+    },
+    _flowHiddenCallbackTimeout: {
+        value: null
+    },
+
+
     _startChangeCategoryTransition: {
         value: function () {
             var self = this;
 
             this._detailsHidden = true;
             this._flowHidden = true;
+            this._categoryContentController.select(this._categoryContentController.content[0]);
 
             // wait .5s until the fade in/out effect is completed
-            setTimeout( function () {
-                // reset the flow to initial scroll position
-                if (self.templateObjects && self.templateObjects.movieFlow) {
-                    self.templateObjects.movieFlow.scroll = 0;
-                }
-                self._displayedContentController = self.categoryContentController;
-                self._flowHidden = false;
-                self._detailsHidden = false;
+            this._flowHiddenCallbackTimeout = setTimeout( function() {
+                self._flowHiddenCallback();
             }, 800 );
         }
     },

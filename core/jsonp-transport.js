@@ -15,7 +15,6 @@ var Montage = require("montage/core/core").Montage,
 exports.JsonpTransport = Montage.specialize(/** @lends JsonpTransport# */ {
     constructor: {
         value: function JsonpTransport() {
-            this.super();
         }
     },
 

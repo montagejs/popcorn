@@ -3,14 +3,6 @@ var Component = require("montage/ui/component").Component;
 var sharedTmdbService = require("core/tmdb-service").shared;
 
 exports.Details = Component.specialize({
-
-    constructor: {
-        value: function Details() {
-            this.super();
-        }
-    },
-
-
     _movie: {
         value: null
     },

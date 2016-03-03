@@ -23,7 +23,6 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
 //TODO combine constructor and load
     constructor: {
         value: function RottenTomatoService() {
-            this.super();
             this.categories = new RangeController().initWithContent([]);
             this.categories.avoidsEmptySelection = true;
         }
