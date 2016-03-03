@@ -43,6 +43,7 @@
         margin-top: -530px;
     }
     .Main-details {
+        opacity: 0;
         position: fixed;
         z-index: 3;
         bottom: 10px;
@@ -54,10 +55,6 @@
         -moz-transform: translate3d(0,148px,0);
         -ms-transform: translate3d(0,148px,0);
         transform: translate3d(0,148px,0);
-        -webkit-transition: opacity .35s, -webkit-transform .35s;
-        -moz-transition: opacity .35s, -moz-transform .35s;
-        -ms-transition: opacity .35s, -ms-transform .35s;
-        transition: opacity .35s, transform .35s;
     }
     .Main-details.expanded {
         -webkit-transform: translate3d(0,0,0);
@@ -90,6 +87,7 @@
         margin-top: -525px;
     }
     .Main-details {
+        opacity: 0;
         position: fixed;
         z-index: 3;
         top: 50%;
@@ -98,10 +96,6 @@
         margin-left: -250px;
         margin-top: 138px;
         height: 203px;
-        -webkit-transition: opacity .35s, -webkit-transform .35s;
-        -moz-transition: opacity .35s, -moz-transform .35s;
-        -ms-transition: opacity .35s, -ms-transform .35s;
-        transition: opacity .35s, transform .35s;
     }
     .Main-details .title:before {
         display: none;
@@ -124,6 +118,7 @@
         margin-top: -525px;
     }
     .Main-details {
+        opacity: 0;
         position: fixed;
         z-index: 1;
         bottom: 64px;
@@ -135,10 +130,6 @@
         -moz-transform: translate3d(0,177px,0);
         -ms-transform: translate3d(0,177px,0);
         transform: translate3d(0,177px,0);
-        -webkit-transition: opacity .35s, -webkit-transform .35s;
-        -moz-transition: opacity .35s, -moz-transform .35s;
-        -ms-transition: opacity .35s, -ms-transform .35s;
-        transition: opacity .35s, transform .35s;
     }
     .Main-details.expanded {
         -webkit-transform: translate3d(0,0,0);
@@ -167,6 +158,7 @@
         width: auto;
     }
     .Main-details {
+        opacity: 0;
         position: absolute;
         bottom: 10px;
         left: 10px;
@@ -179,10 +171,6 @@
         -moz-transform: translate3d(0,148px,0);
         -ms-transform: translate3d(0,148px,0);
         transform: translate3d(0,148px,0);
-        -webkit-transition: opacity .35s, -webkit-transform .35s;
-        -moz-transition: opacity .35s, -moz-transform .35s;
-        -ms-transition: opacity .35s, -ms-transform .35s;
-        transition: opacity .35s, transform .35s;
     }
     .Main-details.expanded {
         -webkit-transform: translate3d(0,0,0);
