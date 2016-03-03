@@ -248,3 +248,10 @@
     
 }
 
+.Details.visible {
+    opacity: 1;
+    -webkit-transition: opacity .35s, -webkit-transform .35s;
+    -moz-transition: opacity .35s, -moz-transform .35s;
+    -ms-transition: opacity .35s, -ms-transform .35s;
+    transition: opacity .35s, transform .35s;
+}

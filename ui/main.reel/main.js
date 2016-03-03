@@ -1,6 +1,6 @@
 
 var Component = require("montage/ui/component").Component,
-    sharedRottenTomatoService = require("core/tmdb-service").shared,
+    sharedMoviesService = require("core/tmdb-service").shared,
     sharedYoutubeService = require("core/youtube-service").shared;
 
 //TODO use details in toggle buttons
@@ -12,12 +12,12 @@ exports.Main = Component.specialize({
             this.application.addEventListener( "openTrailer", this, false);
 
             this.canDrawGate.setField("moviesLoaded", false);
-            this._initialDataLoad = this.rottenTomato.load();
+            this._initialDataLoad = this.moviesService.load();
         }
     },
 
-    rottenTomato: {
-        value: sharedRottenTomatoService
+    moviesService: {
+        value: sharedMoviesService
     },
 
     _initialDataLoad: {
