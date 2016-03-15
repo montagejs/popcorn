@@ -1,0 +1,116 @@
+{
+    "enabled_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "enabled",
+            "valueType": "boolean",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "value_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "value",
+            "valueType": "number",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "min_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "min",
+            "valueType": "number",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "max_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "max",
+            "valueType": "number",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "step_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "step",
+            "valueType": "number",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "blueprint_parent": {
+        "prototype": "core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractControl",
+                "prototypeName": "AbstractControl",
+                "blueprintModule": {
+                    "%": "ui/base/abstract-control.meta"
+                }
+            }
+        }
+    },
+    "root": {
+        "prototype": "core/meta/module-blueprint",
+        "properties": {
+            "name": "AbstractNumberField",
+            "parent": {
+                "@": "blueprint_parent"
+            },
+            "propertyBlueprints": [
+                {
+                    "@": "enabled_property"
+                },
+                {
+                    "@": "value_property"
+                },
+                {
+                    "@": "min_property"
+                },
+                {
+                    "@": "max_property"
+                },
+                {
+                    "@": "step_property"
+                }
+            ],
+            "propertyBlueprintGroups": {
+                "Main": [
+                    {
+                        "@": "enabled_property"
+                    },
+                    {
+                        "@": "value_property"
+                    },
+                    {
+                        "@": "min_property"
+                    },
+                    {
+                        "@": "max_property"
+                    },
+                    {
+                        "@": "step_property"
+                    }
+                ]
+            },
+            "blueprintModule": {
+                "%": "ui/base/abstract-number-field.meta"
+            },
+            "exportName": "AbstractNumberField",
+            "module": {
+                "%": "ui/base/abstract-number-field"
+            }
+        }
+    }
+}

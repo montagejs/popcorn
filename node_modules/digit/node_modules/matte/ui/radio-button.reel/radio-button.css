@@ -1,0 +1,37 @@
+
+.matte-RadioButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 12px;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 1em;
+    border: 1px solid #b3b3b3;
+    background: #f2f2f2;
+    cursor: pointer;
+}
+
+.matte-RadioButton:hover {
+    background-color: #fff;
+}
+
+.matte-RadioButton.montage--active {
+    background-color: #e5e5e5;
+}
+
+.matte-RadioButton:focus {
+    border-color: #7f7f7f;
+}
+
+.matte-RadioButton.montage-RadioButton--checked {
+    background: #f2f2f2 url(radio.png) no-repeat center;
+}
+
+.matte-RadioButton.montage--disabled {
+    opacity: .5;
+    border-style: dashed;
+    pointer-events: none;
+}

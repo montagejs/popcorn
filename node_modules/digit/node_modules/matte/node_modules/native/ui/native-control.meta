@@ -1,0 +1,314 @@
+{
+    "blueprint_native_control_accesskey": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "accesskey",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "string",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_contenteditable": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "contenteditable",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "enum",
+            "enumValues": [
+                "true",
+                "false",
+                "inherit"
+            ],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_contextmenu": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "contextmenu",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "string",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_dir": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "dir",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "enum",
+            "enumValues": [
+                "ltr",
+                "rtl",
+                "auto"
+            ],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_draggable": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "draggable",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "enum",
+            "enumValues": [
+                "true",
+                "false",
+                "auto"
+            ],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_dropzone": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "dropzone",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "string",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_hidden": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "hidden",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "boolean",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_lang": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "lang",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "string",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_spellcheck": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "spellcheck",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "boolean",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_style": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "style",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "string",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_tabindex": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "tabindex",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "number",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "blueprint_native_control_title": {
+        "prototype": "montage/core/meta/property-blueprint",
+        "properties": {
+            "name": "title",
+            "blueprint": {
+                "@": "root"
+            },
+            "cardinality": 1,
+            "mandatory": false,
+            "denyDelete": false,
+            "readOnly": false,
+            "valueType": "string",
+            "enumValues": [],
+            "helpKey": ""
+        }
+    },
+    "blueprint_component_reference": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "Component",
+                "prototypeName": "Component",
+                "blueprintModule": {
+                    "%": "montage/ui/component.meta"
+                }
+            }
+        }
+    },
+    "root": {
+        "prototype": "montage/core/meta/module-blueprint",
+        "properties": {
+            "name": "NativeControl",
+            "customPrototype": false,
+            "parent": {
+                "@": "blueprint_component_reference"
+            },
+            "propertyBlueprints": [
+                {
+                    "@": "blueprint_native_control_accesskey"
+                },
+                {
+                    "@": "blueprint_native_control_contenteditable"
+                },
+                {
+                    "@": "blueprint_native_control_contextmenu"
+                },
+                {
+                    "@": "blueprint_native_control_dir"
+                },
+                {
+                    "@": "blueprint_native_control_draggable"
+                },
+                {
+                    "@": "blueprint_native_control_dropzone"
+                },
+                {
+                    "@": "blueprint_native_control_hidden"
+                },
+                {
+                    "@": "blueprint_native_control_lang"
+                },
+                {
+                    "@": "blueprint_native_control_spellcheck"
+                },
+                {
+                    "@": "blueprint_native_control_style"
+                },
+                {
+                    "@": "blueprint_native_control_tabindex"
+                },
+                {
+                    "@": "blueprint_native_control_title"
+                }
+            ],
+            "propertyBlueprintGroups": {
+                "native-control": [
+                    {
+                        "@": "blueprint_native_control_accesskey"
+                    },
+                    {
+                        "@": "blueprint_native_control_contenteditable"
+                    },
+                    {
+                        "@": "blueprint_native_control_contextmenu"
+                    },
+                    {
+                        "@": "blueprint_native_control_dir"
+                    },
+                    {
+                        "@": "blueprint_native_control_draggable"
+                    },
+                    {
+                        "@": "blueprint_native_control_dropzone"
+                    },
+                    {
+                        "@": "blueprint_native_control_hidden"
+                    },
+                    {
+                        "@": "blueprint_native_control_lang"
+                    },
+                    {
+                        "@": "blueprint_native_control_spellcheck"
+                    },
+                    {
+                        "@": "blueprint_native_control_style"
+                    },
+                    {
+                        "@": "blueprint_native_control_tabindex"
+                    },
+                    {
+                        "@": "blueprint_native_control_title"
+                    }
+                ]
+            },
+            "propertyValidationRules": {},
+            "blueprintModule": {
+                "%": "ui/native-control.meta"
+            },
+            "exportName": "NativeControl",
+            "module": {
+                "%": "ui/native-control"
+            }
+        }
+    }
+}

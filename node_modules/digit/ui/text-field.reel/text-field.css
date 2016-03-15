@@ -1,0 +1,120 @@
+.digit-TextField {
+    outline: none;
+    box-sizing: border-box;
+    font-size: 100%; /* Override UA style. */
+    width: 10em;
+    height: 2.5em;
+    padding: 0 .5em;
+    vertical-align: middle;
+    color: inherit;
+    border: 1px solid;
+    border-radius: .25em;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none; /* Removes inner shadow on iOS. */
+}
+
+
+/* States --------------------- */
+
+.digit-TextField:focus {
+    box-shadow: inset 0 0 0 1px;
+}
+
+.digit-TextField.montage--disabled {
+    opacity: .5;
+    border-style: dashed;
+    pointer-events: none;
+}
+
+.digit-TextField:invalid {
+    color: #E73525;
+}
+
+.digit-TextField[readonly] {
+    background-color: #e5e5e5;
+}
+
+
+/* Placeholder --------------------- */
+
+.digit-TextField::-webkit-input-placeholder { color: inherit; opacity: .5; }
+.digit-TextField::-moz-placeholder { color: inherit; opacity: .5; }
+.digit-TextField:-ms-input-placeholder { color: inherit; opacity: .5; }
+
+
+
+/* Wireframe ---------------------------------------------------------- */
+
+[data-montage-skin="wireframe"] .digit-TextField {
+    color: #4D4D4D;
+    border-color: #b3b3b3;
+    background-color: #fff;
+}
+
+[data-montage-skin="wireframe"] .digit-TextField:focus {
+    border-color: #7f7f7f;
+    box-shadow: none;
+}
+
+[data-montage-skin="wireframe"] .digit-TextField:invalid {
+    color: #E73525;
+    border-color: #E73525;
+}
+
+
+
+/* Light ---------------------------------------------------------- */
+
+[data-montage-skin="light"] .digit-TextField {
+    color: hsla(0,0%,0%,.7);
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
+    border-color: hsl(0,0%,80%);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,96%), hsl(0,0%,98%) );
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.05), 0 1px 0 hsla(0,0%,100%,.6);
+
+    -webkit-transform: translate3d(0px,0px,0px);
+    -moz-transform: translate3d(0px,0px,0px);
+    -ms-transform: translate3d(0px,0px,0px);
+    transform: translate3d(0px,0px,0px);
+}
+
+[data-montage-skin="light"] .digit-TextField:focus {
+    border-color: hsla(0,0%,70%,1);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,92%), hsl(0,0%,94%) );
+    box-shadow: inset 0 1px 3px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.6);
+}
+
+[data-montage-skin="light"] .digit-TextField:invalid {
+    color: #E73525;
+    border-color: #E73525;
+}
+
+
+
+/* Dark ---------------------------------------------------------- */
+
+[data-montage-skin="dark"] .digit-TextField {
+    color: hsla(0,0%,100%,.5);
+    text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
+    border-color: hsl(0,0%,15%);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,28%), hsl(0,0%,30%) );
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0 hsla(0,0%,100%,.1);
+
+    -webkit-transform: translate3d(0px,0px,0px);
+    -moz-transform: translate3d(0px,0px,0px);
+    -ms-transform: translate3d(0px,0px,0px);
+    transform: translate3d(0px,0px,0px);
+}
+
+[data-montage-skin="dark"] .digit-TextField:focus {
+    color: hsla(0,0%,100%,.7);
+    border-color: hsl(0,0%,15%);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,26%), hsl(0,0%,28%) );
+    box-shadow: inset 0 1px 3px hsla(0,0%,0%,.3), 0 1px 0 hsla(0,0%,100%,.1);
+}
+
+[data-montage-skin="dark"] .digit-TextField:invalid {
+    color: #FF6052;
+    border-color: #FF6052;
+}

@@ -1,0 +1,83 @@
+{
+    "blueprint_substitution_switchValue": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "switchValue",
+            "blueprint": {
+                "@": "root"
+            }
+        }
+    },
+    "blueprint_substitution_shouldLoadComponentTree": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "shouldLoadComponentTree",
+            "blueprint": {
+                "@": "root"
+            },
+            "valueType": "boolean"
+        }
+    },
+    "blueprint_substitution_transition": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "transition",
+            "blueprint": {
+                "@": "root"
+            },
+            "valueType": "object"
+        }
+    },
+    "blueprint_component_reference": {
+        "prototype": "core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "Component",
+                "prototypeName": "Component",
+                "blueprintModule": {
+                    "%": "ui/component.meta"
+                }
+            }
+        }
+    },
+    "root": {
+        "prototype": "core/meta/module-blueprint",
+        "properties": {
+            "name": "Substitution",
+            "parent": {
+                "@": "blueprint_component_reference"
+            },
+            "propertyBlueprints": [
+                {
+                    "@": "blueprint_substitution_switchValue"
+                },
+                {
+                    "@": "blueprint_substitution_shouldLoadComponentTree"
+                },
+                {
+                    "@": "blueprint_substitution_transition"
+                }
+            ],
+            "propertyBlueprintGroups": {
+                "Substitution": [
+                    {
+                        "@": "blueprint_substitution_switchValue"
+                    },
+                    {
+                        "@": "blueprint_substitution_shouldLoadComponentTree"
+                    },
+                    {
+                        "@": "blueprint_substitution_transition"
+                    }
+                ]
+            },
+            "blueprintModule": {
+                "%": "ui/substitution.reel/substitution.meta"
+            },
+            "exportName": "Substitution",
+            "module": {
+                "%": "ui/substitution.reel"
+            }
+        }
+    }
+}
