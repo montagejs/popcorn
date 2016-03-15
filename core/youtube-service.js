@@ -16,7 +16,6 @@ exports.YoutubeService = Montage.specialize(/** @lends YoutubeService# */ {
 
     constructor: {
         value: function YoutubeService() {
-            this.super();
         }
     },
 

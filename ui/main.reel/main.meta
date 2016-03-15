@@ -13,7 +13,7 @@
   "blueprint_unnamed_rottenTomato": {
     "prototype": "montage/core/meta/property-blueprint",
     "properties": {
-      "name": "rottenTomato",
+      "name": "moviesService",
       "blueprint": {"@": "root"},
       "valueType": "object"
     }
