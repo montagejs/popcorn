@@ -1,8 +1,8 @@
 {
   "name": "Popcorn",
-  "version": "0.3.1",
+  "version": "1.0",
   "dependencies": {
-    "montage": "montagejs/montage#2f72404983fbad2a82ddb16d8304eaa5472b1d78",
+    "montage": "16.0.2",
     "digit": "~0.6.0",
     "query-params": "0.0.1",
     "url": "0.7.9"
