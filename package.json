@@ -1,6 +1,6 @@
 {
   "name": "Popcorn",
-  "version": "1.0",
+  "version": "1.0.0",
   "dependencies": {
     "montage": "16.0.2",
     "digit": "~0.6.0",
