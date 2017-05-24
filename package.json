@@ -1,6 +1,12 @@
 {
   "name": "Popcorn",
   "version": "1.0.0",
+  "description": "Sample Popcorn app using MontageJS",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/montagejs/popcorn.git"
+  },
   "dependencies": {
     "digit": "^3.0.0",
     "montage": "^17.0.7",
@@ -8,7 +14,6 @@
     "url": "0.7.9"
   },
   "devDependencies": {
-    "montage-testing": "~0.4.3",
     "mop": "^16.0.1"
   },
   "scripts": {
