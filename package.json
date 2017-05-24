@@ -2,8 +2,8 @@
   "name": "Popcorn",
   "version": "1.0.0",
   "dependencies": {
-    "montage": "~16.0.2",
-    "digit": "~0.6.1",
+    "digit": "^3.0.0",
+    "montage": "^17.0.7",
     "query-params": "0.0.1",
     "url": "0.7.9"
   },
