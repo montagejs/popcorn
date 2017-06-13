@@ -14,36 +14,42 @@ exports.Details = Component.specialize({
 
     movie: {
         set: function (val) {
-            var self = this;
-            this._movie = val;
-            this.isVisible = false;
-            if(val != null && !val.loaded) {
-                sharedTmdbService.loadMovie(val)
-                .then(function (movie) {
-                    self.dispatchBeforeOwnPropertyChange("movie", self._movie);
-                    self._movie = movie;
-                    val.runtime = movie.runtime;
-                    self.dispatchOwnPropertyChange("movie", self._movie);
-                    return movie;
-                })
-                .then(function (movie) {
-                    return sharedTmdbService.loadReleases(movie);
-                })
-                .then(function (releases) {
-                    var rating = releases.countries[0].certification;
 
-                    if (rating.length === 0) {
-                        rating = "none";
-                    }
-                    val.mpaaRating = self._movie.mpaaRating = rating;
-                    val.loaded = true;
-                    self.isVisible = true;
-                })
-                .done();
+            var self = this;
+
+            if(val && !val.trailers) {
+
+                sharedTmdbService.loadMovie(val)
+                    .then(function (movie) {
+                        val.trailers = movie.trailers;
+                        val.runtime = movie.runtime;
+                        return movie;
+                    }).then(function (movie) {
+                        return sharedTmdbService.loadReleases(movie);
+                    })
+                    .then(function (releases) {
+                        var rating = releases.countries[0].certification;
+
+                        if (rating.length === 0) {
+                            rating = "none";
+                        }
+
+                        val.mpaaRating = rating;
+                    }).then(function () {
+                        // self.dispatchBeforeOwnPropertyChange("movie", self._movie);
+                        self._movie = val;
+                        self.isVisible = true;
+                        // self.dispatchOwnPropertyChange("movie", self._movie);
+                    })
+                    .done();
+            
             } else {
+                self._movie = val;
                 this.isVisible = true;
             }
+
             this.needsDraw = true;
+
         },
         get: function () {
             return this._movie;

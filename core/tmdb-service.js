@@ -155,8 +155,10 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
 
     loadMovie: {
         value: function (movie) {
+
             return sharedTransport.makeRequest(MOVIE+ movie.id + "?api_key=" + API_KEY + "&append_to_response=trailers", "tmdb")
             .then(function (response) {
+                // console.log('response:', response);
                 return response;
             });
         }
@@ -164,6 +166,7 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
 
     loadReleases: {
         value: function (movie) {
+            
             return sharedTransport.makeRequest(MOVIE+ movie.id + "/releases?api_key=" + API_KEY, "tmdb")
             .then(function (response) {
                 return response;
@@ -173,6 +176,7 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
 
     preloadMovie: {
         value: function(oldMovie) {
+
             if (oldMovie && !oldMovie.loaded) {
                 var self = this,
                     runtime;

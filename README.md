@@ -36,7 +36,7 @@ a navigation area and a content area.
     (category-button.reel).
 * The content area is represented by the Moviestrip component (moviestrip.reel) — including its Image (image.reel)
     and Overlay (overlay.reel) child components — the Details component (details.reel), and the Player component
-    (palyer.reel), which loads the YouTube player when users click the Trailer button in a movie's details view.
+    (player.reel), which loads the YouTube player when users click the Trailer button in a movie's details view.
 
 Note that MontageJS applications are modular, that is, they are assembled out of encapsulated, resuable
 components; regardless of where a component is used, the same HTML, CSS, and JavaScript will control how
