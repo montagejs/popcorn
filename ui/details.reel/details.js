@@ -36,10 +36,10 @@ exports.Details = Component.specialize({
 
                         val.mpaaRating = rating;
                     }).then(function () {
-                        // self.dispatchBeforeOwnPropertyChange("movie", self._movie);
+                        self.dispatchBeforeOwnPropertyChange("movie", self._movie);
                         self._movie = val;
                         self.isVisible = true;
-                        // self.dispatchOwnPropertyChange("movie", self._movie);
+                        self.dispatchOwnPropertyChange("movie", self._movie);
                     })
                     .done();
             
