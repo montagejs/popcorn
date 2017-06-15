@@ -49,12 +49,12 @@ npm install
 
 ### Run and build dist locally 
 
-1. Build dist
+1. Build a new version in `dist/`
 ```
 npm run build
 ```
 
-2. Serve dist using NodeJS http-server
+2. Serve `dist/` using NodeJS http-server
 ```
 npm run serve:dist
 ```
