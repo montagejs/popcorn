@@ -1,5 +1,7 @@
 # Popcorn Readme
 
+Popcorn is a movie discovery application made using MontageJS
+
 ![Screenshot](assets/image/screenshot.png)
 
 [Live Demo](http://montagejs.org/apps/popcorn/)
@@ -11,7 +13,56 @@ web service to expose data on new and upcoming theatrical releases and rentals. 
 a list of movies, filter by categories (such as top box office or upcoming releases), read details on
 selected movies, and watch YouTube trailers inside the application.
 
-## Project Structure
+## Preview and Explore
+
+You can preview this application from within [Montage Studio](https://work.montagestudio.com), as a hosted repo, or locally.
+
+### Hosted, with Montage Studio
+
+To preview the application in Montage Studio, click the Run button at the top of the project explorer.
+
+### Run Locally, without Montage Studio
+
+To run the Popcorn demo locally, follow these steps:
+
+1. Clone the popcorn [GitHub repo](https://github.com/montagejs/popcorn) in your desktop.
+```
+git clone git@github.com:montagejs/popcorn.git
+```
+
+2. Install Node modules dependencies
+```
+npm install
+```
+
+3. Use NodeJS http-server or Spin up your preferred HTTP server and point your browser to the associated port to serve the popcorn directory.
+
+    >**Note:** During development MontageJS applications rely on XHR to load their various components and modules,
+    which is why you will need a web server to serve the demo.
+
+    > You can start NodeJS http-server using command: `npm run serve`
+    Then open your favorite browser at (http://localhost:8080).
+
+    > If you happen to have [minit](https://github.com/montagejs/minit), the Montage Initializer, installed 
+    (`npm install minit -g`) you can run `minit serve` from within the demo directory to set up a server on demand.
+
+
+### Run and build dist locally 
+
+1. Build dist
+```
+npm run build
+```
+
+2. Serve dist using NodeJS http-server
+```
+npm run serve:dist
+```
+
+
+## Project Details
+
+### Application Structure
 
 The contents of the Popcorn sample application are structured into the following directories and files:
 
@@ -24,7 +75,7 @@ The contents of the Popcorn sample application are structured into the following
 * package.json — Describes your app and its dependencies.
 * README.md — Provides information about the demo application and how to install it.
 
-## The User Interface
+### The User Interface
 
 The Popcorn user interface consists of multiple components. These components are stored in the ui directory
 and identified with a .reel extension. Conceptually, the application breaks down into a container that holds
@@ -52,41 +103,14 @@ Note also that MontageJS uses a declarative programming paradigm and a clean sep
 The declaration is included inside a template's script element, and the HTML is free of any templating language
 and business logic, which is a boon to team work between designers and developers.
 
-## The Data
+### The Data
 
 Popcorn uses the Rotten Tomatoes and YouTube RESTful services to expose data on theatrical and rental movie
 releases, and to play trailers within the application. The modules that handle the flow of data within the
 application are stored in the Core directory. Reactive bindings are used in the respective templates to thread
 data from one component to another.
 
-## Preview and Explore
-
-You can preview this application from within [Montage Studio](https://work.montagestudio.com), as a hosted repo,
-or locally.
-
-### Hosted, with Montage Studio
-To preview the application in Montage Studio, click the Run button at the top of the project explorer.
-
-### Locally, without Montage Studio
-
-To run the demo locally, you need:
-
-* A web server of your choice. MontageJS applications are client-side applications with no particular back-end dependency.
-* Cloned GitHub repo of this demo.
-
-To run the Popcorn demo locally, follow these steps:
-
-1. Clone the popcorn [GitHub repo](https://github.com/montagejs/popcorn) in your desktop.
-
-2. Spin up your preferred HTTP server and point your browser to the associated port to serve the popcorn directory.
-
-    >**Note:** During development MontageJS applications rely on XHR to load their various components and modules,
-    which is why you will need a web server to serve the demo.
-
-    > If you happen to have [minit](https://github.com/montagejs/minit), the Montage Initializer, installed 
-    (`npm install minit -g`) you can run `minit serve` from within the demo directory to set up a server on demand.
-
-# Next Steps
+## Next Steps
 
 To learn more about Montage Studio and the MontageJS framework, see the following resources:
 
