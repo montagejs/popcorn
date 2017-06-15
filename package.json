@@ -1,6 +1,13 @@
 {
   "name": "Popcorn",
   "version": "1.0.0",
+  "description": "Popcorn is a movie discovery application made using MontageJS",
+  "license": "BSD-3-Clause",
+  "author": "Montage Studio, inc. (http://montagestudio.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/montagejs/todo-mvc.git"
+  },
   "dependencies": {
     "digit": "^3.0.0",
     "montage": "^17.0.7",
@@ -9,9 +16,15 @@
   },
   "devDependencies": {
     "montage-testing": "~0.4.3",
-    "mop": "^16.0.1"
+    "mop": "^16.0.1",
+    "http-server": "^0.9.0"
   },
   "scripts": {
-    "mop": "mop"
-  }
+    "build": "node build.js",
+    "serve": "http-server",
+    "serve:dist": "http-server dist"
+  },
+  "bundle": [
+    "ui/main.reel"
+  ]
 }
