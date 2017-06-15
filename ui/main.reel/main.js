@@ -1,7 +1,6 @@
 
 var Component = require("montage/ui/component").Component,
-    sharedMoviesService = require("core/tmdb-service").shared,
-    sharedYoutubeService = require("core/youtube-service").shared;
+    sharedMoviesService = require("core/tmdb-service").shared;
 
 //TODO use details in toggle buttons
 //TODO do not use matte toggle buttons
