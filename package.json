@@ -10,14 +10,15 @@
   },
   "dependencies": {
     "digit": "^3.0.0",
-    "montage": "^17.0.11",
+    "montage": "montagejs/montage#commonjs",
+    "mr": "montagejs/mr#commonjs",
     "query-params": "0.0.1",
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "http-server": "^0.9.0",
     "montage-testing": "~0.4.3",
-    "mop": "^16.0.1",
-    "http-server": "^0.9.0"
+    "mop": "montagejs/mop#commonjs"
   },
   "scripts": {
     "build": "node build.js",
