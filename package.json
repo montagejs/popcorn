@@ -11,14 +11,12 @@
   "dependencies": {
     "digit": "^3.0.0",
     "montage": "montagejs/montage#commonjs",
-    "mr": "montagejs/mr#commonjs",
     "query-params": "0.0.1",
     "url": "^0.11.0"
   },
   "devDependencies": {
     "http-server": "^0.9.0",
-    "montage-testing": "~0.4.3",
-    "mop": "montagejs/mop#commonjs"
+    "montage-testing": "~0.4.3"
   },
   "scripts": {
     "build": "node build.js",
