@@ -4,7 +4,7 @@ const path = require("path"),
     mop = require("mop");
 
 var srcPath = path.resolve(__dirname),
-	distPath = path.resolve(__dirname, './dist');
+	distPath = path.resolve(__dirname, './builds');
 
 mop(srcPath, {
 	minify: true,

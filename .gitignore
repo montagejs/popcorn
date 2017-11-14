@@ -1,4 +1,4 @@
-dist/
+builds/
 .idea
 .DS_Store
 node_modules
