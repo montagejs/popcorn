@@ -15,15 +15,14 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "minit": "^0.5.7",
     "montage-testing": "~0.4.3",
-    "mop": "^16.0.1",
-    "http-server": "^0.9.0"
+    "mop": "^16.0.1"
   },
   "scripts": {
-    "build": "node build.js",
-    "publish": "git checkout gh-pages && git subtree push --prefix dist origin gh-pages",
-    "serve": "http-server",
-    "serve:dist": "http-server dist"
+    "build": "mop .",
+    "start": "minit serve",
+    "start:dist": "minit serve -r dist"
   },
   "bundle": [
     "ui/main.reel"
