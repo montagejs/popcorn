@@ -21,6 +21,7 @@
   },
   "scripts": {
     "build": "node build.js",
+    "publish": "git checkout gh-pages && git subtree push --prefix dist origin gh-pages",
     "serve": "http-server",
     "serve:dist": "http-server dist"
   },
