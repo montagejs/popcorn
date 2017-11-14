@@ -6,7 +6,7 @@
   "author": "Montage Studio, inc. (http://montagestudio.com/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/montagejs/todo-mvc.git"
+    "url": "https://github.com/montagejs/popcorn.git"
   },
   "dependencies": {
     "digit": "^3.0.0",
