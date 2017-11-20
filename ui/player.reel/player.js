@@ -1,17 +1,49 @@
 
 var Component = require("montage/ui/component").Component;
 
-var TRAILER_URL = "https://www.youtube.com/embed/%s";
-var PLACE_HOLDER = "%s";
+var YouTube, YoutubeCallBack;
+
+window.onYouTubeIframeAPIReady = function onYouTubeIframeAPIReady() {
+    YouTube = YT;
+};
 
 exports.Player = Component.specialize({
 
-    constructor: {
-        value: function Player() {
-            this.super();
+    enterDocument: {
+        value: function (firstTime) {
+            if (firstTime) {
+                if (typeof YouTube !== "undefined") {
+                    this._initPlayer();
+                } else {
+                    //just one player in the popcorn app should be good enough
+                    YoutubeCallBack = this._initPlayer.bind(this);
+                }
+            }
         }
     },
 
+    _initPlayer: {
+        value: function () {
+            var self = this;
+
+            this.player = new YouTube.Player('youtube-player', {
+                    events: {
+                    'onReady': function () {
+                        self.isPlayerReady = true;
+
+                        if (self._trailerId !== null) {
+                            //load pending trailer
+                            self.player.loadVideoById(self._trailerId);
+                        }
+                    }
+                }
+            });
+        }
+    },
+
+    isPlayerReady: {
+        value: false
+    },
 
     player: {
         value: null
@@ -19,6 +51,8 @@ exports.Player = Component.specialize({
 
     handleCloseButtonAction: {
         value: function () {
+            this.player.stopVideo();
+
             this.templateObjects.overlay.hide();
         }
     },
@@ -36,9 +70,14 @@ exports.Player = Component.specialize({
 
     didShowOverlay: {
         value: function (overlay) {
-            if (this._trailerId) {
-                this.player.src = TRAILER_URL.replace(PLACE_HOLDER, this._trailerId);
+            // if the player is not ready yet,
+            // the video will be played automatically once the event onReady will be raised.
+            // see -> _initPlayer function
+            // todo: need UI when waiting.
+            if (this.isPlayerReady && this._trailerId) {
+                this.player.loadVideoById(this._trailerId);
             }
+
             overlay.classList.add('is-shown');
         }
     },
@@ -46,8 +85,10 @@ exports.Player = Component.specialize({
     didHideOverlay: {
         value: function (overlay) {
             this._trailerId = null;
+
             overlay.classList.remove('is-shown');
         }
 
     }
+    
 });
