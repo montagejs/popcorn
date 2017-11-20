@@ -193,8 +193,9 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
                             rating = "none";
                         }
                         for (var i = 0, categoriesLength = self.categories.content.length; i < categoriesLength; i++) {
-                            var category = self.categories.content[i];
-                            for (var j = 0, moviesLength = category.contentController.content.length; j < moviesLength; j++) {
+                            var category = self.categories.content[i],
+                                moviesLength = category.contentController.content ? category.contentController.content.length : 0;
+                            for (var j = 0, moviesLength; j < moviesLength; j++) {
                                 var storedMovie = category.contentController.content[j];
                                 if (storedMovie.id === oldMovie.id) {
                                     category.contentController.content[j].mpaaRating = rating;
