@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "minit": "^0.5.7",
-    "montage-testing": "~0.4.3",
+    "montage-testing": "~0.5.1",
     "mop": "^16.0.1"
   },
   "scripts": {
