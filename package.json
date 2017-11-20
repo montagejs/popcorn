@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/montagejs/popcorn.git"
   },
+  "production": true,
   "dependencies": {
     "digit": "^3.0.0",
     "montage": "montagejs/montage#master",
@@ -24,6 +25,9 @@
     "start": "minit serve",
     "start:dist": "minit serve -r dist"
   },
+  "excludes": [
+    "dist"
+  ],
   "bundle": [
     "ui/main.reel"
   ]
