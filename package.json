@@ -31,7 +31,8 @@
     "publish": "git checkout gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "excludes": [
-    "dist"
+    "dist",
+    "nodes_modules/*.md"
   ],
   "bundle": [
     "ui/main.reel"
