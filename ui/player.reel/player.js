@@ -1,8 +1,8 @@
 
 var Component = require("montage/ui/component").Component;
 
-var TRAILER_URL = "https://www.youtube.com/embed/%s?autoplay=1&enablej‌​sapi=1";
-var PLACE_HOLDER = "%s";
+var TRAILER_URL = "https://www.youtube.com/embed/%s?autoplay=1&enablej‌​sapi=1",
+    PLACE_HOLDER = "%s";
 
 exports.Player = Component.specialize({
 

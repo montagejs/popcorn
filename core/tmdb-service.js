@@ -195,7 +195,7 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
                         for (var i = 0, categoriesLength = self.categories.content.length; i < categoriesLength; i++) {
                             var category = self.categories.content[i],
                                 moviesLength = category.contentController.content ? category.contentController.content.length : 0;
-                            for (var j = 0, moviesLength; j < moviesLength; j++) {
+                            for (var j = 0; j < moviesLength; j++) {
                                 var storedMovie = category.contentController.content[j];
                                 if (storedMovie.id === oldMovie.id) {
                                     category.contentController.content[j].mpaaRating = rating;
@@ -219,11 +219,9 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
                 for (var i = 0, moviesLength = selectedCategory.contentController.content.length; i < moviesLength; i++) {
                     var currentMovie = selectedCategory.contentController.content[i];
                     if (currentMovie === selectedCategory.contentController.selection[0]) {
-                        this.preloadMovie(selectedCategory.contentController.content[i+1])
-                            .then(function() {
+                        this.preloadMovie(selectedCategory.contentController.content[i+1]).then(function() {
                                 self.preloadMovie(selectedCategory.contentController.content[i+2]);
-                            })
-                            .then(function() {
+                            }).then(function() {
                                 self.preloadMovie(selectedCategory.contentController.content[i+3]);
                             });
                         break;

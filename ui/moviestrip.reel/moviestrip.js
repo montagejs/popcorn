@@ -21,10 +21,10 @@ exports.Moviestrip = Component.specialize({
                     }
                 );
 
-                this.templateObjects.key_up.addEventListener("keyPress", this, false);
-                this.templateObjects.key_down.addEventListener("keyPress", this, false);
-                this.templateObjects.key_left.addEventListener("keyPress", this, false);
-                this.templateObjects.key_right.addEventListener("keyPress", this, false);
+                this.templateObjects.keyUp.addEventListener("keyPress", this, false);
+                this.templateObjects.keyDown.addEventListener("keyPress", this, false);
+                this.templateObjects.keyKeft.addEventListener("keyPress", this, false);
+                this.templateObjects.keyRight.addEventListener("keyPress", this, false);
             }
         }
     },
@@ -67,10 +67,11 @@ exports.Moviestrip = Component.specialize({
             return this._movieFlow;
         },
         set: function (value) {
+            var self = this;
             this._movieFlow = value;
             this._movieFlow.addEventListener("transitionend", function() {
                 self._flowHiddenCallback();
-                cancelTimeout(this._flowHiddenCallbackTimeout);
+                clearTimeout(this._flowHiddenCallbackTimeout);
             },false);
         }
     },
