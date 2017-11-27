@@ -23,7 +23,7 @@ exports.Moviestrip = Component.specialize({
 
                 this.templateObjects.keyUp.addEventListener("keyPress", this, false);
                 this.templateObjects.keyDown.addEventListener("keyPress", this, false);
-                this.templateObjects.keyKeft.addEventListener("keyPress", this, false);
+                this.templateObjects.keyLeft.addEventListener("keyPress", this, false);
                 this.templateObjects.keyRight.addEventListener("keyPress", this, false);
             }
         }
