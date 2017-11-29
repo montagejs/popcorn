@@ -1,7 +1,7 @@
 {
   "blueprint_component_reference": {
     "prototype": "montage/core/meta/blueprint-reference",
-    "properties": {
+    "values": {
       "valueReference": {
         "blueprintName": "Component",
         "blueprintModule": {
@@ -12,7 +12,7 @@
   },
   "blueprint_unnamed_player": {
     "prototype": "montage/core/meta/property-blueprint",
-    "properties": {
+    "values": {
       "name": "player",
       "blueprint": {"@": "root"},
       "valueType": "object"
@@ -20,7 +20,7 @@
   },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
-    "properties": {
+    "values": {
       "name": null,
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [

@@ -6,42 +6,36 @@
     <script type="text/montage-serialization">
     {
         "owner": {
-            "properties": {
+            "values": {
                 "element": {"#": "owner"},
                 "mainContent": {"#": "mainContent"}
             }
         },
         "categories": {
             "prototype": "ui/categories.reel",
-            "properties": {
-                "element": {"#": "categories"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "categories"},
                 "categories": {"<-": "@owner.moviesService.categories"}
             }
         },
         "details": {
             "prototype": "ui/details.reel",
-            "properties": {
-                "element": {"#": "details"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "details"},
                 "movie": {"<-": "@moviestrip.categoryContentController.selection.one()"}
             }
         },
         "moviestrip": {
             "prototype": "ui/moviestrip.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "moviestrip"},
-                "movieDetails": {"@": "details"}
-            },
-            "bindings": {
+                "movieDetails": {"@": "details"},
                 "categoryContentController": {"<-": "@owner.moviesService.categories.selection.one().contentController"}
             }
         },
         "player": {
             "prototype": "ui/player.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "player"}
             }
         }
