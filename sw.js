@@ -1,10 +1,22 @@
 /*global define:false, console, self, Promise, caches, fetch, appCache, clients, indexedDB */
 
 var CACHE_KEY = 'cacheVersion';
-var DEBUG = false;
+var WORKER = 'sw.js';
+var DEBUG = 'debug';
 
 function log(msg, obj) {
-    console.log('OfflineWorker', msg, DEBUG ? obj : undefined);
+
+    if (DEBUG === 'debug') {
+        console.log(WORKER, msg, obj);
+    } else if (DEBUG === 'info') {
+        console.log(WORKER, msg);
+    }
+}
+
+function debug(msg, obj) {
+    if (DEBUG === 'debug') {
+        console.log(WORKER, msg, obj);
+    }
 }
 
 // It's replaced unconditionally to preserve the expected behavior
@@ -24,8 +36,8 @@ Promise.prototype['finally'] = function finallyPolyfill(callback) {
 };
 
 function postMessage(msg) {
-    if (DEBUG) {
-        log("postMessage", msg);   
+    if (DEBUG === 'debug') {
+        debug("postMessage", msg);   
     }
     return self.clients.matchAll().then(function(clients) {
         return Promise.all(clients.map(function(client) {
@@ -180,28 +192,52 @@ function setAppVersion(version) {
     return setStorageValue(CACHE_KEY, version);
 }
 
-
 function getAppVersion() {
     return getStorageValue(CACHE_KEY).then(function (appVersion) {
-        log('App.rev: ' + appVersion);
+        debug('App.rev: ' + appVersion);
         return appVersion;
+    }).then(function (appVersion) {
+        // Cache cache installed
+        return caches.has(appVersion).then(function (hasCache) {
+            return hasCache ? appVersion : null;
+        });
     });
 }
 
 function clearCache(name) {
-    return caches.keys().then(function (cachesToDelete) {
-        return Promise.all(cachesToDelete.map(function (cacheToDelete) {
-            return caches.delete(cacheToDelete);
-        }));
+    return setAppVersion(null).then(function () {
+        return caches.keys().then(function (cachesToDelete) {
+            return Promise.all(cachesToDelete.map(function (cacheToDelete) {
+                return caches.delete(cacheToDelete);
+            }));
+        }); 
     });
 }
 
 function pushCache(name, urls) {
+
+    // Filter urls starting with 'packages/' to let require.async cache on-demand
+    urls = urls.filter(function (url) {
+        return url.indexOf('packages/') !== 0;
+    });
+
+    log('Adding ' + urls.length + ' to cache' + name + '...');
     return caches.open(name).then(function (cache) {
         return cache.addAll(urls).then(function () {
-            log('Updated cache version "' + name + '" urls (' + urls.length + ')', urls);
+            log('Added ' + urls.length + ' to cache' + name, urls);
             return name;
         });
+    });
+}
+
+
+function statusCache() {
+    return getAppVersion().then(function (name) {
+        return caches.open(name).then(function (cache) {
+            return cache.keys().then(function (key) {
+                log(name, key);
+            });
+        }); 
     });
 }
 
@@ -241,7 +277,7 @@ function updateCache() {
   });
 }
 
-log('Started', self);
+debug('Started', self);
 postMessage('Started');
 
 // The install handler takes care of precaching the resources we always need.
@@ -286,15 +322,15 @@ self.addEventListener('message', function (event) {
 });
 
 self.addEventListener('sync', function(event) {
-    log('Push event received', event);
+    debug('Push event received', event);
 });
 
 self.addEventListener('push', function(event) {
-    log('Push event received', event);
+    debug('Push event received', event);
 });
 
 self.addEventListener('update', function (event) {
-    log('Update event received', event);
+    debug('Update event received', event);
 });
 
 
@@ -307,10 +343,10 @@ self.addEventListener('fetch', function (event) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 if (response) {
-                    //log('Cache hit', event.request.url);
+                    debug('Cache hit', event.request.url);
                     return response;
                 } else {
-                    //log('Cache miss', event.request.url);
+                    debug('Cache miss', event.request.url);
                     return fetch(event.request);   
                 }
             })
