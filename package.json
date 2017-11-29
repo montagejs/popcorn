@@ -9,7 +9,7 @@
     "url": "https://github.com/montagejs/popcorn.git"
   },
   "production": true,
-  "appcache": true,
+  "appcache": false,
   "dependencies": {
     "digit": "^3.0.2",
     "montage": "montagejs/montage#master",
