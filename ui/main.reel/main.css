@@ -137,7 +137,7 @@
     }    
     .logo {
         position: fixed;
-        top: 68px;
+        top: calc(15% - 68px);
         left: calc(50% - 108px);
         display: block;
         margin-top: 0px;
@@ -185,8 +185,8 @@
     }
     .logo {
         position: fixed;
-        top: 5px;
-        left: calc(50% - 108px);
+        top: calc(10% - 45px);
+        left: calc(50% - 86px);
         display: block;
         margin-top: 0px;
         margin-left: 0px;
