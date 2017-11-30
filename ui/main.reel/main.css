@@ -4,11 +4,15 @@
     left: 0;
     right: 0;
     bottom: 0;
+    itext-align:center;
     overflow: hidden;
     font-family: Helvetica, Arial, sans-serif;
 }
 .Main-content {
+    idisplay:inline-block;
     position: fixed;
+    imax-width:1280px;
+    imax-height:720px;
     overflow: hidden;
 }
 .Main-details.details-fade-out {
@@ -18,6 +22,29 @@
     transition: transform .35s;
     opacity: 0;
 }
+
+
+.MontageMade {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 50px;
+    height: 100px;
+    overflow: hidden;
+    font-size: 0;
+    color: transparent;
+    background: url(../../assets/image/montage-made.svg) no-repeat center;
+    background-size: 100% auto;
+}
+
+.MontageMade:hover {
+    opacity: .9;
+}
+
+.MontageMade:active {
+    top: 2px;
+}
+
 @media (min-width: 501px) and (max-height: 660px) and (min-height: 501px) {
     .logo {
         position: fixed;
@@ -105,8 +132,22 @@
     }*/
 }
 @media (max-width: 500px) and (orientation: portrait) {
+    .MontageMade {
+    
+    }    
     .logo {
-        display: none;
+        position: fixed;
+        top: 68px;
+        left: calc(50% - 108px);
+        display: block;
+        margin-top: 0px;
+        margin-left: 0px;
+        width: 210px;
+        height: 86px;
+        opacity:.9;
+        z-index: 1;
+        padding: 0;
+        pointer-events: none;
     }
     .Main-content {
         top: 0;
@@ -139,34 +180,51 @@
     }
 }
 @media (max-height: 500px) and (orientation: landscape) {
+    .MontageMade {
+        left: 75px;
+    }
     .logo {
-        display: none;
+        position: fixed;
+        top: 5px;
+        left: calc(50% - 108px);
+        display: block;
+        margin-top: 0px;
+        margin-left: 0px;
+        width: 210px;
+        height: 86px;
+        opacity:.9;
+        z-index: 1;
+        padding: 0;
+        pointer-events: none;
     }
     .Main-content {
         top: 0;
-        left: 126px;
+        left: 30px;
         right: 0;
         bottom: 0;
+        
     }
     .Main-content .Main-strip {
-        top: -65%;
+        top: -45%;
         left: 0;
         bottom: -65%;
         right: 0;
         margin-top: -50px;
         height: auto;
         width: auto;
+        
     }
     .Main-details {
         opacity: 0;
         position: absolute;
         bottom: 10px;
         left: 10px;
-        right: 10px;
+        right: 0px;
         height: 180px;
         max-width: 600px;
-        min-width: 400px;
+        min-width: 270px;
         margin: auto;
+        z-index:2;
         -webkit-transform: translate3d(0,148px,0);
         -moz-transform: translate3d(0,148px,0);
         -ms-transform: translate3d(0,148px,0);
@@ -178,27 +236,6 @@
         -ms-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
     }
-}
-
-.MontageMade {
-    position: absolute;
-    top: 0;
-    left: 25px;
-    width: 50px;
-    height: 100px;
-    overflow: hidden;
-    font-size: 0;
-    color: transparent;
-    background: url(../../assets/image/montage-made.svg) no-repeat center;
-    background-size: 100% auto;
-}
-
-.MontageMade:hover {
-    opacity: .9;
-}
-
-.MontageMade:active {
-    top: 2px;
 }
 
 @media (min-width: 501px) and (max-width: 790px) and (max-height: 660px) and (min-height: 501px) {

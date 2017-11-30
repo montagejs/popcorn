@@ -120,15 +120,7 @@
         height: 24px;
         background-size: 24px 249px;
     }
-    .Categories .Categories-button.in_theaters:before {
-        background-position: 0 -75px;
-    }
-    .Categories .Categories-button.upcoming:before {
-        background-position: 0 -150px;
-    }
-    .Categories .Categories-button.rentals:before {
-        background-position: 0 -225px;
-    }
+    
 }
 @media (max-width: 500px) and (orientation: portrait) {
     .Categories-strip {
@@ -161,13 +153,15 @@
 @media (max-height: 500px) and (orientation: landscape) {
     .Categories-strip {
         top: 0;
-        left: 0;
+        left: -82px;
         bottom: 0;
         width: 126px;
+        position:absolute;
         padding: 8px 0;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        align-items:stretch;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
@@ -175,23 +169,43 @@
         -moz-box-orient: vertical;
         -ms-box-orient: vertical;
         box-orient: vertical;
+        transition:all .3s ease-in;
     }
+    
+    .Categories-strip:hover {
+        left:0px;  
+        transition:all .3s ease-in;
+    }
+    
     .Categories .Categories-button {
         -webkit-flex: 1;-ms-flex: 1;flex: 1;
-        padding-left: 48px;
+        padding-right: 48px;
         text-align: left;
         font-size: 14px;
+        align-self:stretch;
+        min-height:36px;
+        max-height:64px;
         white-space: nowrap;
     }
-    .Categories .Categories-button:before {
-        left: 8px;
-        top: 50%;
-        margin-top: -16px;
-    }
+     .Categories .Categories-button:before {
+         content: "";
+         position: absolute;
+         width: 32px;
+         height: 32px;
+         right:5px;
+         background-image: url(icons.png);
+         background-repeat: no-repeat;
+         background-size: 32px 332px;
+         top:50%;
+         margin-top:-16px;
+     }
     .Categories .Categories-button .CategoryButton-text {
         position: absolute;
-        left: 48px;
+        left: 10px;
         top: 50%;
         margin-top: -7px;
     }
+   
+    
+    
 }

@@ -41,6 +41,14 @@
     transform: scale3d(.9,.3,1);
 }
 
+.Details .button-trailer{
+    padding-left: 10px
+}
+.Details .button-trailer:before {
+    content: "►";
+    color: #fff;
+}
+
 .Details .maturity {
     margin: 0 2px 0 4px;
     padding: 0 0.5em;
@@ -110,7 +118,7 @@
     margin: 0;
     padding: 0;
     display: block;
-    width: 75px;
+    width: 100px;
     border: none;
     border-radius: 0;
     color: white;
