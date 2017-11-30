@@ -6,7 +6,7 @@ exports.Image = Component.specialize( {
         value: null
     },
 
-    _title: {
+    _label: {
         value: null
     },
 
@@ -19,10 +19,10 @@ exports.Image = Component.specialize( {
         }
     },
 
-    title: {
+    label: {
         set: function (value) {
-            if (value !== this._title) {
-                this._title = value;
+            if (value !== this._label) {
+                this._label = value;
                 this.needsDraw = true;
             }
         }
@@ -30,7 +30,8 @@ exports.Image = Component.specialize( {
 
     draw: {
         value: function () {
-            this._element.setAttribute('title', this._title);
+            this._element.setAttribute('title', this._label);
+            this._element.setAttribute('alt', this._label);
             
             if (this._src) {
                 this._element.style.backgroundImage = "url(" + this._src + ")";
