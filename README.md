@@ -4,7 +4,7 @@ Popcorn is a movie discovery application made using MontageJS
 
 ![Screenshot](assets/image/screenshot.png)
 
-[Live Demo](http://montagejs.org/apps/popcorn/)
+[Live Demo](http://montagejs.github.io/popcorn/)
 
 Thank your for exploring our Popcorn demo application.
 
