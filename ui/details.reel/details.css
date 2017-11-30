@@ -41,12 +41,10 @@
     transform: scale3d(.9,.3,1);
 }
 
-.Details .button-trailer{
-    padding-left: 10px
-}
 .Details .button-trailer:before {
     content: "►";
     color: #fff;
+    padding-right: 5px
 }
 
 .Details .maturity {
