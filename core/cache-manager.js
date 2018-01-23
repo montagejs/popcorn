@@ -52,7 +52,7 @@ var CacheManager = {
         
 
         var that = this,
-            isWorker = event.currentTarget !== that.appCache,
+            isWorker = event && event.currentTarget !== that.appCache,
             opts = that.options,
             eventCache = that.events;
             
@@ -253,6 +253,7 @@ exports.CacheManager = CacheManager;
 // Expose for debug
 // TODO remove 
 window.checkForUpdate = CacheManager.checkForUpdate.bind(CacheManager);
+window.clearCache = CacheManager.clearCache.bind(CacheManager);
 
 exports.eventCache = CacheManager.events;
 exports.listenToUpdate = CacheManager.listenToUpdate.bind(CacheManager);
