@@ -1,23 +1,14 @@
 /*global define:false, console, self, Promise, caches, fetch, appCache, clients, indexedDB */
 
-var CACHE_KEY = 'cacheVersion';
-var WORKER = 'cache-worker.js';
-var DEBUG = false;
+// https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features
+// https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions
+// https://github.com/w3c/ServiceWorker/blob/master/explainer.md
+// chrome://inspect/#service-workers
+// https://serviceworke.rs
 
-function log(msg, obj) {
-
-    if (DEBUG === 'debug') {
-        console.log(WORKER, msg, obj);
-    } else if (DEBUG === 'info') {
-        console.log(WORKER, msg);
-    }
-}
-
-function debug(msg, obj) {
-    if (DEBUG === 'debug') {
-        console.log(WORKER, msg, obj);
-    }
-}
+//
+// Env Setttings
+//
 
 // It's replaced unconditionally to preserve the expected behavior
 // in programs even if there's ever a native finally.
@@ -35,9 +26,19 @@ Promise.prototype['finally'] = function finallyPolyfill(callback) {
         });
 };
 
+var DEBUG = false;
+
+//
+// Utils
+// 
+
+function log(msg, obj) {
+    console.log('OfflineWorker', msg, DEBUG ? obj : undefined);
+}
+
 function postMessage(msg) {
-    if (DEBUG === 'debug') {
-        debug("postMessage", msg);   
+    if (DEBUG) {
+        log("postMessage", msg);   
     }
     return self.clients.matchAll().then(function(clients) {
         return Promise.all(clients.map(function(client) {
@@ -46,9 +47,22 @@ function postMessage(msg) {
     });
 }
 
-var cacheSections = ['CACHE MANIFEST', 'CACHE:', 'NETWORK:'],
-    cacheVersionSections = ['#version', '#hash'];
-        
+//
+// AppCache
+//
+
+function parseAppCacheVersion(appCacheLine) {
+    var version = String(appCacheLine || '').replace("#", '').trim().split(' - '),
+        rev = String(version[0]).replace('rev ', ''),
+        updated = String(version[1]) || new Date().toISOString();
+
+    return {
+        rev: rev,
+        updated: updated
+    };
+}
+
+var cacheSections = ['CACHE MANIFEST', 'CACHE:', 'NETWORK:'];
 function parseAppCache(appCacheText) {
 
     var appCache = {
@@ -86,29 +100,34 @@ function parseAppCache(appCacheText) {
         }
     });
 
+    log('AppCacheManifest.rev: ' + appCache.rev);
+
     return appCache;
 }
 
-function getAppCache() {
+function getAppCacheManifest() {
     return new Promise(function (resolve, reject) {
-        log('Fetch cache manifest...');
-        postMessage('checking');
+        log('Fetching cache manifest...');
         fetch('./manifest.appcache').then(function (response) {
+            log('Fetched cache manifest.');
             if (response.status === 200) {
-                return response.text().then(function (appCacheText) {
+                response.text().then(function (appCacheText) {
                     var appCache = parseAppCache(appCacheText);
-                    log('AppCache.rev: ' + appCache.rev);
                     resolve(appCache);
                 }, reject);
+            } else {
+                reject("NoAppCache");   
             }
-
-            reject("NoAppCache");
-        }, function (err) {
+        }).catch(function (err) {
             log('Fetch cache manifest failed cause: ' + err);
             reject(err);
         });
     });
 }
+
+//
+// Storage
+//
 
 var dbName = "OfflineWorker";
 var storeName = "OfflineObjectStore";
@@ -187,55 +206,51 @@ function setStorageValue(key, value) {
         });
     });
 }
-    
-function setAppVersion(version) {
-    return setStorageValue(CACHE_KEY, version);
+
+//
+// App Version
+//
+  
+var APP_VERSION_KEY = 'appCacheVersion';
+
+function setAppCacheVersion(version) {
+    return setStorageValue(APP_VERSION_KEY, version);
 }
 
-function getAppVersion() {
-    return getStorageValue(CACHE_KEY).then(function (appVersion) {
-        debug('App.rev: ' + appVersion);
-        return appVersion;
-    }).then(function (appVersion) {
-        // Cache cache installed
+function getAppCacheManifestVersion() {
+    return getStorageValue(APP_VERSION_KEY).then(function (appVersion) {
         return caches.has(appVersion).then(function (hasCache) {
-            return hasCache ? appVersion : null;
+            if (hasCache === true) {
+                log('AppCache.rev: ' + appVersion);
+                return appVersion;
+            } else {
+                return null;
+            }
         });
     });
 }
 
-function clearCache(name) {
-    return setAppVersion(null).then(function () {
-        return caches.keys().then(function (cachesToDelete) {
-            return Promise.all(cachesToDelete.map(function (cacheToDelete) {
-                return caches.delete(cacheToDelete);
-            }));
-        }); 
+//
+// Cache
+//
+
+function clearCache() {
+    return caches.keys().then(function (cachesToDelete) {
+        return Promise.all(cachesToDelete.map(function (cacheToDelete) {
+            return caches.delete(cacheToDelete);
+        }));
     });
 }
 
 function pushCache(name, urls) {
-
-    // Filter urls starting with 'packages/' to let require.async cache on-demand
-    urls = urls.filter(function (url) {
-        return url.indexOf('packages/') !== 0;
-    });
-
-    log('Adding ' + urls.length + ' to cache' + name + '...');
-    return caches.open(name).then(function (cache) {
-        return cache.addAll(urls).then(function () {
-            log('Added ' + urls.length + ' to cache' + name, urls);
-            return name;
-        });
-    });
-}
-
-
-function statusCache() {
-    return getAppVersion().then(function (name) {
+    // Clear all others caches
+    return clearCache().then(function () {
+        // Open new cache
         return caches.open(name).then(function (cache) {
-            return cache.keys().then(function (key) {
-                log(name, key);
+            // Update new cache
+            return cache.addAll(urls).then(function () {
+                log('Updated cache version "' + name + '" urls (' + urls.length + ')', urls);
+                return name;
             });
         }); 
     });
@@ -245,51 +260,60 @@ var pendingCacheUpdate;
 function updateCache() {
     if (pendingCacheUpdate) {
         return pendingCacheUpdate;
-    }
+    } else {
 
-    return (pendingCacheUpdate = getAppCache()).then(function (appCache) {
-        return getAppVersion().then(function (appVersion) {
-            return new Promise(function (resolve, reject) {
+        postMessage('progress');
+        return (pendingCacheUpdate = getAppCacheManifest()).then(function (appCache) {
+            return getAppCacheManifestVersion().then(function (appVersion) {
                 // Install
                 if (appVersion === null) {
-                    log('Installing "' + appCache.rev + '"');
+                    log('Installing cache "' + appCache.rev + '"');
                     return pushCache(appCache.rev, appCache.cache).then(function () {
-                        log('Installed "' + appCache.rev + '"');
-                        return setAppVersion(appCache.rev);
+                        log('Installed cache "' + appCache.rev + '"');
+                        return setAppCacheVersion(appCache.rev).then(function () {
+                            return Promise.resolve("noUpdate");
+                        });
                     });
                 // Clean then install new version
                 } else if (appVersion !== appCache.rev) {
-                    log('Updating to "' + appCache.rev + '"');
-                    clearCache(appVersion).then(function () {
-                        return pushCache(appCache.rev, appCache.cache).then(function () {
-                        log('Updated from "' + appVersion + '" to "' + appCache.rev + '"');
-                            return setAppVersion(appCache.rev);
+                    log('Updating to cache "' + appCache.rev + '"');
+                    return pushCache(appCache.rev, appCache.cache).then(function () {
+                        log('Updated cache from "' + appVersion + '" to "' + appCache.rev + '"');
+                        return setAppCacheVersion(appCache.rev).then(function () {
+                            return Promise.resolve("updateReady");
                         });
-                    }).then(resolve, reject);
+                    });
                 } else {
                     log('Cached "' + appCache.rev + '"');
-                    return reject("Cached");
+                    return Promise.resolve("cached");
                 }
             });
+
+        }).finally(function () {
+            pendingCacheUpdate = null;
         });
-  }).finally(function () {
-    pendingCacheUpdate = null;
-  });
+    }
 }
 
-debug('Started', self);
-postMessage('Started');
+//
+// Worker
+//
+
+log('Started', self);
 
 // The install handler takes care of precaching the resources we always need.
 self.addEventListener('install', function (event) {
     log('Install...', event);
     event.waitUntil(
+        // Clear previous caches
         updateCache().then(function () {
+            log('Installed', self);
             return self.skipWaiting();
-        }).then(function (appVersion) {
-            return postMessage('cached');
-        }, function () {
-            return postMessage('uncached');
+        }).catch(function (err) {
+            log('No Cache cause: ' + err);
+            return postMessage('err');
+        }).then(function() {
+            log('Installed', self);
         })
     );
 });
@@ -298,40 +322,56 @@ self.addEventListener('install', function (event) {
 self.addEventListener('activate', function (event) {
     log('Activating...', event);
     event.waitUntil(
-        updateCache().then(function (appVersion) {
-            return postMessage('updateReady');
-        }).catch(function (err) {
-            log('No Update cause: ' + err);
-            return postMessage('cached');
-        }).then(function() {
-            return clients.claim();
+        // Update cache
+        updateCache().then(function (cacheStatus) {
+            return self.skipWaiting().then(function () {
+                return postMessage(cacheStatus);
+            }).catch(function (err) {
+                log('No Update cause: ' + err);
+                return postMessage('noUpdate');
+            }).then(function() {
+                log('Activated', self);
+                return clients.claim();
+            });
         })
     );
 });
 
 self.addEventListener('message', function (event) {
-    log('Checking...', event);
-    event.waitUntil(
-        updateCache().then(function (appVersion) {
-            return postMessage('updateReady');
-        }).catch(function (err) {
-            return postMessage('noUpdate');
-        })
-    );
+    if (event.data === 'Update') {
+        log('UpdateCache...', event);
+        event.waitUntil(
+            updateCache().then(function (cacheStatus) {
+                return postMessage(cacheStatus);
+            }).catch(function (err) {
+                log('No Update cause: ' + err);
+                return postMessage('noUpdate');
+            })
+        );   
+    } else if (event.data === 'CacheClear') {
+        log('CacheClear...', event);
+        event.waitUntil(
+            clearCache().then(function () {
+                return postMessage('CacheCleared');
+            }).catch(function (err) {
+                log('No cache clear cause: ' + err);
+                return postMessage('CacheClearError');
+            })
+        );
+    }
 });
 
 self.addEventListener('sync', function(event) {
-    debug('Push event received', event);
+    log('Push event received', event);
 });
 
 self.addEventListener('push', function(event) {
-    debug('Push event received', event);
+    log('Push event received', event);
 });
 
 self.addEventListener('update', function (event) {
-    debug('Update event received', event);
+    log('Update event received', event);
 });
-
 
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
@@ -342,10 +382,10 @@ self.addEventListener('fetch', function (event) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 if (response) {
-                    debug('Cache hit', event.request.url);
+                    //log('Cache hit', event.request.url);
                     return response;
                 } else {
-                    debug('Cache miss', event.request.url);
+                    //log('Cache miss', event.request.url);
                     return fetch(event.request);   
                 }
             })
