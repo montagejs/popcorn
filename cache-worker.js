@@ -1,8 +1,8 @@
 /*global define:false, console, self, Promise, caches, fetch, appCache, clients, indexedDB */
 
 var CACHE_KEY = 'cacheVersion';
-var WORKER = 'sw.js';
-var DEBUG = 'debug';
+var WORKER = 'cache-worker.js';
+var DEBUG = false;
 
 function log(msg, obj) {
 
@@ -92,7 +92,7 @@ function parseAppCache(appCacheText) {
 function getAppCache() {
     return new Promise(function (resolve, reject) {
         log('Fetch cache manifest...');
-        postMessage('Updating');
+        postMessage('checking');
         fetch('./manifest.appcache').then(function (response) {
             if (response.status === 200) {
                 return response.text().then(function (appCacheText) {
@@ -287,9 +287,9 @@ self.addEventListener('install', function (event) {
         updateCache().then(function () {
             return self.skipWaiting();
         }).then(function (appVersion) {
-            return postMessage('Installed');
+            return postMessage('cached');
         }, function () {
-            return postMessage('InstallFailed');
+            return postMessage('uncached');
         })
     );
 });
@@ -299,10 +299,10 @@ self.addEventListener('activate', function (event) {
     log('Activating...', event);
     event.waitUntil(
         updateCache().then(function (appVersion) {
-            return postMessage('Updated');
+            return postMessage('updateReady');
         }).catch(function (err) {
             log('No Update cause: ' + err);
-            return postMessage('NoUpdate');
+            return postMessage('cached');
         }).then(function() {
             return clients.claim();
         })
@@ -313,10 +313,9 @@ self.addEventListener('message', function (event) {
     log('Checking...', event);
     event.waitUntil(
         updateCache().then(function (appVersion) {
-            return postMessage('Updated');
+            return postMessage('updateReady');
         }).catch(function (err) {
-            log('No Update cause: ' + err);
-            return postMessage('NoUpdate');
+            return postMessage('noUpdate');
         })
     );
 });
