@@ -120,7 +120,6 @@ var CacheManager = {
                 // TODO ServiceWorker.addEvent('type', func, worker) ?
                 return ServiceWorker.getServiceWorker().then(function (serviceWorker) {
                     serviceWorker.addEventListener('message', function(event) {
-                        console.log(event);
                         if (
                             event.source && worker.active &&
                                 event.source.scriptURL === worker.active.scriptURL
