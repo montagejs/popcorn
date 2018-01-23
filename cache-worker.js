@@ -345,7 +345,7 @@ self.addEventListener('message', function (event) {
                 return postMessage(cacheStatus);
             }).catch(function (err) {
                 log('No Update cause: ' + err);
-                return postMessage('noUpdate');
+                return postMessage('error');
             })
         );   
     } else if (event.data === 'CacheClear') {
@@ -355,7 +355,7 @@ self.addEventListener('message', function (event) {
                 return postMessage('CacheCleared');
             }).catch(function (err) {
                 log('No cache clear cause: ' + err);
-                return postMessage('CacheClearError');
+                return postMessage('error');
             })
         );
     }
