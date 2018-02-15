@@ -9,7 +9,15 @@
     "url": "https://github.com/montagejs/popcorn.git"
   },
   "production": true,
-  "appcache": true,
+  "appcache": {
+    "exclude": [
+      "**/manifest.appcache",
+      "**/ui/**/*",
+      "**/core/**/*",
+      "**/*.json",
+      "**/node_modules/**/*"
+    ]
+  },
   "manifest": true,
   "dependencies": {
     "digit": "^3.0.2",
@@ -31,9 +39,9 @@
     "publish": "git checkout gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "excludes": [
+    "**/**/mocha.css",
     "dist",
-    "builds",
-    "nodes_modules/*.md"
+    "builds"
   ],
   "bundle": [
     "ui/main.reel"
