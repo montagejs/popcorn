@@ -115,7 +115,7 @@ var CacheManager = {
         }
 
         // Support serviceWorker
-        if (ServiceWorker.supportServiceWorker) {
+        if (ServiceWorker.supportServiceWorker && hasCacheManifest) {
             that.getCacheWorker().then(function (worker) {
                 // TODO ServiceWorker.addEvent('type', func, worker) ?
                 return ServiceWorker.getServiceWorker().then(function (serviceWorker) {
@@ -191,7 +191,7 @@ var CacheManager = {
             appCache = that.appCache;
         try {
 
-            if (ServiceWorker.supportServiceWorker) {
+            if (ServiceWorker.supportServiceWorker && hasCacheManifest) {
                 that.getCacheWorker().then(function (worker) {
                     return ServiceWorker.sendWorkerMsg(worker, 'Update');
                 });

@@ -234,6 +234,9 @@ function getAppCacheManifestVersion() {
 // Cache
 //
 
+var externalCache = 'external-cache',
+    internalCache = 'internal-cache'; // Will be clear by setCache and clearCache
+
 function clearCache() {
     return caches.keys().then(function (cachesToDelete) {
         return Promise.all(cachesToDelete.map(function (cacheToDelete) {
@@ -242,7 +245,7 @@ function clearCache() {
     });
 }
 
-function pushCache(name, urls) {
+function setCache(name, urls) {
     // Clear all others caches
     return clearCache().then(function () {
         // Open new cache
@@ -254,6 +257,14 @@ function pushCache(name, urls) {
             });
         }); 
     });
+}
+
+
+function addResponseToCache(name, request, response) {
+    return caches.open(name).then(function (cache) {
+        // Update new cache
+        return cache.put(request, response.clone());
+    }); 
 }
 
 var pendingCacheUpdate;
@@ -268,7 +279,7 @@ function updateCache() {
                 // Install
                 if (appVersion === null) {
                     log('Installing cache "' + appCache.rev + '"');
-                    return pushCache(appCache.rev, appCache.cache).then(function () {
+                    return setCache(appCache.rev, appCache.cache).then(function () {
                         log('Installed cache "' + appCache.rev + '"');
                         return setAppCacheVersion(appCache.rev).then(function () {
                             return Promise.resolve("noUpdate");
@@ -277,7 +288,7 @@ function updateCache() {
                 // Clean then install new version
                 } else if (appVersion !== appCache.rev) {
                     log('Updating to cache "' + appCache.rev + '"');
-                    return pushCache(appCache.rev, appCache.cache).then(function () {
+                    return setCache(appCache.rev, appCache.cache).then(function () {
                         log('Updated cache from "' + appVersion + '" to "' + appCache.rev + '"');
                         return setAppCacheVersion(appCache.rev).then(function () {
                             return Promise.resolve("updateReady");
@@ -378,17 +389,31 @@ self.addEventListener('update', function (event) {
 // from the network before returning it to the page.
 self.addEventListener('fetch', function (event) {
     // Skip cross-origin requests, like those for Google Analytics.
-    if (event.request.url.startsWith(self.location.origin)) {
-        event.respondWith(
-            caches.match(event.request).then(function(response) {
-                if (response) {
-                    //log('Cache hit', event.request.url);
-                    return response;
-                } else {
-                    //log('Cache miss', event.request.url);
-                    return fetch(event.request);   
-                }
-            })
-        );
-    }
+    event.respondWith(
+        caches.match(event.request).then(function(response) {
+            if (response) {
+                //log('Cache hit', event.request.url);
+                return response;
+            } else {
+                //log('Cache miss', event.request.url);
+                return fetch(event.request).then(function(response) {
+                    //
+                    if (
+                        internalCache && 
+                            event.request.url.startsWith(self.location.origin)
+                    ) {
+                        return addResponseToCache(internalCache, event.request, response).then(function () {
+                            return response;
+                        });
+                    } else if (externalCache) {
+                        return addResponseToCache(externalCache, event.request, response).then(function () {
+                            return response;
+                        });
+                    } else {
+                        return response;
+                    }
+                })
+            }
+        })
+    );
 });
