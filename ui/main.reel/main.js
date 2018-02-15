@@ -1,6 +1,7 @@
 
 var Component = require("montage/ui/component").Component,
-    sharedMoviesService = require("core/tmdb-service").shared;
+    sharedMoviesService = require("core/tmdb-service").shared,
+    defaultLocalizer = require("montage/core/localizer").defaultLocalizer;
 
 //TODO use details in toggle buttons
 //TODO do not use matte toggle buttons
@@ -8,6 +9,15 @@ exports.Main = Component.specialize({
 
     constructor: {
         value: function Main () {
+
+            /*
+            // Test localize
+            defaultLocalizer.locale = 'fr';
+            defaultLocalizer.localize("hello").then(function (localized) {
+                console.log(localized);
+            });
+            */
+
             this.application.addEventListener( "openTrailer", this, false);
 
             this.canDrawGate.setField("moviesLoaded", false);
