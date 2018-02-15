@@ -37,7 +37,7 @@ var CacheManager = {
     options: {
         reloadOnUpdateReady: false,
         confirmOnUpdateReady: true,
-        offlineWorkerScope: '/',
+        offlineWorkerScope: location.pathname,
         offlineWorkerFile: 'cache-worker.js',
         updateCheckInterval: 1000 * 60 * 15, // 15 minutes
         updateRetryInterval: 1000 * 60 * 15 * 2, // 30 minutes
