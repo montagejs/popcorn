@@ -1,6 +1,7 @@
 
 var Component = require("montage/ui/component").Component,
     sharedMoviesService = require("core/tmdb-service").shared,
+    defaultLocalizer = require("montage/core/localizer").defaultLocalizer,
     CacheManager = require('core/cache-manager.js').CacheManager;
 
 //TODO use details in toggle buttons
@@ -9,6 +10,20 @@ exports.Main = Component.specialize({
 
     constructor: {
         value: function Main () {
+
+            /*
+            // Test localize
+            defaultLocalizer.locale = 'fr';
+            defaultLocalizer.localize("hello").then(function (localized) {
+                console.log(localized);
+            });
+            */
+
+            var localeParam = this.getParameterByName('lang');
+            if (localeParam) {
+                defaultLocalizer.locale = localeParam;
+            }
+
             this.application.addEventListener( "openTrailer", this, false);
 
             this.canDrawGate.setField("moviesLoaded", false);
@@ -36,6 +51,18 @@ exports.Main = Component.specialize({
             CacheManager.confirmOnUpdateReady = true;
             CacheManager.listenToUpdate();
             CacheManager.checkForUpdate();
+        }
+    },
+
+    getParameterByName: {
+            value: function (name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
     },
 
