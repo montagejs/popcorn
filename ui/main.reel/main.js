@@ -1,6 +1,7 @@
 
 var Component = require("montage/ui/component").Component,
-    sharedMoviesService = require("core/tmdb-service").shared;
+    sharedMoviesService = require("core/tmdb-service").shared,
+    CacheManager = require('core/cache-manager.js').CacheManager;
 
 //TODO use details in toggle buttons
 //TODO do not use matte toggle buttons
@@ -12,6 +13,29 @@ exports.Main = Component.specialize({
 
             this.canDrawGate.setField("moviesLoaded", false);
             this._initialDataLoad = this.moviesService.load();
+
+            // Add events
+            CacheManager.events.error = function (error) {
+                console.error('MainUpdate', 'error', error);
+            };
+            CacheManager.events.cached = function () {
+                console.log('MainUpdate', 'up-to-date (cached)');
+            };
+            CacheManager.events.noUpdate = function () {
+                console.log('MainUpdate', 'up-to-date (noUpdate)');
+            };
+            CacheManager.events.checking = function () {
+                console.log('MainUpdate', 'checking');
+            };
+            CacheManager.events.updateReady = function () {
+                console.log('MainUpdate', 'updateReady');
+            };
+            CacheManager.events.noupdate = function () {
+                console.log('MainUpdate', 'noupdate');
+            };
+            CacheManager.confirmOnUpdateReady = true;
+            CacheManager.listenToUpdate();
+            CacheManager.checkForUpdate();
         }
     },
 
