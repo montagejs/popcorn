@@ -46,8 +46,8 @@ exports.Image = Component.specialize({
                     images[url] = defer.promise;
                 }
                 return images[url];
-            }
-        }()),
+            };
+        }())
     },
 
     draw: {
