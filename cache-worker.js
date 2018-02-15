@@ -236,9 +236,6 @@ function getAppCacheManifestVersion() {
 // Cache
 //
 
-var externalCache = 'external-cache',
-    internalCache = 'internal-cache'; // Will be clear by setCache and clearCache
-
 function clearCache() {
     return caches.keys().then(function (cachesToDelete) {
         return Promise.all(cachesToDelete.map(function (cacheToDelete) {
@@ -266,6 +263,8 @@ function addResponseToCache(name, request, response) {
     return caches.open(name).then(function (cache) {
         // Update new cache
         return cache.put(request, response.clone());
+    }, function () {
+        return response;
     }); 
 }
 
@@ -391,31 +390,17 @@ self.addEventListener('update', function (event) {
 // from the network before returning it to the page.
 self.addEventListener('fetch', function (event) {
     // Skip cross-origin requests, like those for Google Analytics.
-    event.respondWith(
-        caches.match(event.request).then(function(response) {
-            if (response) {
-                //log('Cache hit', event.request.url);
-                return response;
-            } else {
-                //log('Cache miss', event.request.url);
-                return fetch(event.request).then(function(response) {
-                    //
-                    if (
-                        internalCache && 
-                            event.request.url.startsWith(self.location.origin)
-                    ) {
-                        return addResponseToCache(internalCache, event.request, response).then(function () {
-                            return response;
-                        });
-                    } else if (externalCache) {
-                        return addResponseToCache(externalCache, event.request, response).then(function () {
-                            return response;
-                        });
-                    } else {
-                        return response;
-                    }
-                });
-            }
-        })
-    );
+    if (event.request.url.startsWith(self.location.origin)) {
+        event.respondWith(
+            caches.match(event.request).then(function(response) {
+                if (response) {
+                    log('Cache hit', event.request.url);
+                    return response;
+                } else {
+                    log('Cache miss', event.request.url);
+                    return fetch(event.request);   
+                }
+            })
+        );
+    }
 });
