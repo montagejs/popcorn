@@ -219,11 +219,9 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
                 for (var i = 0, moviesLength = selectedCategory.contentController.content.length; i < moviesLength; i++) {
                     var currentMovie = selectedCategory.contentController.content[i];
                     if (currentMovie === selectedCategory.contentController.selection[0]) {
-                        this.preloadMovie(selectedCategory.contentController.content[i+1]).then(function() {
-                                self.preloadMovie(selectedCategory.contentController.content[i+2]);
-                            }).then(function() {
-                                self.preloadMovie(selectedCategory.contentController.content[i+3]);
-                            });
+                        this.preloadMovie(selectedCategory.contentController.content[i+1])
+                            .then(self.preloadMovie.bind(self, selectedCategory.contentController.content[i+2]))
+                            .then(self.preloadMovie.bind(self, selectedCategory.contentController.content[i+3]));
                         break;
                     }
                 }

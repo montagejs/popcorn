@@ -1,4 +1,4 @@
-/*global define:false, console, self, Promise, caches, fetch, appCache, clients, indexedDB */
+/*global define:false, console, self, Promise, caches, fetch, appCache, clients, indexedDB, Promise */
 
 // https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features
 // https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions
@@ -412,7 +412,7 @@ self.addEventListener('fetch', function (event) {
                     } else {
                         return response;
                     }
-                })
+                });
             }
         })
     );

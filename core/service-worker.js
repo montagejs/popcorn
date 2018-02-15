@@ -1,12 +1,4 @@
-
-function defer() {
-    var deffered = {};
-    deffered.promise = new Promise(function (resolve, reject) {
-        deffered.resolve = resolve;
-         deffered.reject = reject;
-    });
-    return deffered;
-}
+var Promise = require("montage/core/promise").Promise;
 
 function parseURI(url) {
 
@@ -121,7 +113,7 @@ var ServiceWorker = {
         
     sendWorkerMsg: function (worker, msg) {
         if (msg) {
-            var deferred = defer();
+            var deferred = Promise.defer();
             if (worker.active) {
                 worker.active.postMessage(msg);
                 deferred.resolve({
