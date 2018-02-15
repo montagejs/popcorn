@@ -61,7 +61,7 @@ exports.Main = Component.specialize({
             var trailers = event.detail.trailers;
             //todo: filter video list with youtube trailer available.?
 
-            if (trailers && trailers.youtube && trailers.youtube.length) { 
+            if (trailers && trailers.youtube && trailers.youtube.length) {
                 var videos = trailers.youtube,
                     video;
 
@@ -74,7 +74,7 @@ exports.Main = Component.specialize({
                 }
 
                 this.templateObjects.player.openTrailer(video.source);
-             }
+            }
         }
     },
 
