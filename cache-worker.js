@@ -33,7 +33,9 @@ var DEBUG = false;
 // 
 
 function log(msg, obj) {
-    console.log('OfflineWorker', msg, DEBUG ? obj : undefined);
+    if (DEBUG) {
+        console.log('OfflineWorker', msg, obj);   
+    }
 }
 
 function postMessage(msg) {
