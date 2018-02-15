@@ -57,7 +57,7 @@ var CacheManager = {
             eventCache = that.events;
             
         // TODO remove debug
-        console.log('CacheManager', isWorker ? 'ServiceWorker' : 'ApplicationCache', eventType, event);
+        //console.log('CacheManager', isWorker ? 'ServiceWorker' : 'ApplicationCache', eventType, event);
 
         if (typeof eventCache[eventType] === 'function') {
             eventCache[eventType](event);
