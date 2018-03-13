@@ -37,6 +37,10 @@ npm install
 
 3. Use NodeJS http-server or Spin up your preferred HTTP server and point your browser to the associated port to serve the popcorn directory.
 
+```
+npm run start
+```
+
     >**Note:** During development MontageJS applications rely on XHR to load their various components and modules,
     which is why you will need a web server to serve the demo.
 
