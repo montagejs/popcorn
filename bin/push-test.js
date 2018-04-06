@@ -11,9 +11,9 @@ webpush.sendNotification(pushSubscription, JSON.stringify({
 	tag: Date.now(),
 	method:"push",
 	title: "Montage Popcorn",
-    icon: '/assets/icons/icon-196.png',
-    badge:'/assets/icons/icon-128.png',
-    sound: '/assets/audio/pop_up_alert.mp3',
+	icon: '/assets/icons/icon-196.png',
+	badge:'/assets/icons/icon-128.png',
+	sound: '/assets/audio/pop_up_alert.mp3',
 	body: "There's a new trailer!"
 })).then(function (res) {
 	console.log('ok', res);
