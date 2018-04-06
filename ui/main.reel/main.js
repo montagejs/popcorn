@@ -81,9 +81,9 @@ exports.Main = Component.specialize({
                     });
                 }
             }).then(function (subscription) {
-                console.info('Push Notification subscription', JSON.stringify(subscription))
+                console.info('Push Notification subscription', JSON.stringify(subscription));
             }).catch(function (err) {
-                console.error('Push Notification Error', err)
+                console.error('Push Notification Error', err);
             });
         }
     },

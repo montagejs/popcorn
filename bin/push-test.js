@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const webpush = require('web-push');
+var webpush = require('web-push');
 // https://console.firebase.google.com
-//const SERVER_API_KEY="";
+var SERVER_API_KEY="";
 // From push-worker subscription
-//const pushSubscription = {"endpoint":"...","expirationTime":null,"keys":{"p256dh":"..."}};
+var pushSubscription = {"endpoint":"...","expirationTime":null,"keys":{"p256dh":"..."}};
 
 webpush.setGCMAPIKey(SERVER_API_KEY);
 webpush.sendNotification(pushSubscription, JSON.stringify({
@@ -16,8 +16,8 @@ webpush.sendNotification(pushSubscription, JSON.stringify({
     sound: '/assets/audio/pop_up_alert.mp3',
 	body: "There's a new trailer!"
 })).then(function (res) {
-	console.log('ok', res)
+	console.log('ok', res);
 }).catch(function (err) {
-	console.error('err', err)
+	console.error('err', err);
 });
 	
