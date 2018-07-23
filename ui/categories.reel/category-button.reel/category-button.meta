@@ -1,7 +1,7 @@
 {
   "blueprint_abstractradiobutton_reference": {
     "prototype": "montage/core/meta/blueprint-reference",
-    "properties": {
+    "values": {
       "valueReference": {
         "blueprintName": "AbstractRadioButton",
         "blueprintModule": {
@@ -12,14 +12,14 @@
   },
   "blueprint_unnamed_label": {
     "prototype": "montage/core/meta/property-blueprint",
-    "properties": {
+    "values": {
       "name": "label",
       "blueprint": {"@": "root"}
     }
   },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
-    "properties": {
+    "values": {
       "name": null,
       "parent": {"@": "blueprint_abstractradiobutton_reference"},
       "propertyBlueprints": [

@@ -1,8 +1,8 @@
 
 var Component = require("montage/ui/component").Component;
 
-var TRAILER_URL = "https://www.youtube.com/embed/%s";
-var PLACE_HOLDER = "%s";
+var TRAILER_URL = "https://www.youtube.com/embed/%s?autoplay=1&enablejsapi=1",
+    PLACE_HOLDER = "%s";
 
 exports.Player = Component.specialize({
 
@@ -19,6 +19,7 @@ exports.Player = Component.specialize({
 
     handleCloseButtonAction: {
         value: function () {
+            this.player.src = "";
             this.templateObjects.overlay.hide();
         }
     },
@@ -37,7 +38,10 @@ exports.Player = Component.specialize({
     didShowOverlay: {
         value: function (overlay) {
             if (this._trailerId) {
-                this.player.src = TRAILER_URL.replace(PLACE_HOLDER, this._trailerId);
+                var trailerUrl = TRAILER_URL.replace(PLACE_HOLDER, encodeURIComponent(this._trailerId));
+                if (this.player.src !== trailerUrl) {
+                    this.player.src = trailerUrl;
+                }
             }
             overlay.classList.add('is-shown');
         }

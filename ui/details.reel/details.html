@@ -6,53 +6,43 @@
     <script type="text/montage-serialization">
     {
         "owner": {
-            "properties": {
+            "values": {
                 "element": {"#": "owner"},
-                "popularityIcon": {"#": "popularityIcon"}
-            },
-            "bindings": {
+                "popularityIcon": {"#": "popularityIcon"},
                 "classList.has('visible')": {"<-": "@owner.isVisible"}
             }
         },
         "audienceScore": {
             "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "audienceScore"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "audienceScore"},
                 "value": {"<-": "@owner.movie.vote_average"}
             }
         },
         "criticsScore": {
             "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "criticsScore"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "criticsScore"},
                 "value": {"<-": "@owner.movie.popularity.round(0)"}
             }
         },
         "dates": {
             "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "dates"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "dates"},
                 "value": {"<-": "@owner.movie.release_date"}
             }
         },
         "description": {
             "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "description"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "description"},
                 "value": {"<-": "@owner.movie.overview"}
             }
         },
         "expandButton": {
             "prototype": "digit/ui/button.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "expand"}
             },
             "listeners": [
@@ -64,41 +54,35 @@
         },
         "maturity": {
             "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "maturity"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "maturity"},
                 "value": {"<-": "@owner.movie.mpaaRating"}
             }
         },
         "runtime": {
             "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "runtime"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "runtime"},
                 "value": {"<-": "(@owner.movie.runtime/60).floor() + 'h ' + @owner.movie.runtime%60 + 'min'"}
             }
         },
         "scroller": {
             "prototype": "digit/ui/scroller.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "scroller"},
                 "hasMomentum": true
             }
         },
         "title": {
             "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "title"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "title"},
                 "value": {"<-": "@owner.movie.title"}
             }
         },
         "trailerButton": {
             "prototype": "digit/ui/button.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "trailerButton"}
             },
             "listeners": [
@@ -155,7 +139,7 @@
             <div class="Details-attributions">Creative Commons – Attribution (CC BY 3.0) Thermometer designed by Megan Sheehan from the Noun Project </div>
         </div>
         <nav class="action-buttons">
-            <button data-montage-id="trailerButton" class="button button-trailer">
+            <button data-montage-id="trailerButton" class="button button-trailer" title="Play Trailer">
                 Trailer
             </button>
         </nav>

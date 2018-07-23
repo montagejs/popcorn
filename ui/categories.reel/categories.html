@@ -6,20 +6,16 @@
     <script type="text/montage-serialization">
     {
         "owner": {
-            "properties": {
-                "element": {"#": "owner"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "owner"},
                 "selected": {"<-": "@radioButtonController.value"}
             }
         },
         "button": {
             "prototype": "./category-button.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "button"},
-                "radioButtonController": {"@": "radioButtonController"}
-            },
-            "bindings": {
+                "radioButtonController": {"@": "radioButtonController"},
                 "classList.has(@repetition:iteration.object.key)": {"<-": "true"},
                 "label": {"<-": "@repetition:iteration.object.title"},
                 "value": {"<-": "@repetition:iteration.object"}
@@ -27,16 +23,14 @@
         },
         "radioButtonController": {
             "prototype": "montage/core/radio-button-controller",
-            "bindings": {
+            "values": {
                 "contentController": {"<-": "@owner.categories"}
             }
         },
         "repetition": {
             "prototype": "montage/ui/repetition.reel",
-            "properties": {
-                "element": {"#": "repetition"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "repetition"},
                 "contentController": {"<-": "@owner.categories"}
             }
         }

@@ -1,6 +1,8 @@
 
 var Component = require("montage/ui/component").Component,
-    sharedMoviesService = require("core/tmdb-service").shared;
+    sharedMoviesService = require("core/tmdb-service").shared,
+    defaultLocalizer = require("montage/core/localizer").defaultLocalizer,
+    CacheManager = require('core/cache-manager.js').CacheManager;
 
 //TODO use details in toggle buttons
 //TODO do not use matte toggle buttons
@@ -8,10 +10,66 @@ exports.Main = Component.specialize({
 
     constructor: {
         value: function Main () {
+
+            /*
+            // Test localize
+            defaultLocalizer.locale = 'fr';
+            defaultLocalizer.localize("hello").then(function (localized) {
+                console.log(localized);
+            });
+            */
+
+            var localeParam = this.getParameterByName('lang');
+            if (localeParam) {
+                defaultLocalizer.locale = localeParam;
+            }
+
             this.application.addEventListener( "openTrailer", this, false);
 
             this.canDrawGate.setField("moviesLoaded", false);
             this._initialDataLoad = this.moviesService.load();
+
+            // Add events
+            CacheManager.events.error = function (error) {
+                console.error('MainUpdate', 'error', error);
+            };
+            CacheManager.events.cached = function () {
+                console.log('MainUpdate', 'up-to-date (cached)');
+            };
+            CacheManager.events.noUpdate = function () {
+                console.log('MainUpdate', 'up-to-date (noUpdate)');
+            };
+            CacheManager.events.checking = function () {
+                console.log('MainUpdate', 'checking');
+            };
+            CacheManager.events.updateReady = function () {
+                console.log('MainUpdate', 'updateReady');
+            };
+            CacheManager.events.noupdate = function () {
+                console.log('MainUpdate', 'noupdate');
+            };
+            CacheManager.confirmOnUpdateReady = true;
+            CacheManager.listenToUpdate();
+            CacheManager.checkForUpdate();
+        }
+    },
+
+    getParameterByName: {
+            value: function (name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) {
+                return null;
+            } else if (!results[2]) {
+                return '';
+            } else {
+                return decodeURIComponent(results[2].replace(/\+/g, " "));   
+            }
         }
     },
 
@@ -37,7 +95,7 @@ exports.Main = Component.specialize({
             var trailers = event.detail.trailers;
             //todo: filter video list with youtube trailer available.?
 
-            if (trailers && trailers.youtube && trailers.youtube.length) { 
+            if (trailers && trailers.youtube && trailers.youtube.length) {
                 var videos = trailers.youtube,
                     video;
 
@@ -50,7 +108,7 @@ exports.Main = Component.specialize({
                 }
 
                 this.templateObjects.player.openTrailer(video.source);
-             }
+            }
         }
     },
 

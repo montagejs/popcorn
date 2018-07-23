@@ -1,0 +1,47 @@
+{
+  "lang": "en",
+  "name": "Montage Popcorn",
+  "short_name": "PopCorn",
+  "description": "Popcorn is a movie discovery application made using MontageJS",
+  "start_url": "./?utm_source=homescreen",
+  "icons": [
+    {
+      "src": "./assets/icons/apple-touch-icon-120x120-precomposed.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icons/apple-touch-icon-152x152-precomposed.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icons/apple-touch-icon-76x76-precomposed.png",
+      "sizes": "76x76",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000",
+  "background_color": "#000",
+  "display": "standalone",
+  "montage_manifest_version": 1,
+    "files": {
+        "locale": {
+            "directory": true,
+            "files": {
+                "en": {
+                    "directory": true,
+                    "files": {
+                        "messages.json": null
+                    }
+                },
+                "fr": {
+                    "directory": true,
+                    "files": {
+                        "messages.json": null
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,14 +6,14 @@
     <script type="text/montage-serialization">
     {
         "owner": {
-            "properties": {
+            "values": {
                 "element": {"#": "owner"},
                 "movieFlow": {"@": "movieFlow"}
             }
         },
         "movieFlow": {
             "prototype": "montage/ui/flow.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "movieFlow"},
                 "cameraFov": 77.06934,
                 "cameraPosition": [
@@ -226,26 +226,56 @@
                 ],
                 "scrollingTransitionDuration": "600",
                 "slotContent": {"@": "overlay"},
-                "stride": 1
-            },
-            "bindings": {
+                "stride": 1,
                 "classList.has('is-hidden')": {"<-": "@owner._flowHidden"},
                 "contentController": {"<-": "@owner._displayedContentController"}
             }
         },
         "overlay": {
             "prototype": "./overlay.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "overlay"}
             }
         },
         "poster": {
             "prototype": "./image.reel",
-            "properties": {
-                "element": {"#": "poster"}
-            },
-            "bindings": {
-                "src": {"<-": "'http://image.tmdb.org/t/p/w300' + @movieFlow:iteration.object.poster_path"}
+            "values": {
+                "element": {"#": "poster"},
+                "label": {"<-": "@movieFlow:iteration.object.title"},
+                "src": {"<-": "'https://image.tmdb.org/t/p/w300' + @movieFlow:iteration.object.poster_path"}
+            }
+        },
+
+        "keyUp": {
+            "prototype": "montage/composer/key-composer",
+            "values": {
+                "keys": "up",
+                "identifier": "previous",
+                "component": {"@": "owner"}
+            }
+        },
+        "keyDown": {
+            "prototype": "montage/composer/key-composer",
+            "values": {
+                "keys": "down",
+                "identifier": "next",
+                "component": {"@": "owner"}
+            }
+        },
+        "keyLeft": {
+            "prototype": "montage/composer/key-composer",
+            "values": {
+                "keys": "left",
+                "identifier": "previous",
+                "component": {"@": "owner"}
+            }
+        },
+        "keyRight": {
+            "prototype": "montage/composer/key-composer",
+            "values": {
+                "keys": "right",
+                "identifier": "next",
+                "component": {"@": "owner"}
             }
         }
     }

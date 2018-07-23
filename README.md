@@ -4,7 +4,7 @@ Popcorn is a movie discovery application made using MontageJS
 
 ![Screenshot](assets/image/screenshot.png)
 
-[Live Demo](http://montagejs.org/apps/popcorn/)
+[Live Demo](http://montagejs.github.io/popcorn/)
 
 Thank your for exploring our Popcorn demo application.
 
@@ -36,6 +36,10 @@ npm install
 ```
 
 3. Use NodeJS http-server or Spin up your preferred HTTP server and point your browser to the associated port to serve the popcorn directory.
+
+```
+npm run start
+```
 
     >**Note:** During development MontageJS applications rely on XHR to load their various components and modules,
     which is why you will need a web server to serve the demo.

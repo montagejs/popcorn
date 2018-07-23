@@ -1,5 +1,6 @@
 
-var Component   = require("montage/ui/component").Component;
+var Component   = require("montage/ui/component").Component,
+    KeyComposer = require("montage/composer/key-composer").KeyComposer;
 
 exports.Moviestrip = Component.specialize({
 
@@ -19,6 +20,36 @@ exports.Moviestrip = Component.specialize({
                         parameters: { self: this }
                     }
                 );
+
+                this.templateObjects.keyUp.addEventListener("keyPress", this, false);
+                this.templateObjects.keyDown.addEventListener("keyPress", this, false);
+                this.templateObjects.keyLeft.addEventListener("keyPress", this, false);
+                this.templateObjects.keyRight.addEventListener("keyPress", this, false);
+            }
+        }
+    },
+
+    handleKeyPress: {
+        value: function(event) {
+            var contentController = this.categoryContentController;
+            var currentMovieIndex = contentController.content.indexOf(contentController.selection.one());
+
+            // Don't change the movie if the flow animation is too far behind
+            if (Math.abs(this.templateObjects.movieFlow.scroll - currentMovieIndex) > 1) {
+                return;
+            }
+
+            if (event.identifier === "next") {
+                if (currentMovieIndex >= contentController.content.length) {
+                    return;
+                }
+                contentController.select(contentController.content[currentMovieIndex + 1]);
+            }
+            if (event.identifier === "previous") {
+                if (currentMovieIndex < 1) {
+                    return;
+                }
+                contentController.select(contentController.content[currentMovieIndex - 1]);
             }
         }
     },
@@ -36,10 +67,11 @@ exports.Moviestrip = Component.specialize({
             return this._movieFlow;
         },
         set: function (value) {
+            var self = this;
             this._movieFlow = value;
             this._movieFlow.addEventListener("transitionend", function() {
                 self._flowHiddenCallback();
-                cancelTimeout(this._flowHiddenCallbackTimeout);
+                clearTimeout(this._flowHiddenCallbackTimeout);
             },false);
         }
     },

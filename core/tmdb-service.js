@@ -9,12 +9,16 @@ var Promise = require("montage/core/promise").Promise;
 var CategoryController = require("./category-controller").CategoryController;
 var sharedTransport = require("./jsonp-transport").shared;
 
+var defaultLocalizer = require("montage/core/localizer").defaultLocalizer;
+
 var API_KEY = "dbf71473cf25bbd06939baef47b626eb";
-var BOX_OFFICE_FEED = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + API_KEY;
-var UPCOMING_FEED = "https://api.themoviedb.org/3/movie/upcoming?api_key=" + API_KEY;
-var TOP_RATED_FEED = "https://api.themoviedb.org/3/movie/top_rated?api_key=" + API_KEY;
-var POPULAR_FEED = "https://api.themoviedb.org/3/movie/popular?api_key=" + API_KEY;
-var MOVIE = "https://api.themoviedb.org/3/movie/";
+var API_URL = "https://api.themoviedb.org/3/";
+var BOX_OFFICE_FEED = API_URL + "movie/now_playing"; 
+var UPCOMING_FEED = API_URL + "movie/upcoming";
+var TOP_RATED_FEED = API_URL + "movie/top_rated";
+var POPULAR_FEED = API_URL + "movie/popular";
+var POPULAR_FEED = API_URL + "movie/popular";
+var MOVIE = API_URL + "movie/";
 /**
  * @class TmdbService
  * @extends Montage
@@ -26,6 +30,13 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
         value: function RottenTomatoService() {
             this.categories = new RangeController().initWithContent([]);
             this.categories.avoidsEmptySelection = true;
+        }
+    },
+
+    defaultParams: {
+        get: function () {
+            var language = defaultLocalizer.locale || 'en';
+            return "?api_key=" + API_KEY + "&language=" + language;
         }
     },
 
@@ -115,30 +126,28 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
     loadLatestBoxOfficeMovies: {
         value: function () {
 
-            return sharedTransport.makeRequest(BOX_OFFICE_FEED, "tmdb")
-            .then(function (response) {
-                return response.results;
-            });
+            return sharedTransport.makeRequest(BOX_OFFICE_FEED + this.defaultParams, "tmdb")
+                .then(function (response) {
+                    return response.results;
+                });
         }
     },
 
     loadUpcomingMovies: {
         value: function () {
-
-            return sharedTransport.makeRequest(UPCOMING_FEED, "tmdb")
-            .then(function (response) {
-                return response.results;
-            });
+            return sharedTransport.makeRequest(UPCOMING_FEED + this.defaultParams, "tmdb")
+                .then(function (response) {
+                    return response.results;
+                });
         }
     },
 
     loadTopRated: {
         value: function () {
-
-            return sharedTransport.makeRequest(TOP_RATED_FEED, "tmdb")
-            .then(function (response) {
-                return response.results;
-            });
+            return sharedTransport.makeRequest(TOP_RATED_FEED + this.defaultParams, "tmdb")
+                .then(function (response) {
+                    return response.results;
+                });
         }
 
     },
@@ -146,7 +155,7 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
     loadPopular: {
         value: function () {
 
-            return sharedTransport.makeRequest(POPULAR_FEED, "tmdb")
+            return sharedTransport.makeRequest(POPULAR_FEED + this.defaultParams, "tmdb")
             .then(function (response) {
                 return response.results;
             });
@@ -155,22 +164,20 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
 
     loadMovie: {
         value: function (movie) {
-
-            return sharedTransport.makeRequest(MOVIE+ movie.id + "?api_key=" + API_KEY + "&append_to_response=trailers", "tmdb")
-            .then(function (response) {
-                // console.log('response:', response);
-                return response;
+            return sharedTransport.makeRequest(MOVIE + movie.id + this.defaultParams + "&append_to_response=trailers", "tmdb")
+                .then(function (response) {
+                    // console.log('response:', response);
+                    return response;
             });
         }
     },
 
     loadReleases: {
         value: function (movie) {
-            
-            return sharedTransport.makeRequest(MOVIE+ movie.id + "/releases?api_key=" + API_KEY, "tmdb")
-            .then(function (response) {
-                return response;
-            });
+            return sharedTransport.makeRequest(MOVIE + movie.id + "/releases" + this.defaultParams, "tmdb")
+                .then(function (response) {
+                    return response;
+                });
         }
     },
 
@@ -193,8 +200,9 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
                             rating = "none";
                         }
                         for (var i = 0, categoriesLength = self.categories.content.length; i < categoriesLength; i++) {
-                            var category = self.categories.content[i];
-                            for (var j = 0, moviesLength = category.contentController.content.length; j < moviesLength; j++) {
+                            var category = self.categories.content[i],
+                                moviesLength = category.contentController.content ? category.contentController.content.length : 0;
+                            for (var j = 0; j < moviesLength; j++) {
                                 var storedMovie = category.contentController.content[j];
                                 if (storedMovie.id === oldMovie.id) {
                                     category.contentController.content[j].mpaaRating = rating;
@@ -219,12 +227,8 @@ exports.TmdbService = Montage.specialize(/** @lends TmdbService# */ {
                     var currentMovie = selectedCategory.contentController.content[i];
                     if (currentMovie === selectedCategory.contentController.selection[0]) {
                         this.preloadMovie(selectedCategory.contentController.content[i+1])
-                            .then(function() {
-                                self.preloadMovie(selectedCategory.contentController.content[i+2]);
-                            })
-                            .then(function() {
-                                self.preloadMovie(selectedCategory.contentController.content[i+3]);
-                            });
+                            .then(self.preloadMovie.bind(self, selectedCategory.contentController.content[i+2]))
+                            .then(self.preloadMovie.bind(self, selectedCategory.contentController.content[i+3]));
                         break;
                     }
                 }

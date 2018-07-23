@@ -6,42 +6,36 @@
     <script type="text/montage-serialization">
     {
         "owner": {
-            "properties": {
+            "values": {
                 "element": {"#": "owner"},
                 "mainContent": {"#": "mainContent"}
             }
         },
         "categories": {
             "prototype": "ui/categories.reel",
-            "properties": {
-                "element": {"#": "categories"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "categories"},
                 "categories": {"<-": "@owner.moviesService.categories"}
             }
         },
         "details": {
             "prototype": "ui/details.reel",
-            "properties": {
-                "element": {"#": "details"}
-            },
-            "bindings": {
+            "values": {
+                "element": {"#": "details"},
                 "movie": {"<-": "@moviestrip.categoryContentController.selection.one()"}
             }
         },
         "moviestrip": {
             "prototype": "ui/moviestrip.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "moviestrip"},
-                "movieDetails": {"@": "details"}
-            },
-            "bindings": {
+                "movieDetails": {"@": "details"},
                 "categoryContentController": {"<-": "@owner.moviesService.categories.selection.one().contentController"}
             }
         },
         "player": {
             "prototype": "ui/player.reel",
-            "properties": {
+            "values": {
                 "element": {"#": "player"}
             }
         }
@@ -50,17 +44,13 @@
 </head>
 <body>
     <div data-montage-id="owner" class="Main">
-        <img class="logo" src="../../assets/image/logo.png" alt="logo">
         <div data-montage-id="categories"></div>
         <div data-montage-id="mainContent" class="Main-content">
-            <div data-montage-id="moviestrip" class="Main-strip">
-
-            </div>
+            <img class="logo" src="../../assets/image/logo.png" alt="Montage Popcorn">
+            <div data-montage-id="moviestrip" class="Main-strip"></div>
             <div data-montage-id="details" class="Main-details"></div>
         </div>
-        <a class="MontageMade" href="http://montagejs.org">
-            Made with Montage
-        </a>
+        <a class="MontageMade" href="http:/montagestudio.com/montagejs" target="_blank">Made with Montage</a>
         <div data-montage-id="player" class="popup"></div>
     </div>
 </body>

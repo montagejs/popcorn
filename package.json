@@ -6,23 +6,44 @@
   "author": "Montage Studio, inc. (http://montagestudio.com/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/montagejs/todo-mvc.git"
+    "url": "https://github.com/montagejs/popcorn.git"
   },
+  "production": true,
+  "appcache": {
+    "exclude": [
+      "**/manifest.appcache",
+      "**/ui/**/*",
+      "**/core/**/*",
+      "**/*.json",
+      "**/node_modules/**/*"
+    ]
+  },
+  "manifest": true,
   "dependencies": {
-    "digit": "^3.0.0",
     "montage": "montagejs/montage#commonjs",
+    "digit": "^3.0.2",
     "query-params": "0.0.1",
     "url": "^0.11.0"
   },
   "devDependencies": {
     "http-server": "^0.9.0",
-    "montage-testing": "~0.4.3"
+    "jshint": "^2.9.5",
+    "minit": "^0.5.7",
+    "montage-testing": "~0.5.1",
+    "mop": "montagejs/mop#commonjs"
   },
   "scripts": {
-    "build": "node build.js",
-    "serve": "http-server",
-    "serve:dist": "http-server dist"
+    "lint": "jshint .",
+    "build": "mop .",
+    "start": "minit serve",
+    "start:dist": "minit serve -r dist",
+    "publish": "git checkout gh-pages && git subtree push --prefix dist origin gh-pages"
   },
+  "excludes": [
+    "**/**/mocha.css",
+    "dist",
+    "builds"
+  ],
   "bundle": [
     "ui/main.reel"
   ]

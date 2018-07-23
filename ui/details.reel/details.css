@@ -13,7 +13,7 @@
     padding: 0;
     font-size: 18px;
     line-height: 42px;
-    padding: 0 84px 0 12px;
+    padding: 0 105px 0 12px;
     height: 42px;
     background: -webkit-linear-gradient(top, hsla(0,0%,50%,.95), hsla(0,0%,25%,.95) );
     background: -moz-linear-gradient(top, hsla(0,0%,50%,.95), hsla(0,0%,25%,.95) );
@@ -39,6 +39,12 @@
     -moz-transform: scale3d(.9,.3,1);
     -ms-transform: scale3d(.9,.3,1);
     transform: scale3d(.9,.3,1);
+}
+
+.Details .button-trailer:before {
+    content: "►";
+    color: #fff;
+    padding-right: 5px
 }
 
 .Details .maturity {
@@ -110,7 +116,7 @@
     margin: 0;
     padding: 0;
     display: block;
-    width: 75px;
+    width: 100px;
     border: none;
     border-radius: 0;
     color: white;
