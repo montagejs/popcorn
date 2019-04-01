@@ -6,14 +6,14 @@
     right: 0;
     height: 1000px;
 }
-.Moviestrip-flow .montage-Flow-Repetition {
+.Moviestrip-flow .Moviestrip-image {
     opacity: 1;
     -webkit-transition: opacity .5s;
     -moz-transition: opacity .5s;
     -ms-transition: opacity .5s;
     transition: opacity .5s;
 }
-.Moviestrip-flow.is-hidden .montage-Flow-Repetition {
+.Moviestrip-flow.is-hidden .Moviestrip-image {
     opacity: 0;
 }
 .montage-Flow-Slot {
