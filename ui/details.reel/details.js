@@ -62,15 +62,6 @@ exports.Details = Component.specialize({
                 //jshint -W106
                 var popularity = this.movie.popularity;
                 //jshint +W106
-                if (popularity < 25) {
-                    this.popularityIcon.style.backgroundPosition = '0px 0px';
-                } else if (popularity < 50) {
-                    this.popularityIcon.style.backgroundPosition = '-12px 0px';
-                } else if (popularity < 75) {
-                    this.popularityIcon.style.backgroundPosition = '-24px 0px';
-                } else {
-                    this.popularityIcon.style.backgroundPosition = '-36px 0px';
-                }
                 if (this._isDetailsExpanded) {
                     this._element.classList.add("expanded");
                 } else {
