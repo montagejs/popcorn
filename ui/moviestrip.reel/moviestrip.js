@@ -124,7 +124,7 @@ exports.Moviestrip = Component.specialize({
             // wait .5s until the fade in/out effect is completed
             this._flowHiddenCallbackTimeout = setTimeout( function() {
                 self._flowHiddenCallback();
-            }, 800 );
+            }, 300 );
         }
     },
 

@@ -8,10 +8,10 @@
 }
 .Moviestrip-flow .Moviestrip-image {
     opacity: 1;
-    -webkit-transition: opacity .5s;
-    -moz-transition: opacity .5s;
-    -ms-transition: opacity .5s;
-    transition: opacity .5s;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -ms-transition: opacity .3s;
+    transition: opacity .3s;
 }
 .Moviestrip-flow.is-hidden .Moviestrip-image {
     opacity: 0;
