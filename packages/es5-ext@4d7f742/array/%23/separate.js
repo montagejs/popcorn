@@ -1,0 +1,1 @@
+"use strict";var forEach=Array.prototype.forEach;module.exports=function(r){var o=[];return forEach.call(this,function(t){o.push(t,r)}),o.pop(),o};

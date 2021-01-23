@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/@@iterator/implement",{dependencies:["../../../../array/#/@@iterator/is-implemented"],factory:function(e,t,r){"use strict";var i=e("../../../../array/#/@@iterator/is-implemented");r.exports=function(e){e(i(),!0)}}});

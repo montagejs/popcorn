@@ -1,0 +1,1 @@
+var Component=require("montage/ui/component").Component;exports.Categories=Component.specialize({constructor:{value:function(){this["super"]()}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/find/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,n){"use strict";n.exports=e("./is-implemented")()?Array.prototype.find:e("./shim")}});

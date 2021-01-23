@@ -1,0 +1,1 @@
+"use strict";var indexOf=require("./e-index-of"),forEach=Array.prototype.forEach,splice=Array.prototype.splice;module.exports=function(r){forEach.call(arguments,function(r){var e=indexOf.call(this,r);e!==-1&&splice.call(this,e,1)},this)};

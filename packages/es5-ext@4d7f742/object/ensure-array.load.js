@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/ensure-array",{dependencies:["../to-short-string-representation","./is-array-like"],factory:function(r,e,t){"use strict";var n=r("../to-short-string-representation"),i=r("./is-array-like");t.exports=function(r){if(i(r))return r;throw new TypeError(n(r)+" is not a array")}}});

@@ -1,0 +1,1 @@
+"use strict";var coerceToNumber=require("../number/coerce");module.exports=function(e){return e=coerceToNumber(e),isFinite(e)?e:null};

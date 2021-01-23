@@ -1,0 +1,1 @@
+montageDefine("9175499","date/ensure",{dependencies:["../lib/resolve-exception","./is"],factory:function(e,t,n){"use strict";var i=e("../lib/resolve-exception"),o=e("./is");n.exports=function(e){return o(e)?e:i(e,"%v is not a date object",arguments[1])}}});

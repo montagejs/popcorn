@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/values/implement",{dependencies:["./is-implemented","./shim"],factory:function(e,i,t){"use strict";e("./is-implemented")()||Object.defineProperty(Array.prototype,"values",{value:e("./shim"),configurable:!0,enumerable:!1,writable:!0})}});

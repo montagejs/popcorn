@@ -1,0 +1,1 @@
+"use strict";var callable=require("../../../object/valid-callable"),ensureValue=require("../../../object/valid-value"),some=Array.prototype.some,apply=Function.prototype.apply;module.exports=function(e){var l,a;return a=Object(ensureValue(this)),callable(e),some.call(a,function(a,r){return!!apply.call(e,this,arguments)&&(l=r,!0)},arguments[1])?l:-1};

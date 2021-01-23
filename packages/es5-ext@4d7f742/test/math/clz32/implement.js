@@ -1,0 +1,1 @@
+"use strict";var isImplemented=require("../../../math/clz32/is-implemented");module.exports=function(e){e(isImplemented(),!0)};

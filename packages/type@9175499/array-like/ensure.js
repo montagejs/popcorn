@@ -1,0 +1,1 @@
+"use strict";var resolveException=require("../lib/resolve-exception"),is=require("./is");module.exports=function(e){return is(e,arguments[1])?e:resolveException(e,"%v is not an array like value",arguments[1])};

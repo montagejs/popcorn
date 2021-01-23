@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/assign/shim",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){var n={a:1,b:2},c={b:3,c:4};t(e(n,c),n,"Returns self"),t.deep(n,{a:1,b:3,c:4},"Single: content"),t.deep(e({},n,c),{a:1,b:3,c:4},"Multi argument")}}});

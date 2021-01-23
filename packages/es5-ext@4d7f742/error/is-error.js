@@ -1,0 +1,1 @@
+"use strict";var objToString=Object.prototype.toString,id=objToString.call(new Error);module.exports=function(r){return r&&(r instanceof Error||objToString.call(r)===id)||!1};

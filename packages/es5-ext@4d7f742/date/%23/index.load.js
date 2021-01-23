@@ -1,0 +1,1 @@
+montageDefine("4d7f742","date/%23/index",{dependencies:["./copy","./days-in-month","./floor-day","./floor-month","./floor-year","./format"],factory:function(o,r,f){"use strict";f.exports={copy:o("./copy"),daysInMonth:o("./days-in-month"),floorDay:o("./floor-day"),floorMonth:o("./floor-month"),floorYear:o("./floor-year"),format:o("./format")}}});

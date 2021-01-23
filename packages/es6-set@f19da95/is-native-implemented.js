@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){return"undefined"!=typeof Set&&"[object Set]"===Object.prototype.toString.call(Set.prototype)}();

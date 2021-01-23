@@ -1,0 +1,1 @@
+"use strict";var d=require("d"),defineProperty=Object.defineProperty;module.exports=function(e,t){var r=e("test"),o={};defineProperty(o,r,d("foo")),t(o.test,void 0,"Name"),t(o[r],"foo","Get")};

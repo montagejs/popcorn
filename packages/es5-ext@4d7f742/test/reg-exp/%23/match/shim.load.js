@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/reg-exp/%23/match/shim",{dependencies:[],factory:function(e,o,t){"use strict";t.exports=function(e,o){var t="foobar".match(/foo/);o.deep(e.call(/foo/,"foobar"),t)}}});

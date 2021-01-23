@@ -1,0 +1,1 @@
+var Montage=require("core/core").Montage;exports.PropertyDescriptor=Montage.specialize({isRelationship:{value:!1},isOptional:{value:!1}});

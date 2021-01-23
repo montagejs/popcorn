@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/find/is-implemented",{dependencies:[],factory:function(n,e,t){"use strict";var i=function(n){return n>3};t.exports=function(){var n=[1,2,3,4,5,6];return"function"==typeof n.find&&4===n.find(i)}}});

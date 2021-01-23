@@ -1,0 +1,1 @@
+"use strict";var indexOf=require("./e-index-of"),filter=Array.prototype.filter,isFirst;isFirst=function(i,r){return indexOf.call(this,i)===r},module.exports=function(){return filter.call(this,isFirst,this)};

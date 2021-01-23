@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/tanh/shim",{dependencies:[],factory:function(e,t,n){"use strict";var a=Math.exp;n.exports=function(e){var t,n;return isNaN(e)?NaN:(e=Number(e),0===e?e:e===1/0?1:e===-(1/0)?-1:(t=a(e),t===1/0?1:(n=a(-e),n===1/0?-1:(t-n)/(t+n))))}}});

@@ -1,0 +1,1 @@
+"use strict";var isFunction=require("../function/is-function"),isObject=require("./is-object"),isValue=require("./is-value");module.exports=function(e){return isValue(e)&&"number"==typeof e.length&&(isObject(e)&&!isFunction(e)||"string"==typeof e)||!1};

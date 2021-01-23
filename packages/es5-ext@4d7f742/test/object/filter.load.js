@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/filter",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t.deep(e({1:1,2:2,3:3,4:4},function(e){return Boolean(e%2)}),{1:1,3:3})}}});

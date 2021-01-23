@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/epsilon/index",{dependencies:[],factory:function(e,n,i){"use strict";i.exports=2.220446049250313e-16}});

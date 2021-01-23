@@ -1,0 +1,1 @@
+"use strict";var lastIndex=require("./last-index");module.exports=function(){var t;if(null!==(t=lastIndex.call(this)))return this[t]};

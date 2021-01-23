@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/case-insensitive-compare",{dependencies:[],factory:function(e,t,n){"use strict";var r=String.prototype.toLowerCase;n.exports=function(e){return r.call(this).localeCompare(r.call(String(e)))}}});

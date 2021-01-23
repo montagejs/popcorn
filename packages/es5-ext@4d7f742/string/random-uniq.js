@@ -1,0 +1,1 @@
+"use strict";var generated=Object.create(null),random=Math.random;module.exports=function(){var e;do e=random().toString(36).slice(2);while(generated[e]);return e};

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){t.deep(e(1.337,8,23),[63,171,34,209])};

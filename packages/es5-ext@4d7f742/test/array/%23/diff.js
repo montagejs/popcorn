@@ -1,0 +1,1 @@
+"use strict";module.exports={__generic:function(e,r){r.deep(e.call(this,this),[])},"":function(e,r){var a={},l={};r.deep(e.call([1,"raz",a,2,"trzy",l],[a,2,"trzy"]),[1,"raz",l],"Scope longer"),r.deep(e.call([1,"raz",a],[a,2,"trzy",1,l]),["raz"],"Arg longer"),r.deep(e.call([1,"raz",a],[]),[1,"raz",a],"Empty arg"),r.deep(e.call([],[1,l,"sdfs"]),[],"Empty scope")}};

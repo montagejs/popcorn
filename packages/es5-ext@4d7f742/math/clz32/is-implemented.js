@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.clz32;return"function"==typeof t&&22===t(1e3)};

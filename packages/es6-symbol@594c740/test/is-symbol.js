@@ -1,0 +1,1 @@
+"use strict";var SymbolPoly=require("../polyfill");module.exports=function(l,e){e(l(void 0),!1,"Undefined"),e(l(null),!1,"Null"),e(l(!0),!1,"Primitive"),e(l("raz"),!1,"String"),e(l({}),!1,"Object"),e(l([]),!1,"Array"),"undefined"!=typeof Symbol&&e(l(Symbol()),!0,"Native"),e(l(SymbolPoly()),!0,"Polyfill")};

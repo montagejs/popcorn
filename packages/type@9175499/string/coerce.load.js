@@ -1,0 +1,1 @@
+montageDefine("9175499","string/coerce",{dependencies:["../value/is","../object/is"],factory:function(t,e,n){"use strict";var r=t("../value/is"),i=t("../object/is"),u=Object.prototype.toString;n.exports=function(t){if(!r(t))return null;if(i(t)){var e=t.toString;if("function"!=typeof e)return null;if(e===u)return null}try{return""+t}catch(n){return null}}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/is-reg-exp",{dependencies:[],factory:function(e,t,n){"use strict";var r=Object.prototype.toString,c=r.call(/a/);n.exports=function(e){return e&&(e instanceof RegExp||r.call(e)===c)||!1}}});

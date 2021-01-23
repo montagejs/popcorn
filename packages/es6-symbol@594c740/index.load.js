@@ -1,0 +1,1 @@
+montageDefine("594c740","index",{dependencies:["./is-implemented","./polyfill"],factory:function(e,i,l){"use strict";l.exports=e("./is-implemented")()?Symbol:e("./polyfill")}});

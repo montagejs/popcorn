@@ -1,0 +1,1 @@
+"use strict";var re=/foo/;module.exports=function(){return"function"==typeof re.match&&(re.match("barfoobar")&&!re.match("elo"))};

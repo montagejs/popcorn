@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/compact",{dependencies:["../../object/is-value"],factory:function(e,t,r){"use strict";var n=e("../../object/is-value"),c=Array.prototype.filter;r.exports=function(){return c.call(this,function(e){return n(e)})}}});

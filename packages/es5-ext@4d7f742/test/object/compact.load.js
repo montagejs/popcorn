@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/compact",{dependencies:[],factory:function(e,t,o){"use strict";o.exports=function(e,t){var o,n={},a={};o=e(n),t.not(o,n,"Returns different object"),t.deep(o,{},"Empty on empty"),n={foo:"bar",a:0,b:!1,c:"",d:"0",e:null,bar:a,elo:void 0},o=e(n),t.deep(o,{foo:"bar",a:0,b:!1,c:"",d:"0",bar:a},"Cleared null values")}}});

@@ -1,0 +1,1 @@
+"use strict";var floor=Math.floor;module.exports=function(o){return isNaN(o)?NaN:(o=Number(o),0===o?o:o===1/0?1/0:o===-(1/0)?-(1/0):o>0?floor(o):-floor(-o))};

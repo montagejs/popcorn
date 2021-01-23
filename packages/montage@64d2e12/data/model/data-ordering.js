@@ -1,0 +1,1 @@
+var Montage=require("core/core").Montage,ASCENDING={name:"Ascending"},DESCENDING={name:"Descending"};exports.DataOrdering=Montage.specialize({expression:{value:void 0},order:{value:ASCENDING}},{withExpressionAndOrder:{value:function(e,r){var n=new this;return n.expression=e,n.order=r,n}},ASCENDING:{value:ASCENDING},DESCENDING:{value:DESCENDING}});

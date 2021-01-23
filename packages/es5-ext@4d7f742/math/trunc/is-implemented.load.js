@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/trunc/is-implemented",{dependencies:[],factory:function(t,e,n){"use strict";n.exports=function(){var t=Math.trunc;return"function"==typeof t&&(13===t(13.67)&&t(-13.67)===-13)}}});

@@ -1,0 +1,1 @@
+"use strict";var coerceToArrayLength=require("../array-length/coerce"),isObject=require("../object/is");module.exports=function(r){if(!isObject(r)){var e=arguments[1];return!(!isObject(e)||!e.allowString||"string"!=typeof r)}if("function"==typeof r)return!1;var t;try{t=r.length}catch(c){return!1}return null!==coerceToArrayLength(t)};

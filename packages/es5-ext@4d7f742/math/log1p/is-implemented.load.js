@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/log1p/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){var e=Math.log1p;return"function"==typeof e&&.6931471805599453===e(1)}}});

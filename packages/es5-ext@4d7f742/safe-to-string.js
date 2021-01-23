@@ -1,0 +1,1 @@
+"use strict";var isCallable=require("./object/is-callable");module.exports=function(t){try{return t&&isCallable(t.toString)?t.toString():String(t)}catch(r){return"<Non-coercible to string value>"}};

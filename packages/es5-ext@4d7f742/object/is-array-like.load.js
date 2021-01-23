@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/is-array-like",{dependencies:["../function/is-function","./is-object","./is-value"],factory:function(e,n,t){"use strict";var i=e("../function/is-function"),o=e("./is-object"),c=e("./is-value");t.exports=function(e){return c(e)&&"number"==typeof e.length&&(o(e)&&!i(e)||"string"==typeof e)||!1}}});

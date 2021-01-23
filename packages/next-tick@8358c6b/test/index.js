@@ -1,0 +1,1 @@
+"use strict";module.exports=function(n,t,u){var i;t(n(function(){t(arguments.length,0,"Arguments"),i=!0}),void 0,"Return"),t(i,void 0,"Is not run immediately"),setTimeout(function(){t(i,!0,"Run in next tick"),i=[],n(function(){i.push(0)}),n(function(){i.push(1)}),n(function(){i.push(2)}),setTimeout(function(){t.deep(i,[0,1,2],"Serial"),u()},10)},10)};

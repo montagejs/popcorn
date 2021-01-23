@@ -1,0 +1,1 @@
+function _clamp(e){return e<=this.min?this.min:e>=this.max?this.max:e}var Converter=require("./converter").Converter,RangeEnforcer=exports.RangeEnforcer=Converter.specialize({min:{value:null},max:{value:null},convert:{value:_clamp},revert:{value:_clamp}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/is-promise",{dependencies:["./is-thenable"],factory:function(e,t,i){"use strict";i.exports=e("./is-thenable")}});

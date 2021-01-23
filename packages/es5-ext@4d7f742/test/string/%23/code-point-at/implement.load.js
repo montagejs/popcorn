@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/code-point-at/implement",{dependencies:["../../../../string/#/code-point-at/is-implemented"],factory:function(e,t,n){"use strict";var i=e("../../../../string/#/code-point-at/is-implemented");n.exports=function(e){e(i(),!0)}}});

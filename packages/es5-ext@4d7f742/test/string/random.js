@@ -1,0 +1,1 @@
+"use strict";var isValidFormat=RegExp.prototype.test.bind(/^[a-z0-9]+$/);module.exports=function(t,e){e(typeof t(),"string"),e.ok(t().length>7),e.not(t({isUnique:!0}),t({isUnique:!0})),e.ok(isValidFormat(t())),e(t({length:1}).length,1),e(t({length:100}).length,100),e(t({length:0}),"")};

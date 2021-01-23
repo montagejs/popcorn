@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var r,o,t=Array.from;return"function"==typeof t&&(r=["raz","dwa"],o=t(r),Boolean(o&&o!==r&&"dwa"===o[1]))};

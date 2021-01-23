@@ -1,0 +1,1 @@
+"use strict";var isArguments=require("es5-ext/function/is-arguments"),isValue=require("es5-ext/object/is-value"),isString=require("es5-ext/string/is-string"),iteratorSymbol=require("es6-symbol").iterator,isArray=Array.isArray;module.exports=function(r){return!!isValue(r)&&(!!isArray(r)||(!!isString(r)||(!!isArguments(r)||"function"==typeof r[iteratorSymbol])))};

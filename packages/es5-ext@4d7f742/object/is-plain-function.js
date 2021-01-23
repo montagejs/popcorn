@@ -1,0 +1,1 @@
+"use strict";var isClassStr=RegExp.prototype.test.bind(/^\s*class[\s{/}]/),fnToString=Function.prototype.toString;module.exports=function(t){return"function"==typeof t&&("function"==typeof t.call&&("function"==typeof t.apply&&!isClassStr(fnToString.call(t))))};

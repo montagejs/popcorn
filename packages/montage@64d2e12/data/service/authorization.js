@@ -1,0 +1,1 @@
+var Montage=require("core/core").Montage,Authorization=exports.Authorization=Montage.specialize({logOut:{value:function(){console.warn("Authorization.logOut() must be overridden by the implementing object")}}});

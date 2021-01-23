@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/fround/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,n){"use strict";n.exports=e("./is-implemented")()?Math.fround:e("./shim")}});

@@ -1,0 +1,1 @@
+"use strict";var isImplemented=require("../../../../promise/#/finally/is-implemented");"function"!=typeof Promise&&(global.Promise=require("plain-promise")),module.exports=function(e){e(isImplemented(),!0)};

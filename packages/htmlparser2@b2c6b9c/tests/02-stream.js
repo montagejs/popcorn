@@ -1,0 +1,1 @@
+var helper=require("./test-helper.js"),Stream=require("..").WritableStream,fs=require("fs");exports.dir="Stream",exports.test=function(e,r){fs.createReadStream(__dirname+e.file).pipe(new Stream(helper.getEventCollector(function(t,i){r(t,i);var a=helper.getEventCollector(r),n=new Stream(a,e.options);n.end(fs.readFileSync(__dirname+e.file))}),e.options))};

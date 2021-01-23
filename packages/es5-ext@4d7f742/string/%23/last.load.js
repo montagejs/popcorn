@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/last",{dependencies:["../../object/valid-value"],factory:function(e,t,n){"use strict";var i=e("../../object/valid-value");n.exports=function(){var e=String(i(this)),t=e.length;return t?e[t-1]:null}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","date/is-date",{dependencies:[],factory:function(e,t,n){"use strict";var a=Object.prototype.toString,c=a.call(new Date);n.exports=function(e){return e&&!isNaN(e)&&(e instanceof Date||a.call(e)===c)||!1}}});

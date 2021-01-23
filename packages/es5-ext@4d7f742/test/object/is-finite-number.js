@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){t(e(void 0),!1,"Undefined"),t(e(null),!1,"Null"),t(e(0),!0,"Zero"),t(e(NaN),!1,"NaN"),t(e(1/0),!1,"Infinity"),t(e(12),!0,"Number"),t(e(!1),!0,"Boolean"),t(e(new Date),!0,"Date"),t(e(new Number(2)),!0,"Number object"),t(e("asdfaf"),!1,"String"),t(e(""),!0,"Empty String"),"function"==typeof Symbol&&t(e(Symbol("test")),!1,"Symbol")};

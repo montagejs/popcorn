@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/copy-within/is-implemented",{dependencies:[],factory:function(n,i,t){"use strict";t.exports=function(){var n=[1,2,3,4,5];return"function"==typeof n.copyWithin&&"1,4,5,4,5"===String(n.copyWithin(1,3))}}});

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(i,t){t(i({}),NaN,"NaN"),t(i(0),0,"Zero"),t(i(1/0),1/0,"Infinity"),t(i(-(1/0)),-1,"-Infinity"),t(i(1).toFixed(15),"1.718281828459045","1")};

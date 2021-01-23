@@ -1,0 +1,1 @@
+montageDefine("9175499","plain-function/is",{dependencies:["../function/is"],factory:function(n,t,i){"use strict";var e=n("../function/is"),o=/^\s*class[\s{/}]/,s=Function.prototype.toString;i.exports=function(n){return!!e(n)&&!o.test(s.call(n))}}});

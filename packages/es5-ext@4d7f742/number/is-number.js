@@ -1,0 +1,1 @@
+"use strict";var objToString=Object.prototype.toString,id=objToString.call(1);module.exports=function(t){return"number"==typeof t||t instanceof Number||"object"==typeof t&&objToString.call(t)===id};

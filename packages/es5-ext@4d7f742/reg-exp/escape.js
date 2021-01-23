@@ -1,0 +1,1 @@
+"use strict";var re=/[-/\\^$*+?.()|[\]{}]/g;module.exports=function(r){return String(r).replace(re,"\\$&")};

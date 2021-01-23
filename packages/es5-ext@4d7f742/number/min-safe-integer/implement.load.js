@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/min-safe-integer/implement",{dependencies:["./is-implemented","./"],factory:function(e,n,i){"use strict";e("./is-implemented")()||Object.defineProperty(Number,"MIN_SAFE_INTEGER",{value:e("./"),configurable:!1,enumerable:!1,writable:!1})}});

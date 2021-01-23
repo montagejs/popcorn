@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/code-point-at/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";var o="abc𝌆def";n.exports=function(){return"function"==typeof o.codePointAt&&119558===o.codePointAt(3)}}});

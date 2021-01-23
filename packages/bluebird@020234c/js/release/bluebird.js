@@ -1,0 +1,1 @@
+"use strict";function noConflict(){try{Promise===bluebird&&(Promise=old)}catch(e){}return bluebird}var old;"undefined"!=typeof Promise&&(old=Promise);var bluebird=require("./promise")();bluebird.noConflict=noConflict,module.exports=bluebird;

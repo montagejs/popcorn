@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/count",{dependencies:[],factory:function(e,t,r){"use strict";r.exports=function(e,t){t(e({}),0,"Empty"),t(e({raz:1,dwa:null,trzy:void 0,cztery:0}),4,"Some properties"),t(e(Object.defineProperties({},{raz:{value:"raz"},dwa:{value:"dwa",enumerable:!0}})),1,"Some properties hidden")}}});

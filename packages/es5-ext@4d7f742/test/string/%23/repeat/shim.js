@@ -1,0 +1,1 @@
+"use strict";module.exports=function(a,r){r(a.call("a",0),"","Empty"),r(a.call("a",1),"a","1"),r(a.call("a",2),"aa","2"),r(a.call("\t",5),"\t\t\t\t\t","Whitespace"),r(a.call("raz",3),"razrazraz","Many chars"),r(a.call("raz",3),"razrazraz","Many chars"),r(a.call("razfoobar",5),"razfoobarrazfoobarrazfoobarrazfoobarrazfoobar","Many chars"),r(a.call("a",300).length,300)};

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/is",{dependencies:[],factory:function(e,t,i){"use strict";i.exports=function(e,t){var i={};t(e(i,{}),!1,"Different objects"),t(e(i,i),!0,"Same objects"),t(e("1","1"),!0,"Same primitive"),t(e("1",1),!1,"Different primitive types"),t(e(NaN,NaN),!0,"NaN"),t(e(0,0),!0,"0,0"),t(e(0,-0),!1,"0,-0")}}});

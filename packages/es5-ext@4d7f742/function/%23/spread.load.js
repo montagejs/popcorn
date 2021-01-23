@@ -1,0 +1,1 @@
+montageDefine("4d7f742","function/%23/spread",{dependencies:["../../object/valid-callable"],factory:function(t,e,n){"use strict";var a=t("../../object/valid-callable"),c=Function.prototype.apply;n.exports=function(){var t=a(this);return function(e){return c.call(t,this,e)}}}});

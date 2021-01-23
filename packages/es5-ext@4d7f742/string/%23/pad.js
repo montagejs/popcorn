@@ -1,0 +1,1 @@
+"use strict";var toInteger=require("../../number/to-integer"),value=require("../../object/valid-value"),repeat=require("./repeat"),abs=Math.abs,max=Math.max;module.exports=function(e){var r=String(value(this)),t=r.length,a=arguments[1];return a=isNaN(a)?1:toInteger(a),e=repeat.call(String(e),abs(a)),a>=0?e.slice(0,max(0,a-t))+r:r+(t+a>=0?"":e.slice(a+t))};

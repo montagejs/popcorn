@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/valid-object",{dependencies:["./is-object"],factory:function(e,t,n){"use strict";var o=e("./is-object");n.exports=function(e){if(!o(e))throw new TypeError(e+" is not an Object");return e}}});

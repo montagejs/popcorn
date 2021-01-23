@@ -1,0 +1,1 @@
+montageDefine("4d7f742","function/is-arguments",{dependencies:[],factory:function(t,n,e){"use strict";var r=Object.prototype.toString,c=r.call(function(){return arguments}());e.exports=function(t){return r.call(t)===c}}});

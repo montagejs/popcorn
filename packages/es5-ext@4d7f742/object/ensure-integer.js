@@ -1,0 +1,1 @@
+"use strict";var toShortString=require("../to-short-string-representation"),isInteger=require("./is-integer");module.exports=function(r){if(!isInteger(r))throw new TypeError(toShortString(r)+" is not a integer");return Number(r)};

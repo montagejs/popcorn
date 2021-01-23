@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/key-of",{dependencies:[],factory:function(t,e,r){"use strict";r.exports=function(t,e){var r={},o={},n={foo:"bar",raz:r,trzy:"cztery",five:"6"};e(t(n,"bar"),"foo","First property"),e(t(n,6),null,"Primitive that's not there"),e(t(n,r),"raz","Object"),e(t(n,o),null,"Object that's not there"),e(t(n,"6"),"five","Last property")}}});

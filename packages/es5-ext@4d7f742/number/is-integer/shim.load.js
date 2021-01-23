@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/is-integer/shim",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e){return"number"==typeof e&&e%1===0}}});

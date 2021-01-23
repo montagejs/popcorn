@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/@@iterator/shim",{dependencies:["es6-iterator/string","../../../object/valid-value"],factory:function(e,t,i){"use strict";var r=e("es6-iterator/string"),n=e("../../../object/valid-value");i.exports=function(){return new r(n(this))}}});

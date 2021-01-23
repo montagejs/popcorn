@@ -1,0 +1,1 @@
+"use strict";var ensurePlainFunction=require("../../object/ensure-plain-function"),ensureThenable=require("../../object/ensure-thenable"),microtaskDelay=require("../../function/#/microtask-delay");module.exports=function(e){ensureThenable(this),ensurePlainFunction(e),this.then(microtaskDelay.call(function(n){e(null,n)}),microtaskDelay.call(function(n){e(n)}))};

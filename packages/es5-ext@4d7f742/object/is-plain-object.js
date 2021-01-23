@@ -1,0 +1,1 @@
+"use strict";var getPrototypeOf=Object.getPrototypeOf,prototype=Object.prototype,objToString=prototype.toString,id=Object().toString();module.exports=function(t){var o,e;return!(!t||"object"!=typeof t||objToString.call(t)!==id)&&(o=getPrototypeOf(t),null===o?(e=t.constructor,"function"!=typeof e||e.prototype!==t):o===prototype||null===getPrototypeOf(o))};

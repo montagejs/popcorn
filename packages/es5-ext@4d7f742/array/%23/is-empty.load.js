@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/is-empty",{dependencies:["../../object/ensure-array","./first-index"],factory:function(e,r,n){"use strict";var t=e("../../object/ensure-array"),i=e("./first-index");n.exports=function(){return null===i.call(t(this))}}});

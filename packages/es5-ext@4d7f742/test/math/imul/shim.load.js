@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/imul/shim",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(e(),0,"No arguments"),t(e(0,0),0,"Zeros"),t(e(2,4),8,"#1"),t(e(-1,8),-8,"#2"),t(e(4294967294,5),-10,"#3")}}});

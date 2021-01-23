@@ -1,0 +1,1 @@
+"use strict";var safeToString=require("../safe-to-string"),isPlainObject=require("./is-plain-object");module.exports=function(e){if(!isPlainObject(e))throw new TypeError(safeToString(e)+" is not a plain object");return e};

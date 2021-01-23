@@ -1,0 +1,1 @@
+"use strict";var isInteger=require("../number/is-integer"),isValue=require("./is-value");module.exports=function(e){return!!isValue(e)&&(e=Number(e),isInteger(e))};

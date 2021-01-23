@@ -1,0 +1,1 @@
+montageDefine("9175499","promise/ensure",{dependencies:["../lib/resolve-exception","./is"],factory:function(e,i,n){"use strict";var o=e("../lib/resolve-exception"),s=e("./is");n.exports=function(e){return s(e)?e:o(e,"%v is not a promise",arguments[1])}}});

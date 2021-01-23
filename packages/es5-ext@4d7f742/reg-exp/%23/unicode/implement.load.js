@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/unicode/implement",{dependencies:["../is-unicode","./is-implemented"],factory:function(e,i,n){"use strict";var t=e("../is-unicode");e("./is-implemented")()||Object.defineProperty(RegExp.prototype,"unicode",{configurable:!0,enumerable:!1,get:t})}});

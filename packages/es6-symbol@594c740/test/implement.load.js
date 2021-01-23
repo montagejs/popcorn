@@ -1,0 +1,1 @@
+montageDefine("594c740","test/implement",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(typeof Symbol,"function")}}});

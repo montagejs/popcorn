@@ -1,0 +1,1 @@
+montageDefine("f610e91","signal",{dependencies:["collections/map"],factory:function(n,e,t){function o(n){var e=new c;return e.getDefault=function(){return 0},{observe:function(t){return t(n),e.set(t,e.get(t)+1),function(){e.set(t,e.get(t)-1)}},emit:function(t){n=t,e.forEach(function(n,e){e(t)})}}}var c=n("collections/map");t.exports=o}});

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(n,t){var o=function(){};t(n(o),o,"Function"),o=new Function,t(n(o),o,"Function"),t["throws"](function(){n({})},"Object"),t["throws"](function(){n(/re/)},"RegExp"),t["throws"](function(){n({call:function(){return 20}})},"Plain object")};

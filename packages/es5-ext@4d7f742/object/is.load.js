@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/is",{dependencies:["../number/is-nan"],factory:function(n,e,t){"use strict";var i=n("../number/is-nan");t.exports=function(n,e){return n===e?0!==n||1/n===1/e:i(n)&&i(e)}}});

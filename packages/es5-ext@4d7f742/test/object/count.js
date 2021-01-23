@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,r){r(e({}),0,"Empty"),r(e({raz:1,dwa:null,trzy:void 0,cztery:0}),4,"Some properties"),r(e(Object.defineProperties({},{raz:{value:"raz"},dwa:{value:"dwa",enumerable:!0}})),1,"Some properties hidden")};

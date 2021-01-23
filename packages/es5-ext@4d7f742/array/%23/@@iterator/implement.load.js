@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/@@iterator/implement",{dependencies:["./is-implemented","es6-symbol","./shim"],factory:function(e,t,i){"use strict";e("./is-implemented")()||Object.defineProperty(Array.prototype,e("es6-symbol").iterator,{value:e("./shim"),configurable:!0,enumerable:!1,writable:!0})}});

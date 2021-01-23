@@ -1,0 +1,1 @@
+"use strict";module.exports=function(c,e){e(c.call(78,4),"0078"),e(c.call(65.12323,4,3),"0065.123","Precision"),e(c.call(65,4,3),"0065.000","Precision integer")};

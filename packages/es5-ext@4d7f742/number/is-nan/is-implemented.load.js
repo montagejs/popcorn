@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/is-nan/is-implemented",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(){var e=Number.isNaN;return"function"==typeof e&&(!e({})&&e(NaN)&&!e(34))}}});

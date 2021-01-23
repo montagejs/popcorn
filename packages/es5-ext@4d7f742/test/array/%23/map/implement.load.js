@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/map/implement",{dependencies:["../../../../array/#/map/is-implemented"],factory:function(e,a,t){"use strict";var n=e("../../../../array/#/map/is-implemented");t.exports=function(e){e(n(),!0)}}});

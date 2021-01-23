@@ -1,0 +1,1 @@
+"use strict";var value=require("../../object/valid-value");module.exports=function(){var e=String(value(this)),r=e.length;return r?e[r-1]:null};

@@ -1,0 +1,1 @@
+"use strict";var eq=require("./eq"),value=require("./valid-value"),keys=Object.keys,objPropertyIsEnumerable=Object.prototype.propertyIsEnumerable;module.exports=function(e,r){var t,u;return!!eq(value(e),value(r))||(e=Object(e),r=Object(r),t=keys(e),u=keys(r),t.length===u.length&&t.every(function(t){return!!objPropertyIsEnumerable.call(r,t)&&eq(e[t],r[t])}))};

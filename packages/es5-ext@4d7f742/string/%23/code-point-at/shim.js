@@ -1,0 +1,1 @@
+"use strict";var toInteger=require("../../../number/to-integer"),validValue=require("../../../object/valid-value");module.exports=function(e){var r,t,i=String(validValue(this)),a=i.length;if(e=toInteger(e),!(e<0||e>=a))return r=i.charCodeAt(e),r>=55296&&r<=56319&&a>e+1&&(t=i.charCodeAt(e+1),t>=56320&&t<=57343)?1024*(r-55296)+t-56320+65536:r};

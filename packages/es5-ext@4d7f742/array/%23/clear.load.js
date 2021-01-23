@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/clear",{dependencies:["../../object/valid-value"],factory:function(e,t,a){"use strict";var n=e("../../object/valid-value");a.exports=function(){return n(this).length=0,this}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","promise/%23/finally/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,n){"use strict";n.exports=e("./is-implemented")()?Promise.prototype["finally"]:e("./shim")}});

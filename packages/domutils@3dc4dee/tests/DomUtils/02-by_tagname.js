@@ -1,0 +1,1 @@
+var DomUtils=require("../..");exports.name="Get elements by tagName",exports.getElements=function(e){return DomUtils.getElements({tag_name:"tag2"},e,!0)},exports.getByFunction=function(e){return DomUtils.getElementsByTagName("tag2",e,!0)},exports.expected=[];for(var i=0;i<20;i++)exports.expected.push({type:"tag",name:"tag2",attribs:{},children:[{data:" text ",type:"text"}]});

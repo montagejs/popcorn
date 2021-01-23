@@ -1,0 +1,1 @@
+montageDefine("b2c6b9c","tests/Documents/Basic.html",{"text":"<!DOCTYPE html><html manifest=../../../../manifest.appcache><head><title>The Title</title></head><body>Hello world</body></html>"})

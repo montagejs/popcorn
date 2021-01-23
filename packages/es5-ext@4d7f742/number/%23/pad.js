@@ -1,0 +1,1 @@
+"use strict";var pad=require("../../string/#/pad"),toPosInt=require("../to-pos-integer"),toFixed=Number.prototype.toFixed;module.exports=function(t){var o;return t=toPosInt(t),o=toPosInt(arguments[1]),pad.call(o?toFixed.call(this,o):this,"0",t+(o?1+o:0))};

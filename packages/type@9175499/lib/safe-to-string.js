@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t){try{return t.toString()}catch(r){try{return String(t)}catch(n){return null}}};

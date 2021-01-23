@@ -1,0 +1,1 @@
+"use strict";var SubArray=require("../../../../array/_sub-array-dummy-safe");module.exports=function(r,a){var e,u,l,s={};e=["foo",void 0,0,"2d",!1,s,null],a.deep(r.call(e,2,4),[0,"2d"],"Plain array: result"),u=new SubArray("foo",(void 0),0,"2d",(!1),s,null),l=r.call(u,2,4),a(l instanceof SubArray,!0,"Instance of subclass"),a.deep(l,[0,"2d"],"Subclass: result")};

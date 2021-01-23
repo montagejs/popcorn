@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/trunc/shim",{dependencies:[],factory:function(e,t,n){"use strict";var r=Math.floor;n.exports=function(e){return isNaN(e)?NaN:(e=Number(e),0===e?e:e===1/0?1/0:e===-(1/0)?-(1/0):e>0?r(e):-r(-e))}}});

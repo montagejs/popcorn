@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/contains/is-implemented",{dependencies:[],factory:function(n,t,e){"use strict";var i="razdwatrzy";e.exports=function(){return"function"==typeof i.contains&&(i.contains("dwa")===!0&&i.contains("foo")===!1)}}});

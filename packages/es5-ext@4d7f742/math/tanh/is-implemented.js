@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.tanh;return"function"==typeof t&&(.7615941559557649===t(1)&&1===t(Number.MAX_VALUE))};

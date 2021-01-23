@@ -1,0 +1,1 @@
+"use strict";module.exports=function(r,t){var e={};t(r(e),e,"Reguar object instance"),e=Object.create(null),t(r(e),e,"Null prototype"),t["throws"](function(){r(function(){})},TypeError,"Error")};

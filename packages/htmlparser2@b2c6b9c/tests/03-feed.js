@@ -1,0 +1,1 @@
+var helper=require("./test-helper.js"),FeedHandler=require("../lib/FeedHandler.js"),fs=require("fs"),parserOpts={xmlMode:!0};exports.dir="Feeds",exports.test=function(e,r){var s=new FeedHandler(function(e,s){e?r(e,0):r(null,s)}),t=fs.readFileSync(__dirname+"/Documents/"+e.file).toString();helper.writeToParser(s,parserOpts,t)};

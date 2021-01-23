@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){var r={raz:1,dwa:2,trzy:3},n={};e(t(r,function(t,e){n[e]=t}),void 0,"Return"),e.deep(n,r)};

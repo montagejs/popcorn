@@ -1,0 +1,1 @@
+montageDefine("f19da95","ext/copy",{dependencies:["../"],factory:function(e,n,t){"use strict";var c=e("../");t.exports=function(){return new c(this)}}});

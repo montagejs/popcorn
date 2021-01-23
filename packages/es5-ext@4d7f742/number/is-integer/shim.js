@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e){return"number"==typeof e&&e%1===0};

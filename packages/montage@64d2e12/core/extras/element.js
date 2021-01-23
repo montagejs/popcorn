@@ -1,0 +1,1 @@
+"undefined"==typeof Element||Element.isElement||(Object.defineProperty(Element,"isElement",{value:function(e){return!(!e||1!==e.nodeType)},writable:!0,configurable:!0}),Object.defineProperty(Element.prototype,"nativeSetAttribute",{value:Element.prototype.setAttribute,writable:!0,configurable:!0}));

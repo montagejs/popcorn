@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/repeat/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";var o="foo";n.exports=function(){return"function"==typeof o.repeat&&"foofoo"===o.repeat(2)}}});

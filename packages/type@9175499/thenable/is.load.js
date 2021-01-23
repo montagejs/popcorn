@@ -1,0 +1,1 @@
+montageDefine("9175499","thenable/is",{dependencies:["../object/is"],factory:function(e,t,n){"use strict";var r=e("../object/is");n.exports=function(e){if(!r(e))return!1;try{return"function"==typeof e.then}catch(t){return!1}}}});

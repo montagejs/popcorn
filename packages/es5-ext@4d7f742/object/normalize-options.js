@@ -1,0 +1,1 @@
+"use strict";var isValue=require("./is-value"),forEach=Array.prototype.forEach,create=Object.create,process=function(r,e){var c;for(c in r)e[c]=r[c]};module.exports=function(r){var e=create(null);return forEach.call(arguments,function(r){isValue(r)&&process(Object(r),e)}),e};

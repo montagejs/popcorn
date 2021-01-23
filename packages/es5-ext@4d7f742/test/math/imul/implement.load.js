@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/imul/implement",{dependencies:["../../../math/imul/is-implemented"],factory:function(e,t,i){"use strict";var m=e("../../../math/imul/is-implemented");i.exports=function(e){e(m(),!0)}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/capitalize",{dependencies:[],factory:function(e,t,a){"use strict";a.exports=function(e,t){t(e.call("raz"),"Raz","Word"),t(e.call("BLA"),"BLA","Uppercase"),t(e.call(""),"","Empty"),t(e.call("a"),"A","One letter"),t(e.call("this is a test"),"This is a test","Sentence")}}});

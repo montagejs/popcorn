@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/from-code-point/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,n){"use strict";n.exports=e("./is-implemented")()?String.fromCodePoint:e("./shim")}});

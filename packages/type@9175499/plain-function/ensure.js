@@ -1,0 +1,1 @@
+"use strict";var resolveException=require("../lib/resolve-exception"),is=require("./is");module.exports=function(e){return is(e)?e:resolveException(e,"%v is not a plain function",arguments[1])};

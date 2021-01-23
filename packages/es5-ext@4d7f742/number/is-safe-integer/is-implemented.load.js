@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/is-safe-integer/is-implemented",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(){var e=Number.isSafeInteger;return"function"==typeof e&&(!e("23")&&e(34232322323)&&!e(9007199254740992))}}});

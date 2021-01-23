@@ -1,0 +1,1 @@
+montageDefine("4d7f742","iterable/index",{dependencies:["./for-each","./is","./validate","./validate-object"],factory:function(e,a,t){"use strict";t.exports={forEach:e("./for-each"),is:e("./is"),validate:e("./validate"),validateObject:e("./validate-object")}}});

@@ -1,0 +1,1 @@
+"use strict";var callable=require("../../object/valid-callable"),aFrom=require("../../array/from"),defineLength=require("../_define-length"),apply=Function.prototype.apply;module.exports=function(){var e=callable(this),r=aFrom(arguments);return defineLength(function(){return apply.call(e,this,r.concat(aFrom(arguments)))},e.length-r.length)};

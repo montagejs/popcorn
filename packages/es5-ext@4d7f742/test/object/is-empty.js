@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){e(t({}),!0,"Empty"),e(t({1:1}),!1,"Not empty")};

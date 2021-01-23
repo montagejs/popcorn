@@ -1,0 +1,1 @@
+"use strict";module.exports=function(r,o){var t=r,e=new t("My Error","MY_ERROR",{errno:123});o(e instanceof Error,!0,"Instance of error"),o(e.constructor,Error,"Constructor"),o(e.name,"Error","Name"),o(String(e),"Error: My Error","String representation"),o(e.code,"MY_ERROR","Code"),o(e.errno,123,"Errno"),o(typeof e.stack,"string","Stack trace")};

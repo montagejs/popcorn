@@ -1,0 +1,1 @@
+"use strict";var ensureValue=require("./valid-value"),stringifiable=require("./validate-stringifiable");module.exports=function(e){return stringifiable(ensureValue(e))};

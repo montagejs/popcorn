@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/_decimal-adjust",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(e("round")(55.55,-1),55.6)}}});

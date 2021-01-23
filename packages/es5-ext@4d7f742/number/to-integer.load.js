@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/to-integer",{dependencies:["../math/sign"],factory:function(e,t,n){"use strict";var i=e("../math/sign"),r=Math.abs,a=Math.floor;n.exports=function(e){return isNaN(e)?0:(e=Number(e),0!==e&&isFinite(e)?i(e)*a(r(e)):e)}}});

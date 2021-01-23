@@ -1,0 +1,1 @@
+var DomUtils=require("../..");exports.name="Get elements by type",exports.getElements=function(t){return DomUtils.getElements({tag_type:"script"},t,!0)},exports.getByFunction=function(t){return DomUtils.getElementsByTagType("script",t,!0)},exports.expected=[];for(var i=0;i<20;i++)exports.expected.push({type:"script",name:"script",attribs:{},children:[{data:"text",type:"text"}]});

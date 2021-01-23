@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/sign/is-implemented",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(){var e=Math.sign;return"function"==typeof e&&(1===e(10)&&e(-20)===-1)}}});

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){var n,a=new Date;n=e.call(a),t.not(a,n,"Different objects"),t.ok(n instanceof Date,"Instance of Date"),t(a.getTime(),n.getTime(),"Same time")};

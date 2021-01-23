@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/validate-stringifiable",{dependencies:["./is-callable"],factory:function(t,e,n){"use strict";var r=t("./is-callable");n.exports=function(t){try{return t&&r(t.toString)?t.toString():String(t)}catch(e){throw new TypeError("Passed argument cannot be stringifed")}}}});

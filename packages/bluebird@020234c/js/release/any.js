@@ -1,0 +1,1 @@
+"use strict";module.exports=function(n){function r(n){var r=new t(n),e=r.promise();return r.setHowMany(1),r.setUnwrap(),r.init(),e}var t=n._SomePromiseArray;n.any=function(n){return r(n)},n.prototype.any=function(){return r(this)}};

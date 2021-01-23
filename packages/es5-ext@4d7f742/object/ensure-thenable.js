@@ -1,0 +1,1 @@
+"use strict";var safeToString=require("../safe-to-string"),isThenable=require("./is-thenable");module.exports=function(e){if(!isThenable(e))throw new TypeError(safeToString(e)+" is not a thenable");return e};

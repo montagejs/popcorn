@@ -1,0 +1,1 @@
+"use strict";var callable=require("../../object/valid-callable"),apply=Function.prototype.apply;module.exports=function(){var l=callable(this);return function(a){return apply.call(l,this,a)}};

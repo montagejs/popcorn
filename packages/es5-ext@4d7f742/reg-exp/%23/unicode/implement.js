@@ -1,0 +1,1 @@
+"use strict";var isUnicode=require("../is-unicode");require("./is-implemented")()||Object.defineProperty(RegExp.prototype,"unicode",{configurable:!0,enumerable:!1,get:isUnicode});

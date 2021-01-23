@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/some",{dependencies:[],factory:function(t,e,n){"use strict";var i={1:1,2:2,3:3};n.exports=function(t,e){var n={},r=0;t(i,function(t,e){return n[e]=t,!1}),e(JSON.stringify(n),JSON.stringify(i),"Iterates"),e(t(i,function(){return++r,!0}),!0,"Succeeds"),e(r,1,"Stops iteration after condition is met"),e(t(i,function(){return!1}),!1,"Fails")}}});

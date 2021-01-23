@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/reg-exp/escape",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){var n="(?:^te|er)s{2}t\\[raz]+$";t(RegExp("^"+e(n)+"$").test(n),!0)}}});

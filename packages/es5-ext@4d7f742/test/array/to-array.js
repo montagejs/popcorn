@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,r){var n=[1,2,3];r(e(n),n,"Array"),r.deep(e("12r3v"),["1","2","r","3","v"],"String"),r.deep(e(function(){return arguments}(3,n,"raz")),[3,n,"raz"],"Arguments"),r.deep(e(function(){return arguments}(3)),[3],"Arguments with one numeric value"),r.deep(e({0:"raz",1:"dwa",length:2}),["raz","dwa"],"Other")};

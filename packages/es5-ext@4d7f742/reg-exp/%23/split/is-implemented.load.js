@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/split/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";var i=/\|/;n.exports=function(){return"function"==typeof i.split&&"foo"===i.split("bar|foo")[1]}}});

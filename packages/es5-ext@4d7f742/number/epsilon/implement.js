@@ -1,0 +1,1 @@
+"use strict";require("./is-implemented")()||Object.defineProperty(Number,"EPSILON",{value:require("./"),configurable:!1,enumerable:!1,writable:!1});

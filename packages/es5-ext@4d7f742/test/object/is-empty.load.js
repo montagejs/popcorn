@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/is-empty",{dependencies:[],factory:function(t,e,n){"use strict";n.exports=function(t,e){e(t({}),!0,"Empty"),e(t({1:1}),!1,"Not empty")}}});

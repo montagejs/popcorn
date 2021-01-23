@@ -1,0 +1,1 @@
+"use strict";var callable=require("es5-ext/object/valid-callable"),forOf=require("es6-iterator/for-of"),isSet=require("../is-set"),Set=require("../"),call=Function.prototype.call;module.exports=function(e){var t,r=arguments[1];return callable(e),t=isSet(this)?new this.constructor:new Set,forOf(this,function(l){call.call(e,r,l)&&t.add(l)}),t};

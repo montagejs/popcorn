@@ -1,0 +1,1 @@
+"use strict";var toPosInt=require("../../number/to-pos-integer"),callable=require("../../object/valid-callable"),value=require("../../object/valid-value"),floor=Math.floor;module.exports=function(e){var l,o,r,t;for(value(this),callable(e),l=toPosInt(this.length),o=0,r=l-1;o<=r;)t=floor((o+r)/2),e(this[t])<0?r=t-1:o=t+1;return r<0?0:r>=l?l-1:r};

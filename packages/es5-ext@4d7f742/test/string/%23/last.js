@@ -1,0 +1,1 @@
+"use strict";module.exports=function(l,c){c(l.call(""),null,"Null"),c(l.call("abcdef"),"f","String")};

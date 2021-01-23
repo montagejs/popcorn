@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/function/%23/spread",{dependencies:[],factory:function(t,n,e){"use strict";var c=function(t,n){return this[t]+this[n]},i={a:3,b:4};e.exports=function(t,n){n(t.call(c).call(i,["a","b"]),7)}}});

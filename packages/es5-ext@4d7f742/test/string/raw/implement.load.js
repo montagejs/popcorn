@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/raw/implement",{dependencies:["../../../string/raw/is-implemented"],factory:function(e,t,n){"use strict";var i=e("../../../string/raw/is-implemented");n.exports=function(e){e(i(),!0)}}});

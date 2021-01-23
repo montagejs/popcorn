@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,o){var r,t={},a={};r=e(t),o.not(r,t,"Returns different object"),o.deep(r,{},"Empty on empty"),t={foo:"bar",a:0,b:!1,c:"",d:"0",e:null,bar:a,elo:void 0},r=e(t),o.deep(r,{foo:"bar",a:0,b:!1,c:"",d:"0",bar:a},"Cleared null values")};

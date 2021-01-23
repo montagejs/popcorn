@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/is-natural-number",{dependencies:["../number/is-natural"],factory:function(e,n,r){"use strict";var t=e("../number/is-natural");r.exports=function(e){return t(Number(e))}}});

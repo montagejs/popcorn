@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/expm1/shim",{dependencies:[],factory:function(e,t,n){"use strict";var a=Math.exp;n.exports=function(e){return isNaN(e)?NaN:(e=Number(e),0===e?e:e===1/0?1/0:e===-(1/0)?-1:e>-1e-6&&e<1e-6?e+e*e/2:a(e)-1)}}});

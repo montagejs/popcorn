@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/is-string",{dependencies:[],factory:function(t,n,e){"use strict";e.exports=function(t,n){n(t(null),!1,"Null"),n(t(""),!0,"Empty string"),n(t(12),!1,"Number"),n(t(!1),!1,"Boolean"),n(t(new Date),!1,"Date"),n(t(new String("raz")),!0,"String object"),n(t("asdfaf"),!0,"String")}}});

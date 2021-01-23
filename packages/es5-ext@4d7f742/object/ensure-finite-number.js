@@ -1,0 +1,1 @@
+"use strict";var isFiniteNumber=require("./is-finite-number"),safeToString=require("../safe-to-string");module.exports=function(e){if(isFiniteNumber(e))return Number(e);throw new TypeError(safeToString(e)+" does not represent a finite number value")};

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.log2;return"function"==typeof t&&"1.584962500721156"===t(3).toFixed(15)};

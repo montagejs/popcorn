@@ -1,0 +1,1 @@
+montageDefine("cf2e582","all-off",{dependencies:["es5-ext/object/valid-object"],factory:function(e,t,_){"use strict";var o=e("es5-ext/object/valid-object"),c=Object.prototype.hasOwnProperty;_.exports=function(e){var t,_=arguments[1];if(o(e),void 0!==_){if(t=c.call(e,"__ee__")&&e.__ee__,!t)return;return void(t[_]&&delete t[_])}c.call(e,"__ee__")&&delete e.__ee__}}});

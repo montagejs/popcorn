@@ -1,0 +1,1 @@
+"use strict";var log=Math.log,LOG2E=Math.LOG2E;module.exports=function(t){return isNaN(t)?NaN:(t=Number(t),t<0?NaN:0===t?-(1/0):1===t?0:t===1/0?1/0:log(t)*LOG2E)};

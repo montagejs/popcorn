@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var o,r=Array.of;return"function"==typeof r&&(o=r("foo","bar"),Boolean(o&&"bar"===o[1]))};

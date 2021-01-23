@@ -1,0 +1,1 @@
+montageDefine("0e99770","locale/fr/messages.json",{exports:{hello:"Bonjours"}});

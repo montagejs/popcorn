@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/is-finite/implement",{dependencies:["../../../number/is-finite/is-implemented"],factory:function(e,i,n){"use strict";var t=e("../../../number/is-finite/is-implemented");n.exports=function(e){e(t(),!0)}}});

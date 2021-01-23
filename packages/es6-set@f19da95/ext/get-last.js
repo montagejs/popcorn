@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){for(var e,r,t=this.values();;){if(r=t.next(),r.done)break;e=r.value}return e};

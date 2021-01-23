@@ -1,0 +1,1 @@
+"use strict";module.exports=function(o,e){e.deep(o.call(/\|/,"bar|foo"),["bar","foo"])};

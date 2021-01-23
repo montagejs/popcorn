@@ -1,0 +1,1 @@
+"use strict";var toPosInt=require("../../number/to-pos-integer"),value=require("../../object/valid-value"),objHasOwnProperty=Object.prototype.hasOwnProperty;module.exports=function(){var r,e;if(!(e=toPosInt(value(this).length)))return null;for(r=0;!objHasOwnProperty.call(this,r);)if(++r===e)return null;return r};

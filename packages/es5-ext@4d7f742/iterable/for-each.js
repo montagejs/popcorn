@@ -1,0 +1,1 @@
+"use strict";var forOf=require("es6-iterator/for-of"),isIterable=require("es6-iterator/is-iterable"),iterable=require("./validate"),forEach=Array.prototype.forEach;module.exports=function(r,e){isIterable(iterable(r))?forOf(r,e,arguments[2]):forEach.call(r,e,arguments[2])};

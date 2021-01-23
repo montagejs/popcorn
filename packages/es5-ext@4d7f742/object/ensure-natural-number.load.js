@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/ensure-natural-number",{dependencies:["../number/is-natural","../to-short-string-representation"],factory:function(r,e,n){"use strict";var t=r("../number/is-natural"),a=r("../to-short-string-representation");n.exports=function(r){var e=Number(r);if(!t(e))throw new TypeError(a(r)+" is not a natural number");return e}}});

@@ -1,0 +1,1 @@
+"use strict";var filter=require("./filter"),isValue=require("./is-value");module.exports=function(e){return filter(e,function(e){return isValue(e)})};

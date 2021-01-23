@@ -1,0 +1,1 @@
+montageDefine("594c740","test/index",{dependencies:["d"],factory:function(e,t,o){"use strict";var n=e("d"),i=Object.defineProperty;o.exports=function(e,t){var o=e("test"),c={};i(c,o,n("foo")),t(c.test,void 0,"Name"),t(c[o],"foo","Get")}}});

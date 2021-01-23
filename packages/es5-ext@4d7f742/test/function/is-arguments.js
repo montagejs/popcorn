@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,r){var t,n;t=function(){return arguments}(),n={0:1,1:2},Object.defineProperty(n,"length",{value:2}),r(e(t),!0,"Arguments"),r(e(n),!1,"Dummy"),r(e([]),!1,"Array")};

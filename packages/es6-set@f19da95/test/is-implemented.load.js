@@ -1,0 +1,1 @@
+montageDefine("f19da95","test/is-implemented",{dependencies:["es5-ext/global","../polyfill"],factory:function(e,t,l){"use strict";var o=e("es5-ext/global"),i=e("../polyfill");l.exports=function(e,t){var l;t(typeof e(),"boolean"),l=o.Set,o.Set=i,t(e(),!0),void 0===l?delete o.Set:o.Set=l}}});

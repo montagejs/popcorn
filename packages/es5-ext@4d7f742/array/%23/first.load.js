@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/first",{dependencies:["./first-index"],factory:function(i,t,e){"use strict";var n=i("./first-index");e.exports=function(){var i;if(null!==(i=n.call(this)))return this[i]}}});

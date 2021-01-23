@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/splice/implement",{dependencies:["../../../../array/#/splice/is-implemented"],factory:function(e,i,t){"use strict";var n=e("../../../../array/#/splice/is-implemented");t.exports=function(e){e(n(),!0)}}});

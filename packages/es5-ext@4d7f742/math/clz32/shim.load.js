@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/clz32/shim",{dependencies:[],factory:function(t,e,n){"use strict";n.exports=function(t){return t>>>=0,t?32-t.toString(2).length:32}}});

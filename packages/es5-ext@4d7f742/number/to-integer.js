@@ -1,0 +1,1 @@
+"use strict";var sign=require("../math/sign"),abs=Math.abs,floor=Math.floor;module.exports=function(r){return isNaN(r)?0:(r=Number(r),0!==r&&isFinite(r)?sign(r)*floor(abs(r)):r)};

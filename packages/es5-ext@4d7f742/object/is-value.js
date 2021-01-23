@@ -1,0 +1,1 @@
+"use strict";var _undefined=require("../function/noop")();module.exports=function(n){return n!==_undefined&&null!==n};

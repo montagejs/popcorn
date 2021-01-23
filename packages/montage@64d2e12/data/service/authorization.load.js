@@ -1,0 +1,1 @@
+montageDefine("64d2e12","data/service/authorization",{dependencies:["core/core"],factory:function(e,o,t){var n=e("core/core").Montage;o.Authorization=n.specialize({logOut:{value:function(){console.warn("Authorization.logOut() must be overridden by the implementing object")}}})}});

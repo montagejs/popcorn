@@ -1,0 +1,1 @@
+"use strict";var re=/foo/;module.exports=function(){return"function"==typeof re.replace&&"marbar"===re.replace("foobar","mar")};

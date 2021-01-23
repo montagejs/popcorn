@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/tanh/index",{dependencies:["./shim"],factory:function(e,t,n){"use strict";n.exports=e("./shim")}});

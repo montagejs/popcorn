@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/tanh/shim",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e,n){n(e({}),NaN,"NaN"),n(e(0),0,"Zero"),n(e(1/0),1,"Infinity"),n(e(-(1/0)),-1,"-Infinity"),n(e(1),.7615941559557649,"1"),n(e(Number.MAX_VALUE),1),n(e(-Number.MAX_VALUE),-1)}}});

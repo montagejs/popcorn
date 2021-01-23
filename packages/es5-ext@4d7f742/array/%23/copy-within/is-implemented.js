@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=[1,2,3,4,5];return"function"==typeof t.copyWithin&&"1,4,5,4,5"===String(t.copyWithin(1,3))};

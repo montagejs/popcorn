@@ -1,0 +1,1 @@
+"use strict";module.exports=function(n,t){t(n(function(){}),!0,"Function"),t(n({}),!1,"Object"),t(n(),!1,"Undefined"),t(n(null),!1,"Null")};

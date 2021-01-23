@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/cosh/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,s){"use strict";s.exports=e("./is-implemented")()?Math.cosh:e("./shim")}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/asinh/shim",{dependencies:[],factory:function(t,e,i){"use strict";var n=Math.log,a=Math.sqrt;i.exports=function(t){return isNaN(t)?NaN:(t=Number(t),0===t?t:isFinite(t)?t<0?(t=-t,-n(t+a(t*t+1))):n(t+a(t*t+1)):t)}}});

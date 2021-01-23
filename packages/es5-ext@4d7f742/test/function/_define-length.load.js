@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/function/_define-length",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){var n,o="raz",r="dwa",a=function(e,t){return this+e+t+o+r};n=e(a,3),t(n.call("marko","el","fe"),"markoelferazdwa","Content"),t(n.length,3,"Length"),t(n.prototype,a.prototype,"Prototype")}}});

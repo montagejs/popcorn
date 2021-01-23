@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.asinh;return"function"==typeof t&&1.4436354751788103===t(2)};

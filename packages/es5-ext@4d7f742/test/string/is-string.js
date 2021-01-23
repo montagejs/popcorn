@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){e(t(null),!1,"Null"),e(t(""),!0,"Empty string"),e(t(12),!1,"Number"),e(t(!1),!1,"Boolean"),e(t(new Date),!1,"Date"),e(t(new String("raz")),!0,"String object"),e(t("asdfaf"),!0,"String")};

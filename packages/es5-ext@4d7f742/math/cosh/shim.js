@@ -1,0 +1,1 @@
+"use strict";var exp=Math.exp;module.exports=function(e){return isNaN(e)?NaN:(e=Number(e),0===e?1:isFinite(e)?(exp(e)+exp(-e))/2:1/0)};

@@ -1,0 +1,1 @@
+montageDefine("6c1c305","duplex",{dependencies:["./lib/_stream_duplex.js"],factory:function(e,n,s){s.exports=e("./lib/_stream_duplex.js")}});

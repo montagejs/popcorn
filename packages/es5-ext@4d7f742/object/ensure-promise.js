@@ -1,0 +1,1 @@
+"use strict";var safeToString=require("../safe-to-string"),isPromise=require("./is-promise");module.exports=function(r){if(!isPromise(r))throw new TypeError(safeToString(r)+" is not a promise");return r};

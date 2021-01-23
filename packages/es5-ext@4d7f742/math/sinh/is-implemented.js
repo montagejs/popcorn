@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.sinh;return"function"==typeof t&&(1.1752011936438014===t(1)&&5e-324===t(Number.MIN_VALUE))};

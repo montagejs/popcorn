@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/is-thenable",{dependencies:["./is-callable","./is-object"],factory:function(e,t,n){"use strict";var c=e("./is-callable"),i=e("./is-object");n.exports=function(e){return i(e)&&c(e.then)}}});

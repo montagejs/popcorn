@@ -1,0 +1,1 @@
+function Scope(e){this.parent=null,this.value=e}module.exports=Scope,Scope.prototype.nest=function(e){var t=Object.create(this);return t.value=e,t.parent=this,t};

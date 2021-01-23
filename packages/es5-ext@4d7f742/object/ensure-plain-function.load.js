@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/ensure-plain-function",{dependencies:["../safe-to-string","./is-plain-function"],factory:function(n,i,t){"use strict";var e=n("../safe-to-string"),o=n("./is-plain-function");t.exports=function(n){if(!o(n))throw new TypeError(e(n)+" is not a plain function");return n}}});

@@ -1,0 +1,1 @@
+"use strict";var isPrototype=require("../prototype/is"),dateValueOf=Date.prototype.valueOf;module.exports=function(t){if(!t)return!1;try{if("function"!=typeof t.getFullYear)return!1;if("function"!=typeof t.getTimezoneOffset)return!1;if("function"!=typeof t.setFullYear)return!1;dateValueOf.call(t)}catch(e){return!1}return!isNaN(t)&&!isPrototype(t)};

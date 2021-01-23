@@ -1,0 +1,1 @@
+var DataService=require("data/service/data-service").DataService;exports.AuthorizationService=DataService.specialize({constructor:{value:function(){console.warn("AuthorizationService is deprecated. The Authorization API was moved to DataService"),DataService.call(this)}}});

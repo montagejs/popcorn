@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/is-integer/shim",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e,n){n(e(2),!0,"Number"),n(e(2.34),!1,"Float"),n(e("23"),!1,"Not numeric"),n(e(NaN),!1,"NaN"),n(e(1/0),!1,"Infinity")}}});

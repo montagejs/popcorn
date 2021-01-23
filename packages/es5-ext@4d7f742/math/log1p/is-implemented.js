@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.log1p;return"function"==typeof t&&.6931471805599453===t(1)};

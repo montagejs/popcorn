@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/camel-to-hyphen",{dependencies:[],factory:function(y,a,o){"use strict";o.exports=function(y,a){a(y.call("razDwaTRzy4yFoo45My"),"raz-dwa-t-rzy4y-foo45-my"),a(y.call("razDwaTRzy4yFoo45My-"),"raz-dwa-t-rzy4y-foo45-my-"),a(y.call("razDwaTRzy4yFoo45My--"),"raz-dwa-t-rzy4y-foo45-my--")}}});

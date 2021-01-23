@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/sign/shim",{dependencies:["../../../object/is"],factory:function(e,t,i){"use strict";var s=e("../../../object/is");i.exports=function(e,t){t(s(e(0),0),!0,"+0"),t(s(e(-0),-0),!0,"-0"),t(e({}),NaN,!0,"NaN"),t(e(-234234234),-1,"Negative"),t(e(234234234),1,"Positive")}}});

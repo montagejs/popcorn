@@ -1,0 +1,1 @@
+montageDefine("9175499","object/is",{dependencies:["../value/is"],factory:function(e,n,t){"use strict";var i=e("../value/is"),o={object:!0,"function":!0,undefined:!0};t.exports=function(e){return!!i(e)&&hasOwnProperty.call(o,typeof e)}}});

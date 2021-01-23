@@ -1,0 +1,1 @@
+"use strict";var isValue=require("../../object/is-value"),repeat=require("./repeat"),replace=String.prototype.replace,re=/(\r\n|[\n\r\u2028\u2029])([\u0000-\u0009\u000b-\uffff]+)/g;module.exports=function(e){var r=arguments[1];return e=repeat.call(String(e),isValue(r)?r:1),e+replace.call(this,re,"$1"+e+"$2")};

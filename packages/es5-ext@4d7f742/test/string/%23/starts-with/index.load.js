@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/starts-with/index",{dependencies:["./shim"],factory:function(t,e,s){"use strict";s.exports=t("./shim")}});

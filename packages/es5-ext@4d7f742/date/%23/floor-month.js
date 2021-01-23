@@ -1,0 +1,1 @@
+"use strict";var floorDay=require("./floor-day");module.exports=function(){return floorDay.call(this).setDate(1),this};

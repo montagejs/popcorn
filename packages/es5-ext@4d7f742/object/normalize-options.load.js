@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/normalize-options",{dependencies:["./is-value"],factory:function(e,n,t){"use strict";var o=e("./is-value"),r=Array.prototype.forEach,c=Object.create,a=function(e,n){var t;for(t in e)n[t]=e[t]};t.exports=function(e){var n=c(null);return r.call(arguments,function(e){o(e)&&a(Object(e),n)}),n}}});

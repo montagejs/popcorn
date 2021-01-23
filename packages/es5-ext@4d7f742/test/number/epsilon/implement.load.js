@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/epsilon/implement",{dependencies:["../../../number/epsilon/is-implemented"],factory:function(e,n,i){"use strict";var t=e("../../../number/epsilon/is-implemented");i.exports=function(e){e(t(),!0)}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/keys/shim",{dependencies:["../is-value"],factory:function(e,t,n){"use strict";var s=e("../is-value"),c=Object.keys;n.exports=function(e){return c(s(e)?Object(e):e)}}});

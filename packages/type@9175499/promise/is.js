@@ -1,0 +1,1 @@
+"use strict";var isPrototype=require("../prototype/is"),objectToString=Object.prototype.toString,objectTaggedString=objectToString.call(Promise.resolve());module.exports=function(t){if(!t)return!1;try{if("function"!=typeof t.then)return!1;if("function"!=typeof t["catch"])return!1}catch(e){return!1}return objectToString.call(t)===objectTaggedString&&!isPrototype(t)};

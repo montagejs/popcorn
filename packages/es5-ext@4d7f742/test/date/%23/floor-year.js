@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){t(e.call(new Date(2e3,5,13,13,32,34,234)).valueOf(),new Date(2e3,0,1).valueOf())};

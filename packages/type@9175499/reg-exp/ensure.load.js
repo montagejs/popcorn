@@ -1,0 +1,1 @@
+montageDefine("9175499","reg-exp/ensure",{dependencies:["../lib/resolve-exception","./is"],factory:function(e,n,i){"use strict";var r=e("../lib/resolve-exception"),o=e("./is");i.exports=function(e){return o(e)?e:r(e,"%v is not a regular expression object",arguments[1])}}});

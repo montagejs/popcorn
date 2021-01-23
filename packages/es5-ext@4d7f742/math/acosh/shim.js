@@ -1,0 +1,1 @@
+"use strict";var log=Math.log,sqrt=Math.sqrt;module.exports=function(t){return isNaN(t)?NaN:(t=Number(t),t<1?NaN:1===t?0:t===1/0?t:log(t+sqrt(t*t-1)))};

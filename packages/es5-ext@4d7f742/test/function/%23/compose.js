@@ -1,0 +1,1 @@
+"use strict";var f=function(n,t){return["a",arguments.length,n,t]},g=function(n){return["b",arguments.length].concat(n)},h=function(n){return["c",arguments.length].concat(n)};module.exports=function(n,t){t.deep(n.call(h,g,f)(1,2),["c",1,"b",1,"a",2,1,2]),t.deep(n(h,g,f)(1,2),["c",1,"b",1,"a",2,1,2])};

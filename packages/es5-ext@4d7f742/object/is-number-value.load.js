@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/is-number-value",{dependencies:["./is-value"],factory:function(e,t,n){"use strict";var r=e("./is-value");n.exports=function(e){if(!r(e))return!1;try{return!isNaN(e)}catch(t){return!1}}}});

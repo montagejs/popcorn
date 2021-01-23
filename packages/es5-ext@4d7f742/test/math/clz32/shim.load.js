@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/clz32/shim",{dependencies:[],factory:function(n,t,e){"use strict";e.exports=function(n,t){t(n(1),31,"1"),t(n(1e3),22,"1000"),t(n(),32,"No arguments"),t(n(1/0),32,"Infinity"),t(n(-(1/0)),32,"-Infinity"),t(n("foo"),32,"String"),t(n(!0),31,"Boolean"),t(n(3.5),30,"Float")}}});

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(l,i){var a={};i(l.call([]),!0,"Empty"),i(l.call({}),!0,"Empty lists"),i(l.call([1,a,"raz"]),!0,"Uniq"),i(l.call([1,a,1,"raz"]),!1,"Not Uniq: primitive"),i(l.call([1,a,"1","raz"]),!0,"Uniq: primitive"),i(l.call([1,a,1,{},"raz"]),!1,"Not Uniq: Obj")};

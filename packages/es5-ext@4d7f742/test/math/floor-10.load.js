@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/floor-10",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(e(55.59,-1),55.5),t(e(59,1),50),t(e(-55.51,-1),-55.6),t(e(-51,1),-60)}}});

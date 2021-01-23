@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/acosh/shim",{dependencies:[],factory:function(e,t,N){"use strict";N.exports=function(e,t){t(e({}),NaN,"NaN"),t(e(-1),NaN,"Negative"),t(e(0),NaN,"Zero"),t(e(.5),NaN,"Below 1"),t(e(1),0,"1"),t(e(2),1.3169578969248166,"Other"),t(e(1/0),1/0,"Infinity")}}});

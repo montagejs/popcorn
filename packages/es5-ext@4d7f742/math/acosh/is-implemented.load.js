@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/acosh/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){var e=Math.acosh;return"function"==typeof e&&1.3169578969248166===e(2)}}});

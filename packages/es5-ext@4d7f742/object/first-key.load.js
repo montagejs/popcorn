@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/first-key",{dependencies:["./valid-value"],factory:function(e,r,t){"use strict";var n=e("./valid-value"),a=Object.prototype.propertyIsEnumerable;t.exports=function(e){var r;n(e);for(r in e)if(a.call(e,r))return r;return null}}});

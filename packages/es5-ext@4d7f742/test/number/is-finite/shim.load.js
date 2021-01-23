@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/is-finite/shim",{dependencies:[],factory:function(e,n,i){"use strict";i.exports=function(e,n){n(e(2),!0,"Number"),n(e("23"),!1,"Not numeric"),n(e(NaN),!1,"NaN"),n(e(1/0),!1,"Infinity")}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/function/noop",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e,n){n(typeof e(1,2,3),"undefined")}}});

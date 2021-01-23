@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/_compare-by-length",{dependencies:["../../number/to-pos-integer"],factory:function(e,n,t){"use strict";var r=e("../../number/to-pos-integer");t.exports=function(e,n){return r(e.length)-r(n.length)}}});

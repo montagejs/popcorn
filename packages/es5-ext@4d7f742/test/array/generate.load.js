@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/generate",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){var n={},r={};t.deep(e(3),[void 0,void 0,void 0],"Just length"),t.deep(e(0,"x"),[],"No repeat"),t.deep(e(1,n,r),[n],"Arguments length larger than repeat number"),t.deep(e(3,n),[n,n,n],"Single argument"),t.deep(e(5,n,r),[n,r,n,r,n],"Many arguments")}}});

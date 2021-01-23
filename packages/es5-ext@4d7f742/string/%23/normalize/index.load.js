@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/normalize/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,n){"use strict";n.exports=e("./is-implemented")()?String.prototype.normalize:e("./shim")}});

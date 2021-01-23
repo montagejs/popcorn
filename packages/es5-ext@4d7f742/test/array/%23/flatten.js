@@ -1,0 +1,1 @@
+"use strict";var o=[1,2,[3,4,[5,6],7,8],9,10,[11,12,[13,14]],15];module.exports={__generic:function(e,t){t(e.call(this).length,3)},"Nested Arrays":function(e,t){var n=e.call(o);t.not(o,n),t.deep(n,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])}};

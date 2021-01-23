@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.trunc;return"function"==typeof t&&(13===t(13.67)&&t(-13.67)===-13)};

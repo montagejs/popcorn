@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/is-promise",{dependencies:[],factory:function(n,t,e){"use strict";e.exports=function(n,t){var e;t(n(),!1),t(n(null),!1),t(n("promise"),!1),t(n({}),!1),t(n(function(){}),!1),t(n({then:{}}),!1),t(n({then:function(){}}),!0),e=function(){},e.then={},t(n(e),!1),e.then=function(){},t(n(e),!0)}}});

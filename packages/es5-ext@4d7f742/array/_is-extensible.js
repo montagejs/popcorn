@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var r,e=require("./_sub-array-dummy");return!!e&&(r=new e,!!Array.isArray(r)&&(r instanceof e&&(r[34]="foo",35===r.length)))}();

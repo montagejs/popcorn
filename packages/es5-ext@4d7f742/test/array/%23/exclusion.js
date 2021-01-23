@@ -1,0 +1,1 @@
+"use strict";module.exports={__generic:function(e,t){var a={};t.deep(e.call(this,this,[this[0],this[2],a]),[a])},"":function(e,t){var a={},r={};t.deep(e.call([a,r]),[a,r],"No arguments"),t.deep(e.call([a,1],[],[]),[a,1],"Empty arguments"),t.deep(e.call([1,"raz",a],[2,"raz",r],[2,"raz",a]),[1,r])}};

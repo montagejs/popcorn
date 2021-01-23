@@ -1,0 +1,1 @@
+"use strict";module.exports=function(r,t){var e=r>>>16&65535,u=65535&r,n=t>>>16&65535,o=65535&t;return u*o+(e*o+u*n<<16>>>0)|0};

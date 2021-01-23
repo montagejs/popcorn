@@ -1,0 +1,1 @@
+montageDefine("f19da95","test/ext/get-last",{dependencies:["../../"],factory:function(e,t,n){"use strict";var a=e("../../");n.exports=function(e,t){var n=["raz",2,!0],c=new a(n);t(e.call(c),!0),c=new a,t(e.call(c),void 0)}}});

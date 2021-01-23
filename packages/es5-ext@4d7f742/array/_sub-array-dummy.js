@@ -1,0 +1,1 @@
+"use strict";var setPrototypeOf=require("../object/set-prototype-of");module.exports=function(){var t;return setPrototypeOf?(t=function(){Array.apply(this,arguments)},setPrototypeOf(t,Array),t.prototype=Object.create(Array.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),t):null}();

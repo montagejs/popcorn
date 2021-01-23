@@ -1,0 +1,1 @@
+var Deserializer=require("core/serialization/deserializer/montage-deserializer").MontageDeserializer;module.exports=function(e,r){var i;return e.async(r).then(function(r){return i=(new Deserializer).init(JSON.stringify(r),e),i.deserializeObject()})};

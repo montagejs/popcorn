@@ -1,0 +1,1 @@
+"use strict";var indexOf=require("./e-index-of");module.exports=function(e){return indexOf.call(this,e,arguments[1])>-1};

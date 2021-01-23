@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/capitalize",{dependencies:["../../object/valid-value"],factory:function(e,t,i){"use strict";var a=e("../../object/valid-value");i.exports=function(){var e=String(a(this));return e.charAt(0).toUpperCase()+e.slice(1)}}});

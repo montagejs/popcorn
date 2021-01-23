@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.atanh;return"function"==typeof t&&549306144334055===Math.round(1e15*t(.5))};

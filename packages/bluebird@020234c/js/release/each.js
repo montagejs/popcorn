@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){function i(){return r(this)}function n(t,i){return o(t,i,e,e)}var o=t.reduce,r=t.all;t.prototype.each=function(t){return o(this,t,e,0)._then(i,void 0,void 0,this,void 0)},t.prototype.mapSeries=function(t){return o(this,t,e,e)},t.each=function(t,n){return o(t,n,e,0)._then(i,void 0,void 0,t,void 0)},t.mapSeries=n};

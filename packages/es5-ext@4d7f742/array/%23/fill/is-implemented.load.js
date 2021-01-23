@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/fill/is-implemented",{dependencies:[],factory:function(e,n,i){"use strict";i.exports=function(){var e=[1,2,3,4,5,6];return"function"==typeof e.fill&&"1,2,3,-1,-1,-1"===String(e.fill(-1,-3))}}});

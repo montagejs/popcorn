@@ -1,0 +1,1 @@
+montageDefine("594c740","validate-symbol",{dependencies:["./is-symbol"],factory:function(e,o,n){"use strict";var s=e("./is-symbol");n.exports=function(e){if(!s(e))throw new TypeError(e+" is not a symbol");return e}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/from/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,m){"use strict";m.exports=e("./is-implemented")()?Array.from:e("./shim")}});

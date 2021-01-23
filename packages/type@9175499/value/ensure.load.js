@@ -1,0 +1,1 @@
+montageDefine("9175499","value/ensure",{dependencies:["../lib/resolve-exception","./is"],factory:function(e,n,i){"use strict";var t=e("../lib/resolve-exception"),o=e("./is");i.exports=function(e){return o(e)?e:t(e,"Cannot use %v",arguments[1])}}});

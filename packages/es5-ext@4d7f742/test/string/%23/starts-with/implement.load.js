@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/starts-with/implement",{dependencies:["../../../../string/#/starts-with/is-implemented"],factory:function(t,e,i){"use strict";var s=t("../../../../string/#/starts-with/is-implemented");i.exports=function(t){t(s(),!0)}}});

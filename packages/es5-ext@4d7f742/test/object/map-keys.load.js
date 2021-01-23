@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/map-keys",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t.deep(e({1:1,2:2,3:3},function(e,t){return"x"+(e+t)}),{x11:1,x22:2,x33:3})}}});

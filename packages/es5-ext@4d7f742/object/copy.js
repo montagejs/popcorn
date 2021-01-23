@@ -1,0 +1,1 @@
+"use strict";var aFrom=require("../array/from"),assign=require("./assign"),value=require("./valid-value");module.exports=function(r){var e=Object(value(r)),a=arguments[1],u=Object(arguments[2]);if(e!==r&&!a)return e;var i={};return a?aFrom(a,function(e){(u.ensure||e in r)&&(i[e]=r[e])}):assign(i,r),i};

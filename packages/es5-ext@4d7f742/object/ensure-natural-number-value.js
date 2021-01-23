@@ -1,0 +1,1 @@
+"use strict";var isNaturalValue=require("./is-natural-number-value"),toShortString=require("../to-short-string-representation");module.exports=function(r){var t=Number(r);if(!isNaturalValue(r))throw new TypeError(toShortString(r)+" is not a natural number");return t};

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/to-integer",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(e({}),0,"NaN"),t(e(20),20,"Positive integer"),t(e("-20"),-20,"String negative integer"),t(e(1/0),1/0,"Infinity"),t(e(15.343),15,"Float"),t(e(-15.343),-15,"Negative float")}}});

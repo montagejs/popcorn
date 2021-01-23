@@ -1,0 +1,1 @@
+montageDefine("9175499","test/_lib/arrow-function-if-supported",{dependencies:[],factory:function(require,exports,module){"use strict";try{module.exports=eval("(() => {})")}catch(error){}}});

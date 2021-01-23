@@ -1,0 +1,1 @@
+var Montage=require("core/core").Montage;exports.ConnectionDescriptor=Montage.specialize({name:{value:void 0}});

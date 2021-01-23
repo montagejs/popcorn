@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/find",{dependencies:["./find-key","./is-value"],factory:function(e,n,i){"use strict";var t=e("./find-key"),f=e("./is-value");i.exports=function(e,n){var i=t.apply(this,arguments);return f(i)?e[i]:i}}});

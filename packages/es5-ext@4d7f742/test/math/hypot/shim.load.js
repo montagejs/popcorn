@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/hypot/shim",{dependencies:[],factory:function(t,n,e){"use strict";e.exports=function(t,n){n(t(),0,"No arguments"),n(t(0,-0,0),0,"Zeros"),n(t(4,NaN,1/0),1/0,"Infinity"),n(t(4,NaN,-(1/0)),1/0,"Infinity"),n(t(4,NaN,34),NaN,"NaN"),n(t(3,4),5,"#1"),n(t(3,4,5),7.0710678118654755,"#2")}}});

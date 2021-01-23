@@ -1,0 +1,1 @@
+montageDefine("f610e91","lib/trie-parser",{dependencies:[],factory:function(n,e,r){function t(n){var e={};return Object.keys(n.children).forEach(function(r){e[r]=t(n.children[r])}),function(r,t){return t=t||c,function(c,i){return e[c]?e[c](r,function(n){return t(n)(c,i)}):r(n.value,t)(c,i)}}}function c(n){return n}r.exports=t}});

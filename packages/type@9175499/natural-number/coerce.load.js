@@ -1,0 +1,1 @@
+montageDefine("9175499","natural-number/coerce",{dependencies:["../integer/coerce"],factory:function(e,n,r){"use strict";var c=e("../integer/coerce");r.exports=function(e){return e=c(e),e&&e<0?null:e}}});

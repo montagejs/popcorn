@@ -1,0 +1,1 @@
+montageDefine("4d7f742","to-short-string-representation",{dependencies:["./safe-to-string"],factory:function(e,t,n){"use strict";var r=e("./safe-to-string"),i=/[\n\r\u2028\u2029]/g;n.exports=function(e){var t=r(e);return t.length>100&&(t=t.slice(0,99)+"…"),t=t.replace(i,function(e){return JSON.stringify(e).slice(1,-1)})}}});

@@ -1,0 +1,1 @@
+"use strict";var value=require("./valid-value");module.exports=function(e){return new Function("return "+value(e))()};

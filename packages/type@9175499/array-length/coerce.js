@@ -1,0 +1,1 @@
+"use strict";var coerceToSafeInteger=require("../safe-integer/coerce");module.exports=function(e){return e=coerceToSafeInteger(e),e&&e<0?null:e};

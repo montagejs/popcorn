@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/date/%23/format",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){var n=new Date(2011,2,3,3,5,5,32);t(e.call(n," %Y.%y.%m.%d.%H.%M.%S.%L ")," 2011.11.03.03.03.05.05.032 ")}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/log10/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){var e=Math.log10;return"function"==typeof e&&.3010299956639812===e(2)}}});

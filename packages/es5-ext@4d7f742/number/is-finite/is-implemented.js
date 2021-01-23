@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Number.isFinite;return"function"==typeof t&&(!t("23")&&t(34)&&!t(1/0))};

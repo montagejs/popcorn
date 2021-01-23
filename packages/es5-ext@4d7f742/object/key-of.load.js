@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/key-of",{dependencies:["./eq","./some"],factory:function(e,n,t){"use strict";var o=e("./eq"),r=e("./some");t.exports=function(e,n){var t;return r(e,function(e,r){return!!o(e,n)&&(t=r,!0)})?t:null}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/is-sticky",{dependencies:["../valid-reg-exp"],factory:function(e,t,i){"use strict";var n=e("../valid-reg-exp"),r=/\/[a-xz]*y[a-xz]*$/;i.exports=function(){return Boolean(String(n(this)).match(r))}}});

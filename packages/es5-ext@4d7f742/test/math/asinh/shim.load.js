@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/asinh/shim",{dependencies:[],factory:function(e,i,t){"use strict";t.exports=function(e,i){i(e({}),NaN,"NaN"),i(e(0),0,"Zero"),i(e(1/0),1/0,"Infinity"),i(e(-(1/0)),-(1/0),"-Infinity"),i(e(-2),-1.4436354751788103,"Negative"),i(e(2),1.4436354751788103,"Positive")}}});

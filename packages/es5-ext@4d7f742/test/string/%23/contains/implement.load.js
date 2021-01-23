@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/contains/implement",{dependencies:["../../../../string/#/contains/is-implemented"],factory:function(n,e,t){"use strict";var i=n("../../../../string/#/contains/is-implemented");t.exports=function(n){n(i(),!0)}}});

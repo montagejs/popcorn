@@ -1,0 +1,1 @@
+montageDefine("4d7f742","iterable/validate",{dependencies:["./is"],factory:function(e,r,i){"use strict";var t=e("./is");i.exports=function(e){if(t(e))return e;throw new TypeError(e+" is not an iterable or array-like")}}});

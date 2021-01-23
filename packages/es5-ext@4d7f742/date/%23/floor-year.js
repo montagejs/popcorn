@@ -1,0 +1,1 @@
+"use strict";var floorMonth=require("./floor-month");module.exports=function(){return floorMonth.call(this).setMonth(0),this};

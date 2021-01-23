@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/compact",{dependencies:["./filter","./is-value"],factory:function(e,t,n){"use strict";var i=e("./filter"),r=e("./is-value");n.exports=function(e){return i(e,function(e){return r(e)})}}});

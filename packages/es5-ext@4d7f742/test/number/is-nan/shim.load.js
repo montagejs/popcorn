@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/is-nan/shim",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e,n){n(e(2),!1,"Number"),n(e({}),!1,"Not numeric"),n(e(NaN),!0,"NaN")}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/is-string",{dependencies:[],factory:function(t,e,n){"use strict";var i=Object.prototype.toString,o=i.call("");n.exports=function(t){return"string"==typeof t||t&&"object"==typeof t&&(t instanceof String||i.call(t)===o)||!1}}});

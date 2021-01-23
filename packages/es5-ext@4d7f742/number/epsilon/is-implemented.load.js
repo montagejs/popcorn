@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/epsilon/is-implemented",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(){return"number"==typeof Number.EPSILON}}});

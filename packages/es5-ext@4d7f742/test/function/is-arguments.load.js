@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/function/is-arguments",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e,n){var t,r;t=function(){return arguments}(),r={0:1,1:2},Object.defineProperty(r,"length",{value:2}),n(e(t),!0,"Arguments"),n(e(r),!1,"Dummy"),n(e([]),!1,"Array")}}});

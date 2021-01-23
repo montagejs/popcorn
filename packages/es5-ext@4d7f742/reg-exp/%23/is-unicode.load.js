@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/is-unicode",{dependencies:["../valid-reg-exp"],factory:function(e,n,i){"use strict";var t=e("../valid-reg-exp"),r=/\/[a-xz]*u[a-xz]*$/;i.exports=function(){return Boolean(String(t(this)).match(r))}}});

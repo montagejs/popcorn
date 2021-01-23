@@ -1,0 +1,1 @@
+"use strict";var isSet=require("./is-set");module.exports=function(e){if(!isSet(e))throw new TypeError(e+" is not a Set");return e};

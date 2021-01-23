@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/hypot/is-implemented",{dependencies:[],factory:function(t,e,n){"use strict";n.exports=function(){var t=Math.hypot;return"function"==typeof t&&5===t(3,4)}}});

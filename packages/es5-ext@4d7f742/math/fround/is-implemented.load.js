@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/fround/is-implemented",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(){var e=Math.fround;return"function"==typeof e&&1.3370000123977661===e(1.337)}}});

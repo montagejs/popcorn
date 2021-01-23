@@ -1,0 +1,1 @@
+var AbstractRadioButton=require("montage/ui/base/abstract-radio-button").AbstractRadioButton;exports.CategoryButton=AbstractRadioButton.specialize({constructor:{value:function(){this["super"]()}},label:{value:null}});

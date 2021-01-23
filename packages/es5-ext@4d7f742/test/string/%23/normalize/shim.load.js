@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/normalize/shim",{dependencies:[],factory:function(i,t,a){"use strict";var e="äiti";a.exports=function(i,t){t(i.call(e),"äiti"),t(i.call(e,"NFC"),"äiti"),t(i.call(e,"NFD"),"äiti"),t(i.call(e,"NFKC"),"äiti"),t(i.call(e,"NFKD"),"äiti")}}});

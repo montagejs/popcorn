@@ -1,0 +1,1 @@
+var DataQuery=require("data/model/data-query").DataQuery;exports.DataSelector=DataQuery;

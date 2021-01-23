@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/_compare-by-length",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){var n=[4,5,6],r={length:8},o={},a={length:1};t.deep([n,r,o,a].sort(e),[o,a,n,r])}}});

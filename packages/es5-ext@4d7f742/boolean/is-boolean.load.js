@@ -1,0 +1,1 @@
+montageDefine("4d7f742","boolean/is-boolean",{dependencies:[],factory:function(e,o,t){"use strict";var n=Object.prototype.toString,a=n.call(!0);t.exports=function(e){return"boolean"==typeof e||"object"==typeof e&&(e instanceof Boolean||n.call(e)===a)}}});

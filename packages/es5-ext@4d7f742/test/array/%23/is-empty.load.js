@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/is-empty",{dependencies:[],factory:function(t,e,n){"use strict";n.exports=function(t,e){var n={};e(t.call([]),!0,"Empty"),e(t.call({length:0}),!0,"Empty lists"),e(t.call([1,n,"raz"]),!1,"Non empty")}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/reg-exp/%23/is-sticky",{dependencies:[],factory:function(e,t,a){"use strict";a.exports=function(e,t){var a;t(e.call(/raz/),!1,"Normal"),t(e.call(/raz/g),!1,"Global");try{a=new RegExp("raz","y")}catch(c){}a&&t(e.call(a),!0,"Sticky")}}});

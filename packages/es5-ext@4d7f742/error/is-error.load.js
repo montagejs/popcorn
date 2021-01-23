@@ -1,0 +1,1 @@
+montageDefine("4d7f742","error/is-error",{dependencies:[],factory:function(r,e,t){"use strict";var n=Object.prototype.toString,o=n.call(new Error);t.exports=function(r){return r&&(r instanceof Error||n.call(r)===o)||!1}}});

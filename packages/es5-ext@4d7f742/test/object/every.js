@@ -1,0 +1,1 @@
+"use strict";var o={1:1,2:2,3:3};module.exports=function(t,n){var r={};t(o,function(t,n){return r[n]=t,!0}),n(JSON.stringify(r),JSON.stringify(o),"Iterates"),n(t(o,function(){return!0}),!0,"Succeeds"),n(t(o,function(){return!1}),!1,"Fails")};

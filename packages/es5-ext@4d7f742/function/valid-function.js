@@ -1,0 +1,1 @@
+"use strict";var isFunction=require("./is-function");module.exports=function(n){if(!isFunction(n))throw new TypeError(n+" is not a function");return n};

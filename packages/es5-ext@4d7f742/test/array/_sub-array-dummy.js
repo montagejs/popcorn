@@ -1,0 +1,1 @@
+"use strict";var isArray=Array.isArray;module.exports=function(r){r(null===r||isArray(r.prototype),!0)};

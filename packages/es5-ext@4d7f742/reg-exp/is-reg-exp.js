@@ -1,0 +1,1 @@
+"use strict";var objToString=Object.prototype.toString,id=objToString.call(/a/);module.exports=function(t){return t&&(t instanceof RegExp||objToString.call(t)===id)||!1};

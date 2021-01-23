@@ -1,0 +1,1 @@
+"use strict";var coerceToInteger=require("../integer/coerce"),MAX_SAFE_INTEGER=9007199254740991,MIN_SAFE_INTEGER=-9007199254740991;module.exports=function(e){return e=coerceToInteger(e),e?e>MAX_SAFE_INTEGER?null:e<MIN_SAFE_INTEGER?null:e:e};

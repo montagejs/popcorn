@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/@@iterator/is-implemented",{dependencies:["es6-symbol"],factory:function(e,t,o){"use strict";var n=e("es6-symbol").iterator;o.exports=function(){var e,t,o=["foo",1];return"function"==typeof o[n]&&(!!(e=o[n]())&&("function"==typeof e.next&&(t=e.next(),!!t&&("foo"===t.value&&t.done===!1))))}}});

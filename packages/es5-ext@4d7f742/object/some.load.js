@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/some",{dependencies:["./_iterate"],factory:function(e,t,o){"use strict";o.exports=e("./_iterate")("some",!1)}});

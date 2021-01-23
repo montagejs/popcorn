@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/remove",{dependencies:[],factory:function(e,o,t){"use strict";t.exports=function(e,o){var t={},n={},a=[9,n,5,t,"foo"];e.call(a,t),o.deep(a,[9,n,5,"foo"]),e.call(a,{}),o.deep(a,[9,n,5,"foo"],"Not existing"),e.call(a,5),o.deep(a,[9,n,"foo"],"Primitive"),a=[9,n,5,t,"foo"],e.call(a,n,5,"foo"),o.deep(a,[9,t],"More than one argument")}}});

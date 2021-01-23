@@ -1,0 +1,1 @@
+"use strict";var isObject=require("../object/is");module.exports=function(t){if(!isObject(t))return!1;try{return"function"==typeof t.then}catch(e){return!1}};

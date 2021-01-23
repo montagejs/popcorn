@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/sinh/shim",{dependencies:["../expm1"],factory:function(e,t,i){"use strict";var n=e("../expm1"),a=Math.abs,s=Math.exp,r=Math.E;i.exports=function(e){return isNaN(e)?NaN:(e=Number(e),0===e?e:isFinite(e)?a(e)<1?(n(e)-n(-e))/2:(s(e-1)-s(-e-1))*r/2:e)}}});

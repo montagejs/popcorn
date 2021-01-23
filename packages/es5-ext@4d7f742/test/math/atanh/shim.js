@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){t(e({}),NaN,"NaN"),t(e(-2),NaN,"Less than -1"),t(e(2),NaN,"Greater than 1"),t(e(-1),-(1/0),"-1"),t(e(1),1/0,"1"),t(e(0),0,"Zero"),t(Math.round(1e15*e(.5)),549306144334055,"Other")};

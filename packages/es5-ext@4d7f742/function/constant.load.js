@@ -1,0 +1,1 @@
+montageDefine("4d7f742","function/constant",{dependencies:[],factory:function(n,t,e){"use strict";e.exports=function(n){return function(){return n}}}});

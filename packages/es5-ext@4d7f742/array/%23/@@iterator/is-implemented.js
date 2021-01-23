@@ -1,0 +1,1 @@
+"use strict";var iteratorSymbol=require("es6-symbol").iterator;module.exports=function(){var o,t,e=["foo",1];return"function"==typeof e[iteratorSymbol]&&(!!(o=e[iteratorSymbol]())&&("function"==typeof o.next&&(t=o.next(),!!t&&("foo"===t.value&&t.done===!1))))};

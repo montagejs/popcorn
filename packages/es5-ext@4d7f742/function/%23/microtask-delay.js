@@ -1,0 +1,1 @@
+"use strict";var ensurePlainFunction=require("../../object/ensure-plain-function"),defineLength=require("../_define-length"),nextTick=require("next-tick"),apply=Function.prototype.apply;module.exports=function(){var e=ensurePlainFunction(this);return defineLength(function(){nextTick(apply.bind(e,this,arguments))},this.length)};

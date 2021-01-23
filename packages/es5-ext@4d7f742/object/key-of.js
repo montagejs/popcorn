@@ -1,0 +1,1 @@
+"use strict";var eq=require("./eq"),some=require("./some");module.exports=function(e,r){var u;return some(e,function(e,n){return!!eq(e,r)&&(u=n,!0)})?u:null};

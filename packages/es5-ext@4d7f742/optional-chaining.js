@@ -1,0 +1,1 @@
+"use strict";var isValue=require("./object/is-value"),slice=Array.prototype.slice;module.exports=function(e,r){for(var i=slice.call(arguments,1),l=0,s=i.length;isValue(e)&&l<s;)e=e[i[l++]];return l===s?e:void 0};

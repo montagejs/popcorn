@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/is-finite/shim",{dependencies:[],factory:function(e,n,i){"use strict";i.exports=function(e){return"number"==typeof e&&isFinite(e)}}});

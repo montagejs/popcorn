@@ -1,0 +1,1 @@
+"use strict";var isNatural=require("../number/is-natural");module.exports=function(r){return isNatural(Number(r))};

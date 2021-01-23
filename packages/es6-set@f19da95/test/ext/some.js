@@ -1,0 +1,1 @@
+"use strict";var Set=require("../../");module.exports=function(e,l){l(e.call(new Set,Boolean),!1,"Empty set"),l(e.call(new Set([2,3,4]),Boolean),!0,"All true"),l(e.call(new Set([0,!1,4]),Boolean),!0,"Some false"),l(e.call(new Set([0,!1,null]),Boolean),!1,"All false")};

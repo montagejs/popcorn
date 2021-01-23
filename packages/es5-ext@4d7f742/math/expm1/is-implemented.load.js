@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/expm1/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){var e=Math.expm1;return"function"==typeof e&&"1.718281828459045"===e(1).toFixed(15)}}});

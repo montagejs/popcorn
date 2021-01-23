@@ -1,0 +1,1 @@
+"use strict";var isInteger=require("../is-integer/shim"),maxValue=require("../max-safe-integer"),abs=Math.abs;module.exports=function(e){return!!isInteger(e)&&abs(e)<=maxValue};

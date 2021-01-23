@@ -1,0 +1,1 @@
+montageDefine("f19da95","valid-set",{dependencies:["./is-set"],factory:function(e,t,n){"use strict";var i=e("./is-set");n.exports=function(e){if(!i(e))throw new TypeError(e+" is not a Set");return e}}});

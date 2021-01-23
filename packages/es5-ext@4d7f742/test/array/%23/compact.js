@@ -1,0 +1,1 @@
+"use strict";module.exports={__generic:function(e,n){n(e.call(this).length,3)},"":function(e,n){var t,i,l,c;t={},i=[0,1,"",null,t,!1,void 0,!0],l=i.slice(0),n.not(c=e.call(i),i,"Returns different object"),n.deep(i,l,"Origin not changed"),n.deep(c,[0,1,"",t,!1,!0],"Result")}};

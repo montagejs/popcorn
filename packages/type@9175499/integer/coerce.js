@@ -1,0 +1,1 @@
+"use strict";var coerceToFinite=require("../finite/coerce"),abs=Math.abs,floor=Math.floor;module.exports=function(e){return e=coerceToFinite(e),e?(e>0?1:-1)*floor(abs(e)):e};

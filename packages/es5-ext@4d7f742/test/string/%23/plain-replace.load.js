@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/plain-replace",{dependencies:[],factory:function(a,e,r){"use strict";r.exports=function(a,e){e(a.call("razdwatrzy","dwa","olera"),"razoleratrzy","Basic"),e(a.call("razdwatrzy","dwa","ole$&a"),"razole$&atrzy","Inserts"),e(a.call("razdwa","ola","sdfs"),"razdwa","No replace")}}});

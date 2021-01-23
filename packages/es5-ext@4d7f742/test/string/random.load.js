@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/random",{dependencies:[],factory:function(t,e,n){"use strict";var i=RegExp.prototype.test.bind(/^[a-z0-9]+$/);n.exports=function(t,e){e(typeof t(),"string"),e.ok(t().length>7),e.not(t({isUnique:!0}),t({isUnique:!0})),e.ok(i(t())),e(t({length:1}).length,1),e(t({length:100}).length,100),e(t({length:0}),"")}}});

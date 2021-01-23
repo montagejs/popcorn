@@ -1,0 +1,1 @@
+montageDefine("9175499","array-length/ensure",{dependencies:["../lib/resolve-exception","./coerce"],factory:function(e,n,r){"use strict";var t=e("../lib/resolve-exception"),o=e("./coerce");r.exports=function(e){var n=o(e);return null!==n?n:t(e,"%v is not a valid array length",arguments[1])}}});

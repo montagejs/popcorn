@@ -1,0 +1,1 @@
+"use strict";var f=function(t,o){return this[t]+this[o]},o={a:3,b:4};module.exports=function(t,a){a(t.call(f).call(o,["a","b"]),7)};

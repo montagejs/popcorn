@@ -1,0 +1,1 @@
+"use strict";var isArray=Array.isArray,getPrototypeOf=Object.getPrototypeOf;module.exports=function(r){var t;return!(!r||!isArray(r))&&(t=getPrototypeOf(r),!!isArray(t)&&!isArray(getPrototypeOf(t)))};

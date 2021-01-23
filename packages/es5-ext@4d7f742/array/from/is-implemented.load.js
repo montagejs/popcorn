@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/from/is-implemented",{dependencies:[],factory:function(e,n,r){"use strict";r.exports=function(){var e,n,r=Array.from;return"function"==typeof r&&(e=["raz","dwa"],n=r(e),Boolean(n&&n!==e&&"dwa"===n[1]))}}});

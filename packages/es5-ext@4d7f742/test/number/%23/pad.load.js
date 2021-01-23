@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/%23/pad",{dependencies:[],factory:function(e,n,c){"use strict";c.exports=function(e,n){n(e.call(78,4),"0078"),n(e.call(65.12323,4,3),"0065.123","Precision"),n(e.call(65,4,3),"0065.000","Precision integer")}}});

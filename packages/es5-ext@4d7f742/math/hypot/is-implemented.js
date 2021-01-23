@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.hypot;return"function"==typeof t&&5===t(3,4)};

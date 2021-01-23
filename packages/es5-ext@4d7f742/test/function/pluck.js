@@ -1,0 +1,1 @@
+"use strict";var o={foo:"bar"};module.exports=function(f,r){r(f("foo")(o),o.foo)};

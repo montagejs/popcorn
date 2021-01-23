@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/starts-with/shim",{dependencies:["../../../object/valid-value","../../../number/to-integer"],factory:function(t,e,n){"use strict";var i=t("../../../object/valid-value"),r=t("../../../number/to-integer"),a=Math.max,o=Math.min;n.exports=function(t){var e,n=String(i(this));return e=o(a(r(arguments[1]),0),n.length),n.indexOf(t,e)===e}}});

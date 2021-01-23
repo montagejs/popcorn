@@ -1,0 +1,1 @@
+"use strict";var fn=function(n){return n>3};module.exports=function(){var n=[1,2,3,4,5,6];return"function"==typeof n.find&&4===n.find(fn)};

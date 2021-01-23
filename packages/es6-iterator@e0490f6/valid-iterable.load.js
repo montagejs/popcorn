@@ -1,0 +1,1 @@
+montageDefine("e0490f6","valid-iterable",{dependencies:["./is-iterable"],factory:function(e,i,r){"use strict";var t=e("./is-iterable");r.exports=function(e){if(!t(e))throw new TypeError(e+" is not iterable");return e}}});

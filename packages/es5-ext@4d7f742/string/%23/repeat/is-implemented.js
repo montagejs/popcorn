@@ -1,0 +1,1 @@
+"use strict";var str="foo";module.exports=function(){return"function"==typeof str.repeat&&"foofoo"===str.repeat(2)};

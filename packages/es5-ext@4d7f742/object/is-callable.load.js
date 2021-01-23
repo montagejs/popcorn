@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/is-callable",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e){return"function"==typeof e}}});

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t){try{t=Number(t)}catch(r){return!1}return!isNaN(t)&&!(Math.abs(t)>864e13)};

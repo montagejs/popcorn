@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/clz32/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){var e=Math.clz32;return"function"==typeof e&&22===e(1e3)}}});

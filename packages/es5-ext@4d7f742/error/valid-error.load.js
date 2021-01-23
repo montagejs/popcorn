@@ -1,0 +1,1 @@
+montageDefine("4d7f742","error/valid-error",{dependencies:["./is-error"],factory:function(r,e,o){"use strict";var n=r("./is-error");o.exports=function(r){if(!n(r))throw new TypeError(r+" is not an Error object");return r}}});

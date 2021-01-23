@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/first-key",{dependencies:[],factory:function(e,o,n){"use strict";n.exports=function(e,o){var n={},t=Object.create(null);o(e(n),null,"Normal: Empty"),o(e(t),null,"Null extension: Empty"),n.foo="raz",n.bar=343,o(["foo","bar"].indexOf(e(n))!==-1,!0,"Normal"),t.elo="foo",t.mar="wew",o(["elo","mar"].indexOf(e(t))!==-1,!0,"Null extension")}}});

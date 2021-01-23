@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/compact",{dependencies:[],factory:function(e,n,t){"use strict";t.exports={__generic:function(e,n){n(e.call(this).length,3)},"":function(e,n){var t,c,i,o;t={},c=[0,1,"",null,t,!1,void 0,!0],i=c.slice(0),n.not(o=e.call(c),c,"Returns different object"),n.deep(c,i,"Origin not changed"),n.deep(o,[0,1,"",t,!1,!0],"Result")}}}});

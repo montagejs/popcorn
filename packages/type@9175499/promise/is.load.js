@@ -1,0 +1,1 @@
+montageDefine("9175499","promise/is",{dependencies:["../prototype/is"],factory:function(t,e,r){"use strict";var n=t("../prototype/is"),o=Object.prototype.toString,i=o.call(Promise.resolve());r.exports=function(t){if(!t)return!1;try{if("function"!=typeof t.then)return!1;if("function"!=typeof t["catch"])return!1}catch(e){return!1}return o.call(t)===i&&!n(t)}}});

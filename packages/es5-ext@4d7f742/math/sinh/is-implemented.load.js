@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/sinh/is-implemented",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(){var e=Math.sinh;return"function"==typeof e&&(1.1752011936438014===e(1)&&5e-324===e(Number.MIN_VALUE))}}});

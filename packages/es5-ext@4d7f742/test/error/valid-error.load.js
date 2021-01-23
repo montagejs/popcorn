@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/error/valid-error",{dependencies:[],factory:function(r,e,t){"use strict";t.exports=function(r,e){var t=new Error;e(r(t),t,"Error"),e["throws"](function(){r({})},"Other")}}});

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(n,e){e(n("arar"),!1,"String"),e(n(12),!1,"Number"),e(n(!0),!1,"Boolean"),e(n(null),!1,"Null"),e(n(new Date),!0,"Date"),e(n(new String("raz")),!0,"String object"),e(n({}),!0,"Plain object"),e(n(/a/),!0,"Regular expression"),e(n(function(){}),!0,"Function")};

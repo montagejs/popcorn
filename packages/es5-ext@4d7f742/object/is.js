@@ -1,0 +1,1 @@
+"use strict";var numIsNaN=require("../number/is-nan");module.exports=function(n,u){return n===u?0!==n||1/n===1/u:numIsNaN(n)&&numIsNaN(u)};

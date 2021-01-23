@@ -1,0 +1,1 @@
+montageDefine("cf2e582","test/emit-error",{dependencies:["es5-ext/error/custom","../"],factory:function(e,r,o){"use strict";var t=e("es5-ext/error/custom"),n=e("../");o.exports=function(e,r){var o,c,s=t("Some error","ERROR_TEST");o=n(),r["throws"](function(){e.call(o,s)},"ERROR_TEST"),o.on("error",function(e){c=e}),e.call(o,s),r(c,s)}}});

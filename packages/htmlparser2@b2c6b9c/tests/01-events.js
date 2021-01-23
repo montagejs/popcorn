@@ -1,0 +1,1 @@
+var helper=require("./test-helper.js");exports.dir="Events",exports.test=function(e,r){helper.writeToParser(helper.getEventCollector(r),e.options.parser,e.html)};

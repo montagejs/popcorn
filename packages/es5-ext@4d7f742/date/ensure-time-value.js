@@ -1,0 +1,1 @@
+"use strict";var safeToString=require("../safe-to-string"),toInteger=require("../number/to-integer"),isTimeValue=require("./is-time-value");module.exports=function(e){if(isTimeValue(e))return toInteger(e);throw new TypeError(safeToString(e)+" is not a valid time value")};

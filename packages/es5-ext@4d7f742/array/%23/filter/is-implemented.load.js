@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/filter/is-implemented",{dependencies:["../../_sub-array-dummy-safe"],factory:function(e,n,r){"use strict";var t=e("../../_sub-array-dummy-safe"),a=function(){return!0};r.exports=function(){return(new t).filter(a)instanceof t}}});

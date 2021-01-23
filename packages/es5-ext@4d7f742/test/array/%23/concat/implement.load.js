@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/concat/implement",{dependencies:["../../../../array/#/concat/is-implemented"],factory:function(e,t,n){"use strict";var a=e("../../../../array/#/concat/is-implemented");n.exports=function(e){e(a(),!0)}}});

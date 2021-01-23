@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/log2/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){var e=Math.log2;return"function"==typeof e&&"1.584962500721156"===e(3).toFixed(15)}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/to-pos-integer",{dependencies:[],factory:function(e,t,i){"use strict";i.exports=function(e,t){t(e({}),0,"NaN"),t(e(20),20,"Positive integer"),t(e(-20),0,"Negative integer"),t(e(1/0),1/0,"Infinity"),t(e(15.343),15,"Float"),t(e(-15.343),0,"Negative float")}}});

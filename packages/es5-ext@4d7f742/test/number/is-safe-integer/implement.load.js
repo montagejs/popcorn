@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/is-safe-integer/implement",{dependencies:["../../../number/is-safe-integer/is-implemented"],factory:function(e,n,i){"use strict";var t=e("../../../number/is-safe-integer/is-implemented");i.exports=function(e){e(t(),!0)}}});

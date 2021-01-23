@@ -1,0 +1,1 @@
+"use strict";require("./is-implemented")()||Object.defineProperty(String.prototype,require("es6-symbol").iterator,{value:require("./shim"),configurable:!0,enumerable:!1,writable:!0});

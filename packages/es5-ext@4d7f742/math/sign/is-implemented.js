@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.sign;return"function"==typeof t&&(1===t(10)&&t(-20)===-1)};

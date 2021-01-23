@@ -1,0 +1,1 @@
+"use strict";module.exports=function(l,a){var e;a(l.call([]),null,"Empty"),a(l.call([null]),0,"One value"),a(l.call([1,2,3]),2,"Many values"),a(l.call(new Array(1e3)),null,"Sparse empty"),e=[],e[883]=null,e[890]=void 0,a(l.call(e),890,"Manual sparse, distant value"),e=new Array(1e3),e[657]=null,e[700]=void 0,a(l.call(e),700,"Sparse, distant value")};

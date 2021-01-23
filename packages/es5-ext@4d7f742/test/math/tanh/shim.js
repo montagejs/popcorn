@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,i){i(e({}),NaN,"NaN"),i(e(0),0,"Zero"),i(e(1/0),1,"Infinity"),i(e(-(1/0)),-1,"-Infinity"),i(e(1),.7615941559557649,"1"),i(e(Number.MAX_VALUE),1),i(e(-Number.MAX_VALUE),-1)};

@@ -1,0 +1,1 @@
+"use strict";require("./is-implemented")()||Object.defineProperty(Number,"MIN_SAFE_INTEGER",{value:require("./"),configurable:!1,enumerable:!1,writable:!1});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/match/implement",{dependencies:["./is-implemented","./shim"],factory:function(e,t,i){"use strict";e("./is-implemented")()||Object.defineProperty(RegExp.prototype,"match",{value:e("./shim"),configurable:!0,enumerable:!1,writable:!0})}});

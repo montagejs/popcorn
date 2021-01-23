@@ -1,0 +1,1 @@
+montageDefine("4d7f742","date/%23/floor-month",{dependencies:["./floor-day"],factory:function(t,e,o){"use strict";var n=t("./floor-day");o.exports=function(){return n.call(this).setDate(1),this}}});

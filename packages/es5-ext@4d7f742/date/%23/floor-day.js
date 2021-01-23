@@ -1,0 +1,1 @@
+"use strict";var setHours=Date.prototype.setHours;module.exports=function(){return setHours.call(this,0,0,0,0),this};

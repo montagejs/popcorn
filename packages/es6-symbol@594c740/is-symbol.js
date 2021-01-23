@@ -1,0 +1,1 @@
+"use strict";module.exports=function(o){return!!o&&("symbol"==typeof o||!!o.constructor&&("Symbol"===o.constructor.name&&"Symbol"===o[o.constructor.toStringTag]))};

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(N,e){e(N(2),!1,"Number"),e(N({}),!1,"Not numeric"),e(N(NaN),!0,"NaN")};

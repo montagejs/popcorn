@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/hyphen-to-camel",{dependencies:[],factory:function(e,t,n){"use strict";var r=String.prototype.replace,o=/-([a-z0-9])/g,c=function(e,t){return t.toUpperCase()};n.exports=function(){return r.call(this,o,c)}}});

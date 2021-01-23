@@ -1,0 +1,1 @@
+"use strict";var callable=require("es5-ext/object/valid-callable"),forOf=require("es6-iterator/for-of"),call=Function.prototype.call;module.exports=function(l){var e=arguments[1],r=!1;return callable(l),forOf(this,function(a,t){call.call(l,e,a)&&(r=!0,t())}),r};

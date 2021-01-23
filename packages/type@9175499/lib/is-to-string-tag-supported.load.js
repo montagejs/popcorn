@@ -1,0 +1,1 @@
+montageDefine("9175499","lib/is-to-string-tag-supported",{dependencies:[],factory:function(t,o,e){"use strict";e.exports="function"==typeof Symbol&&"symbol"==typeof Symbol.toStringTag}});

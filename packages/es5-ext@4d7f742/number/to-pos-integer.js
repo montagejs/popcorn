@@ -1,0 +1,1 @@
+"use strict";var toInteger=require("./to-integer"),max=Math.max;module.exports=function(e){return max(0,toInteger(e))};

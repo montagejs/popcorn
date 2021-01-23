@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/function/identity",{dependencies:[],factory:function(t,e,n){"use strict";var i={};n.exports=function(t,e){e(t(i),i)}}});

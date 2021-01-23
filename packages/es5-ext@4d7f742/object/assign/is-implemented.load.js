@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/assign/is-implemented",{dependencies:[],factory:function(t,e,n){"use strict";n.exports=function(){var t,e=Object.assign;return"function"==typeof e&&(t={foo:"raz"},e(t,{bar:"dwa"},{trzy:"trzy"}),t.foo+t.bar+t.trzy==="razdwatrzy")}}});

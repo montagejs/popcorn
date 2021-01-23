@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/entries/shim",{dependencies:[],factory:function(e,n,r){"use strict";r.exports=function(e,n){n.deep(e({foo:"bar"}),[["foo","bar"]],"Object"),n.deep(e("raz"),[["0","r"],["1","a"],["2","z"]],"Primitive"),n["throws"](function(){e()},TypeError,"Undefined"),n["throws"](function(){e(null)},TypeError,"Undefined")}}});

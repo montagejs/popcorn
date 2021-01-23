@@ -1,0 +1,1 @@
+"use strict";var ensureStringifiable=require("../../object/validate-stringifiable-value");module.exports=function(){var e=ensureStringifiable(this);return e.charAt(0).toLowerCase()+e.slice(1)};

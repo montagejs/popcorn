@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/find/shim",{dependencies:[],factory:function(t,e,i){"use strict";e.__generic=function(t,e){var i=0,n={},s=Object(this);e(t.call(s,function(t,n,s){e(t,this[n],"Value"),e(n,i++,"Index"),e(s,this,"Scope")},s),void 0,"Falsy result"),e(i,3),i=-1,e(t.call(this,function(){return++i?n:null},this),this[1],"Truthy result"),e(i,1)}}});

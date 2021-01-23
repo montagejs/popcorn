@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/to-array",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){var n={1:1,2:2,3:3},o={},r=e(n,function(e,r,c){return t(c,n,"Self"),t(this,o,"Scope"),e+Number(r)},o);t.deep(r,[2,4,6]),e(n).sort().forEach(function(e){t.deep(e,[e[0],n[e[0]]],"Default")})}}});

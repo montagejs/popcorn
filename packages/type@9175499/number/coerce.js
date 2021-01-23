@@ -1,0 +1,1 @@
+"use strict";var isValue=require("../value/is");module.exports=function(u){if(!isValue(u))return null;try{u=+u}catch(r){return null}return isNaN(u)?null:u};

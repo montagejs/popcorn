@@ -1,0 +1,1 @@
+"use strict";module.exports={__generic:function(t,e){e(t.call(this).length,3)},"":function(t,e){var r,n,c={},l={},a={};r=[1,2,c,3,1,"raz","1",l,c,"trzy",a,"raz"],e.not(n=t.call(r),r,"Returns different object"),e.deep(n,[1,2,c,3,"raz","1",l,"trzy",a],"Result")}};

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/safe-to-string",{dependencies:[],factory:function(t,n,e){"use strict";e.exports=function(t,n){n(t(),"undefined"),n(t(null),"null"),n(t(10),"10"),n(t("str"),"str"),n(t({toString:function(){return"miszka"}}),"miszka"),"function"==typeof Symbol&&n(t(Symbol()),"Symbol()"),n(t(Object.create(null)),"<Non-coercible to string value>")}}});

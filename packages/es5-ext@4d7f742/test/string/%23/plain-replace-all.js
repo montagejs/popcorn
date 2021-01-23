@@ -1,0 +1,1 @@
+"use strict";module.exports=function(a,r){r(a.call("razdwatrzy","dwa","olera"),"razoleratrzy","Basic"),r(a.call("razdwatrzy","dwa","ole$&a"),"razole$&atrzy","Inserts"),r(a.call("razdwa","ola","sdfs"),"razdwa","No replace"),r(a.call("$raz$$dwa$trzy$","$","&&"),"&&raz&&&&dwa&&trzy&&","Multi"),r(a.call("$raz$$dwa$$$$trzy$","$$","&"),"$raz&dwa&&trzy$","Multi many chars")};

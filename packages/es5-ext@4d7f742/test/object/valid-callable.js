@@ -1,0 +1,1 @@
+"use strict";module.exports=function(n,t){var o=function(){};t(n(o),o,"Function"),t["throws"](function(){n({})},"Not Function")};

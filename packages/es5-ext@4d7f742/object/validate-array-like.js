@@ -1,0 +1,1 @@
+"use strict";var isArrayLike=require("./is-array-like");module.exports=function(r){if(isArrayLike(r))return r;throw new TypeError(r+" is not array-like value")};

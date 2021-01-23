@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/plain-replace-all",{dependencies:["../../object/valid-value"],factory:function(e,n,t){"use strict";var i=e("../../object/valid-value");t.exports=function(e,n){var t,r,l,a=0,c=String(i(this));for(e=String(e),n=String(n),r=e.length,l=n.length;(t=c.indexOf(e,a))!==-1;)c=c.slice(0,t)+n+c.slice(t+r),a=t+l;return c}}});

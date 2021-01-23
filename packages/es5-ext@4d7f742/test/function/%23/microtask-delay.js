@@ -1,0 +1,1 @@
+"use strict";var nextTick=require("next-tick");module.exports=function(t,n,e){var i=!1,c=[{},{}],u={},o=t.call(function(){n(this,u),n.deep(arguments,c),i=!0});nextTick(function(){n(i,!1),o.apply(u,c),n(i,!1),nextTick(function(){n(i,!0),e()})})};

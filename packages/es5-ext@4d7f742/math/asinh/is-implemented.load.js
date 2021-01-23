@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/asinh/is-implemented",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(){var e=Math.asinh;return"function"==typeof e&&1.4436354751788103===e(2)}}});

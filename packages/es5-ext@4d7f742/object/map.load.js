@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/map",{dependencies:["./valid-callable","./for-each"],factory:function(e,a,c){"use strict";var n=e("./valid-callable"),t=e("./for-each"),l=Function.prototype.call;c.exports=function(e,a){var c={},o=arguments[2];return n(a),t(e,function(e,n,t,r){c[n]=l.call(a,o,e,n,t,r)}),c}}});

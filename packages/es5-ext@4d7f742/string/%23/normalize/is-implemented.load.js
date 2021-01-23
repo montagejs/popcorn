@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/normalize/is-implemented",{dependencies:[],factory:function(e,n,i){"use strict";var t="æøåäüö";i.exports=function(){return"function"==typeof t.normalize&&"æøåäüö"===t.normalize("NFKD")}}});

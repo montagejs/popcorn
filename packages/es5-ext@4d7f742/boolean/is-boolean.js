@@ -1,0 +1,1 @@
+"use strict";var objToString=Object.prototype.toString,id=objToString.call(!0);module.exports=function(o){return"boolean"==typeof o||"object"==typeof o&&(o instanceof Boolean||objToString.call(o)===id)};

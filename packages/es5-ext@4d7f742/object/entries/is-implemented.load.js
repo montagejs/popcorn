@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/entries/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){try{return"foo"===Object.entries({foo:12})[0][0]}catch(e){return!1}}}});

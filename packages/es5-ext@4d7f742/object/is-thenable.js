@@ -1,0 +1,1 @@
+"use strict";var isCallable=require("./is-callable"),isObject=require("./is-object");module.exports=function(e){return isObject(e)&&isCallable(e.then)};

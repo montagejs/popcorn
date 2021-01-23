@@ -1,0 +1,1 @@
+montageDefine("f19da95","test/ext/copy",{dependencies:["es5-ext/array/to-array","../../"],factory:function(e,t,a){"use strict";var r=e("es5-ext/array/to-array"),n=e("../../");a.exports=function(e,t){var a,o=["raz",2,!0],c=new n(o);a=e.call(c),t.not(a,c,"Copy"),t.deep(r(a),o,"Content")}}});

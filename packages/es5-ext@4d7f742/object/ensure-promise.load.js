@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/ensure-promise",{dependencies:["../safe-to-string","./is-promise"],factory:function(e,r,s){"use strict";var i=e("../safe-to-string"),o=e("./is-promise");s.exports=function(e){if(!o(e))throw new TypeError(i(e)+" is not a promise");return e}}});

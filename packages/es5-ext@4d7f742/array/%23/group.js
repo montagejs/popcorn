@@ -1,0 +1,1 @@
+"use strict";var callable=require("../../object/valid-callable"),value=require("../../object/valid-value"),forEach=Array.prototype.forEach,apply=Function.prototype.apply;module.exports=function(a){var l;return value(this),callable(a),l=Object.create(null),forEach.call(this,function(e){var r=apply.call(a,this,arguments);l[r]||(l[r]=[]),l[r].push(e)},arguments[1]),l};

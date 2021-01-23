@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/replace/shim",{dependencies:["../../valid-reg-exp"],factory:function(e,r,i){"use strict";var t=e("../../valid-reg-exp");i.exports=function(e,r){return t(this),String(e).replace(this,r)}}});

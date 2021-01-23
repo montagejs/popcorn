@@ -1,0 +1,1 @@
+"use strict";module.exports=function(r,o){o["throws"](function(){r(void 0)},TypeError,"Undefined"),o(r(null),0,"Null"),o(r(2),2,"Number"),o["throws"](function(){r(-2)},TypeError,"Negative"),o["throws"](function(){r(2.34)},TypeError,"Float"),o(r("23"),23,"Numeric string"),o["throws"](function(){r(NaN)},TypeError,"NaN"),o["throws"](function(){r(1/0)},TypeError,"Infinity")};

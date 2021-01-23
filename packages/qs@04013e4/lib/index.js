@@ -1,0 +1,1 @@
+var Stringify=require("./stringify"),Parse=require("./parse"),internals={};module.exports={stringify:Stringify,parse:Parse};

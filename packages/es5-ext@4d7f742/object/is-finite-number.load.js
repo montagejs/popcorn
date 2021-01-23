@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/is-finite-number",{dependencies:["./is-number-value"],factory:function(e,n,i){"use strict";var t=e("./is-number-value");i.exports=function(e){return t(e)&&isFinite(e)}}});

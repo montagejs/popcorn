@@ -1,0 +1,1 @@
+montageDefine("f19da95","test/ext/some",{dependencies:["../../"],factory:function(e,l,n){"use strict";var o=e("../../");n.exports=function(e,l){l(e.call(new o,Boolean),!1,"Empty set"),l(e.call(new o([2,3,4]),Boolean),!0,"All true"),l(e.call(new o([0,!1,4]),Boolean),!0,"Some false"),l(e.call(new o([0,!1,null]),Boolean),!1,"All false")}}});

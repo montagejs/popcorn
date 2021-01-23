@@ -1,0 +1,1 @@
+"use strict";var isObject=require("../object/is");module.exports=function(t){if(!isObject(t))return!1;try{return!!t.constructor&&t.constructor.prototype===t}catch(r){return!1}};

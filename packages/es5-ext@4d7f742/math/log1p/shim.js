@@ -1,0 +1,1 @@
+"use strict";var log=Math.log;module.exports=function(e){return isNaN(e)?NaN:(e=Number(e),e<-1?NaN:e===-1?-(1/0):0===e?e:e===1/0?1/0:e>-1e-8&&e<1e-8?e-e*e/2:log(1+e))};

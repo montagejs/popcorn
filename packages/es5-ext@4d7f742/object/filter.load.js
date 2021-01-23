@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/filter",{dependencies:["./valid-callable","./for-each"],factory:function(e,a,c){"use strict";var t=e("./valid-callable"),l=e("./for-each"),n=Function.prototype.call;c.exports=function(e,a){var c={},o=arguments[2];return t(a),l(e,function(e,t,l,r){n.call(a,o,e,t,l,r)&&(c[t]=l[t])}),c}}});

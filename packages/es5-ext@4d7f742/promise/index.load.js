@@ -1,0 +1,1 @@
+montageDefine("4d7f742","promise/index",{dependencies:["./#","./lazy"],factory:function(e,n,i){"use strict";i.exports={"#":e("./#"),lazy:e("./lazy")}}});

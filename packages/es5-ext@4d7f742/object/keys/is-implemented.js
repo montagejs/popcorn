@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){try{return Object.keys("primitive"),!0}catch(t){return!1}};

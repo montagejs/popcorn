@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/find-index/implement",{dependencies:["../../../../array/#/find-index/is-implemented"],factory:function(e,n,i){"use strict";var t=e("../../../../array/#/find-index/is-implemented");i.exports=function(e){e(t(),!0)}}});

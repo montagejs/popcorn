@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/validate-array-like",{dependencies:["./is-array-like"],factory:function(e,r,a){"use strict";var i=e("./is-array-like");a.exports=function(e){if(i(e))return e;throw new TypeError(e+" is not array-like value")}}});

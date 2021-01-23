@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/index",{dependencies:["./is-sticky","./is-unicode","./match","./replace","./search","./split"],factory:function(e,i,c){"use strict";c.exports={isSticky:e("./is-sticky"),isUnicode:e("./is-unicode"),match:e("./match"),replace:e("./replace"),search:e("./search"),split:e("./split")}}});

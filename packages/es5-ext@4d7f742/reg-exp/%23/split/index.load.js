@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/split/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,t){"use strict";t.exports=e("./is-implemented")()?RegExp.prototype.split:e("./shim")}});

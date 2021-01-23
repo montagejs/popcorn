@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/clear",{dependencies:[],factory:function(e,a,r){"use strict";r.exports=function(e,a){var r=[1,2,{},4];a(e.call(r),r,"Returns same array"),a.deep(r,[],"Empties array")}}});

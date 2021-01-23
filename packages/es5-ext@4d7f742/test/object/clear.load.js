@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/clear",{dependencies:["../../object/is-empty"],factory:function(e,t,o){"use strict";var c=e("../../object/is-empty");o.exports=function(e,t){var o={};t(e(o),o,"Empty: Returns same object"),t(c(o),!0,"Empty: Not changed"),o.foo="raz",o.bar="dwa",t(e(o),o,"Same object"),t(c(o),!0,"Emptied")}}});

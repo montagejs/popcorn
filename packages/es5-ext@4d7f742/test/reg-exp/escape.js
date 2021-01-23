@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){var r="(?:^te|er)s{2}t\\[raz]+$";e(RegExp("^"+t(r)+"$").test(r),!0)};

@@ -1,0 +1,1 @@
+montageDefine("668301b","test/auto-bind",{dependencies:["../"],factory:function(e,t,n){"use strict";var r=e("../");n.exports=function(e,t){var n=Object.defineProperties({},e({bar:r(function(){return this===n}),bar2:r(function(){return this})}));t.deep([n.bar(),n.bar2()],[!0,n])}}});

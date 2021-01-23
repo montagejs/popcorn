@@ -1,0 +1,1 @@
+"use strict";var findKey=require("./find-key"),isValue=require("./is-value");module.exports=function(e,i){var r=findKey.apply(this,arguments);return isValue(r)?e[r]:r};

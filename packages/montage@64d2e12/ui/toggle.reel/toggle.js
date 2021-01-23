@@ -1,0 +1,1 @@
+var CheckControl=require("../check-control").CheckControl,Toggle=exports.Toggle=CheckControl.specialize();

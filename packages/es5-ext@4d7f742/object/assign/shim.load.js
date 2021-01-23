@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/assign/shim",{dependencies:["../keys","../valid-value"],factory:function(e,t,a){"use strict";var n=e("../keys"),i=e("../valid-value"),c=Math.max;a.exports=function(e,t){var a,o,r,f=c(arguments.length,2);for(e=Object(i(e)),r=function(n){try{e[n]=t[n]}catch(i){a||(a=i)}},o=1;o<f;++o)t=arguments[o],n(t).forEach(r);if(void 0!==a)throw a;return e}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/safe-traverse",{dependencies:["./valid-value","./is-value"],factory:function(e,r,t){"use strict";var a=e("./valid-value"),n=e("./is-value");t.exports=function(e){var r,t=1;if(a(e),r=arguments.length-1,!r)return e;for(;t<r;)if(e=e[arguments[t++]],!n(e))return;return e[arguments[t]]}}});

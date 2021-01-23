@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,i){i(e(void 0),!1,"Undefined"),i(e(null),!0,"Null"),i(e(2),!0,"Number"),i(e(-2),!1,"Negative"),i(e(2.34),!1,"Float"),i(e("23"),!0,"Numeric string"),i(e(NaN),!1,"NaN"),i(e(1/0),!1,"Infinity")};

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","date/%23/floor-day",{dependencies:[],factory:function(t,e,o){"use strict";var n=Date.prototype.setHours;o.exports=function(){return n.call(this,0,0,0,0),this}}});

@@ -1,0 +1,1 @@
+"use strict";var callable=require("./valid-callable"),forEach=require("./for-each"),call=Function.prototype.call;module.exports=function(l,a){var c={},r=arguments[2];return callable(a),forEach(l,function(l,e,o,t){call.call(a,r,l,e,o,t)&&(c[e]=o[e])}),c};

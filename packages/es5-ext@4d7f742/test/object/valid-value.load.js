@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/valid-value",{dependencies:["../../number/is-nan"],factory:function(n,e,t){"use strict";var a=n("../../number/is-nan");t.exports=function(n,e){var t;e(n(0),0,"0"),e(n(!1),!1,"false"),e(n(""),"","''"),e(a(n(NaN)),!0,"NaN"),e(n(t={}),t,"{}"),e["throws"](function(){n()},"Undefined"),e["throws"](function(){n(null)},"null")}}});

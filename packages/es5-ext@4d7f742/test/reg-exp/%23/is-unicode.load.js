@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/reg-exp/%23/is-unicode",{dependencies:[],factory:function(e,a,c){"use strict";c.exports=function(e,a){var c;a(e.call(/raz/),!1,"Normal"),a(e.call(/raz/g),!1,"Global");try{c=new RegExp("raz","u")}catch(n){}c&&a(e.call(c),!0,"Unicode")}}});

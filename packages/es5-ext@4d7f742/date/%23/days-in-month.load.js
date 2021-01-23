@@ -1,0 +1,1 @@
+montageDefine("4d7f742","date/%23/days-in-month",{dependencies:[],factory:function(e,t,a){"use strict";var n=Date.prototype.getMonth;a.exports=function(){switch(n.call(this)){case 1:return this.getFullYear()%4?28:29;case 3:case 5:case 8:case 10:return 30;default:return 31}}}});

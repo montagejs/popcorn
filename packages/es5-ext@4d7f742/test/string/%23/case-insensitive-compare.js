@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,a){a(e.call("AA","aa"),0,"Same"),a.ok(e.call("Amber","zebra")<0,"Less"),a.ok(e.call("Zebra","amber")>0,"Greater")};

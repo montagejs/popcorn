@@ -1,0 +1,1 @@
+"use strict";var str="abc𝌆def";module.exports=function(){return"function"==typeof str.codePointAt&&119558===str.codePointAt(3)};

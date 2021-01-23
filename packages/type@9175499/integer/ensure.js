@@ -1,0 +1,1 @@
+"use strict";var resolveException=require("../lib/resolve-exception"),coerce=require("./coerce");module.exports=function(e){var r=coerce(e);return null!==r?r:resolveException(e,"%v is not an integer",arguments[1])};

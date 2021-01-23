@@ -1,0 +1,1 @@
+"use strict";var o={1:1,2:2,3:3};module.exports=function(t,n){var i={},r=0;t(o,function(t,n){return i[n]=t,!1}),n(JSON.stringify(i),JSON.stringify(o),"Iterates"),n(t(o,function(){return++r,!0}),!0,"Succeeds"),n(r,1,"Stops iteration after condition is met"),n(t(o,function(){return!1}),!1,"Fails")};

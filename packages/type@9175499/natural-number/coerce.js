@@ -1,0 +1,1 @@
+"use strict";var coerceToInteger=require("../integer/coerce");module.exports=function(e){return e=coerceToInteger(e),e&&e<0?null:e};

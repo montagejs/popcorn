@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/function/valid-function",{dependencies:[],factory:function(n,t,o){"use strict";o.exports=function(n,t){var o=function(){};t(n(o),o,"Function"),o=new Function,t(n(o),o,"Function"),t["throws"](function(){n({})},"Object"),t["throws"](function(){n(/re/)},"RegExp"),t["throws"](function(){n({call:function(){return 20}})},"Plain object")}}});

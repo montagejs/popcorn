@@ -1,0 +1,1 @@
+"use strict";var str="æøåäüö";module.exports=function(){return"function"==typeof str.normalize&&"æøåäüö"===str.normalize("NFKD")};

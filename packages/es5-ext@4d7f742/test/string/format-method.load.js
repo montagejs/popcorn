@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/format-method",{dependencies:[],factory:function(a,t,e){"use strict";e.exports=function(a,t){a=a({a:"A",aa:"B",ab:"C",b:"D",c:function(){return++this.a}}),t(a.call({a:0}," %a%aab%abb%b\\%aa%ab%c%c ")," ABbCbD%aaC12 ")}}});

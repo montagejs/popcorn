@@ -1,0 +1,1 @@
+"use strict";var objToString=Object.prototype.toString,id=objToString.call(function(){return arguments}());module.exports=function(t){return objToString.call(t)===id};

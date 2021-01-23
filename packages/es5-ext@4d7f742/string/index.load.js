@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/index",{dependencies:["./#","./format-method","./from-code-point","./is-string","./random","./random-uniq","./raw"],factory:function(o,n,r){"use strict";r.exports={"#":o("./#"),formatMethod:o("./format-method"),fromCodePoint:o("./from-code-point"),isString:o("./is-string"),random:o("./random"),randomUniq:o("./random-uniq"),raw:o("./raw")}}});

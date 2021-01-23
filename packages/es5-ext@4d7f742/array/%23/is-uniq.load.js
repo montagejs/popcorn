@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/is-uniq",{dependencies:["./e-index-of"],factory:function(e,n,t){"use strict";var r,i=e("./e-index-of"),o=Array.prototype.every;r=function(e,n){return i.call(this,e)===n},t.exports=function(){return o.call(this,r,this)}}});

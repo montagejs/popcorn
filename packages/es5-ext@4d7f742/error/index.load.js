@@ -1,0 +1,1 @@
+montageDefine("4d7f742","error/index",{dependencies:["./#","./custom","./is-error","./valid-error"],factory:function(r,e,o){"use strict";o.exports={"#":r("./#"),custom:r("./custom"),isError:r("./is-error"),validError:r("./valid-error")}}});

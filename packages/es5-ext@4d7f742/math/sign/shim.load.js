@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/sign/shim",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e){return e=Number(e),isNaN(e)||0===e?e:e>0?1:-1}}});

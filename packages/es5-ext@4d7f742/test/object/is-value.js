@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,o){o(t(),!1),o(t(void 0),!1),o(t(null),!1),o(t(NaN),!0),o(t(0),!0),o(t(!1),!0),o(t("null"),!0),o(t(""),!0),o(t({}),!0),o(t(Object.prototype),!0)};

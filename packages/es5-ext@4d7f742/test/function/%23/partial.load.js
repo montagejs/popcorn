@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/function/%23/partial",{dependencies:["../../../array/to-array"],factory:function(r,t,a){"use strict";var e=r("../../../array/to-array"),n=function(){return e(arguments)};a.exports=function(r,t){t.deep(r.call(n,1)(2,3),[1,2,3])}}});

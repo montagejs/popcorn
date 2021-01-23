@@ -1,0 +1,1 @@
+"use strict";var d=require("../");module.exports=function(r,e){var t=Object.defineProperties({},r({bar:d(function(){return this===t}),bar2:d(function(){return this})}));e.deep([t.bar(),t.bar2()],[!0,t])};

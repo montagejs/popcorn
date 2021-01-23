@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/starts-with/is-implemented",{dependencies:[],factory:function(t,r,e){"use strict";var s="razdwatrzy";e.exports=function(){return"function"==typeof s.startsWith&&(s.startsWith("trzy")===!1&&s.startsWith("raz")===!0)}}});

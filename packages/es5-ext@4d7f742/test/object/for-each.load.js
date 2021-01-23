@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/for-each",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){var n={raz:1,dwa:2,trzy:3},o={};t(e(n,function(e,t){o[t]=e}),void 0,"Return"),t.deep(o,n)}}});

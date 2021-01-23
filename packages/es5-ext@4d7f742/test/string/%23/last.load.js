@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/last",{dependencies:[],factory:function(t,e,n){"use strict";n.exports=function(t,e){e(t.call(""),null,"Null"),e(t.call("abcdef"),"f","String")}}});

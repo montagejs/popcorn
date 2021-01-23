@@ -1,0 +1,1 @@
+montageDefine("9175499","prototype/is",{dependencies:["../object/is"],factory:function(t,r,e){"use strict";var o=t("../object/is");e.exports=function(t){if(!o(t))return!1;try{return!!t.constructor&&t.constructor.prototype===t}catch(r){return!1}}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/get-property-names",{dependencies:["../array/#/uniq","./valid-value"],factory:function(e,t,r){"use strict";var a=e("../array/#/uniq"),n=e("./valid-value"),o=Array.prototype.push,p=Object.getOwnPropertyNames,c=Object.getPrototypeOf;r.exports=function(e){var t;for(e=Object(n(e)),t=p(e);e=c(e);)o.apply(t,p(e));return a.call(t)}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/date/valid-date",{dependencies:[],factory:function(t,e,n){"use strict";n.exports=function(t,e){var n=new Date;e(t(n),n,"Date"),e["throws"](function(){t({})},"Object"),e["throws"](function(){t({valueOf:function(){return 20}})},"Number object")}}});

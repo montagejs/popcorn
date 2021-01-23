@@ -1,0 +1,1 @@
+"use strict";module.exports={__generic:function(e,t){var n,i=0;n=Object(this),t.deep(e.call(n,function(e,n,c){return t(e,this[n],"Value"),t(n,i++,"Index"),t(c,this,"Scope"),n},n),{0:[this[0]],1:[this[1]],2:[this[2]]})},"":function(e,t){var n;n=e.call([2,3,3,4,5,6,7,7,23,45,34,56],function(e){return e%2?"odd":"even"}),t.deep(n.odd,[3,3,5,7,7,23,45]),t.deep(n.even,[2,4,6,34,56])}};

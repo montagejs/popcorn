@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/repeat/index",{dependencies:["./is-implemented","./shim"],factory:function(e,t,i){"use strict";i.exports=e("./is-implemented")()?String.prototype.repeat:e("./shim")}});

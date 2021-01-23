@@ -1,0 +1,1 @@
+"use strict";var validTypes={object:!0,symbol:!0};module.exports=function(){var t;if("function"!=typeof Symbol)return!1;t=Symbol("test symbol");try{String(t)}catch(o){return!1}return!!validTypes[typeof Symbol.iterator]&&(!!validTypes[typeof Symbol.toPrimitive]&&!!validTypes[typeof Symbol.toStringTag])};

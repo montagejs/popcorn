@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/reg-exp/%23/unicode/implement",{dependencies:["../../../../reg-exp/#/unicode/is-implemented"],factory:function(e,n,i){"use strict";var t=e("../../../../reg-exp/#/unicode/is-implemented");i.exports=function(e){e(t(),!0)}}});

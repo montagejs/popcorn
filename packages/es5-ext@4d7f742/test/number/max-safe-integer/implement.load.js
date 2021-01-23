@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/max-safe-integer/implement",{dependencies:["../../../number/max-safe-integer/is-implemented"],factory:function(e,n,t){"use strict";var i=e("../../../number/max-safe-integer/is-implemented");t.exports=function(e){e(i(),!0)}}});

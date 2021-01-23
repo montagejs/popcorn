@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/valid-reg-exp",{dependencies:["./is-reg-exp"],factory:function(e,r,n){"use strict";var t=e("./is-reg-exp");n.exports=function(e){if(!t(e))throw new TypeError(e+" is not a RegExp object");return e}}});

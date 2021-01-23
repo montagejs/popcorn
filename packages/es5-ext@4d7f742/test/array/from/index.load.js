@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/from/index",{dependencies:["./shim"],factory:function(e,t,i){"use strict";i.exports=e("./shim")}});

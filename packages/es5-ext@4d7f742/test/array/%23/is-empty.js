@@ -1,0 +1,1 @@
+"use strict";module.exports=function(l,t){var a={};t(l.call([]),!0,"Empty"),t(l.call({length:0}),!0,"Empty lists"),t(l.call([1,a,"raz"]),!1,"Non empty")};

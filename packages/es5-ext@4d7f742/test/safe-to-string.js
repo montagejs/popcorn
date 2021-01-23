@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,n){n(t(),"undefined"),n(t(null),"null"),n(t(10),"10"),n(t("str"),"str"),n(t({toString:function(){return"miszka"}}),"miszka"),"function"==typeof Symbol&&n(t(Symbol()),"Symbol()"),n(t(Object.create(null)),"<Non-coercible to string value>")};

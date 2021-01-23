@@ -1,0 +1,1 @@
+"use strict";var replace=String.prototype.replace,re=/([A-Z])/g;module.exports=function(){var e=replace.call(this,re,"-$1").toLowerCase();return"-"===e[0]&&(e=e.slice(1)),e};

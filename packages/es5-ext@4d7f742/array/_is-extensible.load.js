@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/_is-extensible",{dependencies:["./_sub-array-dummy"],factory:function(e,r,n){"use strict";n.exports=function(){var r,n=e("./_sub-array-dummy");return!!n&&(r=new n,!!Array.isArray(r)&&(r instanceof n&&(r[34]="foo",35===r.length)))}()}});

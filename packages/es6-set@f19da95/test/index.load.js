@@ -1,0 +1,1 @@
+montageDefine("f19da95","test/index",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e,n){n(new e(["raz","dwa"]).size,2)}}});

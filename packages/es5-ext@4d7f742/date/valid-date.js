@@ -1,0 +1,1 @@
+"use strict";var isDate=require("./is-date");module.exports=function(e){if(!isDate(e))throw new TypeError(e+" is not valid Date object");return e};

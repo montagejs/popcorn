@@ -1,0 +1,1 @@
+"use strict";var keys=require("./keys");module.exports=function(e){var r;if(keys(e).forEach(function(e){try{delete this[e]}catch(t){r||(r=t)}},e),void 0!==r)throw r;return e};

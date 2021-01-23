@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/reg-exp/%23/sticky/implement",{dependencies:["../../../../reg-exp/#/sticky/is-implemented"],factory:function(e,t,i){"use strict";var n=e("../../../../reg-exp/#/sticky/is-implemented");i.exports=function(e){e(n(),!0)}}});

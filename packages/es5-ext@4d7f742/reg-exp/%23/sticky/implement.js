@@ -1,0 +1,1 @@
+"use strict";var isSticky=require("../is-sticky");require("./is-implemented")()||Object.defineProperty(RegExp.prototype,"sticky",{configurable:!0,enumerable:!1,get:isSticky});

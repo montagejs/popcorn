@@ -1,0 +1,1 @@
+"use strict";module.exports=function(a,b){a=a({a:"A",aa:"B",ab:"C",b:"D",c:function(){return++this.a}}),b(a.call({a:0}," %a%aab%abb%b\\%aa%ab%c%c ")," ABbCbD%aaC12 ")};

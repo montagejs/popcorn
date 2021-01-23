@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,N){N(t(2),!0,"Number"),N(t(2.34),!1,"Float"),N(t("23"),!1,"Not numeric"),N(t(NaN),!1,"NaN"),N(t(1/0),!1,"Infinity")};

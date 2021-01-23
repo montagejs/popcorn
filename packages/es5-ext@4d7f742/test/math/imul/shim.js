@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,o){o(e(),0,"No arguments"),o(e(0,0),0,"Zeros"),o(e(2,4),8,"#1"),o(e(-1,8),-8,"#2"),o(e(4294967294,5),-10,"#3")};

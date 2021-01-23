@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/_pack-ieee754",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t.deep(e(1.337,8,23),[63,171,34,209])}}});

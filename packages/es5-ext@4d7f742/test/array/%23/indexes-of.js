@@ -1,0 +1,1 @@
+"use strict";module.exports={__generic:function(e,l){l.deep(e.call(this,this[1]),[1])},"":function(e,l){var c={};l.deep(e.call([1,3,5,3,5],6),[],"No result"),l.deep(e.call([1,3,5,1,3,5,1],1),[0,3,6],"Some results"),l.deep(e.call([],c),[],"Empty array"),l.deep(e.call([c,3,{},c,3,5,c],c),[0,3,6],"Search for object")}};

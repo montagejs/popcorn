@@ -1,0 +1,1 @@
+montageDefine("4d7f742","date/ensure-time-value",{dependencies:["../safe-to-string","../number/to-integer","./is-time-value"],factory:function(e,t,i){"use strict";var n=e("../safe-to-string"),r=e("../number/to-integer"),a=e("./is-time-value");i.exports=function(e){if(a(e))return r(e);throw new TypeError(n(e)+" is not a valid time value")}}});

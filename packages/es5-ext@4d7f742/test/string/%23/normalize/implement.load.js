@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/normalize/implement",{dependencies:["../../../../string/#/normalize/is-implemented"],factory:function(e,n,i){"use strict";var t=e("../../../../string/#/normalize/is-implemented");i.exports=function(e){e(t(),!0)}}});

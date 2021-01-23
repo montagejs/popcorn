@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/log1p/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,t){"use strict";t.exports=e("./is-implemented")()?Math.log1p:e("./shim")}});

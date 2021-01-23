@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){var r,o,c={first:1,second:4};c=Object.create(c,{third:{value:null}}),c.first=2,c=Object.create(c),c.fourth=3,r=t(c),r.sort(),o=["first","second","third","fourth"].concat(Object.getOwnPropertyNames(Object.prototype)),o.sort(),e.deep(r,o)};

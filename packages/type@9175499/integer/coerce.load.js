@@ -1,0 +1,1 @@
+montageDefine("9175499","integer/coerce",{dependencies:["../finite/coerce"],factory:function(e,t,n){"use strict";var c=e("../finite/coerce"),r=Math.abs,i=Math.floor;n.exports=function(e){return e=c(e),e?(e>0?1:-1)*i(r(e)):e}}});

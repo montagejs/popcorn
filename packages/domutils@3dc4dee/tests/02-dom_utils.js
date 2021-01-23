@@ -1,0 +1,1 @@
+var handler=new(require("domhandler"));new(require("htmlparser2").Parser)(handler).parseComplete(Array(21).join("<?xml><tag1 id='asdf'> <script>text</script> <!-- comment --> <tag2> text </tag1>"));var dom=handler.dom;exports.dir="/DomUtils/",exports.test=function(e,r){r(null,e.getElements(dom)),r(null,e.getByFunction(dom))};

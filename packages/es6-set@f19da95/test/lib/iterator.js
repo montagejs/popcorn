@@ -1,0 +1,1 @@
+"use strict";var Set=require("../../polyfill"),toArray=require("es5-ext/array/to-array");module.exports=function(e,r){var a=new Set(["raz","dwa"]);r.deep(toArray(new e(a)),["raz","dwa"],"Default"),r.deep(toArray(new e(a,"key+value")),[["raz","raz"],["dwa","dwa"]],"Key & Value"),r.deep(toArray(new e(a,"value")),["raz","dwa"],"Other")};

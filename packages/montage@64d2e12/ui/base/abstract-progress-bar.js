@@ -1,0 +1,1 @@
+var AbstractControl=require("./abstract-control").AbstractControl,AbstractProgressBar=exports.AbstractProgressBar=AbstractControl.specialize({constructor:{value:function r(){if(this.constructor===r)throw new Error("AbstractProgressBar cannot be instantiated.")}}});AbstractProgressBar.addAttributes({value:{dataType:"number"},max:{dataType:"number"}});

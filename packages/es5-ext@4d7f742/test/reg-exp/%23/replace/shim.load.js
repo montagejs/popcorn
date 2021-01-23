@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/reg-exp/%23/replace/shim",{dependencies:[],factory:function(e,o,r){"use strict";r.exports=function(e,o){o(e.call(/foo/,"foobar","mar"),"marbar")}}});

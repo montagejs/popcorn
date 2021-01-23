@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var e,o,t=["foo",1];return"function"==typeof t.values&&(!!(e=t.values())&&("function"==typeof e.next&&(o=e.next(),!!o&&("foo"===o.value&&o.done===!1))))};

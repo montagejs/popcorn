@@ -1,0 +1,1 @@
+montageDefine("594c740","is-implemented",{dependencies:[],factory:function(t,e,o){"use strict";var r={object:!0,symbol:!0};o.exports=function(){var t;if("function"!=typeof Symbol)return!1;t=Symbol("test symbol");try{String(t)}catch(e){return!1}return!!r[typeof Symbol.iterator]&&(!!r[typeof Symbol.toPrimitive]&&!!r[typeof Symbol.toStringTag])}}});

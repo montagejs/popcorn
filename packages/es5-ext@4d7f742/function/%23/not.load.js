@@ -1,0 +1,1 @@
+montageDefine("4d7f742","function/%23/not",{dependencies:["../../object/valid-callable","../_define-length"],factory:function(e,n,t){"use strict";var i=e("../../object/valid-callable"),l=e("../_define-length"),c=Function.prototype.apply;t.exports=function(){var e=i(this);return l(function(){return!c.call(e,this,arguments)},e.length)}}});

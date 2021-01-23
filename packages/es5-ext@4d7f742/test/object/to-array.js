@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){var o={1:1,2:2,3:3},r={},u=e(o,function(e,u,n){return t(n,o,"Self"),t(this,r,"Scope"),e+Number(u)},r);t.deep(u,[2,4,6]),e(o).sort().forEach(function(e){t.deep(e,[e[0],o[e[0]]],"Default")})};

@@ -1,0 +1,1 @@
+var Control=require("ui/control").Control,Anchor=exports.Anchor=Control.specialize({blur:{value:function(){this._element.blur()}},focus:{value:function(){this._element.focus()}},hasTemplate:{value:!1}});Anchor.addAttributes({textContent:null,href:null,hreflang:null,media:null,rel:null,target:null,type:null});

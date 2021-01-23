@@ -1,0 +1,1 @@
+montageDefine("9175499","array/ensure",{dependencies:["../lib/resolve-exception","./is"],factory:function(e,n,r){"use strict";var i=e("../lib/resolve-exception"),t=e("./is");r.exports=function(e){return t(e)?e:i(e,"%v is not an array object",arguments[1])}}});

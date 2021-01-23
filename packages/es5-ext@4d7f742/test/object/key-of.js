@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,r){var e={},o={},a={foo:"bar",raz:e,trzy:"cztery",five:"6"};r(t(a,"bar"),"foo","First property"),r(t(a,6),null,"Primitive that's not there"),r(t(a,e),"raz","Object"),r(t(a,o),null,"Object that's not there"),r(t(a,"6"),"five","Last property")};

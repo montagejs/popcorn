@@ -1,0 +1,1 @@
+"use strict";var ensureError=require("es5-ext/error/valid-error"),ensureObject=require("es5-ext/object/valid-object"),hasOwnProperty=Object.prototype.hasOwnProperty;module.exports=function(e){if(ensureObject(this)&&ensureError(e),!hasOwnProperty.call(ensureObject(this),"__ee__"))throw e;if(!this.__ee__.error)throw e;this.emit("error",e)};

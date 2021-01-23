@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/cbrt/shim",{dependencies:[],factory:function(e,t,i){"use strict";var n=Math.pow;i.exports=function(e){return isNaN(e)?NaN:(e=Number(e),0===e?e:isFinite(e)?e<0?-n(-e,1/3):n(e,1/3):e)}}});

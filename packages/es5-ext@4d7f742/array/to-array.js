@@ -1,0 +1,1 @@
+"use strict";var from=require("./from"),isArray=Array.isArray;module.exports=function(r){return isArray(r)?r:from(r)};

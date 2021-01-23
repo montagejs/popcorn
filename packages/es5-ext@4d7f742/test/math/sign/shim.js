@@ -1,0 +1,1 @@
+"use strict";var is=require("../../../object/is");module.exports=function(i,e){e(is(i(0),0),!0,"+0"),e(is(i(-0),-0),!0,"-0"),e(i({}),NaN,!0,"NaN"),e(i(-234234234),-1,"Negative"),e(i(234234234),1,"Positive")};

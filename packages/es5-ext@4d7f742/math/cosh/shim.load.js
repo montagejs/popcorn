@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/cosh/shim",{dependencies:[],factory:function(e,t,i){"use strict";var n=Math.exp;i.exports=function(e){return isNaN(e)?NaN:(e=Number(e),0===e?1:isFinite(e)?(n(e)+n(-e))/2:1/0)}}});

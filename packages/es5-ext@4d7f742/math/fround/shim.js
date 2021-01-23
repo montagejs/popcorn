@@ -1,0 +1,1 @@
+"use strict";var toFloat32;toFloat32="undefined"==typeof Float32Array?function(){var e=require("../_pack-ieee754"),r=require("../_unpack-ieee754");return function(t){return r(e(t,8,23),8,23)}}():function(){var e=new Float32Array(1);return function(r){return e[0]=r,e[0]}}(),module.exports=function(e){return isNaN(e)?NaN:(e=Number(e),0===e?e:isFinite(e)?toFloat32(e):e)};

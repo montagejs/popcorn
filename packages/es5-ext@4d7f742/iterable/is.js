@@ -1,0 +1,1 @@
+"use strict";var iteratorSymbol=require("es6-symbol").iterator,isValue=require("../object/is-value"),isArrayLike=require("../object/is-array-like");module.exports=function(e){return!!isValue(e)&&("function"==typeof e[iteratorSymbol]||isArrayLike(e))};

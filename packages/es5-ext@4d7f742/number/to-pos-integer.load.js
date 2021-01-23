@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/to-pos-integer",{dependencies:["./to-integer"],factory:function(e,t,n){"use strict";var r=e("./to-integer"),o=Math.max;n.exports=function(e){return o(0,r(e))}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/set-prototype-of/index",{dependencies:["./is-implemented","./shim"],factory:function(e,t,i){"use strict";i.exports=e("./is-implemented")()?Object.setPrototypeOf:e("./shim")}});

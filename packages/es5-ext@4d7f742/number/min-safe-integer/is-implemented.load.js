@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/min-safe-integer/is-implemented",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(){return"number"==typeof Number.MIN_SAFE_INTEGER}}});

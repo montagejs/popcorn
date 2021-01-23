@@ -1,0 +1,1 @@
+"use strict";var value=require("./valid-value"),mixin=require("./mixin"),getPrototypeOf=Object.getPrototypeOf;module.exports=function(t,e){if(t=Object(value(t)),e=Object(value(e)),t===e)return t;for(var r=[];e&&!isPrototypeOf.call(e,t);)r.unshift(e),e=getPrototypeOf(e);var i;if(r.forEach(function(e){try{mixin(t,e)}catch(r){i=r}}),i)throw i;return t};

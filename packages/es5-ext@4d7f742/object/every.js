@@ -1,0 +1,1 @@
+"use strict";module.exports=require("./_iterate")("every",!0);

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","iterable/validate-object",{dependencies:["../object/is-object","./is"],factory:function(e,t,i){"use strict";var o=e("../object/is-object"),r=e("./is");i.exports=function(e){if(r(e)&&o(e))return e;throw new TypeError(e+" is not an iterable or array-like object")}}});

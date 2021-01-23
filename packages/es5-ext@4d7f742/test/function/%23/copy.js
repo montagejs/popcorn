@@ -1,0 +1,1 @@
+"use strict";module.exports=function(o,t){var e,r="raz",a="dwa",n=function(o,t){return this+o+t+r+a},p={};n.prototype=p,n.foo="raz",e=o.call(n),t(e.length,n.length,"Length"),t(e.name,n.name,"Length"),t(e.call("marko","el","fe"),"markoelferazdwa","Body"),t(e.prototype,n.prototype,"Prototype"),t(e.foo,n.foo,"Custom property")};

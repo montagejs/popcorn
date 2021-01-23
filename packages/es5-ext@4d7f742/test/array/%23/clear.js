@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,r){var a=[1,2,{},4];r(e.call(a),a,"Returns same array"),r.deep(a,[],"Empties array")};

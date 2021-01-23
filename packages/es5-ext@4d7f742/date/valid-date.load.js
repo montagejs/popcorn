@@ -1,0 +1,1 @@
+montageDefine("4d7f742","date/valid-date",{dependencies:["./is-date"],factory:function(e,t,i){"use strict";var n=e("./is-date");i.exports=function(e){if(!n(e))throw new TypeError(e+" is not valid Date object");return e}}});

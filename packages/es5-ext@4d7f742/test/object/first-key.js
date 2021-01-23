@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,l){var o={},n=Object.create(null);l(e(o),null,"Normal: Empty"),l(e(n),null,"Null extension: Empty"),o.foo="raz",o.bar=343,l(["foo","bar"].indexOf(e(o))!==-1,!0,"Normal"),n.elo="foo",n.mar="wew",l(["elo","mar"].indexOf(e(n))!==-1,!0,"Null extension")};

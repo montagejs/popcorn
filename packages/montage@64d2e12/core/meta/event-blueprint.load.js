@@ -1,0 +1,1 @@
+montageDefine("64d2e12","core/meta/event-blueprint",{dependencies:["./event-descriptor"],factory:function(e,t,n){t.EventBlueprint=e("./event-descriptor").EventDescriptor}});

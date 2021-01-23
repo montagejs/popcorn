@@ -1,0 +1,1 @@
+var TextInput=require("ui/text-input").TextInput,TextArea=exports.TextArea=TextInput.specialize({hasTemplate:{value:!1}});TextArea.addAttributes({cols:null,rows:null,wrap:null});

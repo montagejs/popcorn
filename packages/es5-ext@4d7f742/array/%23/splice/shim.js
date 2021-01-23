@@ -1,0 +1,1 @@
+"use strict";var isPlainArray=require("../../is-plain-array"),isArray=Array.isArray,splice=Array.prototype.splice,forEach=Array.prototype.forEach;module.exports=function(r,i){var a,s=splice.apply(this,arguments);return this&&isArray(this)&&!isPlainArray(this)?(a=new this.constructor(s.length),forEach.call(s,function(r,i){a[i]=r}),a):s};

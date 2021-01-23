@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.fround;return"function"==typeof t&&1.3370000123977661===t(1.337)};

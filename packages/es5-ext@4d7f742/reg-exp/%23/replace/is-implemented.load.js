@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/replace/is-implemented",{dependencies:[],factory:function(e,r,n){"use strict";var o=/foo/;n.exports=function(){return"function"==typeof o.replace&&"marbar"===o.replace("foobar","mar")}}});

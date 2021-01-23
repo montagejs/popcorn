@@ -1,0 +1,1 @@
+montageDefine("f19da95","is-set",{dependencies:["es6-symbol"],factory:function(e,t,n){"use strict";var o=Object.prototype.toString,s=e("es6-symbol").toStringTag,i="[object Set]",r="undefined"==typeof Set?null:Set;n.exports=function(e){return e&&(r&&(e instanceof r||e===r.prototype)||o.call(e)===i||"Set"===e[s])||!1}}});

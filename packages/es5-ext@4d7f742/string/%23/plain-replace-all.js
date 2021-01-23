@@ -1,0 +1,1 @@
+"use strict";var value=require("../../object/valid-value");module.exports=function(e,r){var t,i,l,n=0,u=String(value(this));for(e=String(e),r=String(r),i=e.length,l=r.length;(t=u.indexOf(e,n))!==-1;)u=u.slice(0,t)+r+u.slice(t+i),n=t+l;return u};

@@ -1,0 +1,1 @@
+"use strict";var isCallable=require("./is-callable");module.exports=function(r){try{return r&&isCallable(r.toString)?r.toString():String(r)}catch(t){throw new TypeError("Passed argument cannot be stringifed")}};

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/tanh/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){var e=Math.tanh;return"function"==typeof e&&(.7615941559557649===e(1)&&1===e(Number.MAX_VALUE))}}});

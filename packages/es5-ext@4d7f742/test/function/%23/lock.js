@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,n){n(t.call(function(){return arguments.length})(1,2,3),0)};

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/is-integer",{dependencies:["../number/is-integer","./is-value"],factory:function(e,n,i){"use strict";var r=e("../number/is-integer"),t=e("./is-value");i.exports=function(e){return!!t(e)&&(e=Number(e),r(e))}}});

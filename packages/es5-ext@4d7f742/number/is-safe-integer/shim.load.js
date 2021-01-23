@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/is-safe-integer/shim",{dependencies:["../is-integer/shim","../max-safe-integer"],factory:function(e,i,n){"use strict";var s=e("../is-integer/shim"),t=e("../max-safe-integer"),r=Math.abs;n.exports=function(e){return!!s(e)&&r(e)<=t}}});

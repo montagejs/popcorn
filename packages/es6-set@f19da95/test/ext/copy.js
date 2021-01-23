@@ -1,0 +1,1 @@
+"use strict";var toArray=require("es5-ext/array/to-array"),Set=require("../../");module.exports=function(r,e){var t,a=["raz",2,!0],o=new Set(a);t=r.call(o),e.not(t,o,"Copy"),e.deep(toArray(t),a,"Content")};

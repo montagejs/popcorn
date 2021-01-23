@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/expm1/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,m){"use strict";m.exports=e("./is-implemented")()?Math.expm1:e("./shim")}});

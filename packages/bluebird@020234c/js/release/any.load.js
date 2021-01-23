@@ -1,0 +1,1 @@
+montageDefine("020234c","js/release/any",{dependencies:[],factory:function(n,e,t){"use strict";t.exports=function(n){function e(n){var e=new t(n),r=e.promise();return e.setHowMany(1),e.setUnwrap(),e.init(),r}var t=n._SomePromiseArray;n.any=function(n){return e(n)},n.prototype.any=function(){return e(this)}}}});

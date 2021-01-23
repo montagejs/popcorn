@@ -1,0 +1,1 @@
+"use strict";var firstIndex=require("./first-index");module.exports=function(){var r;if(null!==(r=firstIndex.call(this)))return this[r]};

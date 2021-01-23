@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/normalize/_data",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(typeof e[0],"object")}}});

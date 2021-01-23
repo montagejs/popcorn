@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/remove",{dependencies:["./e-index-of"],factory:function(e,r,t){"use strict";var o=e("./e-index-of"),a=Array.prototype.forEach,i=Array.prototype.splice;t.exports=function(e){a.call(arguments,function(e){var r=o.call(this,e);r!==-1&&i.call(this,r,1)},this)}}});

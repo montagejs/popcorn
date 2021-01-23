@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/date/ensure-time-value",{dependencies:[],factory:function(e,n,r){"use strict";r.exports=function(e,n){n(e(12),12,"Number in range"),n(e(12.23),12,"Rounds number in range"),n(e(-12.63),-12,"Rounds negative number in range"),n["throws"](function(){e(NaN)},TypeError,"Throws on invalid")}}});

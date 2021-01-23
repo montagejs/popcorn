@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,d){var n=e.call("r💩z");d.deep(n.next(),{done:!1,value:"r"},"#1"),d.deep(n.next(),{done:!1,value:"💩"},"#2"),d.deep(n.next(),{done:!1,value:"z"},"#3"),d.deep(n.next(),{done:!0,value:void 0},"End")};

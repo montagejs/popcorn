@@ -1,0 +1,1 @@
+"use strict";var isCallable=require("../object/is-callable"),value=require("../object/valid-value"),slice=Array.prototype.slice,apply=Function.prototype.apply;module.exports=function(l){var e=slice.call(arguments,1),a=isCallable(l);return function(c){return value(c),apply.call(a?l:c[l],c,e.concat(slice.call(arguments,1)))}};

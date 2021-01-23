@@ -1,0 +1,1 @@
+"use strict";module.exports=function(l,a){var r={};a(l.call([],[]),!0,"Empty"),a(l.call([],{}),!0,"Empty lists"),a(l.call([1,r,"raz"],[1,r,"raz"]),!0,"Same"),a(l.call([1,r,"raz"],{0:1,1:r,2:"raz",length:3}),!0,"Same lists"),a(l.call([1,r,"raz"],[r,1,"raz"]),!1,"Diff order"),a(l.call([1,r],[1,r,"raz"]),!1,"Diff length #1"),a(l.call([1,r,"raz"],[1,r]),!1,"Diff length #2")};

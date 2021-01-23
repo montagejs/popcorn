@@ -1,0 +1,1 @@
+montageDefine("f19da95","ext/every",{dependencies:["es5-ext/object/valid-callable","es6-iterator/for-of"],factory:function(e,t,o){"use strict";var a=e("es5-ext/object/valid-callable"),r=e("es6-iterator/for-of"),c=Function.prototype.call;o.exports=function(e){var t=arguments[1],o=!0;return a(e),r(this,function(a,r){c.call(e,t,a)||(o=!1,r())}),o}}});

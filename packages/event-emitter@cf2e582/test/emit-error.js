@@ -1,0 +1,1 @@
+"use strict";var customError=require("es5-ext/error/custom"),ee=require("../");module.exports=function(r,e){var o,t,u=customError("Some error","ERROR_TEST");o=ee(),e["throws"](function(){r.call(o,u)},"ERROR_TEST"),o.on("error",function(r){t=r}),r.call(o,u),e(t,u)};

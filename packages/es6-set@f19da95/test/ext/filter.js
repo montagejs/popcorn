@@ -1,0 +1,1 @@
+"use strict";var aFrom=require("es5-ext/array/from"),Set=require("../../");module.exports=function(e,l){l.deep(aFrom(e.call(new Set,Boolean)),[],"Empty set"),l.deep(aFrom(e.call(new Set([2,3,4]),Boolean)),[2,3,4],"All true"),l.deep(aFrom(e.call(new Set([0,!1,4]),Boolean)),[4],"Some false"),l.deep(aFrom(e.call(new Set([0,!1,null]),Boolean)),[],"All false")};

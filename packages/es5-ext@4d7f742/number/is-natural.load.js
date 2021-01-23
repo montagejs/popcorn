@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/is-natural",{dependencies:["./is-integer"],factory:function(e,n,t){"use strict";var i=e("./is-integer");t.exports=function(e){return i(e)&&e>=0}}});

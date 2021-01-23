@@ -1,0 +1,1 @@
+montageDefine("4d7f742","json/index",{dependencies:["./safe-stringify"],factory:function(e,i,n){"use strict";n.exports={safeStringify:e("./safe-stringify")}}});

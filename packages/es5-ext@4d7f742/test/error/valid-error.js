@@ -1,0 +1,1 @@
+"use strict";module.exports=function(r,o){var t=new Error;o(r(t),t,"Error"),o["throws"](function(){r({})},"Other")};

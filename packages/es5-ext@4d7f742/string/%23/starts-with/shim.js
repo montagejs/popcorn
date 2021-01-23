@@ -1,0 +1,1 @@
+"use strict";var value=require("../../../object/valid-value"),toInteger=require("../../../number/to-integer"),max=Math.max,min=Math.min;module.exports=function(e){var t,r=String(value(this));return t=min(max(toInteger(arguments[1]),0),r.length),r.indexOf(e,t)===t};

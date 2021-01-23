@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/log1p/implement",{dependencies:["../../../math/log1p/is-implemented"],factory:function(e,t,n){"use strict";var i=e("../../../math/log1p/is-implemented");n.exports=function(e){e(i(),!0)}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/expm1/shim",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(e({}),NaN,"NaN"),t(e(0),0,"Zero"),t(e(1/0),1/0,"Infinity"),t(e(-(1/0)),-1,"-Infinity"),t(e(1).toFixed(15),"1.718281828459045","1")}}});

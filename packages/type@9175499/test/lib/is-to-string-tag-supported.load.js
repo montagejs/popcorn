@@ -1,0 +1,1 @@
+montageDefine("9175499","test/lib/is-to-string-tag-supported",{dependencies:["chai","../../lib/is-to-string-tag-supported"],factory:function(t,i,e){"use strict";var o=t("chai").assert,s=t("../../lib/is-to-string-tag-supported");describe("lib/is-to-string-tag-supported",function(){it("Should return boolean",function(){o("boolean"==typeof s)})})}});

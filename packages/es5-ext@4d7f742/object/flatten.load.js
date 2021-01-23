@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/flatten",{dependencies:["./is-plain-object","./for-each"],factory:function(e,t,n){"use strict";var i,c=e("./is-plain-object"),o=e("./for-each");i=function a(e,t){c(e)?o(e,a,this):this[t]=e},n.exports=function(e){var t={};return o(e,i,t),t}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","date/%23/copy",{dependencies:[],factory:function(e,t,n){"use strict";var o=Date.prototype.getTime;n.exports=function(){return new Date(o.call(this))}}});

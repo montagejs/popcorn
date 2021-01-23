@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/ceil-10",{dependencies:["./_decimal-adjust"],factory:function(e,t,c){"use strict";c.exports=e("./_decimal-adjust")("ceil")}});

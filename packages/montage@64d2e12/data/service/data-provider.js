@@ -1,0 +1,1 @@
+var Montage=require("core/core").Montage,Promise=require("core/promise").Promise;exports.DataProvider=Montage.specialize({data:{value:void 0},requestData:{value:function(e,r){return Promise.resolve(this.data)}}});

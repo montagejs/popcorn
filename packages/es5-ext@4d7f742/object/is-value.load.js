@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/is-value",{dependencies:["../function/noop"],factory:function(n,e,o){"use strict";var t=n("../function/noop")();o.exports=function(n){return n!==t&&null!==n}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/_sub-array-dummy",{dependencies:["../object/set-prototype-of"],factory:function(e,r,t){"use strict";var o=e("../object/set-prototype-of");t.exports=function(){var e;return o?(e=function(){Array.apply(this,arguments)},o(e,Array),e.prototype=Object.create(Array.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),e):null}()}});

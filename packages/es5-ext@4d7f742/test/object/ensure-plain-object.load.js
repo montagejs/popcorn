@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/ensure-plain-object",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){var n={};t(e(n),n,"Reguar object instance"),n=Object.create(null),t(e(n),n,"Null prototype"),t["throws"](function(){e(function(){})},TypeError,"Error")}}});

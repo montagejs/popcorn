@@ -1,0 +1,1 @@
+montageDefine("c2ad217","dict",{dependencies:["./_dict","./listen/property-changes","./listen/map-changes"],factory:function(e,t,c){"use strict";var p=e("./_dict"),a=e("./listen/property-changes"),n=e("./listen/map-changes");c.exports=p,Object.addEach(p.prototype,a.prototype),Object.addEach(p.prototype,n.prototype)}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/%23/pad",{dependencies:["../../string/#/pad","../to-pos-integer"],factory:function(t,e,n){"use strict";var r=t("../../string/#/pad"),i=t("../to-pos-integer"),o=Number.prototype.toFixed;n.exports=function(t){var e;return t=i(t),e=i(arguments[1]),r.call(e?o.call(this,e):this,"0",t+(e?1+e:0))}}});

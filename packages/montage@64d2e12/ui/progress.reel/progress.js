@@ -1,0 +1,1 @@
+var Control=require("ui/control").Control,Progress=exports.Progress=Control.specialize({hasTemplate:{value:!1}});Progress.addAttributes({form:null,max:{dataType:"number"},value:{dataType:"number"}});

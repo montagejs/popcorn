@@ -1,0 +1,1 @@
+"use strict";var Set=require("../../");module.exports=function(e,r){var t=["raz",2,!0],a=new Set(t);r(e.call(a),"raz"),a=new Set,r(e.call(a),void 0)};

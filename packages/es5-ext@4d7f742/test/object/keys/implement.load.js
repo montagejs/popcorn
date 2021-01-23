@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/keys/implement",{dependencies:["../../../object/keys/is-implemented"],factory:function(e,t,n){"use strict";var i=e("../../../object/keys/is-implemented");n.exports=function(e){e(i(),!0)}}});

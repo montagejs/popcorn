@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/function/pluck",{dependencies:[],factory:function(o,e,n){"use strict";var t={foo:"bar"};n.exports=function(o,e){e(o("foo")(t),t.foo)}}});

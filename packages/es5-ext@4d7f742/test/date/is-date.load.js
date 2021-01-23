@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/date/is-date",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(e("arar"),!1,"String"),t(e(12),!1,"Number"),t(e(!0),!1,"Boolean"),t(e(new Date),!0,"Date"),t(e(new String("raz")),!1,"String object"),t(e({}),!1,"Plain object")}}});

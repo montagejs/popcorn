@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/primitive-set",{dependencies:[],factory:function(e,t,r){"use strict";var n=Array.prototype.forEach,c=Object.create;r.exports=function(e){var t=c(null);return n.call(arguments,function(e){t[e]=!0}),t}}});

@@ -1,0 +1,1 @@
+"use strict";var isIterable=require("./is-iterable");module.exports=function(e){if(!isIterable(e))throw new TypeError(e+" is not iterable");return e};

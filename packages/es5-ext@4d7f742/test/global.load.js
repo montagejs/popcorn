@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/global",{dependencies:[],factory:function(t,e,o){"use strict";o.exports=function(t,e){e.ok(t&&"object"==typeof t),e(typeof t.Array,"function"),e("__global__"in Object.prototype,!1)}}});

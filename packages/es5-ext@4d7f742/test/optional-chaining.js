@@ -1,0 +1,1 @@
+"use strict";module.exports=function(o,l){var r={foo:{bar:"elo",par:null}};l(o(),void 0),l(o(null),null),l(o(r),r),l(o(r,"foo"),r.foo),l(o(r,"foo","bar"),"elo"),l(o(r,"foo","bar","slice"),String.prototype.slice),l(o(r,"foo","par"),null),l(o(r,"foo","par","marko"),void 0),l(o(r,"marko"),void 0),l(o(""),""),l(o("","foo"),void 0),l(o("","slice"),String.prototype.slice)};

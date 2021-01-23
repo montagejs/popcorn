@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/keys/is-implemented",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(){var e,n,t=[1,"foo"];return"function"==typeof t.keys&&(!!(e=t.keys())&&("function"==typeof e.next&&(n=e.next(),!!n&&(0===n.value&&n.done===!1))))}}});

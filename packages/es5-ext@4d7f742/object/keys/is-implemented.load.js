@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/keys/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){try{return Object.keys("primitive"),!0}catch(e){return!1}}}});

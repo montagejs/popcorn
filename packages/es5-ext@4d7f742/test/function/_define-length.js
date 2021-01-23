@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){var o,r="raz",n="dwa",a=function(t,e){return this+t+e+r+n};o=t(a,3),e(o.call("marko","el","fe"),"markoelferazdwa","Content"),e(o.length,3,"Length"),e(o.prototype,a.prototype,"Prototype")};

@@ -1,0 +1,1 @@
+"use strict";var isPrototype=require("../prototype/is");module.exports=function(t){if("function"!=typeof t)return!1;if(!hasOwnProperty.call(t,"length"))return!1;try{if("number"!=typeof t.length)return!1;if("function"!=typeof t.call)return!1;if("function"!=typeof t.apply)return!1}catch(r){return!1}return!isPrototype(t)};

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/cbrt/shim",{dependencies:[],factory:function(t,e,n){"use strict";n.exports=function(t,e){e(t({}),NaN,"NaN"),e(t(0),0,"Zero"),e(t(1/0),1/0,"Infinity"),e(t(-(1/0)),-(1/0),"-Infinity"),e(t(-1),-1,"-1"),e(t(1),1,"1"),e(t(2),1.2599210498948732,"Ohter")}}});

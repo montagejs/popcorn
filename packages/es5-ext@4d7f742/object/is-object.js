@@ -1,0 +1,1 @@
+"use strict";var isValue=require("./is-value"),map={"function":!0,object:!0};module.exports=function(e){return isValue(e)&&map[typeof e]||!1};

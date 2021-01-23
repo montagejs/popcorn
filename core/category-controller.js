@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,RangeController=require("montage/core/range-controller").RangeController;exports.CategoryController=Montage.specialize({constructor:{value:function(e,t){this.title=e,this.key=t;var o=new RangeController;o.avoidsEmptySelection=!0,this.contentController=o}},title:{value:null},key:{value:null},contentController:{value:null}});

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(n,r){r(n(12),12,"Number in range"),r(n(12.23),12,"Rounds number in range"),r(n(-12.63),-12,"Rounds negative number in range"),r["throws"](function(){n(NaN)},TypeError,"Throws on invalid")};

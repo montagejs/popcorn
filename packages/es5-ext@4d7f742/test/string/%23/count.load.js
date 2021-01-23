@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/count",{dependencies:[],factory:function(x,l,o){"use strict";o.exports=function(x,l){l["throws"](function(){x.call("","")}),l(x.call("x","x"),1),l(x.call("xx","x"),2),l(x.call("xxx","xx"),1),l(x.call("xxxx","xx"),2),l(x.call("xx","xxx"),0),l(x.call("","elo"),0),l(x.call("fooo","foofooo"),0)}}});

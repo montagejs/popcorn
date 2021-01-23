@@ -1,0 +1,1 @@
+"use strict";var toString=Object.prototype.toString,toStringTagSymbol=require("es6-symbol").toStringTag,id="[object Set]",Global="undefined"==typeof Set?null:Set;module.exports=function(t){return t&&(Global&&(t instanceof Global||t===Global.prototype)||toString.call(t)===id||"Set"===t[toStringTagSymbol])||!1};

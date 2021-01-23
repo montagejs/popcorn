@@ -1,0 +1,1 @@
+montageDefine("9175499","number/ensure",{dependencies:["../lib/resolve-exception","./coerce"],factory:function(e,n,r){"use strict";var o=e("../lib/resolve-exception"),c=e("./coerce");r.exports=function(e){var n=c(e);return null!==n?n:o(e,"%v is not a number",arguments[1])}}});

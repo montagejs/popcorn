@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,r){r.deep(e({foo:"bar"}),[["foo","bar"]],"Object"),r.deep(e("raz"),[["0","r"],["1","a"],["2","z"]],"Primitive"),r["throws"](function(){e()},TypeError,"Undefined"),r["throws"](function(){e(null)},TypeError,"Undefined")};

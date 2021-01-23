@@ -1,0 +1,1 @@
+"use strict";module.exports=function(i,t){t(i({}),NaN,"NaN"),t(i(0),0,"Zero"),t(i(1/0),1/0,"Infinity"),t(i(-(1/0)),-(1/0),"-Infinity"),t(i(-2),-1.4436354751788103,"Negative"),t(i(2),1.4436354751788103,"Positive")};

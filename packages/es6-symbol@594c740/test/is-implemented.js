@@ -1,0 +1,1 @@
+"use strict";var global=require("es5-ext/global"),polyfill=require("../polyfill");module.exports=function(l,o){var e;o(typeof l(),"boolean"),e=global.Symbol,global.Symbol=polyfill,o(l(),!0),void 0===e?delete global.Symbol:global.Symbol=e};

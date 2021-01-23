@@ -1,0 +1,1 @@
+"use strict";var isFunction=require("../function/is"),classRe=/^\s*class[\s{/}]/,functionToString=Function.prototype.toString;module.exports=function(t){return!!isFunction(t)&&!classRe.test(functionToString.call(t))};

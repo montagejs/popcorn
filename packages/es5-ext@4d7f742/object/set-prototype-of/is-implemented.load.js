@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/set-prototype-of/is-implemented",{dependencies:[],factory:function(e,t,o){"use strict";var n=Object.create,c=Object.getPrototypeOf,r={};o.exports=function(){var e=Object.setPrototypeOf,t=arguments[0]||n;return"function"==typeof e&&c(e(t(null),r))===r}}});

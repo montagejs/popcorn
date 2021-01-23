@@ -1,0 +1,1 @@
+"use strict";var create=Object.create,getPrototypeOf=Object.getPrototypeOf,plainObject={};module.exports=function(){var t=Object.setPrototypeOf,e=arguments[0]||create;return"function"==typeof t&&getPrototypeOf(t(e(null),plainObject))===plainObject};

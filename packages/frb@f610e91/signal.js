@@ -1,0 +1,1 @@
+function Signal(n){var e=new Map;return e.getDefault=function(){return 0},{observe:function(t){return t(n),e.set(t,e.get(t)+1),function(){e.set(t,e.get(t)-1)}},emit:function(t){n=t,e.forEach(function(n,e){e(t)})}}}var Map=require("collections/map");module.exports=Signal;

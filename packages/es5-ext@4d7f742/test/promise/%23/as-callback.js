@@ -1,0 +1,1 @@
+"use strict";module.exports=function(n,o){return"function"!=typeof Promise?null:{Success:function(e){n.call(new Promise(function(n){n("foo")}),function(n,i){o(n,null),o(i,"foo"),e()})},Failure:function(e){var i=new Error("Rejection");n.call(new Promise(function(n,o){o(i)}),function(n,u){o(n,i),o(u,void 0),e()})}}};

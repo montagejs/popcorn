@@ -1,0 +1,1 @@
+montageDefine("594c740","is-native-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports="function"==typeof Symbol&&"symbol"==typeof Symbol()}});

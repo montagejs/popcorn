@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/floor-10",{dependencies:["./_decimal-adjust"],factory:function(e,t,o){"use strict";o.exports=e("./_decimal-adjust")("floor")}});

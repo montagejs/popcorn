@@ -1,0 +1,1 @@
+montageDefine("9175499","safe-integer/coerce",{dependencies:["../integer/coerce"],factory:function(e,n,r){"use strict";var c=e("../integer/coerce"),t=9007199254740991,i=-9007199254740991;r.exports=function(e){return e=c(e),e?e>t?null:e<i?null:e:e}}});

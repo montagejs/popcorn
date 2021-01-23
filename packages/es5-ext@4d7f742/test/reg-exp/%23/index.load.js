@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/reg-exp/%23/index",{dependencies:["tad/lib/utils/index-test","path"],factory:function(e,t,i){"use strict";var n=e("tad/lib/utils/index-test"),d=e("path").resolve(__dirname,"../../../reg-exp/#");i.exports=function(e,t,i){n(n.readDir(d).aside(function(e){delete e.sticky,delete e.unicode}))(e,t,i)}}});

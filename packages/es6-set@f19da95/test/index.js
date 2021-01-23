@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,s){s(new e(["raz","dwa"]).size,2)};

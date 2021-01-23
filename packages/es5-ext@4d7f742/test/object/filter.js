@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,n){n.deep(e({1:1,2:2,3:3,4:4},function(e){return Boolean(e%2)}),{1:1,3:3})};

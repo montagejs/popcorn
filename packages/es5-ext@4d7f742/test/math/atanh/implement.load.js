@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/atanh/implement",{dependencies:["../../../math/atanh/is-implemented"],factory:function(e,t,n){"use strict";var a=e("../../../math/atanh/is-implemented");n.exports=function(e){e(a(),!0)}}});

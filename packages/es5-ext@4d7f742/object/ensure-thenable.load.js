@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/ensure-thenable",{dependencies:["../safe-to-string","./is-thenable"],factory:function(e,t,n){"use strict";var r=e("../safe-to-string"),s=e("./is-thenable");n.exports=function(e){if(!s(e))throw new TypeError(r(e)+" is not a thenable");return e}}});

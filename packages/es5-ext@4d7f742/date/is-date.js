@@ -1,0 +1,1 @@
+"use strict";var objToString=Object.prototype.toString,id=objToString.call(new Date);module.exports=function(t){return t&&!isNaN(t)&&(t instanceof Date||objToString.call(t)===id)||!1};

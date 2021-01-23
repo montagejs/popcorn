@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,n){n(e("arar"),!1,"String"),n(e(12),!0,"Number in range"),n(e(!0),!0,"Boolean"),n(e(new Date),!0,"Date"),n(e({}),!1,"Plain object"),n(e(NaN),!1,"NaN"),n(e(1/0),!1,"Infinity"),n(e(864e15),!1,"Beyond range"),n(e(864e13),!0,"Below range"),n(e(-864e15),!1,"Negative beyond range"),n(e(-864e13),!0,"Negative below range")};

@@ -1,0 +1,1 @@
+"use strict";var safeToString=require("../safe-to-string"),isPlainFunction=require("./is-plain-function");module.exports=function(i){if(!isPlainFunction(i))throw new TypeError(safeToString(i)+" is not a plain function");return i};

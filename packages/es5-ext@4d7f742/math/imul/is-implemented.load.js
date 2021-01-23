@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/imul/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){var e=Math.imul;return"function"==typeof e&&e(-1,8)===-8}}});

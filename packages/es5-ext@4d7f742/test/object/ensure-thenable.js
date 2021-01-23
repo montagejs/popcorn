@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,n){var o={then:function(){}};n["throws"](function(){t({})},TypeError),n(t(o),o)};

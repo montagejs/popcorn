@@ -1,0 +1,1 @@
+"use strict";var indexTest=require("tad/lib/utils/index-test"),path=require("path").resolve(__dirname,"../../../reg-exp/#");module.exports=function(e,t,i){indexTest(indexTest.readDir(path).aside(function(e){delete e.sticky,delete e.unicode}))(e,t,i)};

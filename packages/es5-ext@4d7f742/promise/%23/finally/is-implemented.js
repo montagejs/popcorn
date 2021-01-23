@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){return"function"==typeof Promise&&"function"==typeof Promise.prototype["finally"]};

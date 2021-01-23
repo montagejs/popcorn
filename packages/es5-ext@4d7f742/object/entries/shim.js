@@ -1,0 +1,1 @@
+"use strict";var ensureValue=require("../valid-value");module.exports=function(e){ensureValue(e);var r=[];e=Object(e);for(var u in e)propertyIsEnumerable.call(e,u)&&r.push([u,e[u]]);return r};

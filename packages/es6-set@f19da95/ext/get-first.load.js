@@ -1,0 +1,1 @@
+montageDefine("f19da95","ext/get-first",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){return this.values().next().value}}});

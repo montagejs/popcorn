@@ -1,0 +1,1 @@
+montageDefine("4d7f742","iterable/for-each",{dependencies:["es6-iterator/for-of","es6-iterator/is-iterable","./validate"],factory:function(e,r,t){"use strict";var a=e("es6-iterator/for-of"),o=e("es6-iterator/is-iterable"),i=e("./validate"),f=Array.prototype.forEach;t.exports=function(e,r){o(i(e))?a(e,r,arguments[2]):f.call(e,r,arguments[2])}}});

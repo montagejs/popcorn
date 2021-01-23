@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t){return t>>>=0,t?32-t.toString(2).length:32};

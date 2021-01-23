@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/copy",{dependencies:["../array/from","./assign","./valid-value"],factory:function(e,r,n){"use strict";var a=e("../array/from"),t=e("./assign"),i=e("./valid-value");n.exports=function(e){var r=Object(i(e)),n=arguments[1],c=Object(arguments[2]);if(r!==e&&!n)return r;var o={};return n?a(n,function(r){(c.ensure||r in e)&&(o[r]=e[r])}):t(o,e),o}}});

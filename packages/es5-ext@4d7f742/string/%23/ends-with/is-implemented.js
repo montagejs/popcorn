@@ -1,0 +1,1 @@
+"use strict";var str="razdwatrzy";module.exports=function(){return"function"==typeof str.endsWith&&(str.endsWith("trzy")===!0&&str.endsWith("raz")===!1)};

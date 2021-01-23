@@ -1,0 +1,1 @@
+montageDefine("9175499","number/coerce",{dependencies:["../value/is"],factory:function(e,n,r){"use strict";var t=e("../value/is");r.exports=function(e){if(!t(e))return null;try{e=+e}catch(n){return null}return isNaN(e)?null:e}}});

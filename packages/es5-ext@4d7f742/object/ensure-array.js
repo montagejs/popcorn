@@ -1,0 +1,1 @@
+"use strict";var toShortString=require("../to-short-string-representation"),isArray=require("./is-array-like");module.exports=function(r){if(isArray(r))return r;throw new TypeError(toShortString(r)+" is not a array")};

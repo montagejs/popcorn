@@ -1,0 +1,1 @@
+"use strict";require("./is-implemented")()||Object.defineProperty(require("es5-ext/global"),"Symbol",{value:require("./polyfill"),configurable:!0,enumerable:!1,writable:!0});

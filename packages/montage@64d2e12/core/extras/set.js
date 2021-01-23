@@ -1,0 +1,1 @@
+Object.defineProperty(Set.prototype,"deserializeSelf",{value:function(e){var t,r,i;if(t=e.getProperty("values"))for(r=0,i=t.length;r<i;r++)this.add(t[r])},writable:!0,configurable:!0}),Object.defineProperty(Set.prototype,"serializeSelf",{value:function(e){for(var t,r=[],i=this.keys();t=i.next().value;)r.push(t);e.setProperty("values",r)},writable:!0,configurable:!0});

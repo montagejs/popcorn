@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Number.isNaN;return"function"==typeof t&&(!t({})&&t(NaN)&&!t(34))};

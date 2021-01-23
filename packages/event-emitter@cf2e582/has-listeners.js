@@ -1,0 +1,1 @@
+"use strict";var isEmpty=require("es5-ext/object/is-empty"),value=require("es5-ext/object/valid-value"),hasOwnProperty=Object.prototype.hasOwnProperty;module.exports=function(e){var t;return value(e),t=arguments[1],arguments.length>1?hasOwnProperty.call(e,"__ee__")&&Boolean(e.__ee__[t]):e.hasOwnProperty("__ee__")&&!isEmpty(e.__ee__)};

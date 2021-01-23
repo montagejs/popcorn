@@ -1,0 +1,1 @@
+"use strict";var log=Math.log;module.exports=function(N){return isNaN(N)?NaN:(N=Number(N),N<-1?NaN:N>1?NaN:N===-1?-(1/0):1===N?1/0:0===N?N:.5*log((1+N)/(1-N)))};

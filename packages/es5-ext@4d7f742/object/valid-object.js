@@ -1,0 +1,1 @@
+"use strict";var isObject=require("./is-object");module.exports=function(e){if(!isObject(e))throw new TypeError(e+" is not an Object");return e};

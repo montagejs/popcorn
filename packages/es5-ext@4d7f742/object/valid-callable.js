@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t){if("function"!=typeof t)throw new TypeError(t+" is not a function");return t};

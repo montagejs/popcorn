@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/case-insensitive-compare",{dependencies:[],factory:function(e,a,t){"use strict";t.exports=function(e,a){a(e.call("AA","aa"),0,"Same"),a.ok(e.call("Amber","zebra")<0,"Less"),a.ok(e.call("Zebra","amber")>0,"Greater")}}});

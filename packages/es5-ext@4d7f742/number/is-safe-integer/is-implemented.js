@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var e=Number.isSafeInteger;return"function"==typeof e&&(!e("23")&&e(34232322323)&&!e(9007199254740992))};

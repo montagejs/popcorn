@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,a){var t=new Date;a.ok(e(12,3)>0,"Numbers"),a.ok(e(2,13)<0,"Numbers #2"),a.ok(e("aaa","aa")>0,"Strings"),a.ok(e("aa","ab")<0,"Strings #2"),a(e("aa","aa"),0,"Strings same"),a(e(t,new Date(t.getTime())),0,"Same date"),a.ok(e(t,new Date(t.getTime()+1))<0,"Different date")};

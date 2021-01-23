@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var r,t=Object.assign;return"function"==typeof t&&(r={foo:"raz"},t(r,{bar:"dwa"},{trzy:"trzy"}),r.foo+r.bar+r.trzy==="razdwatrzy")};

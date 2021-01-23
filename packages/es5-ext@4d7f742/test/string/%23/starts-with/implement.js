@@ -1,0 +1,1 @@
+"use strict";var isImplemented=require("../../../../string/#/starts-with/is-implemented");module.exports=function(e){e(isImplemented(),!0)};

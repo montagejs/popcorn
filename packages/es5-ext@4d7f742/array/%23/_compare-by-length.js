@@ -1,0 +1,1 @@
+"use strict";var toPosInt=require("../../number/to-pos-integer");module.exports=function(t,e){return toPosInt(t.length)-toPosInt(e.length)};

@@ -1,0 +1,1 @@
+"use strict";var keys=require("./keys");module.exports=function(e){return keys(e).length};

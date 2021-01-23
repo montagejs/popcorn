@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,a){var r=[],l={},c={};a.deep(e.call(r,l),[],"Empty"),a.not(e.call(r),r,"Returns copy"),a.deep(e.call([1],l),[1],"One"),a.deep(e.call([1,"raz"],l),[1,l,"raz"],"One"),a.deep(e.call([1,"raz",r],l),[1,l,"raz",l,r],"More"),r=new Array(1e3),r[23]=2,r[3453]="raz",r[500]=c,a.deep(e.call(r,l),[2,l,c,l,"raz"],"Sparse")};

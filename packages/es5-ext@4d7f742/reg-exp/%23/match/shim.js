@@ -1,0 +1,1 @@
+"use strict";var validRegExp=require("../../valid-reg-exp");module.exports=function(e){return validRegExp(this),String(e).match(this)};

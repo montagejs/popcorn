@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/cosh/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(){var e=Math.cosh;return"function"==typeof e&&1.5430806348152437===e(1)}}});

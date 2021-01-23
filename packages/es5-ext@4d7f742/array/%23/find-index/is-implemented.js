@@ -1,0 +1,1 @@
+"use strict";var fn=function(n){return n>3};module.exports=function(){var n=[1,2,3,4,5,6];return"function"==typeof n.findIndex&&3===n.findIndex(fn)};

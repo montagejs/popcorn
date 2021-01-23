@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/is-uniq",{dependencies:[],factory:function(i,t,a){"use strict";a.exports=function(i,t){var a={};t(i.call([]),!0,"Empty"),t(i.call({}),!0,"Empty lists"),t(i.call([1,a,"raz"]),!0,"Uniq"),t(i.call([1,a,1,"raz"]),!1,"Not Uniq: primitive"),t(i.call([1,a,"1","raz"]),!0,"Uniq: primitive"),t(i.call([1,a,1,{},"raz"]),!1,"Not Uniq: Obj")}}});

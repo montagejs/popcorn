@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){e(typeof Set,"function")};

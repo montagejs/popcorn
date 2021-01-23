@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/contains/shim",{dependencies:[],factory:function(n,t,e){"use strict";var i=String.prototype.indexOf;e.exports=function(n){return i.call(this,n,arguments[1])>-1}}});

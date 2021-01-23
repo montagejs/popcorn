@@ -1,0 +1,1 @@
+montageDefine("4d7f742","promise/%23/finally/is-implemented",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(){return"function"==typeof Promise&&"function"==typeof Promise.prototype["finally"]}}});

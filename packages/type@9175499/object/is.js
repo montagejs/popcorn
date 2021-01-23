@@ -1,0 +1,1 @@
+"use strict";var isValue=require("../value/is"),possibleTypes={object:!0,"function":!0,undefined:!0};module.exports=function(e){return!!isValue(e)&&hasOwnProperty.call(possibleTypes,typeof e)};

@@ -1,0 +1,1 @@
+"use strict";var is=require("../../../object/is");module.exports=function(i,e){e(i({}),NaN,"NaN"),e(i(0),0,"Zero"),e(i(1/0),1/0,"Infinity"),e(i(-(1/0)),-(1/0),"-Infinity"),e(is(i(.234),0),!0,"0"),e(is(i(-.234),-0),!0,"-0"),e(i(13.7),13,"Positive #1"),e(i(12.3),12,"Positive #2"),e(i(-12.3),-12,"Negative #1"),e(i(-14.7),-14,"Negative #2")};

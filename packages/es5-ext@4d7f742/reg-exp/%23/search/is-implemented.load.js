@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/search/is-implemented",{dependencies:[],factory:function(e,n,o){"use strict";var r=/foo/;o.exports=function(){return"function"==typeof r.search&&3===r.search("barfoo")}}});

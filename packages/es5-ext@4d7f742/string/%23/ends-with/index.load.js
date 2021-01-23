@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/ends-with/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,t){"use strict";t.exports=e("./is-implemented")()?String.prototype.endsWith:e("./shim")}});

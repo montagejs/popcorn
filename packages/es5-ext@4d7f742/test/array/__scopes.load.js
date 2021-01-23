@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/__scopes",{dependencies:[],factory:function(e,t,n){"use strict";t.Array=["1","2","3"],t.Arguments=function(){return arguments}("1","2","3"),t.String="123",t.Object={0:"1",1:"2",2:"3",3:"4",length:3}}});

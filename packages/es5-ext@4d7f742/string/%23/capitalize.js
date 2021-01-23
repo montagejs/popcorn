@@ -1,0 +1,1 @@
+"use strict";var value=require("../../object/valid-value");module.exports=function(){var e=String(value(this));return e.charAt(0).toUpperCase()+e.slice(1)};

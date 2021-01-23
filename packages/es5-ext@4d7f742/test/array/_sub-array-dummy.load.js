@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/_sub-array-dummy",{dependencies:[],factory:function(r,e,t){"use strict";var a=Array.isArray;t.exports=function(r){r(null===r||a(r.prototype),!0)}}});

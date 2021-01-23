@@ -1,0 +1,1 @@
+"use strict";var isEmpty=require("../../object/is-empty");module.exports=function(t,e){var m={};e(t(m),m,"Empty: Returns same object"),e(isEmpty(m),!0,"Empty: Not changed"),m.foo="raz",m.bar="dwa",e(t(m),m,"Same object"),e(isEmpty(m),!0,"Emptied")};

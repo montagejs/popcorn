@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){var n={1:1,2:2,3:3};e.deep(t(n,function(t,r,u){return e(u,n,"Context argument"),t+1+r}),{1:"21",2:"32",3:"43"})};

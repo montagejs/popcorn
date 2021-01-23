@@ -1,0 +1,1 @@
+montageDefine("4d7f742","boolean/index",{dependencies:["./is-boolean"],factory:function(e,o,n){"use strict";n.exports={isBoolean:e("./is-boolean")}}});

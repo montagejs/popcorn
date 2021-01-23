@@ -1,0 +1,1 @@
+"use strict";var compare=function(l){return this-l};module.exports=function(l,c){var a;a=[2,5,5,8,34,67,98,345,678],c(l.call(a,compare.bind(1)),0,"All higher"),c(l.call(a,compare.bind(679)),a.length-1,"All lower"),c(l.call(a,compare.bind(4)),0,"Mid"),c(l.call(a,compare.bind(5)),2,"Match"),c(l.call(a,compare.bind(6)),2,"Above")};

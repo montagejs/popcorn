@@ -1,0 +1,1 @@
+"use strict";module.exports=function(y,a){a(y.call("razDwaTRzy4yFoo45My"),"raz-dwa-t-rzy4y-foo45-my"),a(y.call("razDwaTRzy4yFoo45My-"),"raz-dwa-t-rzy4y-foo45-my-"),a(y.call("razDwaTRzy4yFoo45My--"),"raz-dwa-t-rzy4y-foo45-my--")};

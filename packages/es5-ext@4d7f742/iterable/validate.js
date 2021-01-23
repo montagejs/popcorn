@@ -1,0 +1,1 @@
+"use strict";var is=require("./is");module.exports=function(r){if(is(r))return r;throw new TypeError(r+" is not an iterable or array-like")};

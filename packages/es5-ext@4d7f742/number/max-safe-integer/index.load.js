@@ -1,0 +1,1 @@
+montageDefine("4d7f742","number/max-safe-integer/index",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=Math.pow(2,53)-1}});

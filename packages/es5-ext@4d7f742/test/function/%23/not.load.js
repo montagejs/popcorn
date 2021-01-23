@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/function/%23/not",{dependencies:["../../../function/identity","../../../function/noop"],factory:function(n,t,e){"use strict";var o=n("../../../function/identity"),c=n("../../../function/noop");e.exports=function(n,t){t(n.call(o)(""),!0,"Falsy"),t(n.call(c)(),!0,"Undefined"),t(n.call(o)({}),!1,"Any object"),t(n.call(o)(!0),!1,"True")}}});

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","function/pluck",{dependencies:["../object/valid-value"],factory:function(e,n,t){"use strict";var c=e("../object/valid-value");t.exports=function(e){return function(n){return c(n)[e]}}}});

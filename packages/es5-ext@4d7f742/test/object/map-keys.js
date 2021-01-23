@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){t.deep(e({1:1,2:2,3:3},function(e,t){return"x"+(e+t)}),{x11:1,x22:2,x33:3})};

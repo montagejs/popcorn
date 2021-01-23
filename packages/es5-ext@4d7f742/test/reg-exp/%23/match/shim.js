@@ -1,0 +1,1 @@
+"use strict";module.exports=function(o,a){var e="foobar".match(/foo/);a.deep(o.call(/foo/,"foobar"),e)};

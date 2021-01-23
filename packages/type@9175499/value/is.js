@@ -1,0 +1,1 @@
+"use strict";var _undefined=void 0;module.exports=function(e){return e!==_undefined&&null!==e};

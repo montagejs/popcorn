@@ -1,0 +1,1 @@
+"use strict";var exp=Math.exp;module.exports=function(e){var r,t;return isNaN(e)?NaN:(e=Number(e),0===e?e:e===1/0?1:e===-(1/0)?-1:(r=exp(e),r===1/0?1:(t=exp(-e),t===1/0?-1:(r-t)/(r+t))))};

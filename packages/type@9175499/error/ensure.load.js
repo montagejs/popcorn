@@ -1,0 +1,1 @@
+montageDefine("9175499","error/ensure",{dependencies:["../lib/resolve-exception","./is"],factory:function(e,r,n){"use strict";var o=e("../lib/resolve-exception"),i=e("./is");n.exports=function(e){return i(e)?e:o(e,"%v is not an error object",arguments[1])}}});

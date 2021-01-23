@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.acosh;return"function"==typeof t&&1.3169578969248166===t(2)};

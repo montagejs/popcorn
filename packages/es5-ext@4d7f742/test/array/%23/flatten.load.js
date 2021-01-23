@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/flatten",{dependencies:[],factory:function(e,t,n){"use strict";var a=[1,2,[3,4,[5,6],7,8],9,10,[11,12,[13,14]],15];n.exports={__generic:function(e,t){t(e.call(this).length,3)},"Nested Arrays":function(e,t){var n=e.call(a);t.not(a,n),t.deep(n,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])}}}});

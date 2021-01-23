@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/escape",{dependencies:[],factory:function(e,n,r){"use strict";var t=/[-/\\^$*+?.()|[\]{}]/g;r.exports=function(e){return String(e).replace(t,"\\$&")}}});

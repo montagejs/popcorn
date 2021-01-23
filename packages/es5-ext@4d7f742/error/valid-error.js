@@ -1,0 +1,1 @@
+"use strict";var isError=require("./is-error");module.exports=function(r){if(!isError(r))throw new TypeError(r+" is not an Error object");return r};

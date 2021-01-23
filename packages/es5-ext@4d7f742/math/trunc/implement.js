@@ -1,0 +1,1 @@
+"use strict";require("./is-implemented")()||Object.defineProperty(Math,"trunc",{value:require("./shim"),configurable:!0,enumerable:!1,writable:!0});

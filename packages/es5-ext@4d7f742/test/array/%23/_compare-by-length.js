@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){var n=[4,5,6],o={length:8},r={},s={length:1};t.deep([n,o,r,s].sort(e),[r,s,n,o])};

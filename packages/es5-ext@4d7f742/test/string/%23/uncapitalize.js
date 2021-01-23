@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){e(t.call("raz"),"raz","Word"),e(t.call("BLA"),"bLA","Uppercase"),e(t.call(""),"","Empty"),e(t.call("a"),"a","One letter"),e(t.call("this is a test"),"this is a test","Sentence"),e(t.call("This is a test"),"this is a test","Capitalized sentence")};

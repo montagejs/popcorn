@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/is-value",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(e(),!1),t(e(void 0),!1),t(e(null),!1),t(e(NaN),!0),t(e(0),!0),t(e(!1),!0),t(e("null"),!0),t(e(""),!0),t(e({}),!0),t(e(Object.prototype),!0)}}});

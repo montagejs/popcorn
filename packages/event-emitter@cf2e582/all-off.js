@@ -1,0 +1,1 @@
+"use strict";var value=require("es5-ext/object/valid-object"),hasOwnProperty=Object.prototype.hasOwnProperty;module.exports=function(e){var r,t=arguments[1];if(value(e),void 0!==t){if(r=hasOwnProperty.call(e,"__ee__")&&e.__ee__,!r)return;return void(r[t]&&delete r[t])}hasOwnProperty.call(e,"__ee__")&&delete e.__ee__};

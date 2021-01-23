@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=/a/;return"sticky"in t};

@@ -1,0 +1,1 @@
+"use strict";var pow=Math.pow;module.exports=function(o){return isNaN(o)?NaN:(o=Number(o),0===o?o:isFinite(o)?o<0?-pow(-o,1/3):pow(o,1/3):o)};

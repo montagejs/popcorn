@@ -1,0 +1,1 @@
+"use strict";module.exports=function(o,e){var l={},t={},a=[9,t,5,l,"foo"];o.call(a,l),e.deep(a,[9,t,5,"foo"]),o.call(a,{}),e.deep(a,[9,t,5,"foo"],"Not existing"),o.call(a,5),e.deep(a,[9,t,"foo"],"Primitive"),a=[9,t,5,l,"foo"],o.call(a,t,5,"foo"),e.deep(a,[9,l],"More than one argument")};

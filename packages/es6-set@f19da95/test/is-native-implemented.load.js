@@ -1,0 +1,1 @@
+montageDefine("f19da95","test/is-native-implemented",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(typeof e,"boolean")}}});

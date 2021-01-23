@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/expm1/implement",{dependencies:["../../../math/expm1/is-implemented"],factory:function(e,t,m){"use strict";var n=e("../../../math/expm1/is-implemented");m.exports=function(e){e(n(),!0)}}});

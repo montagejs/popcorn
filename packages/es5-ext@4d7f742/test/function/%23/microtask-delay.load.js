@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/function/%23/microtask-delay",{dependencies:["next-tick"],factory:function(t,n,e){"use strict";var c=t("next-tick");e.exports=function(t,n,e){var i=!1,o=[{},{}],f={},a=t.call(function(){n(this,f),n.deep(arguments,o),i=!0});c(function(){n(i,!1),a.apply(f,o),n(i,!1),c(function(){n(i,!0),e()})})}}});

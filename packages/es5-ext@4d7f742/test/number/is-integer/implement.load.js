@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/is-integer/implement",{dependencies:["../../../number/is-integer/is-implemented"],factory:function(e,n,i){"use strict";var t=e("../../../number/is-integer/is-implemented");i.exports=function(e){e(t(),!0)}}});

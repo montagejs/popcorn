@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/imul/shim",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e,n){var t=e>>>16&65535,i=65535&e,r=n>>>16&65535,c=65535&n;return i*c+(t*c+i*r<<16>>>0)|0}}});

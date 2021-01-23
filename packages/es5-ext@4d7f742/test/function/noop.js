@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){t(typeof e(1,2,3),"undefined")};

@@ -1,0 +1,1 @@
+"use strict";var indexOf=String.prototype.indexOf,slice=String.prototype.slice;module.exports=function(t,i){var e=indexOf.call(this,t);return e===-1?String(this):slice.call(this,0,e)+i+slice.call(this,e+String(t).length)};

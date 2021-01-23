@@ -1,0 +1,1 @@
+montageDefine("4d7f742","array/%23/diff",{dependencies:["../../object/valid-value","./contains"],factory:function(t,e,n){"use strict";var a=t("../../object/valid-value"),i=t("./contains"),r=Array.prototype.filter;n.exports=function(t){return a(this),a(t),r.call(this,function(e){return!i.call(t,e)})}}});

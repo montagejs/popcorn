@@ -1,0 +1,1 @@
+"use strict";exports.__generic=function(t,e){var s=0,i={},l=Object(this);e(t.call(l,function(t,i,l){e(t,this[i],"Value"),e(i,s++,"Index"),e(l,this,"Scope")},l),-1,"Falsy result"),e(s,3),s=-1,e(t.call(this,function(){return++s?i:null},this),1,"Truthy result"),e(s,1)};

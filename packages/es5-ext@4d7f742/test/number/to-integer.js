@@ -1,0 +1,1 @@
+"use strict";module.exports=function(t,e){e(t({}),0,"NaN"),e(t(20),20,"Positive integer"),e(t("-20"),-20,"String negative integer"),e(t(1/0),1/0,"Infinity"),e(t(15.343),15,"Float"),e(t(-15.343),-15,"Negative float")};

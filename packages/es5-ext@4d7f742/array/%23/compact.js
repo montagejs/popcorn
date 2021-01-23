@@ -1,0 +1,1 @@
+"use strict";var isValue=require("../../object/is-value"),filter=Array.prototype.filter;module.exports=function(){return filter.call(this,function(e){return isValue(e)})};

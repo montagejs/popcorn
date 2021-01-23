@@ -1,0 +1,1 @@
+montageDefine("cf2e582","emit-error",{dependencies:["es5-ext/error/valid-error","es5-ext/object/valid-object"],factory:function(e,r,t){"use strict";var o=e("es5-ext/error/valid-error"),i=e("es5-ext/object/valid-object"),s=Object.prototype.hasOwnProperty;t.exports=function(e){if(i(this)&&o(e),!s.call(i(this),"__ee__"))throw e;if(!this.__ee__.error)throw e;this.emit("error",e)}}});

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(n,o){o(n(1),31,"1"),o(n(1e3),22,"1000"),o(n(),32,"No arguments"),o(n(1/0),32,"Infinity"),o(n(-(1/0)),32,"-Infinity"),o(n("foo"),32,"String"),o(n(!0),31,"Boolean"),o(n(3.5),30,"Float")};

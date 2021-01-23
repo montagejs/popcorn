@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/sign/implement",{dependencies:["../../../math/sign/is-implemented"],factory:function(e,t,n){"use strict";var i=e("../../../math/sign/is-implemented");n.exports=function(e){e(i(),!0)}}});

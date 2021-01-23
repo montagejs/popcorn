@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/to-uint32",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(e({}),0,"Not numeric"),t(e(-4),4294967292,"Negative"),t(e(133432),133432,"Positive"),t(e(8589934592),0,"Greater than maximum")}}});

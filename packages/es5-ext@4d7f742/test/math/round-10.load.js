@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/math/round-10",{dependencies:[],factory:function(e,t,n){"use strict";n.exports=function(e,t){t(e(55.55,-1),55.6),t(e(55.549,-1),55.5),t(e(55,1),60),t(e(54.9,1),50),t(e(-55.55,-1),-55.5),t(e(-55.551,-1),-55.6),t(e(-55,1),-50),t(e(-55.1,1),-60),t(e(1.005,-2),1.01),t(e(-1.005,-2),-1)}}});

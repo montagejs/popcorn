@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var n,o=String.raw;return"function"==typeof o&&(n=["foo\nbar","marko\n"],n.raw=["foo\\nbar","marko\\n"],"foo\\nbarINSE\nRTmarko\\n"===o(n,"INSE\nRT"))};

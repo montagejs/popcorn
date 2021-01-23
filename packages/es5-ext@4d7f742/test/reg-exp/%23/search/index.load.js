@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/reg-exp/%23/search/index",{dependencies:["./shim"],factory:function(e,s,t){"use strict";t.exports=e("./shim")}});

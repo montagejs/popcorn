@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){t(e({}),0,"Not numeric"),t(e(-4),4294967292,"Negative"),t(e(133432),133432,"Positive"),t(e(8589934592),0,"Greater than maximum")};

@@ -1,0 +1,1 @@
+montageDefine("4d7f742","reg-exp/%23/split/shim",{dependencies:["../../valid-reg-exp"],factory:function(e,i,t){"use strict";var n=e("../../valid-reg-exp");t.exports=function(e){return n(this),String(e).split(this)}}});

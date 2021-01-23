@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/ends-with/implement",{dependencies:["../../../../string/#/ends-with/is-implemented"],factory:function(e,t,n){"use strict";var i=e("../../../../string/#/ends-with/is-implemented");n.exports=function(e){e(i(),!0)}}});

@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){var n={a:1,b:2},c={b:3,c:4};t(e(n,c),n,"Returns self"),t.deep(n,{a:1,b:3,c:4},"Single: content"),t.deep(e({},n,c),{a:1,b:3,c:4},"Multi argument")};

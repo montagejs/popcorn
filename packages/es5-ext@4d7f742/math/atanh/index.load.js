@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/atanh/index",{dependencies:["./is-implemented","./shim"],factory:function(e,t,i){"use strict";i.exports=e("./is-implemented")()?Math.atanh:e("./shim")}});

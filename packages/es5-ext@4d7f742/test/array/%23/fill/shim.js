@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,t){var a;a=[1,2,3,4,5,6],t(e.call(a,-1),a,"Returns self object"),t.deep(a,[-1,-1,-1,-1,-1,-1],"Value"),t.deep(e.call([1,2,3,4,5,6],-1,3),[1,2,3,-1,-1,-1],"Positive start"),t.deep(e.call([1,2,3,4,5,6],-1,-3),[1,2,3,-1,-1,-1],"Negative start"),t.deep(e.call([1,2,3,4,5,6],-1,9),[1,2,3,4,5,6],"Large start")};

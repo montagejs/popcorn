@@ -1,0 +1,1 @@
+"use strict";var value=require("./valid-value"),isValue=require("./is-value");module.exports=function(e){var r,u=1;if(value(e),r=arguments.length-1,!r)return e;for(;u<r;)if(e=e[arguments[u++]],!isValue(e))return;return e[arguments[u]]};

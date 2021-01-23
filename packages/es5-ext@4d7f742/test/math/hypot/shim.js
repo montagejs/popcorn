@@ -1,0 +1,1 @@
+"use strict";module.exports=function(N,n){n(N(),0,"No arguments"),n(N(0,-0,0),0,"Zeros"),n(N(4,NaN,1/0),1/0,"Infinity"),n(N(4,NaN,-(1/0)),1/0,"Infinity"),n(N(4,NaN,34),NaN,"NaN"),n(N(3,4),5,"#1"),n(N(3,4,5),7.0710678118654755,"#2")};

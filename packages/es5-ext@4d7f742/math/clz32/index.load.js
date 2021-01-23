@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/clz32/index",{dependencies:["./is-implemented","./shim"],factory:function(e,i,t){"use strict";t.exports=e("./is-implemented")()?Math.clz32:e("./shim")}});

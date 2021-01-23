@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/raw/is-implemented",{dependencies:[],factory:function(n,r,o){"use strict";o.exports=function(){var n,r=String.raw;return"function"==typeof r&&(n=["foo\nbar","marko\n"],n.raw=["foo\\nbar","marko\\n"],"foo\\nbarINSE\nRTmarko\\n"===r(n,"INSE\nRT"))}}});

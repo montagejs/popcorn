@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/array/%23/first",{dependencies:[],factory:function(e,t,a){"use strict";t.__generic=function(e,t){t(e.call(this),this[0])},t[""]=function(e,t){var a;t(e.call([]),void 0,"Empty"),t(e.call(new Array(234),void 0,"Sparse empty")),a=new Array(2342),a[434]={},t(e.call(a),a[434],"Sparse")}}});

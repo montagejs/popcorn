@@ -1,0 +1,1 @@
+var TextInput=require("ui/text-input").TextInput,DateField=exports.DateField=TextInput.specialize({hasTemplate:{value:!1}});DateField.addAttributes({max:null,min:null,step:null});

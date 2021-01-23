@@ -1,0 +1,1 @@
+"use strict";var safeToString=require("./safe-to-string"),reNewLine=/[\n\r\u2028\u2029]/g;module.exports=function(e){var r=safeToString(e);return r.length>100&&(r=r.slice(0,99)+"…"),r=r.replace(reNewLine,function(e){return JSON.stringify(e).slice(1,-1)})};

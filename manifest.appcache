@@ -1,0 +1,31 @@
+CACHE MANIFEST
+#version 1.0.0
+#hash 0e99770
+
+CACHE:
+assets/icons/apple-touch-icon-120x120-precomposed.png
+assets/icons/apple-touch-icon-152x152-precomposed.png
+assets/icons/apple-touch-icon-76x76-precomposed.png
+assets/icons/apple-touch-icon-precomposed.png
+assets/icons/apple-touch-icon.png
+assets/image/loading-poster.gif
+assets/image/logo.png
+assets/image/montage-made.svg
+assets/image/no-poster.jpg
+assets/image/screenshot.png
+assets/style/style.css
+index.html.bundle-0.js
+index.html.bundle-1-0.js
+cache-worker.js
+cache-worker.load.js
+favicon.ico
+index.html
+index.html.load.js
+locale/en/messages.json.load.js
+locale/fr/messages.json.load.js
+manifest.json.load.js
+package-lock.json.load.js
+package.json.load.js
+
+NETWORK:
+*

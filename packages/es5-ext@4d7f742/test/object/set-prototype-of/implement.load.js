@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/set-prototype-of/implement",{dependencies:["../../../object/create","../../../object/set-prototype-of/is-implemented"],factory:function(e,t,o){"use strict";var c=e("../../../object/create"),n=e("../../../object/set-prototype-of/is-implemented");o.exports=function(e){e(n(c),!0)}}});

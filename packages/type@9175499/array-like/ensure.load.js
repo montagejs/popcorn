@@ -1,0 +1,1 @@
+montageDefine("9175499","array-like/ensure",{dependencies:["../lib/resolve-exception","./is"],factory:function(e,i,n){"use strict";var r=e("../lib/resolve-exception"),t=e("./is");n.exports=function(e){return t(e,arguments[1])?e:r(e,"%v is not an array like value",arguments[1])}}});

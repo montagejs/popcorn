@@ -1,0 +1,1 @@
+montageDefine("04013e4","lib/index",{dependencies:["./stringify","./parse"],factory:function(e,i,n){var r=e("./stringify"),s=e("./parse");n.exports={stringify:r,parse:s}}});

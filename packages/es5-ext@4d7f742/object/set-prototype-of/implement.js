@@ -1,0 +1,1 @@
+"use strict";var shim;!require("./is-implemented")()&&(shim=require("./shim"))&&Object.defineProperty(Object,"setPrototypeOf",{value:shim,configurable:!0,enumerable:!1,writable:!0});

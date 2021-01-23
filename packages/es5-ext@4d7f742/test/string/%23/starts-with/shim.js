@@ -1,0 +1,1 @@
+"use strict";module.exports=function(a,e){e(a.call("abc",""),!0,"Empty needle"),e(a.call("abcd","ab"),!0,"Starts with needle"),e(a.call("abcd","abcd"),!0,"Needle equals haystack"),e(a.call("abcd","bcde",1),!1,"Needle larger than haystack"),e(!a.call("abcd","cd"),!0,"Doesn't start with needle"),e(a.call("abcd","bc",1),!0,"Position")};

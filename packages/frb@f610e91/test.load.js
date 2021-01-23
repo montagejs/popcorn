@@ -1,0 +1,1 @@
+montageDefine("f610e91","test",{dependencies:["./bindings"],factory:function(e,n,o){function t(e,n){console.log(e===n?"* ":"x ",e,n)}var r=e("./bindings"),s=r.defineBindings({target:[1]},{source:{"<->":"target.rangeContent()"}});t(s.source[0],1);var c=s.source;t(c[0],1),s.source=[2],t(c[0],1),s.target.splice(0,3,3),t(c,s.source),t(c[0],1),t(s.source[0],3)}});

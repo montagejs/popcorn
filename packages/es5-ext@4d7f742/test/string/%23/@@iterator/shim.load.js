@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/string/%23/@@iterator/shim",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e,n){var t=e.call("r💩z");n.deep(t.next(),{done:!1,value:"r"},"#1"),n.deep(t.next(),{done:!1,value:"💩"},"#2"),n.deep(t.next(),{done:!1,value:"z"},"#3"),n.deep(t.next(),{done:!0,value:void 0},"End")}}});

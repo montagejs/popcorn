@@ -1,0 +1,1 @@
+"use strict";module.exports=function(n,t){t(n([]),!0,"Array"),t(n(""),!0,"String"),t(n(function(){return arguments}()),!0,"Arguments"),t(n({length:0}),!0,"List object"),t(n(function(){}),!1,"Function"),t(n({}),!1,"Plain object"),t(n(/raz/),!1,"Regexp"),t(n(),!1,"No argument"),t(n(null),!1,"Null"),t(n(void 0),!1,"Undefined")};

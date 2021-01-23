@@ -1,0 +1,1 @@
+montageDefine("4d7f742","safe-to-string",{dependencies:["./object/is-callable"],factory:function(t,e,n){"use strict";var r=t("./object/is-callable");n.exports=function(t){try{return t&&r(t.toString)?t.toString():String(t)}catch(e){return"<Non-coercible to string value>"}}}});

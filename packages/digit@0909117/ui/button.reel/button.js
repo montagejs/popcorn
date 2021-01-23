@@ -1,0 +1,1 @@
+var AbstractButton=require("montage/ui/base/abstract-button").AbstractButton;exports.Button=AbstractButton.specialize({hasTemplate:{value:!0},constructor:{value:function(){this["super"](),this.classList.add("digit-Button")}}});

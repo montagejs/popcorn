@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/object/ensure-thenable",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e,n){var t={then:function(){}};n["throws"](function(){e({})},TypeError),n(e(t),t)}}});

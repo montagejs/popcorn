@@ -1,0 +1,1 @@
+montageDefine("4d7f742","optional-chaining",{dependencies:["./object/is-value"],factory:function(e,t,n){"use strict";var o=e("./object/is-value"),i=Array.prototype.slice;n.exports=function(e,t){for(var n=i.call(arguments,1),r=0,a=n.length;o(e)&&r<a;)e=e[n[r++]];return r===a?e:void 0}}});

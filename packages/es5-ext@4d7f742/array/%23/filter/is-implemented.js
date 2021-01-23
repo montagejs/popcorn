@@ -1,0 +1,1 @@
+"use strict";var SubArray=require("../../_sub-array-dummy-safe"),pass=function(){return!0};module.exports=function(){return(new SubArray).filter(pass)instanceof SubArray};

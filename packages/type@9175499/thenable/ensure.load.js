@@ -1,0 +1,1 @@
+montageDefine("9175499","thenable/ensure",{dependencies:["../lib/resolve-exception","./is"],factory:function(e,n,t){"use strict";var i=e("../lib/resolve-exception"),o=e("./is");t.exports=function(e){return o(e)?e:i(e,"%v is not a thenable object",arguments[1])}}});

@@ -1,0 +1,1 @@
+montageDefine("039e83e","inherits",{dependencies:["util","./inherits_browser.js"],factory:function(e,i,t){try{var r=e("util");if("function"!=typeof r.inherits)throw"";t.exports=r.inherits}catch(n){t.exports=e("./inherits_browser.js")}}});

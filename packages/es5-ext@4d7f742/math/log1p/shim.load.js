@@ -1,0 +1,1 @@
+montageDefine("4d7f742","math/log1p/shim",{dependencies:[],factory:function(e,t,n){"use strict";var a=Math.log;n.exports=function(e){return isNaN(e)?NaN:(e=Number(e),e<-1?NaN:e===-1?-(1/0):0===e?e:e===1/0?1/0:e>-1e-8&&e<1e-8?e-e*e/2:a(1+e))}}});

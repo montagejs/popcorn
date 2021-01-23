@@ -1,0 +1,1 @@
+"use strict";var isImplemented=require("../../../../reg-exp/#/unicode/is-implemented");module.exports=function(e){e(isImplemented(),!0)};

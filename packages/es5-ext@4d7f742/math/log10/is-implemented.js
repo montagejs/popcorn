@@ -1,0 +1,1 @@
+"use strict";module.exports=function(){var t=Math.log10;return"function"==typeof t&&.3010299956639812===t(2)};

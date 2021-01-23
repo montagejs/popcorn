@@ -1,0 +1,1 @@
+montageDefine("4d7f742","test/number/is-number",{dependencies:[],factory:function(e,n,t){"use strict";t.exports=function(e,n){n(e(0),!0,"Zero"),n(e(NaN),!0,"NaN"),n(e(1/0),!0,"Infinity"),n(e(12),!0,"Number"),n(e(!1),!1,"Boolean"),n(e(new Date),!1,"Date"),n(e(new Number(2)),!0,"Number object"),n(e("asdfaf"),!1,"String"),n(e(""),!1,"Empty String")}}});

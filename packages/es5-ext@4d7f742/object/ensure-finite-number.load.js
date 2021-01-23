@@ -1,0 +1,1 @@
+montageDefine("4d7f742","object/ensure-finite-number",{dependencies:["./is-finite-number","../safe-to-string"],factory:function(e,n,r){"use strict";var t=e("./is-finite-number"),i=e("../safe-to-string");r.exports=function(e){if(t(e))return Number(e);throw new TypeError(i(e)+" does not represent a finite number value")}}});

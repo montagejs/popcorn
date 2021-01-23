@@ -1,0 +1,1 @@
+"use strict";var replace=String.prototype.replace,re=/-([a-z0-9])/g,toUpperCase=function(e,r){return r.toUpperCase()};module.exports=function(){return replace.call(this,re,toUpperCase)};

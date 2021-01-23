@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/indent",{dependencies:["../../object/is-value","./repeat"],factory:function(e,t,n){"use strict";var r=e("../../object/is-value"),i=e("./repeat"),u=String.prototype.replace,a=/(\r\n|[\n\r\u2028\u2029])([\u0000-\u0009\u000b-\uffff]+)/g;n.exports=function(e){var t=arguments[1];return e=i.call(String(e),r(t)?t:1),e+u.call(this,a,"$1"+e+"$2")}}});

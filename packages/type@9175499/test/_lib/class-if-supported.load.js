@@ -1,0 +1,1 @@
+montageDefine("9175499","test/_lib/class-if-supported",{dependencies:[],factory:function(require,exports,module){"use strict";try{module.exports=eval("(class {})")}catch(error){}}});

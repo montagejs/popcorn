@@ -1,0 +1,1 @@
+montageDefine("4d7f742","string/%23/ends-with/is-implemented",{dependencies:[],factory:function(e,t,n){"use strict";var i="razdwatrzy";n.exports=function(){return"function"==typeof i.endsWith&&(i.endsWith("trzy")===!0&&i.endsWith("raz")===!1)}}});
