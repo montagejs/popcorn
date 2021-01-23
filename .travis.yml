@@ -6,7 +6,7 @@ script:
   - npm run test
   - npm run build
 
-  deploy:
+deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
