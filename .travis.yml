@@ -7,3 +7,11 @@ script:
   - npm run lint
   - npm run test
   - npm run build
+
+  deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: builds/Popcorn
+  on:
+    branch: develop
