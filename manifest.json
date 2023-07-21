@@ -24,6 +24,9 @@
   "theme_color": "#000",
   "background_color": "#000",
   "display": "standalone",
+  "permissions":["notifications"],
+  "gcm_sender_id":"743128909939",
+  "gcm_user_visible_only":true,
   "montage_manifest_version": 1,
     "files": {
         "locale": {

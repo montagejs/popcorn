@@ -2,7 +2,8 @@
 var Component = require("montage/ui/component").Component,
     sharedMoviesService = require("core/tmdb-service").shared,
     defaultLocalizer = require("montage/core/localizer").defaultLocalizer,
-    CacheManager = require('core/cache-manager.js').CacheManager;
+    CacheManager = require('core/cache-manager').CacheManager,
+    PushManager = require('core/push-manager').PushManager;
 
 //TODO use details in toggle buttons
 //TODO do not use matte toggle buttons
@@ -10,25 +11,29 @@ exports.Main = Component.specialize({
 
     constructor: {
         value: function Main () {
+            
+            this.initLocal();
+            this.initCache();
+            this.initPush();
 
-            /*
-            // Test localize
-            defaultLocalizer.locale = 'fr';
-            defaultLocalizer.localize("hello").then(function (localized) {
-                console.log(localized);
-            });
-            */
+            // Init App
+            this.application.addEventListener( "openTrailer", this, false);
+            this.canDrawGate.setField("moviesLoaded", false);
+            this._initialDataLoad = this.moviesService.load();
+        }
+    },
 
+    initLocal: {
+        value: function () {
             var localeParam = this.getParameterByName('lang');
             if (localeParam) {
                 defaultLocalizer.locale = localeParam;
             }
+        }
+    },
 
-            this.application.addEventListener( "openTrailer", this, false);
-
-            this.canDrawGate.setField("moviesLoaded", false);
-            this._initialDataLoad = this.moviesService.load();
-
+    initCache: {
+        value: function () {
             // Add events
             CacheManager.events.error = function (error) {
                 console.error('MainUpdate', 'error', error);
@@ -51,6 +56,35 @@ exports.Main = Component.specialize({
             CacheManager.confirmOnUpdateReady = true;
             CacheManager.listenToUpdate();
             CacheManager.checkForUpdate();
+        }
+    },
+
+    initPush: {
+        value: function () {
+            PushManager.hasSubscription().then(function (hasSubscription) {
+                if (!hasSubscription) {
+                    return PushManager.subscribe().then(function (subscription) {
+                        return PushManager.send(subscription, 'Welcome back!', {
+                            // options goes here picture,badge,tag
+                        }).then(function () {
+                            return subscription;
+                        });
+                    });  
+                } else {
+                    // Already subscribed
+                    return PushManager.getSubscription(function (subscription) {
+                        return PushManager.send(subscription, 'Push notification enabled!', {
+                            // options goes here picture,badge,tag
+                        }).then(function () {
+                            return subscription;
+                        });
+                    });
+                }
+            }).then(function (subscription) {
+                console.info('Push Notification subscription', JSON.stringify(subscription));
+            }).catch(function (err) {
+                console.error('Push Notification Error', err);
+            });
         }
     },
 
